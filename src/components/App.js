@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
 import NavBar from "./NavBar";
+import Home from "./Home";
 import {getComponentForPageName, PageNames} from "./../pageConstants";
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
         return (
             <React.Fragment>
                 <NavBar />
+                <Home />
                 {/*{getComponentForPageName(*/}
                 {/*    this.state.destination,*/}
                 {/*    this.onNavigationClicked*/}

@@ -10,10 +10,11 @@
   --dropdown-opacity-animation-delay: 170;
   --default-font: "Gilroy-Bold";
   /*--default-code-font: "Fira Code";*/
-  --max-app-width: 1396px;
+  --max-app-width: 1434px;
   /*Colors*/
   --color-white: #FFFFFF;
-  --color-gray-lightest: #DFDFDF;
+  --color-gray-accent: #DFDFDF;
+  --color-gray-darkest: #303030;
   --color-gray-font: #717171;
 }
 
@@ -107,6 +108,7 @@ video {
   vertical-align: baseline;
   box-sizing: border-box;
   font-family: var(--default-font);
+  color: var(--color-gray-darkest);
 }
 
 code, pre {

@@ -5,31 +5,31 @@ import App from './components/App';
 import { getValueOfCSSVariable } from "./CSSUtils";
 
 // This function positions nav bar dropdowns.
-const myWindowResizeListener = () => {
-    const designsContainer = document.querySelector("#designs-container");
-    const designsContainerStyle = getComputedStyle(designsContainer);
-    const designsContainerMarginLeft = parseInt(
-        designsContainerStyle.marginLeft
+const myWindowResizeListener = (containerId, dropdownId) => {
+    const container = document.querySelector(containerId);
+    const containerStyle = getComputedStyle(container);
+    const containerMarginLeft = parseInt(
+        containerStyle.marginLeft
     );
-    const designsContainerWidth =
-        designsContainer.offsetWidth + designsContainerMarginLeft;
-    const designsContainerRect = designsContainer.getBoundingClientRect();
-    const designsContainerX = designsContainerRect.left;
+    const containerWidth =
+        container.offsetWidth + containerMarginLeft;
+    const containerRect = container.getBoundingClientRect();
+    const containerX = containerRect.left;
 
-    const designDropdown = document.querySelector("#designs-dropdown-container");
-    const designDropdownStyle = getComputedStyle(designDropdown);
-    const designDropdownMarginLeft = parseInt(designDropdownStyle.marginLeft);
-    const designDropdownWidth = designDropdown.offsetWidth + designDropdownMarginLeft;
+    const dropdown = document.querySelector(dropdownId);
+    const dropdownStyle = getComputedStyle(dropdown);
+    const dropdownMarginLeft = parseInt(dropdownStyle.marginLeft);
+    const dropdownWidth = dropdown.offsetWidth + dropdownMarginLeft;
 
     // Set the CSS 'left' property of the computed style for `dropdown` to some computed number.
-    const n1 = designsContainerX + designsContainerWidth / 2;
-    const n2 = n1 - designDropdownWidth / 2;
-    designDropdown.style.left = n2 + "px";
+    const n1 = containerX + containerWidth / 2;
+    const n2 = n1 - dropdownWidth / 2;
+    dropdown.style.left = n2 + "px";
 };
 
 // Function that adds animation for dropdown menu.
-function attachAnimationForDropdownMenu() {
-    const dropdown = document.querySelector("#designs-dropdown-container");
+function attachAnimationForDropdownMenu(dropdownId, containerId) {
+    const dropdown = document.querySelector(dropdownId);
     const dropdownOpacityAnimationDelay = getValueOfCSSVariable(
         dropdown,
         "--dropdown-opacity-animation-delay"
@@ -60,13 +60,9 @@ function attachAnimationForDropdownMenu() {
         }, dropdownOpacityAnimationDelay);
     };
 
-    const designsContainer = document.querySelector("#designs-container");
-    designsContainer.addEventListener("mouseenter", fadeIn);
-    // designsContainer.addEventListener("mouseleave", fadeOut);
-
-    // const codeContainer = document.querySelector("#code-container")
-    // codeContainer.addEventListener("mouseenter", fadeIn);
-    // codeContainer.addEventListener("mouseleave", fadeOut);
+    const container = document.querySelector(containerId);
+    container.addEventListener("mouseenter", fadeIn);
+    container.addEventListener("mouseleave", fadeOut);
 }
 
 const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
@@ -99,11 +95,14 @@ const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
 
 const runAfterMount = () => {
     // Attach a window resize listener and run it once.
-    window.addEventListener("resize", myWindowResizeListener);
-    myWindowResizeListener();
+    window.addEventListener("resize", () => myWindowResizeListener("#designs-container", "#designs-dropdown-container"));
+    window.addEventListener("resize", () => myWindowResizeListener("#code-container", "#code-dropdown-container"));
+    myWindowResizeListener("#designs-container", "#designs-dropdown-container");
+    myWindowResizeListener("#code-container", "#code-dropdown-container");
 
     // Enable animation for the dropdown menu.
-    attachAnimationForDropdownMenu();
+    attachAnimationForDropdownMenu("#designs-dropdown-container", "#designs-container");
+    attachAnimationForDropdownMenu("#code-dropdown-container", "#code-container");
     const appBar = document.querySelector("#app-bar");
     const height = getValueOfCSSVariable(appBar, "--app-bar-height");
     handleAutoHideAppBar(appBar, height);

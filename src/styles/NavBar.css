@@ -1,6 +1,6 @@
 :root {
     --app-bar-height: 64px;
-    --max-app-width: 1396px;
+    --max-app-width: 1434px;
 }
 
 .logo {
@@ -28,11 +28,12 @@
     top: 0;
     width: 100%;
     max-width: var(--max-app-width);
+    padding: 0 31px;
 }
 
 nav {
     display: flex;
-    width: 250px;
+    /*width: 250px;*/
     height: 100%;
     justify-content: space-between;
 }
@@ -59,7 +60,7 @@ nav > *:hover {
 
 #designs-dropdown-container {
     position: absolute;
-    width: 386px;
+    /*width: 386px;*/
     /*Set left property using myWindowSizeListener()*/
     top: 69px;
     margin-top: -3px;
@@ -73,11 +74,10 @@ nav > *:hover {
 
 #code-dropdown-container {
     position: absolute;
-    width: 385px;
+    /*width: 200px !important;*/
     /*Set left property using myWindowSizeListener()*/
-    top: 70px;
+    top: 69px;
     margin-top: -3px;
-    padding-top: 6px;
     opacity: 0;
     visibility: hidden;
 }
@@ -110,7 +110,7 @@ nav > *:hover {
     background-color: var(--color-white);
     -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
-    border: 1px solid var(--color-gray-lightest);
+    border: 1px solid var(--color-gray-accent);
 }
 
 .dropdown {
@@ -124,7 +124,7 @@ nav > *:hover {
     border-radius: 4px;
     -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
-    border: 1px solid var(--color-gray-lightest);
+    border: 1px solid var(--color-gray-accent);
 }
 
 .dropdown > a {
@@ -136,7 +136,7 @@ nav > *:hover {
 }
 
 .dropdown > a:hover {
-    background-color: gold;
+    background-color: #EFEFEF;
 }
 
 .dropdown > a p {
@@ -148,4 +148,34 @@ nav > *:hover {
 .app-logos-container {
     display: flex;
     align-self: center;
+}
+
+.app-logos-container > img {
+   padding-left: 5px;
+}
+
+.code-dropdown-width {
+    width: 240px;
+}
+
+
+/*Selected states*/
+.nav-selected {
+    border-bottom: 3px solid black;
+    padding-top: 3px;
+}
+
+
+/*Add this to an dropdown element using JS */
+/*Also swap the icons for darker icons*/
+.dropdown-selected {
+    /*border-top: 1px solid var(--color-gray-accent);*/
+    /*border-bottom: 1px solid var(--color-gray-accent);*/
+    border-left: 3px solid var(--color-gray-darkest);
+}
+
+.dropdown-selected p {
+    font-size: 1.20em;
+    color: var(--color-gray-darkest) !important;
+    margin-left: -3px;
 }
