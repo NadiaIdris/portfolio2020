@@ -110,7 +110,10 @@ const runAfterMount = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App runAfterMount={runAfterMount}/>
+    <App
+        windowLocationPathname={window.location.pathname}
+        runAfterMount={runAfterMount}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );

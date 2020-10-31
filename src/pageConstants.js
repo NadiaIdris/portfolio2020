@@ -10,6 +10,11 @@ import WeatherApp from './components/WeatherApp';
 import PlannerApp from './components/PlannerApp';
 import PortfolioApp from './components/PortfolioApp';
 import About from './components/About';
+import ios from "./vector-images/ios-logo.svg";
+import android from "./vector-images/android-logo.svg";
+import iosLight from './vector-images/ios-logo-lght-gray.svg';
+import androidLight from './vector-images/android-logo-lght-gray.svg';
+import webLight from './vector-images/web-logo-lght-gray.svg';
 
 const PageNames = {
     HOME: "Home",
@@ -37,7 +42,7 @@ const PageNamesWithSpaces = {
     PORTFOLIO_APP: "Portfolio App",
 };
 
-const getComponentForPageName = (name, onNavigationClicked) => {
+const getComponentForPageName = (name) => {
     switch (name) {
         case PageNames.HOME:
             return <Home/>;
@@ -62,4 +67,8 @@ const getComponentForPageName = (name, onNavigationClicked) => {
     }
 };
 
-export {PageNames, PageNamesWithSpaces, getComponentForPageName};
+export {
+    PageNames,
+    PageNamesWithSpaces,
+    getComponentForPageName,
+};
