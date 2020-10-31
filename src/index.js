@@ -108,6 +108,11 @@ const runAfterMount = () => {
     handleAutoHideAppBar(appBar, height);
 };
 
+// TODO: write this function
+// const makeNavBarFixedWhenDropdownVisibleAndScrolling = () => {
+//
+// };
+
 ReactDOM.render(
   <React.StrictMode>
     <App

@@ -18,6 +18,14 @@ const Logo = (props) => {
     );
 };
 
+const GitHub = () => {
+    return(
+        <a href="https://github.com/MaretIdris" target="_blank">
+            <img className="github-logo" src={github} alt="Github logo"/>
+        </a>
+    );
+};
+
 const createHomeOrAboutComponent = (props, pageName) => {
     const isActive = (pageName) => {
         if (props.currentDestination === pageName) return "nav-selected";
@@ -161,8 +169,7 @@ const NavBar = (props) => {
                 </div>
                 {createHomeOrAboutComponent(props, PageNames.ABOUT)}
             </nav>
-            <a><img className="github-logo-on-navbar" src={github}
-                    alt="Github logo"/></a>
+            <GitHub />
         </div>
     );
 };

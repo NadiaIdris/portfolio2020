@@ -5,10 +5,12 @@
 
 .logo {
     width: 50px;
+    cursor: pointer;
 }
 
-.github-logo-on-navbar {
+.github-logo {
     width: 30px;
+    cursor: pointer;
 }
 
 #app-bar {
@@ -43,6 +45,7 @@ nav > * {
     flex-direction: column;
     justify-content: center;
     padding: 0 15px;
+    cursor: pointer;
 }
 
 nav > *:hover {
