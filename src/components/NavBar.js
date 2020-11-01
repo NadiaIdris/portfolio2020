@@ -8,11 +8,11 @@ import androidLight from './../vector-images/android-logo-lght-gray.svg';
 import webDark from './../vector-images/web-logo.svg'
 import webLight from './../vector-images/web-logo-lght-gray.svg';
 import './../styles/NavBar.css';
-import {PageNames, PageNamesWithSpaces} from "./../pageConstants";
+import {PageNames, PageNamesWithSpaces} from "../pageConstants";
 
 const Logo = (props) => {
     return (
-        <a onClick={() => props.onNavigationClicked(PageNames.HOME)}>
+        <a onClick={() => props.onNavigationClicked(PageNames.HOME)} title="Maret Idris home page">
             <img className="logo" src={logo} alt="Logo"/>
         </a>
     );
@@ -20,7 +20,7 @@ const Logo = (props) => {
 
 const GitHub = () => {
     return(
-        <a href="https://github.com/MaretIdris" target="_blank">
+        <a className="tooltip" href="https://github.com/MaretIdris" target="_blank" title="Maret Idris Github page">
             <img className="github-logo" src={github} alt="Github logo"/>
         </a>
     );

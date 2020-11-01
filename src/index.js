@@ -67,7 +67,13 @@ function attachAnimationForDropdownMenu(dropdownId, containerId) {
 
 const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
     let prevScrollPosition = window.pageYOffset;
+    let ignoreRunCount = 20;
     window.onscroll = () => {
+        if (ignoreRunCount-- > -1){
+            console.log("window.onscroll event ignored");
+            return;
+        }
+        console.log("window.onscroll event fired");
         const currentScrollPosition = window.pageYOffset;
 
         let showValue = "0";
@@ -95,8 +101,10 @@ const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
 
 const runAfterMount = () => {
     // Attach a window resize listener and run it once.
-    window.addEventListener("resize", () => myWindowResizeListener("#designs-container", "#designs-dropdown-container"));
-    window.addEventListener("resize", () => myWindowResizeListener("#code-container", "#code-dropdown-container"));
+    window.addEventListener("resize", () => {
+        myWindowResizeListener("#designs-container", "#designs-dropdown-container");
+        myWindowResizeListener("#code-container", "#code-dropdown-container");
+    });
     myWindowResizeListener("#designs-container", "#designs-dropdown-container");
     myWindowResizeListener("#code-container", "#code-dropdown-container");
 
@@ -107,11 +115,6 @@ const runAfterMount = () => {
     const height = getValueOfCSSVariable(appBar, "--app-bar-height");
     handleAutoHideAppBar(appBar, height);
 };
-
-// TODO: write this function
-// const makeNavBarFixedWhenDropdownVisibleAndScrolling = () => {
-//
-// };
 
 ReactDOM.render(
   <React.StrictMode>

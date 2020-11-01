@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../styles/App.css';
 import NavBar from "./NavBar";
 import Home from "./Home";
-import {getComponentForPageName, PageNames} from "./../pageConstants";
+import {getComponentForPageName, PageNames} from "../pageConstants";
 
 class App extends Component {
     constructor(props) {
@@ -43,8 +43,6 @@ class App extends Component {
                     this.state.destination,
                     this.onNavigationClicked
                 )}
-
-                <Home/>
             </React.Fragment>
         );
     }

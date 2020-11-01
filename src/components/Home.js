@@ -1,12 +1,16 @@
 import React from 'react';
-
-const dummyText = `Spicy jalapeno bacon ipsum dolor `.repeat(800);
+import Banner from "./Banner";
 
 const Home = () => {
     return (
         <React.Fragment>
-            <p>{dummyText}</p>
-            {/*<Banner />*/}
+            <Banner
+                strings={[
+                    "am a product designer",
+                    "express ideas through code",
+                    "am startup tested"
+                ]}
+            />
             {/*<DesignProjects />*/}
             {/*<CodingProjects />*/}
             {/*<Recommendations />*/}
