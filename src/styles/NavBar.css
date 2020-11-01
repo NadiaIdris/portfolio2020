@@ -45,7 +45,21 @@ nav > * {
     justify-content: center;
     padding: 0 15px;
     cursor: pointer;
+    color: var(--color-gray-font);
 }
+
+/*nav > *:after {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    width: 0%;*/
+/*    !*padding-top: 20px; *!*/
+/*    border-bottom: 3px solid black;*/
+/*    transition: .5s;*/
+/*}*/
+
+/*nav > *:hover:after {*/
+/*    width: 100%;*/
+/*}*/
 
 nav > *:hover {
     /*background-color: var(--color-gray-accent);*/
@@ -165,14 +179,12 @@ nav > *:hover {
 .nav-selected {
     border-bottom: 3px solid black;
     padding-top: 3px;
+    color: var(--color-gray-darkest);
 }
-
 
 /*Add this to an dropdown element using JS */
 /*Also swap the icons for darker icons*/
 .dropdown-selected {
-    /*border-top: 1px solid var(--color-gray-accent);*/
-    /*border-bottom: 1px solid var(--color-gray-accent);*/
     border-left: 3px solid var(--color-gray-darkest);
 }
 
