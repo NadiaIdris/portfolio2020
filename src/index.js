@@ -28,7 +28,7 @@ const myWindowResizeListener = (containerId, dropdownId) => {
 };
 
 // Function that adds animation for dropdown menu.
-function attachAnimationForDropdownMenu(dropdownId, containerId) {
+const attachAnimationForDropdownMenu = (dropdownId, containerId) => {
     const dropdown = document.querySelector(dropdownId);
     const dropdownOpacityAnimationDelay = getValueOfCSSVariable(
         dropdown,
@@ -65,6 +65,8 @@ function attachAnimationForDropdownMenu(dropdownId, containerId) {
     container.addEventListener("mouseleave", fadeOut);
 }
 
+let enableNavBarAutoHide = true;
+
 const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
     let prevScrollPosition = window.pageYOffset;
     let ignoreRunCount = 20;
@@ -75,29 +77,41 @@ const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
         }
         console.log("window.onscroll event fired");
         const currentScrollPosition = window.pageYOffset;
+        if (enableNavBarAutoHide) {
+            let showValue = "0";
+            let hideValue = "-" + appBarHeight + "px";
 
-        let showValue = "0";
-        let hideValue = "-" + appBarHeight + "px";
+            if (
+                prevScrollPosition === currentScrollPosition &&
+                prevScrollPosition !== 0
+            ) {
+                // Page has refreshed, but it was already scrolled down.
+                appBarElement.style.top = showValue;
+                return;
+            }
 
-        if (
-            prevScrollPosition === currentScrollPosition &&
-            prevScrollPosition !== 0
-        ) {
-            // Page has refreshed, but it was already scrolled down.
-            appBarElement.style.top = showValue;
-            return;
-        }
-
-        if (prevScrollPosition > currentScrollPosition) {
-            // Scroll up.
-            appBarElement.style.top = showValue;
-        } else {
-            // Scroll down.
-            appBarElement.style.top = hideValue;
+            if (prevScrollPosition > currentScrollPosition) {
+                // Scroll up.
+                appBarElement.style.top = showValue;
+            } else {
+                // Scroll down.
+                appBarElement.style.top = hideValue;
+            }
         }
         prevScrollPosition = currentScrollPosition;
     };
 };
+
+const handleDisableAutoHide = (id) => {
+    document.getElementById(id).onmouseenter = () => {
+        console.log(`${id} mouseenter - disable navbar autohide`);
+        enableNavBarAutoHide = false;
+    }
+    document.getElementById(id).onmouseleave = () => {
+        console.log(`${id} mouseleave - enable navbar autohide`);
+        enableNavBarAutoHide = true;
+    }
+}
 
 const runAfterMount = () => {
     // Attach a window resize listener and run it once.
@@ -114,6 +128,9 @@ const runAfterMount = () => {
     const appBar = document.querySelector("#app-bar");
     const height = getValueOfCSSVariable(appBar, "--app-bar-height");
     handleAutoHideAppBar(appBar, height);
+
+    handleDisableAutoHide("designs-container");
+    handleDisableAutoHide("code-container");
 };
 
 ReactDOM.render(

@@ -1,6 +1,8 @@
 import React from 'react';
 import Banner from "./Banner";
 
+const dummyText = `Spicy jalapeno bacon ipsum dolor `.repeat(700);
+
 const Home = () => {
     return (
         <React.Fragment>
@@ -11,6 +13,7 @@ const Home = () => {
                     "am startup tested"
                 ]}
             />
+            {dummyText}
             {/*<DesignProjects />*/}
             {/*<CodingProjects />*/}
             {/*<Recommendations />*/}
