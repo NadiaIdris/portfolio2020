@@ -9,13 +9,13 @@
 :root {
   --dropdown-opacity-animation-delay: 170;
   --default-font: "Gilroy-Bold";
-  /*--default-code-font: "Fira Code";*/
   --max-app-width: 1434px;
   /*Colors*/
   --color-white: #FFFFFF;
   --color-gray-accent: #DFDFDF;
   --color-gray-darkest: #303030;
   --color-gray-font: #717171;
+  --color-gray-hover-bckround: #EFEFEF;
 }
 
 /*----- Reset all the CSS styles -----*/
@@ -169,5 +169,17 @@ html {
 }
 
 h1 {
+  /*font-size: 3em;*/
+}
+
+h2 {
+  font-size: 1.625em;
+}
+
+h3 {
   font-size: 3em;
+}
+
+h4 {
+  font-size: 1.375em;
 }

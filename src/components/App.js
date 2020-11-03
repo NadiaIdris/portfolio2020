@@ -3,6 +3,7 @@ import '../styles/App.css';
 import NavBar from "./NavBar";
 import Home from "./Home";
 import {getComponentForPageName, PageNames} from "../pageConstants";
+import {scrollToTop} from "../utils";
 
 class App extends Component {
     constructor(props) {
@@ -30,6 +31,7 @@ class App extends Component {
             console.log(this.state);
         });
         window.history.pushState({}, null, destination);
+        scrollToTop();
     };
 
     render() {

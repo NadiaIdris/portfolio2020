@@ -34,9 +34,9 @@ class Banner extends React.Component {
     render() {
         return (
             <div className="wrap banner">
-                <h1>
+                <h3>
                     👋🏻 Hi, I am Maret Idris
-                </h1>
+                </h3>
                 <div className="type-wrap">
                     I&nbsp;
                   <span

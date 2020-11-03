@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from "./Banner";
-
-const dummyText = `Spicy jalapeno bacon ipsum dolor `.repeat(700);
+import DesignProjects from "./DesignProjects";
+import {dummyText} from "../utils";
 
 const Home = () => {
     return (
@@ -13,11 +13,11 @@ const Home = () => {
                     "am startup tested"
                 ]}
             />
-            {dummyText}
-            {/*<DesignProjects />*/}
+            <DesignProjects />
             {/*<CodingProjects />*/}
             {/*<Recommendations />*/}
             {/*<Footer />*/}
+            {dummyText}
         </React.Fragment>
     );
 };

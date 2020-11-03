@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './components/App';
-import { getValueOfCSSVariable } from "./CSSUtils";
+import {getValueOfCSSVariable, scrollToTop} from "./utils";
 
 // This function positions nav bar dropdowns.
 const myWindowResizeListener = (containerId, dropdownId) => {
@@ -69,14 +69,18 @@ let enableNavBarAutoHide = true;
 
 const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
     let prevScrollPosition = window.pageYOffset;
-    let ignoreRunCount = 20;
+    const numberOfPixelsToIgnore = 64;
+
     window.onscroll = () => {
-        if (ignoreRunCount-- > -1){
+        const currentScrollPosition = window.pageYOffset;
+
+        if (currentScrollPosition < numberOfPixelsToIgnore ||
+            prevScrollPosition === currentScrollPosition){
             console.log("window.onscroll event ignored");
             return;
         }
         console.log("window.onscroll event fired");
-        const currentScrollPosition = window.pageYOffset;
+
         if (enableNavBarAutoHide) {
             let showValue = "0";
             let hideValue = "-" + appBarHeight + "px";
@@ -98,6 +102,7 @@ const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
                 appBarElement.style.top = hideValue;
             }
         }
+
         prevScrollPosition = currentScrollPosition;
     };
 };
@@ -132,6 +137,10 @@ const runAfterMount = () => {
     handleDisableAutoHide("designs-container");
     handleDisableAutoHide("code-container");
 };
+
+window.addEventListener("load", () => {
+    scrollToTop();
+});
 
 ReactDOM.render(
   <React.StrictMode>

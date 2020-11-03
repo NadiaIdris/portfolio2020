@@ -41,11 +41,11 @@
     text-align: center;
 }
 
-/*.type-wrap span {*/
-/*    font-size: 1.625em;*/
-/*}*/
-
 .type-wrap {
     padding-top: 20px;
     font-size: 1.625em;
+}
+
+h1 {
+    font-size: 3em;
 }
