@@ -20,7 +20,7 @@ const Logo = (props) => {
 
 const GitHub = () => {
     return(
-        <a className="tooltip" href="https://github.com/MaretIdris" target="_blank" title="Maret Idris Github page">
+        <a href="https://github.com/MaretIdris" target="_blank" title="Maret Idris Github page">
             <img className="github-logo" src={github} alt="Github logo"/>
         </a>
     );

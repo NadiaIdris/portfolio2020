@@ -20,7 +20,8 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    background-color: var(--color-white);
+    /*background-color: var(--color-white);*/
+    background-color: gold;
     /*
       Hide the app bar on scroll.
       Stacking context: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
@@ -30,7 +31,7 @@
     top: 0;
     width: 100%;
     max-width: var(--max-app-width);
-    padding: 0 31px;
+    padding: 0 31px
 }
 
 nav {
@@ -53,7 +54,6 @@ nav > *:hover {
     border-bottom: 3px solid #B0B0B0;
     padding-top: 3px;
     color: var(--color-gray-font);
-    /*background-color: var(--color-gray-hover-bckround);*/
 }
 
 #designs-container:hover {
@@ -148,6 +148,8 @@ nav > *:hover {
     display: flex;
     align-self: center;
     color: var(--color-gray-font);
+    font-family: var(--default-font);
+    font-size: 1em;
 }
 
 .app-logos-container {
@@ -179,7 +181,7 @@ nav > *:hover {
 }
 
 .dropdown-selected p {
-    font-size: 1.1em;
+    font-size: 1.1em !important;
     color: var(--color-gray-darkest) !important;
     margin-left: -3px;
 }

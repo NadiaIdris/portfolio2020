@@ -1,21 +1,29 @@
 /*Read more on different font formats: https://www.w3schools.com/css/css3_fonts.asp#:~:text=OpenType%20Fonts%20(OTF),on%20the%20major%20computer%20platforms.*/
 @font-face {
-  font-family: 'Gilroy-Bold';
-  src: url("Gilroy-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Gilroy-Bold';
+    src: url("Gilroy-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono Medium';
+    src: url("JetBrainsMono-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 :root {
-  --dropdown-opacity-animation-delay: 170;
-  --default-font: "Gilroy-Bold";
-  --max-app-width: 1434px;
-  /*Colors*/
-  --color-white: #FFFFFF;
-  --color-gray-accent: #DFDFDF;
-  --color-gray-darkest: #303030;
-  --color-gray-font: #717171;
-  --color-gray-hover-bckround: #EFEFEF;
+    --dropdown-opacity-animation-delay: 170;
+    --default-font: "Gilroy-Bold";
+    --default-font-size: 1em;
+    --max-app-width: 1434px;
+    /*Colors*/
+    --color-white: #FFFFFF;
+    --color-gray-accent: #DFDFDF;
+    --color-gray-darkest: #303030;
+    --color-gray-font: #717171;
+    --color-gray-hover-bckround: #EFEFEF;
 }
 
 /*----- Reset all the CSS styles -----*/
@@ -101,18 +109,18 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 1em;
-  vertical-align: baseline;
-  box-sizing: border-box;
-  font-family: var(--default-font);
-  color: var(--color-gray-darkest);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: var(--default-font-size);
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+    color: var(--color-gray-darkest);
 }
 
 code, pre {
-  font-family: var(--default-code-font);
+    /*font-family: var(--default-code-font);*/
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -127,59 +135,68 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 body {
-  line-height: 1;
+    line-height: 1;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+    content: "";
+    content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /*-----  -----*/
 
 body {
-max-width: var(--max-app-width);
-  margin: 0 auto;
+    max-width: var(--max-app-width);
+    margin: 0 auto;
+    font-size: var(--default-font-size);
+    /*color: var(--color-gray-darkest);*/
 }
 
 html {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 h1 {
-  /*font-size: 3em;*/
+    /*font-size: 3em;*/
 }
 
 h2 {
-  font-size: 1.625em;
+    font-size: 1.625em;
+    padding: 10px 0 18px 0;
 }
 
 h3 {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 h4 {
-  font-size: 1.375em;
+    font-size: 1.375em;
+    padding: 4px 0 4px 0;
+}
+
+p {
+    font-family: "JetBrains Mono Medium";
+    font-size: 0.875em;
 }
