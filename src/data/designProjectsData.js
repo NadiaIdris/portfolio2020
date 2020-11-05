@@ -1,4 +1,6 @@
-import truckX from "./truckXData";
+import truckXData from "./truckXData";
+import abbeyRoadStudiosData from "./abbeyRoadStudiosData";
+import uampData from "./uampData";
 
-export const arrayOfDesignProjects = [truckX];
+export const arrayOfDesignProjects = [truckXData, abbeyRoadStudiosData, uampData];
 

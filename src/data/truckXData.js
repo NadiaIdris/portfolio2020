@@ -1,7 +1,7 @@
 import androidLight from './../vector-images/android-logo-lght-gray.svg';
 import iOSLight from './../vector-images/ios-logo-lght-gray.svg';
 
-const truckX = {
+const truckXData = {
     title: "TruckX",
     description: "Electronic logbook and trip planning app for truck drivers.",
     icons: [iOSLight, androidLight],
@@ -36,4 +36,4 @@ const truckX = {
 
 };
 
-export default truckX;
+export default truckXData;
