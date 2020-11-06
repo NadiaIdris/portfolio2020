@@ -212,3 +212,28 @@ p {
     font-family: "JetBrains Mono Medium";
     font-size: 0.85em;
 }
+
+/*Scrollbar*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid var(--color-gray-hover-bckround);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /*border: 1px solid #C6C6C6;*/
+    background: var(--color-gray-accent);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-accent);
+}

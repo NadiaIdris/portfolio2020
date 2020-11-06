@@ -5,40 +5,26 @@
 .all-design-projects {
     display: flex;
     flex-direction: row;
+    max-width: var(--max-app-width);
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
-
-/*.all-design-projects:first-child {*/
-/*    margin-right: 20px;*/
-/*}*/
 
 .one-design-project {
     width: 354px;
     height: auto;
     position: relative;
     margin-right: 25px;
-}
-
-.one-design-project:after {
-    content: '';
-    position: absolute;
-    top: -6px;
-    bottom: 0;
-    left: -6px;
-    right: -6px;
-    border: 6px solid var(--color-white);
-    border-radius: 6px;
-    background-color: var(--color-white);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 100ms ease-in-out;
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    margin-bottom: 25px;
+    cursor: pointer;
 }
 
 .design-project-img {
     width: 354px;
     height: 354px;
     border-radius: 4px;
+    overflow: hidden;
+    transition: transform .5s;
 }
 
 .light-gray-text {
@@ -63,3 +49,20 @@
 .icons img {
     padding-left: 7px;
 }
+
+
+/*.one-design-project changes on hover*/
+.img-hover-zoom {
+    height: 354px; /* Modify this according to your need */
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.2);
+}
+
+.one-design-project:hover .img-hover-zoom img{
+    transform: scale(1.2);
+}
+/*------*/

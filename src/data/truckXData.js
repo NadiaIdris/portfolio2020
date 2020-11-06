@@ -1,12 +1,13 @@
 import androidLight from './../vector-images/android-logo-lght-gray.svg';
 import iOSLight from './../vector-images/ios-logo-lght-gray.svg';
+import homepageTruckX from './../vector-images/truckX 846x846.svg'
 
 const truckXData = {
     title: "TruckX",
     description: "Electronic logbook and trip planning app for truck drivers.",
     icons: [iOSLight, androidLight],
 
-    homepageImage: "https://images.unsplash.com/photo-1561137259-d550c40ec99d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1558&q=80",
+    homepageImage: homepageTruckX,
     homepageImgAlt: "TruckX image",
     mainImage: "",
 
