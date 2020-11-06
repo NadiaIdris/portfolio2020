@@ -1,8 +1,8 @@
-.design-projects-container {
-    padding: 0 31px 31px 31px;
+.projects-container {
+    padding: 0 31px 50px 31px;
 }
 
-.all-design-projects {
+.all-projects {
     display: flex;
     flex-direction: row;
     max-width: var(--max-app-width);
@@ -33,7 +33,7 @@
     padding: 0 0 6px 1px;
 }
 
-.design-project-description-container {
+.project-description-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -52,17 +52,17 @@
 
 
 /*.one-design-project changes on hover*/
-.img-hover-zoom {
+.design-img-hover-zoom {
     height: 354px; /* Modify this according to your need */
     overflow: hidden;
     border-radius: 4px;
 }
 
-.img-hover-zoom:hover img {
+.design-img-hover-zoom:hover img {
     transform: scale(1.2);
 }
 
-.one-design-project:hover .img-hover-zoom img{
+.one-design-project:hover .design-img-hover-zoom img{
     transform: scale(1.2);
 }
 /*------*/

@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from "./Banner";
 import DesignProjects from "./DesignProjects";
+import CodingProjects from "./CodingProjects";
 import {dummyText} from "../utils";
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
                 ]}
             />
             <DesignProjects />
-            {/*<CodingProjects />*/}
+            <CodingProjects />
             {/*<Recommendations />*/}
             {/*<Footer />*/}
             {dummyText}
