@@ -26,6 +26,7 @@
     --default-font-size: 1em;
     --max-app-width: 1434px;
     --letter-spacing: 0.4px;
+    --default-page-padding: 31px;
     /*Colors*/
     --color-white: #FFFFFF;
     --color-gray-accent: #DFDFDF;
