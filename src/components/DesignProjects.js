@@ -4,7 +4,7 @@ import {arrayOfDesignProjects} from '../data/projectsData';
 
 class DesignProjects extends React.Component {
     componentDidMount() {
-        const projectsContainer = document.querySelector(".all-projects");
+        const projectsContainer = document.querySelector("#all-projects");
 
         const projectsContainerSizeScrollWidth = projectsContainer.scrollWidth;
         console.log("projectsContainerSizeScrollWidth " + projectsContainerSizeScrollWidth);
@@ -15,33 +15,56 @@ class DesignProjects extends React.Component {
         const projectsContainerGetBoundingClientRect = projectsContainer.getBoundingClientRect().right;
         console.log("projectsContainerGetBoundingClientRect " + projectsContainerGetBoundingClientRect);
 
-        // TODO: get how much has been scrolled (scrollX?)
+        const hideNextButton = () => {
+            const lastDesignProject = document.querySelector("#all-projects").lastElementChild;
+            lastDesignProject.style.marginRight = "0";
+            let rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
+            const rightOfProjectsContainer = projectsContainer.getBoundingClientRect().right;
+
+            if (rightOfLastDesignProject === rightOfProjectsContainer) {
+                const nextButton = document.querySelector(".next-button");
+                nextButton.style.opacity = "0";
+            }
+        };
+
+        const hidePreviousButton = () => {
+            const firstDesignProject = document.querySelector("#all-projects").firstElementChild;
+            let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect().left;
+            const leftOfProjectsContainer = projectsContainer.getBoundingClientRect().left;
+
+            if (leftOfFirstDesignProject === leftOfProjectsContainer) {
+                const previousButton = document.querySelector(".previous-button");
+                previousButton.style.opacity = "0";
+            }
+        };
+
+        const showPreviousButton = () => {
+
+        };
 
         // scrollBy: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
         const moveSliderToRight = () => {
-            const projectsContainer = document.querySelector(".all-projects");
+            const projectsContainer = document.querySelector("#all-projects");
             projectsContainer.scrollBy({
                 top: 0,
                 left: +378,
                 behavior: 'smooth'
             });
-
-            if (projectsContainerSizeScrollWidth) {
-                const nextButton = document.querySelector(".next-button");
-                nextButton.style.opacity = "0";
-            }
-            console.log("projectsContainerGetBoundingClientRect " + projectsContainerGetBoundingClientRect);
-
+            setTimeout(hideNextButton, 400);
         };
 
         const moveSliderToLeft = () => {
-            const projectsContainer = document.querySelector(".all-projects");
+            const projectsContainer = document.querySelector("#all-projects");
             projectsContainer.scrollBy({
                 top: 0,
                 left: -378,
                 behavior: 'smooth'
             });
+            setTimeout(hidePreviousButton, 400);
         };
+
+        // Hide previous button on page load.
+        hidePreviousButton();
 
         const nextButton = document.querySelector(".next-button");
         nextButton.addEventListener("click", moveSliderToRight);
@@ -55,7 +78,7 @@ class DesignProjects extends React.Component {
                 <h2>Designs</h2>
                 <button className="previous-button">Left</button>
                 <button className="next-button">Right</button>
-                <div className="all-projects">
+                <div id="all-projects">
                     {arrayOfDesignProjects.map((project, index) => {
                         return (
                             <div className="one-design-project" key={index}>

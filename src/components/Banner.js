@@ -35,7 +35,7 @@ class Banner extends React.Component {
         return (
             <div className="wrap banner">
                 <h3>
-                    👋🏻 Hi, I am Maret Idris
+                    Hi, I am Maret Idris
                 </h3>
                 <div className="type-wrap">
                     I&nbsp;

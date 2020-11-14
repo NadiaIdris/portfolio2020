@@ -3,12 +3,12 @@
     position: relative;
 }
 
-.all-projects {
+#all-projects {
     display: flex;
     flex-direction: row;
     max-width: var(--max-app-width);
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .one-design-project {
@@ -54,7 +54,7 @@
 
 /*.one-design-project changes on hover*/
 .design-img-hover-zoom {
-    height: 354px; /* Modify this according to your need */
+    height: 354px;
     overflow: hidden;
     border-radius: 4px;
 }

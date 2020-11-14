@@ -47,12 +47,15 @@ nav > * {
     cursor: pointer;
     color: var(--color-gray-font);
     margin: 0 1px;
+    border-bottom: 0 solid white;
 }
 
 nav > *:hover {
     border-bottom: 3px solid #B0B0B0;
     padding-top: 3px;
     color: var(--color-gray-font);
+    opacity: 1;
+    transition: border-bottom-color .2s;
 }
 
 #designs-container:hover {
