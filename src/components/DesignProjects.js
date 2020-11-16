@@ -20,8 +20,8 @@ class DesignProjects extends React.Component {
             if (rightOfLastDesignProject === rightOfProjectsContainer) {
                 const nextButton = document.querySelector(".next-button");
                 nextButton.style.opacity = "0";
-                nextButton.style.right = "0";
-                nextButton.style.transition = nextButtonTransition;
+                // nextButton.style.right = "0";
+                // nextButton.style.transition = nextButtonTransition;
             }
         };
 
@@ -46,8 +46,8 @@ class DesignProjects extends React.Component {
             if (leftOfFirstDesignProject === leftOfProjectsContainer) {
                 const previousButton = document.querySelector(".previous-button");
                 previousButton.style.opacity = "0";
-                previousButton.style.left = "0";
-                previousButton.style.transition = previousButtonTransition;
+                // previousButton.style.left = "0";
+                // previousButton.style.transition = previousButtonTransition;
             }
         };
 
