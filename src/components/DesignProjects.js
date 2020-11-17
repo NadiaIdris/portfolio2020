@@ -24,9 +24,7 @@ class DesignProjects extends React.Component {
             lastDesignProject.style.marginRight = "0";
             const rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
             const rightOfProjectsContainer = projectsContainer.getBoundingClientRect().right;
-            if (rightOfLastDesignProject === rightOfProjectsContainer) {
-                nextButton.style.opacity = "0";
-            }
+            if (rightOfLastDesignProject === rightOfProjectsContainer) nextButton.style.opacity = "0";
         };
 
         const showNextButton = () => {
@@ -41,7 +39,9 @@ class DesignProjects extends React.Component {
 
         const hidePreviousButton = () => {
             let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect().left;
+            console.log(leftOfFirstDesignProject);
             const leftOfProjectsContainer = projectsContainer.getBoundingClientRect().left;
+            console.log(leftOfProjectsContainer);
             if (leftOfFirstDesignProject === leftOfProjectsContainer) previousButton.style.opacity = "0";
         };
 

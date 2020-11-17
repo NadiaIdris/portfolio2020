@@ -72,54 +72,62 @@
 }
 /*------*/
 
-.previous-button {
-    position: absolute;
-    z-index: 1;
-    top: 205px;
-    left: 35px;
-    height: var(--next-previous-button-size);
-    width: var(--next-previous-button-size);
-    border-radius: 100px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 4px;
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    opacity: 0;
-}
-
-.next-button {
-    position: absolute;
-    z-index: 1;
-    top: 205px;
-    right: 10px;
-    height: var(--next-previous-button-size);
-    width: var(--next-previous-button-size);
-    border-radius: 100px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 9px;
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    opacity: 0;
-}
-
 button:focus {
     outline: 0;
 }
 
-/*@media only screen and (max-width: 500px) {*/
-/*    #all-projects {*/
-/*        overflow-x: scroll;*/
-/*    }*/
-/*}*/
+@media only screen and (max-width: 500px) {
+    #all-projects {
+        overflow-x: scroll;
+    }
 
-/*@media only screen and (min-width: 501px) {*/
-/*    #all-projects {*/
-/*        overflow-x: hidden;*/
-/*    }*/
-/*}*/
+    .previous-button {
+        display: none;
+    }
+
+    .next-button {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    #all-projects {
+        overflow-x: hidden;
+    }
+
+    .previous-button {
+        position: absolute;
+        z-index: 1;
+        top: 205px;
+        left: 35px;
+        height: var(--next-previous-button-size);
+        width: var(--next-previous-button-size);
+        border-radius: 100px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 4px;
+        -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+        opacity: 0;
+    }
+
+    .next-button {
+        position: absolute;
+        z-index: 1;
+        top: 205px;
+        right: 10px;
+        height: var(--next-previous-button-size);
+        width: var(--next-previous-button-size);
+        border-radius: 100px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 9px;
+        -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+        opacity: 0;
+    }
+}
