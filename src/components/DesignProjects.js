@@ -6,150 +6,101 @@ import previousArrow from './../vector-images/arrow-left.svg';
 
 class DesignProjects extends React.Component {
     componentDidMount() {
-        const nextButtonTransition = "right .5s, opacity .5s";
-        const previousButtonTransition = "left .5s, opacity .5s";
+        const nextButtonTransition = "right .2s ease-out, opacity .2s ease-out";
+        const previousButtonTransition = "left .2s ease-out, opacity .2s ease-out";
+        const MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS = +378;
+        const MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS = -378;
+        const HIDE_AND_SHOW_BUTTONS_TIMEOUT = 400;
+        const DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON = "50px";
 
+        const sectionContainer = document.querySelector("#design-projects-container");
         const projectsContainer = document.querySelector("#all-projects");
+        const lastDesignProject = document.querySelector("#all-projects").lastElementChild;
+        const firstDesignProject = document.querySelector("#all-projects").firstElementChild;
+        const nextButton = sectionContainer.querySelector(".next-button");
+        const previousButton = sectionContainer.querySelector(".previous-button");
 
         const hideNextButton = () => {
-            const lastDesignProject = document.querySelector("#all-projects").lastElementChild;
             lastDesignProject.style.marginRight = "0";
-            let rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
+            const rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
             const rightOfProjectsContainer = projectsContainer.getBoundingClientRect().right;
-
             if (rightOfLastDesignProject === rightOfProjectsContainer) {
-                const nextButton = document.querySelector(".next-button");
                 nextButton.style.opacity = "0";
-                // nextButton.style.right = "0";
-                // nextButton.style.transition = nextButtonTransition;
             }
         };
 
         const showNextButton = () => {
-            const lastDesignProject = document.querySelector("#all-projects").lastElementChild;
-            let rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
+            const rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
             const rightOfProjectsContainer = projectsContainer.getBoundingClientRect().right;
-
             if (rightOfLastDesignProject > rightOfProjectsContainer) {
-                const nextButton = document.querySelector(".next-button");
                 nextButton.style.opacity = "1";
-                nextButton.style.right = "100px";
+                nextButton.style.right = DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON;
                 nextButton.style.transition = nextButtonTransition;
             }
         };
 
         const hidePreviousButton = () => {
-            const firstDesignProject = document.querySelector("#all-projects").firstElementChild;
             let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect().left;
             const leftOfProjectsContainer = projectsContainer.getBoundingClientRect().left;
-
-            if (leftOfFirstDesignProject === leftOfProjectsContainer) {
-                const previousButton = document.querySelector(".previous-button");
-                previousButton.style.opacity = "0";
-                // previousButton.style.left = "0";
-                // previousButton.style.transition = previousButtonTransition;
-            }
+            if (leftOfFirstDesignProject === leftOfProjectsContainer) previousButton.style.opacity = "0";
         };
 
         const showPreviousButton = () => {
-            const firstDesignProject = document.querySelector("#all-projects").firstElementChild;
             let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect().left;
             const leftOfProjectsContainer = projectsContainer.getBoundingClientRect().left;
 
             if (leftOfFirstDesignProject < leftOfProjectsContainer) {
-                const previousButton = document.querySelector(".previous-button");
                 previousButton.style.opacity = "1";
-                previousButton.style.left = "100px";
+                previousButton.style.left = DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON;
                 previousButton.style.transition = previousButtonTransition;
             }
         };
 
         // scrollBy: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
         const moveSliderToRight = () => {
-            const projectsContainer = document.querySelector("#all-projects");
             projectsContainer.scrollBy({
                 top: 0,
-                left: +378,
+                left: MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS,
                 behavior: 'smooth'
             });
-            setTimeout(hideNextButton, 400);
-            setTimeout(showPreviousButton, 400);
+            setTimeout(hideNextButton, HIDE_AND_SHOW_BUTTONS_TIMEOUT);
+            setTimeout(showPreviousButton, HIDE_AND_SHOW_BUTTONS_TIMEOUT);
         };
 
         const moveSliderToLeft = () => {
-            const projectsContainer = document.querySelector("#all-projects");
             projectsContainer.scrollBy({
                 top: 0,
-                left: -378,
+                left: MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS,
                 behavior: 'smooth'
             });
-            setTimeout(hidePreviousButton, 400);
-            setTimeout(showNextButton, 400);
+            setTimeout(hidePreviousButton, HIDE_AND_SHOW_BUTTONS_TIMEOUT);
+            setTimeout(showNextButton, HIDE_AND_SHOW_BUTTONS_TIMEOUT);
         };
 
-        // Hide previous button on page load.
-        hidePreviousButton();
-        // showPreviousButton();
-        const nextButton = document.querySelector(".next-button");
-        nextButton.addEventListener("click", moveSliderToRight);
-        const previousButton = document.querySelector(".previous-button");
-        previousButton.addEventListener("click", moveSliderToLeft);
-
-        // Animate button appearance on hover.
         const animateInNextButton = () => {
             // if at the end of scrolling, do early return.
-            const lastDesignProject = document.querySelector("#all-projects").lastElementChild;
             let rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
             const rightOfProjectsContainer = projectsContainer.getBoundingClientRect().right;
             if (rightOfLastDesignProject === rightOfProjectsContainer) return;
 
-            const nextButton = document.querySelector(".next-button");
             nextButton.style.opacity = "1";
-            nextButton.style.right = "100px";
+            nextButton.style.right = DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON;
             nextButton.style.transition = nextButtonTransition;
         }
 
-        const animateInPreviousButton = () => {
-            // if at the start of scrolling, do an early return.
-            const firstDesignProject = document.querySelector("#all-projects").firstElementChild;
-            let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect().left;
-            const leftOfProjectsContainer = projectsContainer.getBoundingClientRect().left;
-            if (leftOfFirstDesignProject === leftOfProjectsContainer) return;
-
-            const previousButton = document.querySelector(".previous-button");
-            previousButton.style.opacity = "1";
-            previousButton.style.left = "100px";
-            previousButton.style.transition = previousButtonTransition;
-        };
-
-        const animateOutNextAndPreviousButtons = () => {
-            const nextButton = document.querySelector(".next-button");
-            nextButton.style.opacity = "0";
-            nextButton.style.right = "0";
-            nextButton.style.transition = nextButtonTransition;
-
-            const previousButton = document.querySelector(".previous-button");
-            previousButton.style.opacity = "0";
-            previousButton.style.left = "0";
-            previousButton.style.transition = previousButtonTransition;
-        };
-
-        projectsContainer.addEventListener("mouseenter", animateInNextButton);
-        projectsContainer.addEventListener("mouseenter", animateInPreviousButton);
-        projectsContainer.addEventListener("mouseleave", animateOutNextAndPreviousButtons);
-
-        nextButton.addEventListener("mouseenter", animateInNextButton);
-        nextButton.addEventListener("mouseenter", animateInPreviousButton);
-
-        previousButton.addEventListener("mouseenter", animateInNextButton);
-        previousButton.addEventListener("mouseenter", animateInPreviousButton);
+        // Hide previous button on page load.
+        hidePreviousButton();
+        animateInNextButton();
+        nextButton.addEventListener("click", moveSliderToRight);
+        previousButton.addEventListener("click", moveSliderToLeft);
     }
 
     render() {
         return (
-            <section className="projects-container">
-                <h2>Designs</h2>
-                <button className="previous-button"><img src={previousArrow}/></button>
+            <section id="design-projects-container">
+                <h2>Design projects</h2>
+                <button className="previous-button"><img src={previousArrow}/>
+                </button>
                 <button className="next-button"><img src={nextArrow}/></button>
                 <div id="all-projects">
                     {arrayOfDesignProjects.map((project, index) => {
@@ -177,10 +128,9 @@ class DesignProjects extends React.Component {
                         );
                     })}
                 </div>
-
             </section>
         );
     }
-};
+}
 
 export default DesignProjects;

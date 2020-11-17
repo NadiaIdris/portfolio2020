@@ -2,7 +2,7 @@
     --next-previous-button-size: 46px;
 }
 
-.projects-container {
+#design-projects-container {
     padding: 0 var(--default-page-padding) 50px var(--default-page-padding);
     position: relative;
 }
@@ -111,3 +111,15 @@
 button:focus {
     outline: 0;
 }
+
+/*@media only screen and (max-width: 500px) {*/
+/*    #all-projects {*/
+/*        overflow-x: scroll;*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (min-width: 501px) {*/
+/*    #all-projects {*/
+/*        overflow-x: hidden;*/
+/*    }*/
+/*}*/
