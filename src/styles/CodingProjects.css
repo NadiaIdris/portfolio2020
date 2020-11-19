@@ -1,2 +1,131 @@
 /* If styling seems to be missing, check out
    DesignProjects.css file. */
+#coding-projects-container {
+    padding: 0 var(--default-page-padding) 50px var(--default-page-padding);
+    position: relative;
+}
+
+#all-coding-projects {
+    display: flex;
+    flex-direction: row;
+    max-width: var(--max-app-width);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.one-coding-project {
+    /* Change the width */
+    width: 441px;
+    height: auto;
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+/* Duplicate code from DesignProjects.css*/
+/*.img-hover-zoom {*/
+/*    height: 354px;*/
+/*    overflow: hidden;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*.img-hover-zoom:hover img {*/
+/*    transform: scale(1.2);*/
+/*}*/
+
+.one-coding-project:hover .img-hover-zoom img{
+    transform: scale(1.2);
+}
+/*------*/
+
+.coding-project-img {
+    width: 441px;
+    height: 354px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform .5s;
+    object-fit: cover;
+}
+
+/*.project-description-container {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*.light-gray-text {*/
+/*    color: var(--color-gray-font);*/
+/*    line-height: 1.4;*/
+/*    padding: 0 0 6px 0;*/
+/*}*/
+
+/*.icons {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+
+/*!*Select any img element that is a child of any*/
+/*  element with a class name of “icons *!*/
+/*.icons img {*/
+/*    padding-left: 7px;*/
+/*}*/
+/*button:focus {*/
+/*    outline: 0;*/
+/*}*/
+
+@media only screen and (max-width: 500px) {
+    #all-coding-projects {
+        overflow-x: scroll;
+    }
+
+    /*.previous-button {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*.next-button {*/
+    /*    display: none;*/
+    /*}*/
+}
+
+@media only screen and (min-width: 501px) {
+    #all-coding-projects {
+        overflow-x: hidden;
+    }
+
+    /*.previous-button {*/
+    /*    position: absolute;*/
+    /*    z-index: 1;*/
+    /*    top: 205px;*/
+    /*    left: 35px;*/
+    /*    height: var(--next-previous-button-size);*/
+    /*    width: var(--next-previous-button-size);*/
+    /*    border-radius: 100px;*/
+    /*    border: none;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    padding-left: 4px;*/
+    /*    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);*/
+    /*    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);*/
+    /*    opacity: 0;*/
+    /*}*/
+
+    /*.next-button {*/
+    /*    position: absolute;*/
+    /*    z-index: 1;*/
+    /*    top: 205px;*/
+    /*    right: 10px;*/
+    /*    height: var(--next-previous-button-size);*/
+    /*    width: var(--next-previous-button-size);*/
+    /*    border-radius: 100px;*/
+    /*    border: none;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    padding-left: 9px;*/
+    /*    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);*/
+    /*    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);*/
+    /*    opacity: 0;*/
+    /*}*/
+}

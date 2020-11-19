@@ -1,6 +1,5 @@
 :root {
     --app-bar-height: 64px;
-    --max-app-width: 1434px;
 }
 
 .logo {
@@ -162,10 +161,12 @@ nav > *:hover {
 
 .app-logos-container > img {
    padding-left: 5px;
+    width: 34px;
+    height: 34px;
 }
 
 .code-dropdown-width {
-    width: 240px;
+    width: 290px;
 }
 
 
@@ -184,7 +185,8 @@ nav > *:hover {
 }
 
 .dropdown-selected p {
-    font-size: 1.1em !important;
+    /*font-size: 1.1em !important;*/
     color: var(--color-gray-darkest) !important;
     margin-left: -3px;
 }
+

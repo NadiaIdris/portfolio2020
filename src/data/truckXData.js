@@ -1,6 +1,6 @@
 import androidLight from './../vector-images/android-logo-lght-gray.svg';
 import iOSLight from './../vector-images/ios-logo-lght-gray.svg';
-import homepageTruckX from './../vector-images/truckX 846x846.svg'
+import homepageTruckX from './../vector-images/truckx-846x846.svg'
 
 const truckXData = {
     title: "TruckX",

@@ -8,10 +8,10 @@ class DesignProjects extends React.Component {
     componentDidMount() {
         const nextButtonTransition = "right .2s ease-out, opacity .2s ease-out";
         const previousButtonTransition = "left .2s ease-out, opacity .2s ease-out";
-        const MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS = +378;
-        const MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS = -378;
+        const MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS = +379;
+        const MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS = -379;
         const HIDE_AND_SHOW_BUTTONS_TIMEOUT = 400;
-        const DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON = "50px";
+        // const DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON = "50px";
 
         const sectionContainer = document.querySelector("#design-projects-container");
         const projectsContainer = document.querySelector("#all-projects");
@@ -30,18 +30,12 @@ class DesignProjects extends React.Component {
         const showNextButton = () => {
             const rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
             const rightOfProjectsContainer = projectsContainer.getBoundingClientRect().right;
-            if (rightOfLastDesignProject > rightOfProjectsContainer) {
-                nextButton.style.opacity = "1";
-                nextButton.style.right = DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON;
-                nextButton.style.transition = nextButtonTransition;
-            }
+            if (rightOfLastDesignProject > rightOfProjectsContainer) nextButton.style.opacity = "1";
         };
 
         const hidePreviousButton = () => {
             let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect().left;
-            console.log(leftOfFirstDesignProject);
             const leftOfProjectsContainer = projectsContainer.getBoundingClientRect().left;
-            console.log(leftOfProjectsContainer);
             if (leftOfFirstDesignProject === leftOfProjectsContainer) previousButton.style.opacity = "0";
         };
 
@@ -49,11 +43,7 @@ class DesignProjects extends React.Component {
             let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect().left;
             const leftOfProjectsContainer = projectsContainer.getBoundingClientRect().left;
 
-            if (leftOfFirstDesignProject < leftOfProjectsContainer) {
-                previousButton.style.opacity = "1";
-                previousButton.style.left = DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON;
-                previousButton.style.transition = previousButtonTransition;
-            }
+            if (leftOfFirstDesignProject < leftOfProjectsContainer) previousButton.style.opacity = "1";
         };
 
         // scrollBy: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
@@ -77,20 +67,9 @@ class DesignProjects extends React.Component {
             setTimeout(showNextButton, HIDE_AND_SHOW_BUTTONS_TIMEOUT);
         };
 
-        const animateInNextButton = () => {
-            // if at the end of scrolling, do early return.
-            let rightOfLastDesignProject = lastDesignProject.getBoundingClientRect().right;
-            const rightOfProjectsContainer = projectsContainer.getBoundingClientRect().right;
-            if (rightOfLastDesignProject === rightOfProjectsContainer) return;
-
-            nextButton.style.opacity = "1";
-            nextButton.style.right = DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON;
-            nextButton.style.transition = nextButtonTransition;
-        }
-
         // Hide previous button on page load.
         hidePreviousButton();
-        animateInNextButton();
+        showNextButton();
         nextButton.addEventListener("click", moveSliderToRight);
         previousButton.addEventListener("click", moveSliderToLeft);
     }
@@ -106,7 +85,7 @@ class DesignProjects extends React.Component {
                     {arrayOfDesignProjects.map((project, index) => {
                         return (
                             <div className="one-design-project" key={index}>
-                                <div className="design-img-hover-zoom">
+                                <div className="img-hover-zoom">
                                     <img className="design-project-img"
                                          src={project.homepageImage}
                                          alt={project.homepageImgAlt}/>

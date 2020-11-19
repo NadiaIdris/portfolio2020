@@ -1,5 +1,5 @@
 import webLight from './../vector-images/web-logo-lght-gray.svg';
-import homepageAbbeyRoadStudios from './../vector-images/abbeyRoadStudios 846x846.svg'
+import homepageAbbeyRoadStudios from './../vector-images/abbey-road-studios-846x846.svg';
 
 
 const abbeyRoadStudiosData = {

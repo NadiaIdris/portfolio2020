@@ -1,5 +1,5 @@
 import webLight from './../vector-images/web-logo-lght-gray.svg';
-import homepageWWB from './../vector-images/wwb 846x846.svg'
+import homepageWWB from './../vector-images/wwb-846x846.svg'
 
 
 const wholeWorldBandData = {

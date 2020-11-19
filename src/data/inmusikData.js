@@ -1,6 +1,6 @@
 import webLight from './../vector-images/web-logo-lght-gray.svg';
 import iosLight from './../vector-images/ios-logo-lght-gray.svg';
-import homepageInmusik from './../vector-images/inmusik 846x846.svg'
+import homepageInmusik from './../vector-images/inmusik-846x846.svg'
 
 
 const inmusikData = {

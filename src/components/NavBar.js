@@ -7,6 +7,16 @@ import androidDark from './../vector-images/android-logo.svg';
 import androidLight from './../vector-images/android-logo-lght-gray.svg';
 import webDark from './../vector-images/web-logo.svg'
 import webLight from './../vector-images/web-logo-lght-gray.svg';
+
+import reactDark from './../vector-images/react-logo.svg';
+import reactLight from './../vector-images/react-logo-lght-gray.svg';
+import jsDark from "./../vector-images/js-logo.svg";
+import jsLight from "./../vector-images/js-logo-lght-gray.svg";
+import htmlDark from "./../vector-images/html-logo.svg";
+import htmlLight from "./../vector-images/html-logo-lght-gray.svg";
+import cssDark from "./../vector-images/css-logo.svg";
+import cssLight from "./../vector-images/css-logo-lght-gray.svg";
+
 import './../styles/NavBar.css';
 import {PageNames, PageNamesWithSpaces} from "../pageConstants";
 
@@ -41,9 +51,13 @@ const createHomeOrAboutComponent = (props, pageName) => {
 };
 
 const getIconsForDropdown = (name, isLightIconSet) => {
-    const webAlt = "Web logo";
-    const iOSAlt = "iOS logo";
+    const webAlt = "Web icon";
+    const iOSAlt = "iOS icon";
     const androidAlt = "Android logo";
+    const reactAlt = "React logo";
+    const jsAlt = "JavaScript icon";
+    const htmlAlt = "HTML icon";
+    const cssAlt = "CSS icon";
 
     const getIosIcon = () => {
         if (isLightIconSet) return iOsLight;
@@ -57,6 +71,26 @@ const getIconsForDropdown = (name, isLightIconSet) => {
     const getWebIcon = () => {
         if (isLightIconSet) return webLight;
         else return webDark;
+    }
+
+    const getReactIcon = () => {
+        if (isLightIconSet) return reactLight;
+        else return reactDark;
+    }
+
+    const getJsIcon = () => {
+        if (isLightIconSet) return jsLight;
+        else return jsDark;
+    }
+
+    const getHtmlIcon = () => {
+        if (isLightIconSet) return htmlLight;
+        else return htmlDark;
+    }
+
+    const getCssIcon = () => {
+        if (isLightIconSet) return cssLight;
+        else return cssDark;
     }
 
     switch (name) {
@@ -81,11 +115,30 @@ const getIconsForDropdown = (name, isLightIconSet) => {
         case PageNames.WHOLEWORLDBAND:
             return <img src={getWebIcon()} alt={webAlt}/>;
         case PageNames.WEATHER_APP:
-            return <img src={getWebIcon()} alt={webAlt}/>;
+            return (
+                <React.Fragment>
+                    <img src={getJsIcon()} alt={jsAlt}/>
+                    <img src={getHtmlIcon()} alt={htmlAlt}/>
+                    <img src={getCssIcon()} alt={cssAlt}/>
+                </React.Fragment>
+            );
         case PageNames.PLANNER_APP:
-            return <img src={getWebIcon()} alt={webAlt}/>;
+            return (
+                <React.Fragment>
+                    <img src={getJsIcon()} alt={jsAlt}/>
+                    <img src={getHtmlIcon()} alt={htmlAlt}/>
+                    <img src={getCssIcon()} alt={cssAlt}/>
+                </React.Fragment>
+            );
         case PageNames.PORTFOLIO_APP:
-            return <img src={getWebIcon()} alt={webAlt}/>;
+            return (
+                <React.Fragment>
+                    <img src={getReactIcon()} alt={reactAlt}/>
+                    <img src={getHtmlIcon()} alt={htmlAlt}/>
+                    <img src={getCssIcon()} alt={cssAlt}/>
+                </React.Fragment>
+            );
+
     }
 };
 
