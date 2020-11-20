@@ -31,7 +31,7 @@ const PageNamesWithSpaces = {
     UAMP: "Universal Android Music Player",
     ABBEY_ROAD_STUDIOS: "Abbey Road Studios",
     INMUSIK: "Inmusik",
-    WHOLEWORLDBAND: "Whole World Band",
+    WHOLEWORLDBAND: "WholeWorldBand",
     WEATHER_APP: "Weather App",
     PLANNER_APP: "Planner App",
     PORTFOLIO_APP: "Portfolio App",

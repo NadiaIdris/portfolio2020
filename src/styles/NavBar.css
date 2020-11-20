@@ -124,7 +124,8 @@ nav > *:hover {
     display: flex;
     flex-direction: column;
     z-index: 0;
-    width: 386px;
+    /*width: 386px;*/
+    width: 310px;
     margin-top: -10px;
     padding: 14px 0;
     background-color: var(--color-white);
