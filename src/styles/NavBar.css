@@ -29,7 +29,7 @@
     top: 0;
     width: 100%;
     max-width: var(--max-app-width);
-    padding: 0 31px
+    padding: 0 var(--default-page-padding);
 }
 
 nav {
@@ -189,5 +189,11 @@ nav > *:hover {
     /*font-size: 1.1em !important;*/
     color: var(--color-gray-darkest) !important;
     margin-left: -3px;
+}
+
+@media only screen and (max-width: 600px) {
+    #app-bar {
+        padding: 0 var(--page-padding-small);
+    }
 }
 

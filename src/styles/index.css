@@ -28,6 +28,7 @@
     --letter-spacing: 0.4px;
     --default-page-padding: 31px;
     --page-padding-small: 16px;
+    --distance-between-home-page-components: 35px;
     /*Colors*/
     --color-white: #FFFFFF;
     --color-gray-accent: #DFDFDF;
@@ -188,7 +189,7 @@ html {
 }
 
 h1 {
-    /*font-size: 3em;*/
+    font-size: 3em;
     letter-spacing: var(--letter-spacing);
 }
 
@@ -220,11 +221,9 @@ p {
 }
 
 /*Scrollbar*/
-
-/*!* width *!*/
 /*::-webkit-scrollbar {*/
-/*    width: 15px;*/
-/*    height: 15px;*/
+/*    width: 13px;*/
+/*    height: 13px;*/
 /*}*/
 
 /*::-webkit-scrollbar-track {*/

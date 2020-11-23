@@ -33,7 +33,7 @@
 }
 
 .banner {
-    padding: 64px 31px 0 31px;
+    padding: var(--app-bar-height) var(--default-page-padding) 0 var(--default-page-padding);
     height: 474px;
     display: flex;
     flex-direction: column;
@@ -46,6 +46,8 @@
     font-size: 1.625em;
 }
 
-h1 {
-    font-size: 3em;
+@media only screen and (max-width: 600px) {
+    .banner {
+        padding: var(--app-bar-height) var(--page-padding-small) 0 var(--page-padding-small);
+    }
 }

@@ -3,7 +3,8 @@
 }
 
 #design-projects-container {
-    padding: 0 var(--default-page-padding) 50px var(--default-page-padding);
+    padding: 0 var(--default-page-padding);
+    margin-bottom: var(--distance-between-home-page-components);
     position: relative;
 }
 
@@ -20,8 +21,15 @@
     height: auto;
     position: relative;
     margin-right: 25px;
-    margin-bottom: 25px;
+    /* margin-bottom is important because scrollbar
+       will appear after it in viewports smaller than
+       500px */
+    margin-bottom: 30px;
     cursor: pointer;
+}
+
+.one-design-project:nth-of-type(5) {
+    margin-right: 0;
 }
 
 /*.one-design-project changes on hover*/
@@ -75,17 +83,55 @@ button:focus {
     outline: 0;
 }
 
-@media only screen and (max-width: 500px) {
-    #all-projects {
-        overflow-x: scroll;
+/* one-design-project 16px margin left and
+   right ends at 1280px. */
+@media only screen and (max-width: 1280px) {
+    #design-projects-container {
+        padding: 0;
     }
 
-    .previous-button {
-        display: none;
+    #design-projects-container h2 {
+        margin-left: var(--default-page-padding);
     }
 
-    .next-button {
-        display: none;
+    .one-design-project:nth-of-type(1) {
+        margin-left: var(--default-page-padding);
+    }
+
+    .one-design-project:nth-of-type(5) {
+        margin-right: var(--default-page-padding);
+    }
+
+    .empty-div {
+        border-left: 1px solid white;
+        width: var(--default-page-padding);
+        height: 439px;
+    }
+}
+
+/* one-design-project 16px margin left and
+   right ends at 600px */
+@media only screen and (max-width: 600px) {
+    #design-projects-container {
+        padding: 0;
+    }
+
+    #design-projects-container h2 {
+        margin-left: var(--page-padding-small);
+    }
+
+    .one-design-project:nth-of-type(1) {
+        margin-left: var(--page-padding-small);
+    }
+
+    .one-design-project:nth-of-type(5) {
+        margin-right: var(--page-padding-small);
+    }
+
+    .empty-div {
+        border-left: 1px solid white;
+        width: var(--page-padding-small);
+        height: 439px;
     }
 }
 
@@ -128,5 +174,19 @@ button:focus {
         -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
         opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #all-projects {
+        overflow-x: scroll;
+    }
+
+    .previous-button {
+        display: none;
+    }
+
+    .next-button {
+        display: none;
     }
 }

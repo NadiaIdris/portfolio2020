@@ -3,7 +3,6 @@ import Banner from "./Banner";
 import DesignProjects from "./DesignProjects";
 import CodingProjects from "./CodingProjects";
 import Testimonials from "./Testimonials";
-import {dummyText} from "../utils";
 
 const Home = () => {
     return (
@@ -19,7 +18,6 @@ const Home = () => {
             <CodingProjects />
             <Testimonials />
             {/*<Footer />*/}
-            {dummyText}
         </React.Fragment>
     );
 };

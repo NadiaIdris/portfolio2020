@@ -1,23 +1,11 @@
 #recommendations-container {
-    padding: 0 var(--default-page-padding) 50px var(--default-page-padding);
+    padding: 0 var(--default-page-padding);
 }
 
 .all-recommendations {
     display: flex;
     flex-direction: row;
 }
-
-/*.one-recommendation {*/
-/*    width: 674px;*/
-/*    height: auto;*/
-/*    border: 1px solid var(--color-gray-accent);*/
-/*    border-radius: 4px;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-between;*/
-/*    padding: 33px 71px 33px 33px;*/
-/*}*/
-
 
 .vertical-name-and-title h5 {
     width: 220px;
