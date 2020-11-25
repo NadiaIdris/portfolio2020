@@ -24,6 +24,7 @@
     --dropdown-opacity-animation-delay: 170;
     --default-font: "Gilroy-Bold";
     --default-font-size: 1em;
+    --secondary-font: "JetBrains Mono Medium", "Roboto Mono", monospace;
     --max-app-width: 1435px;
     --letter-spacing: 0.4px;
     --default-page-padding: 31px;
@@ -205,10 +206,12 @@ h3 {
 }
 
 h4 {
-    font-size: 1.3em;
-    padding: 13px 0 4px 1px;
+    /*font-size: 1.3em;*/
+    /*padding: 13px 0 4px 1px;*/
+    /*letter-spacing: var(--letter-spacing);*/
+    font-size: 1.2em;
+    padding: 15px 0 6px 1px;
     letter-spacing: var(--letter-spacing);
-
 }
 
 h5 {
@@ -216,8 +219,9 @@ h5 {
 }
 
 p {
-    font-family: "JetBrains Mono Medium";
-    font-size: 0.85em;
+    font-family: var(--secondary-font);
+    font-size: 0.82em;
+    line-height: 1.3;
 }
 
 /*Scrollbar*/

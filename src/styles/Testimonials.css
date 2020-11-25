@@ -1,5 +1,6 @@
 #recommendations-container {
     padding: 0 var(--default-page-padding);
+    margin-bottom: calc(var(--distance-between-home-page-components) + 60px);
 }
 
 .all-recommendations {
@@ -18,6 +19,7 @@
 
 .job-title {
     width: 220px;
+    color: var(--color-gray-font);
 }
 
 .text-bold {
@@ -29,6 +31,7 @@
 
 .text-jb-medium {
     line-height: 1.3;
+    color: var(--color-gray-font);
 }
 
 .recommendation-text {
@@ -110,6 +113,12 @@
     .recommendation-text {
         padding-left: 0;
     }
+
+    .vertical-name-and-title {
+        padding-bottom: 35px;
+    }
+
+
 }
 
 @media only screen and (max-width: 736px) {
@@ -130,11 +139,23 @@
     .one-recommendation {
         width: 100%;
     }
+
+    /*.vertical-name-and-title {*/
+    /*    padding-bottom: 35px;*/
+    /*}*/
 }
 
 @media only screen and (max-width: 562px) {
     #recommendations-container {
         padding: 0 16px var(--page-padding-small) var(--page-padding-small);
     }
+
+    .one-recommendation {
+        padding: 30px 16px;
+    }
+
+    /*.vertical-name-and-title {*/
+    /*    padding-bottom: 35px;*/
+    /*}*/
 
 }

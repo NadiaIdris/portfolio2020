@@ -50,4 +50,12 @@
     .banner {
         padding: var(--app-bar-height) var(--page-padding-small) 0 var(--page-padding-small);
     }
+
+    h3 {
+        font-size: 2.7em;
+    }
+
+    .type-wrap {
+        font-size: 1.3em;
+    }
 }

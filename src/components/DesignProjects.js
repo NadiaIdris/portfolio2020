@@ -10,7 +10,6 @@ class DesignProjects extends React.Component {
     const MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS = +379;
     const MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS = -379;
     const HIDE_AND_SHOW_BUTTONS_TIMEOUT = 400;
-    // const DISTANCE_TO_MOVE_NEXT_AND_PREVIOUS_BUTTON = "50px";
 
     const sectionContainer = document.querySelector(
       "#design-projects-container"
@@ -163,6 +162,7 @@ class DesignProjects extends React.Component {
               </div>
             );
           })}
+
           {/* Empty-div class is for collapsing margins: https://www.smashingmagazine.com/2019/07/margins-in-css/*/}
           <div className="empty-div"></div>
         </div>

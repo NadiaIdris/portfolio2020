@@ -189,7 +189,7 @@ class CodingProjects extends React.Component {
                 </div>
                 <div>
                   <h4>{project.title}</h4>
-                  <div className="project-description-container">
+                  <div className="coding-project-description-container">
                     <p className="light-gray-text">{project.description}</p>
                     <div className="icons">
                       {project.icons.map((icon, index) => {
