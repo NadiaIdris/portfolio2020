@@ -14,22 +14,35 @@
 }
 
 @font-face {
-    font-family: 'JetBrains Mono Medium';
-    src: url("JetBrainsMono-Medium.ttf") format("truetype");
+    font-family: 'Jetbrains Mono Regular';
+    src: url("JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono Extra Bold';
+    src: url("JetBrainsMono-ExtraBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 :root {
-    --dropdown-opacity-animation-delay: 170;
+    /*Fonts*/
     --default-font: "Gilroy-Bold";
     --default-font-size: 1em;
-    --secondary-font: "JetBrains Mono Medium", "Roboto Mono", monospace;
+    --secondary-font: "Jetbrains Mono Regular", "Roboto Mono", monospace;
+    --secondary-font-bold: "JetBrains Mono Extra Bold", "Roboto Mono", monospace;
+
+    /*Other*/
+    --dropdown-opacity-animation-delay: 170;
     --max-app-width: 1435px;
     --letter-spacing: 0.4px;
     --default-page-padding: 31px;
-    --page-padding-small: 16px;
+    --small-page-padding: 16px;
     --distance-between-home-page-components: 35px;
+    --distance-between-project-page-components: 42px;
+    --border-radius: 4px;
     /*Colors*/
     --color-white: #FFFFFF;
     --color-gray-accent: #DFDFDF;
@@ -196,7 +209,7 @@ h1 {
 
 h2 {
     font-size: 1.5em;
-    padding: 10px 0 18px 0;
+    padding: 0 0 18px 0;
     letter-spacing: var(--letter-spacing);
 }
 
@@ -206,9 +219,6 @@ h3 {
 }
 
 h4 {
-    /*font-size: 1.3em;*/
-    /*padding: 13px 0 4px 1px;*/
-    /*letter-spacing: var(--letter-spacing);*/
     font-size: 1.2em;
     padding: 15px 0 6px 1px;
     letter-spacing: var(--letter-spacing);
@@ -221,7 +231,7 @@ h5 {
 p {
     font-family: var(--secondary-font);
     font-size: 0.82em;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 /*Scrollbar*/

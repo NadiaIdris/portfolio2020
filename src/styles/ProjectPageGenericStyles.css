@@ -1,0 +1,34 @@
+/* Styles applying to all project pages */
+.project-page-component-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: var(--distance-between-project-page-components) var(--default-page-padding) 0 var(--default-page-padding);
+}
+
+.project-page-component-container span {
+    font-family: var(--secondary-font-bold);
+}
+
+.space-between-paragraphs {
+    padding-bottom: 13px;
+}
+
+/* Bullet point design */
+.bullet-point-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dash {
+    padding-right: 10px;
+}
+/*-----------*/
+
+@media only screen and (max-width: 600px) {
+    .project-page-component-container {
+        padding: var(--distance-between-project-page-components) var(--small-page-padding) 0 var(--small-page-padding);
+    }
+}
+

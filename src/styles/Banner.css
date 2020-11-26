@@ -48,7 +48,7 @@
 
 @media only screen and (max-width: 600px) {
     .banner {
-        padding: var(--app-bar-height) var(--page-padding-small) 0 var(--page-padding-small);
+        padding: var(--app-bar-height) var(--small-page-padding) 0 var(--small-page-padding);
     }
 
     h3 {
