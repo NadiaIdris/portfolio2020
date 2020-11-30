@@ -148,7 +148,7 @@ class DesignProjects extends React.Component {
                     alt={project.homepageImgAlt}
                   />
                 </div>
-                <div>
+                <div className="title-and-description-container">
                   <h4>{project.title}</h4>
                   <div className="project-description-container">
                     <p className="light-gray-text">{project.description}</p>

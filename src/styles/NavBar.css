@@ -144,6 +144,7 @@ nav > *:hover {
 
 .dropdown > a:hover {
     background-color: var(--color-gray-hover-bckround);
+    transition: background-color .1s ease-out;
 }
 
 .dropdown > a p {

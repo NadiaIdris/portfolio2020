@@ -29,15 +29,21 @@ const truckXData = {
 
   featuresTitle: "Features",
   featuresArray: [
-    "Trips → Add a trip, add a stop, manage a trip, view freight info, etc.",
-    "Timelogs → View and set current timelog state, edit timelog form, and sign off the timelog at the end of each day of the trip.",
+    [
+      "Trips: ",
+      "Add a trip, add a stop, manage a trip, view freight info, etc.",
+    ],
+    [
+      "Timelogs: ",
+      "View and set current timelog state, edit timelog form, and sign off the timelog at the end of each day of the trip.",
+    ],
   ],
 
   userStoriesTitle: "User stories",
-  userStoriesParagraphOne:
+  userStoriesArray: [
     "Today, truck drivers use logbooks to record their service hours and data about their truck. Every time they start a new delivery they have to fill out basic information about their truck and relevant dates using this log book.",
-  userStoriesParagraphTwo:
     "The users of this app are truck drivers who would want to use an app instead of their paper log books. They have smartphones and are used to using apps. They want to make their driving experience simpler and remove the risk of damaging or losing their paper log book. They also are aware of OBD-II devices that can be used to gather telemetry data from their trucks (distance traveled, fuel consumption, etc) that can be used to provide data to this app.",
+  ],
 };
 
 export default truckXData;

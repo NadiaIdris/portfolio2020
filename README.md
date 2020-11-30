@@ -12,6 +12,7 @@
     - [3. When viewport is smaller than 601px](#3-when-viewport-is-smaller-than-601px)
     - [4. When viewport is smaller than 501px](#4-when-viewport-is-smaller-than-501px)
   - [Coding projects carousel](#coding-projects-carousel)
+- [Project page components](#project-page-components)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -110,3 +111,33 @@ no carousel (next and previous buttons).
 - Viewport is smaller than 500px: I reduced the size of the coding project from
   441px in width to 354px to make sure that each coding project component fits
   on the viewport fully on smaller viewports.
+
+# Project page components
+
+1. `<Header />` component -> Includes title of the project, description and
+   2792x1366px image.
+2. `<AboutProject />` component -> Every page has this component. Includes
+   project duration, screen designed, platform information, my role and direct
+   contribution.
+3. `<TitleParagraph />` component -> Add any title and one or more paragraphs.
+   If more than one paragraph, then component automatically adds space between
+   two paragraphs.
+4. `<TitleBulletPointsOneColumn />` component -> Add any title and bullet
+   points. Each bullet point can have a bolded text from the start.
+
+- `TitleBulletPointsOneColumn` component takes an array with two elements. First
+  element is span (bolded text), second element is the main text for the bullet
+  point. If you don't want to add the span, leave the first element of the array
+  empty.
+
+```
+   featuresArray: [
+     [
+       "Timelogs: ",
+       "View and set current timelog state, edit timelog form, and sign off the timelog at the end of each day of the trip.",
+     ],
+     [
+       "",
+       "Span is empty"],
+   ],
+```

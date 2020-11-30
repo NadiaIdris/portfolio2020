@@ -24,11 +24,54 @@
 .dash {
     padding-right: 10px;
 }
+
+/* Styling for requirements one off component*/
+.requirements-columns-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-one {
+    flex-direction: column;
+    width: 50%;
+    margin-right: 40px;
+}
+
+.col-two {
+    flex-direction: column;
+    width: 50%;
+}
+
+.nested-dash {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+
 /*-----------*/
 
 @media only screen and (max-width: 600px) {
     .project-page-component-container {
         padding: var(--distance-between-project-page-components) var(--small-page-padding) 0 var(--small-page-padding);
     }
+
+    .requirements-columns-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-one {
+        flex-direction: column;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .col-two {
+        flex-direction: column;
+        width: 100%;
+    }
 }
+
+
+/**/
 

@@ -1,6 +1,8 @@
 import React from "react";
 
-const TitleBulletPointsOneColumn = ({ title, bulletPointsArray }) => {
+const TitleBulletPointsTwoColumns = ({ title, bulletPointsArray }) => {
+  // Divide
+
   return (
     <div className="project-page-component-container">
       <h2>{title}</h2>
@@ -18,4 +20,5 @@ const TitleBulletPointsOneColumn = ({ title, bulletPointsArray }) => {
     </div>
   );
 };
-export default TitleBulletPointsOneColumn;
+
+export default TitleBulletPointsTwoColumns;
