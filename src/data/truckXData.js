@@ -2,6 +2,7 @@ import androidLight from "./../vector-images/android-logo-lght-gray.svg";
 import iOSLight from "./../vector-images/ios-logo-lght-gray.svg";
 import homepageTruckX from "./../vector-images/truckx-846x846.svg";
 import truckXMain from "./../vector-images/truckx-main-2792x1366.svg";
+import logbook from "./../vector-images/truckx-paper-logsheet-2x.png";
 
 const truckXData = {
   title: "TruckX",
@@ -16,7 +17,16 @@ const truckXData = {
 
   aboutProjectArray: [
     "2016 Dec - 2017 Feb (3 months)",
-    "Web",
+    [
+      [
+        "Android",
+        "https://play.google.com/store/apps/details?id=com.truckx.app&hl=en_US&gl=US",
+      ],
+      [
+        "iOS",
+        "https://apps.apple.com/us/app/truckx-electronic-logbook/id1216209774",
+      ],
+    ],
     "22",
     "Product Designer, while at R3BL",
     "I was the only designer in this project, individually responsible for all of the designs",
@@ -44,6 +54,10 @@ const truckXData = {
     "Today, truck drivers use logbooks to record their service hours and data about their truck. Every time they start a new delivery they have to fill out basic information about their truck and relevant dates using this log book.",
     "The users of this app are truck drivers who would want to use an app instead of their paper log books. They have smartphones and are used to using apps. They want to make their driving experience simpler and remove the risk of damaging or losing their paper log book. They also are aware of OBD-II devices that can be used to gather telemetry data from their trucks (distance traveled, fuel consumption, etc) that can be used to provide data to this app.",
   ],
+
+  logbookTitle: "Truck driver paper logbook sheet",
+  logbookImage: logbook,
+  logbookImgAlt: "Paper logbook sheet",
 };
 
 export default truckXData;

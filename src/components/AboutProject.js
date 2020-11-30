@@ -1,25 +1,62 @@
 import React from "react";
 
-const AboutProject = ({ duration, platform, screens, role, contribution }) => {
+const AboutProject = ({
+  duration,
+  platformArray,
+  screens,
+  role,
+  contribution,
+}) => {
+  const platforms = [];
+  for (let i = 0; i < platformArray.length; i++) {
+    if (platformArray.length > 1 && i !== platformArray.length - 1) {
+      platforms.push(
+        <a
+          href={platformArray[i][1]}
+          target="_blank"
+          key={i}
+          className="platform-link"
+        >
+          {platformArray[i][0]}
+        </a>
+      );
+      platforms.push(<p>,&nbsp;</p>);
+    } else {
+      platforms.push(
+        <a
+          href={platformArray[i][1]}
+          target="_blank"
+          key={i}
+          className="platform-link"
+        >
+          {platformArray[i][0]}
+        </a>
+      );
+    }
+  }
+
   return (
     <div className="project-page-component-container">
       <h2>About project</h2>
       <div className="bullet-point-container">
         <p className="dash">-</p>
         <p>
-          <span>Project duration: </span> {duration}
+          <span>Project duration:&nbsp;</span>
+          {duration}
+        </p>
+      </div>
+      <div className="bullet-point-container">
+        <p className="dash">-</p>
+        <p className="platforms">
+          <span>Platform:&nbsp;</span>
+          {platforms}
         </p>
       </div>
       <div className="bullet-point-container">
         <p className="dash">-</p>
         <p>
-          <span>Platform:</span> {platform}
-        </p>
-      </div>
-      <div className="bullet-point-container">
-        <p className="dash">-</p>
-        <p>
-          <span>Final screens designed:</span> {screens}
+          <span>Final screens designed:&nbsp;</span>
+          {screens}
         </p>
       </div>
 
@@ -28,13 +65,15 @@ const AboutProject = ({ duration, platform, screens, role, contribution }) => {
       <div className="bullet-point-container">
         <p className="dash">-</p>
         <p>
-          <span>My role:</span> {role}
+          <span>My role:&nbsp;</span>
+          {role}
         </p>
       </div>
       <div className="bullet-point-container">
         <p className="dash">-</p>
         <p>
-          <span>My direct contribution:</span> {contribution}
+          <span>My direct contribution:&nbsp;</span>
+          {contribution}
         </p>
       </div>
     </div>

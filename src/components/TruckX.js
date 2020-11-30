@@ -4,6 +4,7 @@ import Header from "./Header";
 import AboutProject from "./AboutProject";
 import TitleParagraph from "./TitleParagraph";
 import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
+import TitleParagraphImage from "./TitleParagraphImage";
 import "./../styles/Header.css";
 import "./../styles/ProjectPageGenericStyles.css";
 
@@ -18,7 +19,7 @@ const TruckX = () => {
       />
       <AboutProject
         duration={truckXData.aboutProjectArray[0]}
-        platform={truckXData.aboutProjectArray[1]}
+        platformArray={truckXData.aboutProjectArray[1]}
         screens={truckXData.aboutProjectArray[2]}
         role={truckXData.aboutProjectArray[3]}
         contribution={truckXData.aboutProjectArray[4]}
@@ -102,6 +103,10 @@ const TruckX = () => {
           </div>
         </div>
       </div>
+      <TitleParagraphImage
+        title={truckXData.logbookTitle}
+        image={truckXData.logbookImage}
+      />
     </React.Fragment>
   );
 };

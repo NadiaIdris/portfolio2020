@@ -141,3 +141,6 @@ no carousel (next and previous buttons).
        "Span is empty"],
    ],
 ```
+
+5. `<TitleParagraphImage />` component -> Add title and image. Also add 5px
+   margin at the bottom on the image.

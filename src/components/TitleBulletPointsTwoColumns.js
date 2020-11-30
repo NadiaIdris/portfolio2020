@@ -1,8 +1,6 @@
 import React from "react";
 
 const TitleBulletPointsTwoColumns = ({ title, bulletPointsArray }) => {
-  // Divide
-
   return (
     <div className="project-page-component-container">
       <h2>{title}</h2>

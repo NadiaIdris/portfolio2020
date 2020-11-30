@@ -15,6 +15,16 @@
     padding-bottom: 13px;
 }
 
+/* About project component */
+.platform-link {
+    font-family: var(--secondary-font);
+}
+
+.platforms {
+    display: flex;
+    flex-direction: row;
+}
+
 /* Bullet point design */
 .bullet-point-container {
     display: flex;
