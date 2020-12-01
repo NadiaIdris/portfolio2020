@@ -8,25 +8,32 @@ const AboutProject = ({
   contribution,
 }) => {
   const platforms = [];
+
   for (let i = 0; i < platformArray.length; i++) {
     if (platformArray.length > 1 && i !== platformArray.length - 1) {
       platforms.push(
         <a
           href={platformArray[i][1]}
           target="_blank"
-          key={i}
+          rel="noreferrer"
+          key={platformArray[i]}
           className="platform-link"
         >
           {platformArray[i][0]}
         </a>
       );
-      platforms.push(<p>,&nbsp;</p>);
+      platforms.push(
+        <span key={i} className="regular-font">
+          ,&nbsp;
+        </span>
+      );
     } else {
       platforms.push(
         <a
           href={platformArray[i][1]}
           target="_blank"
-          key={i}
+          rel="noreferrer"
+          key={platformArray[i]}
           className="platform-link"
         >
           {platformArray[i][0]}

@@ -25,6 +25,10 @@
     flex-direction: row;
 }
 
+.regular-font {
+    font-family: var(--secondary-font) !important;
+}
+
 /* Bullet point design */
 .bullet-point-container {
     display: flex;

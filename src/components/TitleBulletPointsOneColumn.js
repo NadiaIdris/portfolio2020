@@ -4,9 +4,9 @@ const TitleBulletPointsOneColumn = ({ title, bulletPointsArray }) => {
   return (
     <div className="project-page-component-container">
       <h2>{title}</h2>
-      {bulletPointsArray.map((bulletPoint) => {
+      {bulletPointsArray.map((bulletPoint, index) => {
         return (
-          <div className="bullet-point-container">
+          <div className="bullet-point-container" key={index}>
             <p className="dash">-</p>
             <p>
               <span>{bulletPoint[0]}</span>

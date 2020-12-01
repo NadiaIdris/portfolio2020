@@ -105,7 +105,9 @@ const TruckX = () => {
       </div>
       <TitleParagraphImage
         title={truckXData.logbookTitle}
+        paragraphArray={truckXData.logbookParagraphArray}
         image={truckXData.logbookImage}
+        imageAlt={truckXData.logbookImgAlt}
       />
     </React.Fragment>
   );
