@@ -39,7 +39,20 @@
     padding-right: 10px;
 }
 
-/* Styling for requirements one off component*/
+/* If image is the last element of a component,
+   add margin-bottom for visual design purposes. */
+.image-bottom-margin {
+    margin-bottom: 5px;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    cursor: url('zoom.svg'), pointer;
+}
+
+/* Styling for requirements section. It's not a
+   reusable component. */
 .requirements-columns-container {
     display: flex;
     flex-direction: row;

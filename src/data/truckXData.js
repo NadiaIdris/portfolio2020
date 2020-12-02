@@ -58,7 +58,6 @@ const truckXData = {
   logbookTitle: "Truck driver paper logbook sheet",
   logbookImage: logbook,
   logbookImgAlt: "Paper logbook sheet",
-  logbookParagraphArray: ["First paragraph", "Second paragraph"],
 };
 
 export default truckXData;
