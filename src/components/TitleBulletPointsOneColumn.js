@@ -2,7 +2,7 @@ import React from "react";
 
 const TitleBulletPointsOneColumn = ({ title, bulletPointsArray }) => {
   return (
-    <div className="project-page-component-container">
+    <div className="project-page-column-component-container">
       <h2>{title}</h2>
       {bulletPointsArray.map((bulletPoint, index) => {
         return (

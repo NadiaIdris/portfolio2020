@@ -13,6 +13,7 @@
     - [4. When viewport is smaller than 501px](#4-when-viewport-is-smaller-than-501px)
   - [Coding projects carousel](#coding-projects-carousel)
 - [Project page components](#project-page-components)
+  - [The difference between `<TitleParagraph />` and `<TitleParagraphImage />`](#the-difference-between-titleparagraph--and-titleparagraphimage-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -144,3 +145,12 @@ no carousel (next and previous buttons).
 
 5. `<TitleParagraphImage />` component -> Add title and image. Also add 5px
    margin at the bottom on the image.
+6. `<ColOneTextColTwoImg />` component -> Two column component. First column
+   includes title and one paragraph and second column is either a gif or image.
+
+## The difference between `<TitleParagraph />` and `<TitleParagraphImage />`
+
+- `<TitleParagraphImage />` adds margin-bottom after every paragraph and must
+  include an image.
+- `<TitleParagraph />` adds margin-bottom after every paragraph except the very
+  last paragraph. Also it doesn't include an image.

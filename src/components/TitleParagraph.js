@@ -19,7 +19,7 @@ const TitleParagraph = ({ title, paragraphArray }) => {
   }
 
   return (
-    <div className="project-page-component-container">
+    <div className="project-page-column-component-container">
       <h2>{title}</h2>
       {paragraphs}
     </div>

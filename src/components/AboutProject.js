@@ -43,7 +43,7 @@ const AboutProject = ({
   }
 
   return (
-    <div className="project-page-component-container">
+    <div className="project-page-column-component-container">
       <h2>About project</h2>
       <div className="bullet-point-container">
         <p className="dash">-</p>

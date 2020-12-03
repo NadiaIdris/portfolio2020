@@ -3,6 +3,10 @@ import iOSLight from "./../vector-images/ios-logo-lght-gray.svg";
 import homepageTruckX from "./../vector-images/truckx-846x846.svg";
 import truckXMain from "./../vector-images/truckx-main-2792x1366.svg";
 import logbook from "./../vector-images/truckx-paper-logsheet-2x.png";
+import iA from "./../vector-images/truckx-ia-2x.png";
+import wireframe from "./../vector-images/truckx-wireframe-2x.png";
+import interactionDesign from "./../vector-images/truckx-interaction-design.png";
+import lowFiPrototype from "./../vector-images/truckx-low-fidelity-prototype-small.gif";
 
 const truckXData = {
   title: "TruckX",
@@ -58,6 +62,38 @@ const truckXData = {
   logbookTitle: "Truck driver paper logbook sheet",
   logbookImage: logbook,
   logbookImgAlt: "Paper logbook sheet",
+  logbookImageId: "truckx-logbook-modal",
+
+  iATitle: "Information architecture",
+  iAParagraphArray: [
+    "I created this IA with the CEO to demonstrate the main structure and content of the app. This document was considered the main source of truth about what was going to be designed and built. I kept this diagram up to date through the design process with new information that needed to be added to the design.",
+  ],
+  iAImage: iA,
+  iAImageAlt: "TruckX information architecture",
+  iAImageId: "truckx-ia-modal",
+
+  wireframesTitle: "Wireframes",
+  wireframesParagraphArray: [
+    " This paper wireframe user flow was created to give the developers an idea of what needs to be built, so they could have started planning the construction of the app ahead of time.",
+  ],
+  wireframesImage: wireframe,
+  wireframeImageAlt: "TruckX wireframes",
+  wireframesId: "truckx-wireframes-modal",
+
+  interactionTitle: "Interaction design",
+  interactionParagraphArray: [
+    "I created this interaction flow with more details than wireframes to allow the engineering team to determine what it would take for them to build it. It includes notes about interactions of how components of the app behave when interacted with.",
+  ],
+  interactionImage: interactionDesign,
+  interactionImageAlt: "TruckX interaction design",
+  interactionId: "truckx-interaction-design-modal",
+
+  lowFiTitle: "Low fidelity prototype",
+  lowFiParagraph:
+    "In order to test out the user flow before designing the high fidelity app, I created the low fidelity prototype to get user feedback.",
+  lowFiImage: lowFiPrototype,
+  lowFiImageAlt: "TruckX Low Fidelity Prototype",
+  lowFiId: "truckx-low-fi-prototype",
 };
 
 export default truckXData;

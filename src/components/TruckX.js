@@ -1,12 +1,13 @@
 import React from "react";
+import "./../styles/Header.css";
+import "./../styles/ProjectPageGenericStyles.css";
 import truckXData from "./../data/truckXData";
 import Header from "./Header";
 import AboutProject from "./AboutProject";
 import TitleParagraph from "./TitleParagraph";
 import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import TitleParagraphImage from "./TitleParagraphImage";
-import "./../styles/Header.css";
-import "./../styles/ProjectPageGenericStyles.css";
+import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
 
 const TruckX = () => {
   return (
@@ -36,7 +37,7 @@ const TruckX = () => {
         title={truckXData.userStoriesTitle}
         paragraphArray={truckXData.userStoriesArray}
       />
-      <div className="project-page-component-container">
+      <div className="project-page-column-component-container">
         <h2>Requirements</h2>
         <div className="requirements-columns-container">
           <div className="col-one">
@@ -107,6 +108,35 @@ const TruckX = () => {
         title={truckXData.logbookTitle}
         image={truckXData.logbookImage}
         imageAlt={truckXData.logbookImgAlt}
+        imageId={truckXData.logbookImageId}
+      />
+      <TitleParagraphImage
+        title={truckXData.iATitle}
+        paragraphArray={truckXData.iAParagraphArray}
+        image={truckXData.iAImage}
+        imageAlt={truckXData.iAImageAlt}
+        imageId={truckXData.iAImageId}
+      />
+      <TitleParagraphImage
+        title={truckXData.wireframesTitle}
+        paragraphArray={truckXData.wireframesParagraphArray}
+        image={truckXData.wireframesImage}
+        imageAlt={truckXData.wireframeImageAlt}
+        imageId={truckXData.wireframesId}
+      />
+      <TitleParagraphImage
+        title={truckXData.interactionTitle}
+        paragraphArray={truckXData.interactionParagraphArray}
+        image={truckXData.interactionImage}
+        imageAlt={truckXData.interactionImageAlt}
+        imageId={truckXData.interactionId}
+      />
+      <ColOneTextColTwoImg
+        title={truckXData.lowFiTitle}
+        paragraph={truckXData.lowFiParagraph}
+        image={truckXData.lowFiImage}
+        imageAlt={truckXData.lowFiImageAlt}
+        imageId={truckXData.lowF}
       />
     </React.Fragment>
   );
