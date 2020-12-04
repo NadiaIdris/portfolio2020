@@ -1,5 +1,6 @@
 import React from "react";
 import closeIcon from "./../vector-images/close-icon.svg";
+import { closeModal, openModal } from "../utils";
 
 const TitleParagraphImage = ({
   title,
@@ -23,7 +24,6 @@ const TitleParagraphImage = ({
     }
   };
 
-  // Only add image if it exists.
   const imageElement = (imageId) => {
     return (
       <React.Fragment>
@@ -41,18 +41,6 @@ const TitleParagraphImage = ({
         </div>
       </React.Fragment>
     );
-  };
-
-  const openModal = (imageId) => {
-    document.querySelector(`#${imageId}`).style.display = "block";
-    document.querySelector("html").style.height = "100%";
-    document.querySelector("html").style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    document.querySelector(`#${imageId}`).style.display = "none";
-    document.querySelector("html").style.height = "auto";
-    document.querySelector("html").style.overflow = "visible";
   };
 
   return (

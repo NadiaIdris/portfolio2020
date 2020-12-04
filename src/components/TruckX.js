@@ -8,6 +8,7 @@ import TitleParagraph from "./TitleParagraph";
 import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import TitleParagraphImage from "./TitleParagraphImage";
 import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
+import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
 
 const TruckX = () => {
   return (
@@ -136,7 +137,13 @@ const TruckX = () => {
         paragraph={truckXData.lowFiParagraph}
         image={truckXData.lowFiImage}
         imageAlt={truckXData.lowFiImageAlt}
-        imageId={truckXData.lowF}
+        imageId={truckXData.lowFiId}
+      />
+      <TitleParagraphMobileGallery
+        title={truckXData.mobileGalleryTitle}
+        paragraph={truckXData.mobileGalleryParagraph}
+        mobileGalleryImagesArray={truckXData.mobileGalleryImagesArray}
+        mobileGalleryId={truckXData.mobileGalleryId}
       />
     </React.Fragment>
   );

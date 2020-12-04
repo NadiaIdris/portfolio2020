@@ -1,13 +1,27 @@
 // Access CSS variable from JS: https://stackoverflow.com/a/41725782
 const getValueOfCSSVariable = (element, variableName) => {
-    return parseInt(getComputedStyle(element).getPropertyValue(variableName));
+  return parseInt(getComputedStyle(element).getPropertyValue(variableName));
 };
 
 const dummyText = `Spicy jalapeno bacon ipsum dolor `.repeat(700);
 
 const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    console.log("Scrolled to top");
-}
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  console.log("Scrolled to top");
+};
 
-export { getValueOfCSSVariable, dummyText, scrollToTop };
+// Open full viewport modal component.
+const openModal = (imageId) => {
+  document.querySelector(`#${imageId}`).style.display = "block";
+  document.querySelector("html").style.height = "100%";
+  document.querySelector("html").style.overflow = "hidden";
+};
+
+// Close modal component.
+const closeModal = (imageId) => {
+  document.querySelector(`#${imageId}`).style.display = "none";
+  document.querySelector("html").style.height = "auto";
+  document.querySelector("html").style.overflow = "visible";
+};
+
+export { getValueOfCSSVariable, dummyText, scrollToTop, openModal, closeModal };

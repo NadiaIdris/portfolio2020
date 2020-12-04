@@ -1,12 +1,17 @@
 import androidLight from "./../vector-images/android-logo-lght-gray.svg";
 import iOSLight from "./../vector-images/ios-logo-lght-gray.svg";
 import homepageTruckX from "./../vector-images/truckx-846x846.svg";
-import truckXMain from "./../vector-images/truckx-main-2792x1366.svg";
+import truckXMain from "./../vector-images/truck-main-2792x1366.png";
 import logbook from "./../vector-images/truckx-paper-logsheet-2x.png";
 import iA from "./../vector-images/truckx-ia-2x.png";
 import wireframe from "./../vector-images/truckx-wireframe-2x.png";
 import interactionDesign from "./../vector-images/truckx-interaction-design.png";
 import lowFiPrototype from "./../vector-images/truckx-low-fidelity-prototype-small.gif";
+import timelog from "./../vector-images/truckx-timelog.png";
+import loads from "./../vector-images/truckx-loads.png";
+import oneLoad from "./../vector-images/truckx-loads-load.png";
+import oneLoadFreight from "./../vector-images/truckx-load-freight.png";
+import oneLoadSign from "./../vector-images/truckx-load-sign.png";
 
 const truckXData = {
   title: "TruckX",
@@ -94,6 +99,17 @@ const truckXData = {
   lowFiImage: lowFiPrototype,
   lowFiImageAlt: "TruckX Low Fidelity Prototype",
   lowFiId: "truckx-low-fi-prototype",
+
+  mobileGalleryTitle: "High fidelity mockups",
+  mobileGalleryParagraph:
+    "My goals for the visual design were to keep app looking simple and easy to modify and extend the design.",
+  mobileGalleryImagesArray: [
+    [timelog, "Timelog"],
+    [loads, "Loads"],
+    [oneLoad, "Load"],
+    [oneLoadFreight, "Freight info"],
+    [oneLoadSign, "Sign a load"],
+  ],
 };
 
 export default truckXData;
