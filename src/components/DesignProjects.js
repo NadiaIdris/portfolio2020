@@ -6,127 +6,148 @@ import previousArrow from "./../vector-images/arrow-left.svg";
 import { getValueOfCSSVariable } from "../utils";
 
 class DesignProjects extends React.Component {
-  componentDidMount() {
-    const MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS = +379;
-    const MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS = -379;
-    const HIDE_AND_SHOW_BUTTONS_TIMEOUT = 400;
+  constructor(props) {
+    super(props);
+    this.MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS = +379;
+    this.MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS = -379;
+    this.HIDE_AND_SHOW_BUTTONS_TIMEOUT = 400;
+    this.imageLoadedCounter = 0;
+  }
 
-    const sectionContainer = document.querySelector(
+  componentDidMount() {
+    this.initializeVariables();
+    this.nextButton.addEventListener("click", this.moveSliderToRight);
+    this.previousButton.addEventListener("click", this.moveSliderToLeft);
+  }
+
+  initializeVariables = () => {
+    this.sectionContainer = document.querySelector(
       "#design-projects-container"
     );
-    const projectsContainer = document.querySelector("#all-projects");
-    const lastDesignProject = document.querySelector("#all-projects")
-      .lastElementChild;
-    console.log(lastDesignProject);
-    const firstDesignProject = document.querySelector("#all-projects")
-      .firstElementChild;
-    const nextButton = sectionContainer.querySelector(".next-button");
-    const previousButton = sectionContainer.querySelector(".previous-button");
+    this.projectsContainer = document.querySelector("#all-projects");
+    this.lastDesignProject = document.querySelector(
+      "#all-projects"
+    ).lastElementChild;
+    console.log(this.lastDesignProject);
+    this.firstDesignProject = document.querySelector(
+      "#all-projects"
+    ).firstElementChild;
+    this.nextButton = this.sectionContainer.querySelector(".next-button");
+    this.previousButton = this.sectionContainer.querySelector(
+      ".previous-button"
+    );
+  };
 
-    const hideNextButton = () => {
-      // lastDesignProject.style.marginRight = "0";
-      const rightOfLastDesignProject = lastDesignProject.getBoundingClientRect()
-        .right;
-      const rightOfProjectsContainer = projectsContainer.getBoundingClientRect()
-        .right;
-      if (rightOfLastDesignProject === rightOfProjectsContainer)
-        nextButton.style.opacity = "0";
-    };
-
-    const showNextButton = () => {
-      const rightOfLastDesignProject = lastDesignProject.getBoundingClientRect()
-        .right;
-      const rightOfProjectsContainer = projectsContainer.getBoundingClientRect()
-        .right;
-      if (rightOfLastDesignProject > rightOfProjectsContainer)
-        nextButton.style.opacity = "1";
-    };
-
-    // If DesignProjects component is 600px or smaller, then remove 16px from
-    // left of firstDesignProject. That 16px is a margin that getBoundingClientRect()
-    // doesn't include.
-    const hidePreviousButtonIfViewportSmallerThan601Px = () => {
-      let leftOfFirstDesignProject =
-        firstDesignProject.getBoundingClientRect().left -
-        getValueOfCSSVariable(document.body, "--small-page-padding");
-      const leftOfProjectsContainer = projectsContainer.getBoundingClientRect()
-        .left;
-      if (leftOfFirstDesignProject === leftOfProjectsContainer)
-        previousButton.style.opacity = "0";
-    };
-
-    // If DesignProjects component is between 601px and 1280px, then remove 31px from
-    // left of firstDesignProject. That 31px is a margin that getBoundingClientRect()
-    // doesn't include.
-    const hidePreviousButtonIfViewport601To1280Px = () => {
-      let leftOfFirstDesignProject =
-        firstDesignProject.getBoundingClientRect().left -
-        getValueOfCSSVariable(document.body, "--default-page-padding");
-      const leftOfProjectsContainer = projectsContainer.getBoundingClientRect()
-        .left;
-      if (leftOfFirstDesignProject === leftOfProjectsContainer)
-        previousButton.style.opacity = "0";
-    };
-
-    const hidePreviousButtonIfViewportLargerThan1280Px = () => {
-      let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect()
-        .left;
-      const leftOfProjectsContainer = projectsContainer.getBoundingClientRect()
-        .left;
-      if (leftOfFirstDesignProject === leftOfProjectsContainer)
-        previousButton.style.opacity = "0";
-    };
-
-    const showPreviousButton = () => {
-      let leftOfFirstDesignProject = firstDesignProject.getBoundingClientRect()
-        .left;
-      const leftOfProjectsContainer = projectsContainer.getBoundingClientRect()
-        .left;
-
-      if (leftOfFirstDesignProject < leftOfProjectsContainer)
-        previousButton.style.opacity = "1";
-    };
-
-    // scrollBy: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
-    const moveSliderToRight = () => {
-      projectsContainer.scrollBy({
-        top: 0,
-        left: MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS,
-        behavior: "smooth",
-      });
-      setTimeout(hideNextButton, HIDE_AND_SHOW_BUTTONS_TIMEOUT);
-      setTimeout(showPreviousButton, HIDE_AND_SHOW_BUTTONS_TIMEOUT);
-    };
-
-    const moveSliderToLeft = () => {
-      projectsContainer.scrollBy({
-        top: 0,
-        left: MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS,
-        behavior: "smooth",
-      });
-      setTimeout(
-        hidePreviousButtonIfViewportLargerThan1280Px,
-        HIDE_AND_SHOW_BUTTONS_TIMEOUT
-      );
-      setTimeout(
-        hidePreviousButtonIfViewportSmallerThan601Px,
-        HIDE_AND_SHOW_BUTTONS_TIMEOUT
-      );
-      setTimeout(
-        hidePreviousButtonIfViewport601To1280Px,
-        HIDE_AND_SHOW_BUTTONS_TIMEOUT
-      );
-      setTimeout(showNextButton, HIDE_AND_SHOW_BUTTONS_TIMEOUT);
-    };
-
+  doCalculationsAfterAllImagesHaveLoaded = () => {
     // Hide previous button on page load.
-    hidePreviousButtonIfViewportLargerThan1280Px();
-    hidePreviousButtonIfViewportSmallerThan601Px();
-    hidePreviousButtonIfViewport601To1280Px();
-    showNextButton();
-    nextButton.addEventListener("click", moveSliderToRight);
-    previousButton.addEventListener("click", moveSliderToLeft);
+    this.hidePreviousButtonIfViewportLargerThan1280Px();
+    this.hidePreviousButtonIfViewportSmallerThan601Px();
+    this.hidePreviousButtonIfViewport601To1280Px();
+    this.showNextButton();
+  };
+
+  /** This gets called after each images is loaded. */
+  imageLoaded() {
+    this.imageLoadedCounter++;
+    console.log("An image has loaded.");
+    if (arrayOfDesignProjects.length == this.imageLoadedCounter) {
+      // Only do this after all the images have been loaded.
+      console.log("Do calculations after all images have loaded.");
+      this.doCalculationsAfterAllImagesHaveLoaded();
+    }
   }
+
+  hideNextButton = () => {
+    // lastDesignProject.style.marginRight = "0";
+    this.rightOfLastDesignProject = this.lastDesignProject.getBoundingClientRect().right;
+    this.rightOfProjectsContainer = this.projectsContainer.getBoundingClientRect().right;
+    if (this.rightOfLastDesignProject === this.rightOfProjectsContainer)
+      this.nextButton.style.opacity = "0";
+  };
+
+  showNextButton = () => {
+    this.rightOfLastDesignProject = this.lastDesignProject.getBoundingClientRect().right;
+    this.rightOfProjectsContainer = this.projectsContainer.getBoundingClientRect().right;
+    if (this.rightOfLastDesignProject > this.rightOfProjectsContainer)
+      this.nextButton.style.opacity = "1";
+  };
+
+  // If DesignProjects component is 600px or smaller, then remove 16px from
+  // left of firstDesignProject. That 16px is a margin that getBoundingClientRect()
+  // doesn't include.
+  hidePreviousButtonIfViewportSmallerThan601Px = () => {
+    let leftOfFirstDesignProject =
+      this.firstDesignProject.getBoundingClientRect().left -
+      getValueOfCSSVariable(document.body, "--small-page-padding");
+    const leftOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
+      .left;
+    if (leftOfFirstDesignProject === leftOfProjectsContainer)
+      this.previousButton.style.opacity = "0";
+  };
+
+  // If DesignProjects component is between 601px and 1280px, then remove 31px from
+  // left of firstDesignProject. That 31px is a margin that getBoundingClientRect()
+  // doesn't include.
+  hidePreviousButtonIfViewport601To1280Px = () => {
+    let leftOfFirstDesignProject =
+      this.firstDesignProject.getBoundingClientRect().left -
+      getValueOfCSSVariable(document.body, "--default-page-padding");
+    const leftOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
+      .left;
+    if (leftOfFirstDesignProject === leftOfProjectsContainer)
+      this.previousButton.style.opacity = "0";
+  };
+
+  hidePreviousButtonIfViewportLargerThan1280Px = () => {
+    let leftOfFirstDesignProject = this.firstDesignProject.getBoundingClientRect()
+      .left;
+    const leftOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
+      .left;
+    if (leftOfFirstDesignProject === leftOfProjectsContainer)
+      this.previousButton.style.opacity = "0";
+  };
+
+  showPreviousButton = () => {
+    let leftOfFirstDesignProject = this.firstDesignProject.getBoundingClientRect()
+      .left;
+    const leftOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
+      .left;
+
+    if (leftOfFirstDesignProject < leftOfProjectsContainer)
+      this.previousButton.style.opacity = "1";
+  };
+
+  // scrollBy: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
+  moveSliderToRight = () => {
+    this.projectsContainer.scrollBy({
+      top: 0,
+      left: this.MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS,
+      behavior: "smooth",
+    });
+    setTimeout(this.hideNextButton, this.HIDE_AND_SHOW_BUTTONS_TIMEOUT);
+    setTimeout(this.showPreviousButton, this.HIDE_AND_SHOW_BUTTONS_TIMEOUT);
+  };
+
+  moveSliderToLeft = () => {
+    this.projectsContainer.scrollBy({
+      top: 0,
+      left: this.MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS,
+      behavior: "smooth",
+    });
+    setTimeout(
+      this.hidePreviousButtonIfViewportLargerThan1280Px,
+      this.HIDE_AND_SHOW_BUTTONS_TIMEOUT
+    );
+    setTimeout(
+      this.hidePreviousButtonIfViewportSmallerThan601Px,
+      this.HIDE_AND_SHOW_BUTTONS_TIMEOUT
+    );
+    setTimeout(
+      this.hidePreviousButtonIfViewport601To1280Px,
+      this.HIDE_AND_SHOW_BUTTONS_TIMEOUT
+    );
+    setTimeout(this.showNextButton, this.HIDE_AND_SHOW_BUTTONS_TIMEOUT);
+  };
 
   render() {
     return (
@@ -147,6 +168,9 @@ class DesignProjects extends React.Component {
                     className="design-project-img"
                     src={project.homepageImage}
                     alt={project.homepageImgAlt}
+                    onLoad={() => {
+                      this.imageLoaded();
+                    }}
                   />
                 </div>
                 <div className="title-and-description-container">
