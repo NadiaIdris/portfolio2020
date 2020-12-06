@@ -57,7 +57,7 @@ class CodingProjects extends React.Component {
     const hidePreviousButtonIfMarginLeftIsSmall = () => {
       let leftOfFirstDesignProject =
         firstCodingProject.getBoundingClientRect().left -
-        getValueOfCSSVariable(document.body, "--page-padding-small");
+        getValueOfCSSVariable(document.body, "--small-page-padding");
       const leftOfProjectsContainer = codingProjectsContainer.getBoundingClientRect()
         .left;
       if (leftOfFirstDesignProject === leftOfProjectsContainer)

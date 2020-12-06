@@ -17,6 +17,7 @@ class DesignProjects extends React.Component {
     const projectsContainer = document.querySelector("#all-projects");
     const lastDesignProject = document.querySelector("#all-projects")
       .lastElementChild;
+    console.log(lastDesignProject);
     const firstDesignProject = document.querySelector("#all-projects")
       .firstElementChild;
     const nextButton = sectionContainer.querySelector(".next-button");
@@ -47,7 +48,7 @@ class DesignProjects extends React.Component {
     const hidePreviousButtonIfViewportSmallerThan601Px = () => {
       let leftOfFirstDesignProject =
         firstDesignProject.getBoundingClientRect().left -
-        getValueOfCSSVariable(document.body, "--page-padding-small");
+        getValueOfCSSVariable(document.body, "--small-page-padding");
       const leftOfProjectsContainer = projectsContainer.getBoundingClientRect()
         .left;
       if (leftOfFirstDesignProject === leftOfProjectsContainer)

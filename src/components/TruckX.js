@@ -1,6 +1,7 @@
 import React from "react";
 import "./../styles/Header.css";
 import "./../styles/ProjectPageGenericStyles.css";
+import "./../styles/TitleParagraphMobileGallery.css";
 import truckXData from "./../data/truckXData";
 import Header from "./Header";
 import AboutProject from "./AboutProject";

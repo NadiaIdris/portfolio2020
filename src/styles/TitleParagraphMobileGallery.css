@@ -1,0 +1,102 @@
+/* Mobile image gallery component styling. */
+#mobile-gallery-container {
+    position: relative;
+}
+
+#all-mobile-gallery-images {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.one-mobile-gallery-image {
+    width: 216px;
+    height: 379px;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 25px;
+    border: 1px solid var(--color-gray-accent);
+}
+
+.mobile-gallery-button {
+    top: 300px;
+}
+
+.empty-div-project-page {
+    border-left: 1px solid white;
+    width: var(--small-page-padding);
+    height: 379px;
+}
+
+@media only screen and (max-width: 800px) {
+    #mobile-gallery-container {
+        padding: var(--distance-between-project-page-components) 0 0 0;;
+    }
+
+    #mobile-gallery-container h2 {
+        margin-left: var(--default-page-padding);
+    }
+
+    #mobile-gallery-container p {
+        margin-left: var(--default-page-padding);
+        margin-right: var(--default-page-padding);
+    }
+
+    .one-mobile-gallery-image:nth-of-type(1) {
+        margin-left: var(--default-page-padding);
+    }
+
+    .one-mobile-gallery-image:nth-of-type(5) {
+        margin-right: var(--default-page-padding);
+    }
+
+    .empty-div-project-page {
+        border-left: 1px solid white;
+        width: var(--small-page-padding);
+        height: 379px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #mobile-gallery-container {
+        padding: var(--distance-between-project-page-components) 0 0 0;;
+    }
+
+    #mobile-gallery-container h2 {
+        margin-left: var(--small-page-padding);
+    }
+
+    #mobile-gallery-container p {
+        margin-left: var(--small-page-padding);
+        margin-right: var(--small-page-padding);
+    }
+
+    .one-mobile-gallery-image:nth-of-type(1) {
+        margin-left: var(--small-page-padding);
+    }
+
+    .one-mobile-gallery-image:nth-of-type(5) {
+        margin-right: var(--small-page-padding);
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    #all-mobile-gallery-images {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #all-mobile-gallery-images {
+        overflow-x: scroll;
+    }
+
+    .previous-button {
+        display: none;
+    }
+
+    .next-button {
+        display: none;
+    }
+}
