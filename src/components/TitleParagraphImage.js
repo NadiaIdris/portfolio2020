@@ -33,8 +33,8 @@ const TitleParagraphImage = ({
           className="image-bottom-margin responsive-image"
           onClick={() => openModal(imageId)}
         />
-        <div id={imageId} className="modal" onClick={() => closeModal()}>
-          <span className="close cursor" onClick={() => closeModal()}>
+        <div id={imageId} className="modal" onClick={() => closeModal(imageId)}>
+          <span className="close cursor" onClick={() => closeModal(imageId)}>
             <img src={closeIcon} />
           </span>
           <img src={image} className="modal-content" />

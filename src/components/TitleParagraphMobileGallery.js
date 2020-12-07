@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
-import { getValueOfCSSVariable } from "../utils";
+import closeIcon from "./../vector-images/close-icon.svg";
+import { getValueOfCSSVariable, openModal, closeModal } from "../utils";
+
+// Pass this component following props:
+// - mobileGalleryTitle
+// - mobileGalleryParagraph
+// - mobileGalleryImagesArray (e.g. -> [[timelog, "Timelogs"],[loads, "Loads"], ...])
+// - mobileGalleryModalId
 
 class TitleParagraphMobileGallery extends Component {
   constructor(props) {
@@ -16,7 +23,8 @@ class TitleParagraphMobileGallery extends Component {
     this.initializeVariables();
     this.nextButton.addEventListener("click", this.moveSliderToRight);
     this.previousButton.addEventListener("click", this.moveSliderToLeft);
-    console.log("Component did mount complete.");
+    this.slideIndex = 1;
+    this.showSlides(this.slideIndex);
   }
 
   initializeVariables = () => {
@@ -44,13 +52,11 @@ class TitleParagraphMobileGallery extends Component {
     this.showNextButton();
   };
 
-  /** This gets called after each images is loaded. */
+  // This gets called after each images is loaded.
   imageLoaded() {
     this.imageLoadedCounter++;
-    console.log("An image has loaded.");
     if (this.props.mobileGalleryImagesArray.length == this.imageLoadedCounter) {
       // Only do this after all the images have been loaded.
-      console.log("Do calculations after all images have loaded.");
       this.doCalculationsAfterAllImagesHaveLoaded();
     }
   }
@@ -59,11 +65,6 @@ class TitleParagraphMobileGallery extends Component {
     const rightOfLastImage = this.lastImage.getBoundingClientRect().right;
     const rightOfMobileGalleryImagesContainer = this.mobileGalleryImagesContainer.getBoundingClientRect()
       .right;
-    console.log("rightOfLastImage", rightOfLastImage);
-    console.log(
-      "rightOfMobileGalleryImagesContainer",
-      rightOfMobileGalleryImagesContainer
-    );
     if (rightOfLastImage === rightOfMobileGalleryImagesContainer)
       this.nextButton.style.opacity = "0";
   };
@@ -76,8 +77,8 @@ class TitleParagraphMobileGallery extends Component {
       this.nextButton.style.opacity = "1";
   };
 
-  // If DesignProjects component is 600px or smaller, then remove 16px from
-  // left of firstDesignProject. That 16px is a margin that getBoundingClientRect()
+  // If TitleParagraphMobileGallery component is 600px or smaller, then remove 16px from
+  // left of firstImage. That 16px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewportSmallerThan601Px = () => {
     let leftOfFirstImage =
@@ -96,8 +97,8 @@ class TitleParagraphMobileGallery extends Component {
       this.previousButton.style.opacity = "0";
   };
 
-  // If DesignProjects component is between 601px and 1280px, then remove 31px from
-  // left of firstDesignProject. That 31px is a margin that getBoundingClientRect()
+  // If TitleParagraphMobileGallery component is between 601px and 1280px, then remove 31px from
+  // left of firstImage. That 31px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewport601To1280Px = () => {
     let leftOfFirstImage =
@@ -158,6 +159,29 @@ class TitleParagraphMobileGallery extends Component {
     setTimeout(this.showNextButton, this.HIDE_AND_SHOW_BUTTONS_TIMEOUT);
   };
 
+  plusSlides = (n) => {
+    this.showSlides((this.slideIndex += n));
+  };
+
+  currentSlide = (n) => {
+    this.showSlides((this.slideIndex = n));
+  };
+
+  showSlides = (n) => {
+    let i;
+    const slides = document.getElementsByClassName("one-slide");
+    if (n > slides.length) {
+      this.slideIndex = 1;
+    }
+    if (n < 1) {
+      this.slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[this.slideIndex - 1].style.display = "block";
+  };
+
   render() {
     return (
       <section
@@ -172,6 +196,7 @@ class TitleParagraphMobileGallery extends Component {
         <button className="next-button mobile-gallery-button">
           <img src={nextArrow} />
         </button>
+
         <div id="all-mobile-gallery-images">
           {this.props.mobileGalleryImagesArray.map((image, index) => {
             return (
@@ -179,15 +204,55 @@ class TitleParagraphMobileGallery extends Component {
                 src={image[0]}
                 alt={image[1]}
                 key={index}
-                className="one-mobile-gallery-image image-bottom-margin"
+                className="one-mobile-gallery-image image-bottom-margin responsive-image"
                 onLoad={() => {
                   this.imageLoaded();
+                }}
+                onError={() => {
+                  this.imageLoaded();
+                }}
+                onClick={() => {
+                  openModal(this.props.mobileGalleryModalId);
+                  this.currentSlide(index + 1);
                 }}
               />
             );
           })}
           {/* Empty-div class is for collapsing margins: https://www.smashingmagazine.com/2019/07/margins-in-css/*/}
           <div className="empty-div-project-page"></div>
+        </div>
+
+        <div id={this.props.mobileGalleryModalId} className="modal">
+          <span
+            className="close cursor"
+            onClick={() => closeModal(this.props.mobileGalleryModalId)}
+          >
+            <img src={closeIcon} />
+          </span>
+          <div>
+            {this.props.mobileGalleryImagesArray.map((image, index) => {
+              return (
+                <img
+                  src={image[0]}
+                  alt={image[1]}
+                  key={index}
+                  className="modal-content one-slide"
+                />
+              );
+            })}
+            <button
+              className="modal-previous-button"
+              onClick={() => this.plusSlides(-1)}
+            >
+              <img src={previousArrow} />
+            </button>
+            <button
+              className="modal-next-button"
+              onClick={() => this.plusSlides(1)}
+            >
+              <img src={nextArrow} />
+            </button>
+          </div>
         </div>
       </section>
     );

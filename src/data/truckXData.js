@@ -104,12 +104,13 @@ const truckXData = {
   mobileGalleryParagraph:
     "My goals for the visual design were to keep app looking simple and easy to modify and extend the design.",
   mobileGalleryImagesArray: [
-    [timelog, "Timelog"],
+    [timelog, "Timelogs"],
     [loads, "Loads"],
     [oneLoad, "Load"],
     [oneLoadFreight, "Freight info"],
     [oneLoadSign, "Sign a load"],
   ],
+  mobileGalleryModalId: "truckx-mobile-gallery",
 };
 
 export default truckXData;

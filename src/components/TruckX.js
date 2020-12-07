@@ -10,6 +10,7 @@ import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import TitleParagraphImage from "./TitleParagraphImage";
 import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
 import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
+import { openModal } from "../utils";
 
 const TruckX = () => {
   return (
@@ -144,7 +145,7 @@ const TruckX = () => {
         title={truckXData.mobileGalleryTitle}
         paragraph={truckXData.mobileGalleryParagraph}
         mobileGalleryImagesArray={truckXData.mobileGalleryImagesArray}
-        mobileGalleryId={truckXData.mobileGalleryId}
+        mobileGalleryModalId={truckXData.mobileGalleryModalId}
       />
     </React.Fragment>
   );
