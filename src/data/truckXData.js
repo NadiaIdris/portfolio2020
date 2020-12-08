@@ -12,6 +12,11 @@ import loads from "./../vector-images/truckx-loads.png";
 import oneLoad from "./../vector-images/truckx-loads-load.png";
 import oneLoadFreight from "./../vector-images/truckx-load-freight.png";
 import oneLoadSign from "./../vector-images/truckx-load-sign.png";
+import highFiPrototype from "./../vector-images/truckx-high-fidelity-small.gif";
+import abbeyRoadStudiosData from "./abbeyRoadStudiosData";
+import uampData from "./uampData";
+import inmusikData from "./inmusikData";
+import wholeWorldBandData from "./wholeWorldBandData";
 
 const truckXData = {
   title: "TruckX",
@@ -97,7 +102,7 @@ const truckXData = {
   lowFiParagraph:
     "In order to test out the user flow before designing the high fidelity app, I created the low fidelity prototype to get user feedback.",
   lowFiImage: lowFiPrototype,
-  lowFiImageAlt: "TruckX Low Fidelity Prototype",
+  lowFiImageAlt: "TruckX low fidelity prototype",
   lowFiId: "truckx-low-fi-prototype",
 
   mobileGalleryTitle: "High fidelity mockups",
@@ -111,6 +116,21 @@ const truckXData = {
     [oneLoadSign, "Sign a load"],
   ],
   mobileGalleryModalId: "truckx-mobile-gallery",
+
+  highFiTitle: "High fidelity prototype",
+  highFiParagraph:
+    "Using InVision I created a high fidelity prototype that was delivered to the engineering team with the mockups in order for them to build the app.",
+  highFiImage: highFiPrototype,
+  highFiImageAlt: "TruckX high fidelity prototype",
+  highFiId: "truckx-hi-fi-prototype",
+
+  moreDesignProjectsTitle: "More design projects",
+  moreDesignProjectsArray: [
+    abbeyRoadStudiosData,
+    uampData,
+    inmusikData,
+    wholeWorldBandData,
+  ],
 };
 
 export default truckXData;

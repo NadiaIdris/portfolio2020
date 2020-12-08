@@ -9,7 +9,6 @@ import WeatherApp from "./components/WeatherApp";
 import PlannerApp from "./components/PlannerApp";
 import PortfolioApp from "./components/PortfolioApp";
 import About from "./components/About";
-import { closeModal, openModal } from "./utils";
 
 const PageNames = {
   HOME: "Home",
@@ -62,4 +61,25 @@ const getComponentForPageName = (name) => {
   }
 };
 
-export { PageNames, PageNamesWithSpaces, getComponentForPageName };
+const getPageName = (pageName) => {
+  switch (pageName) {
+    case PageNamesWithSpaces.TRUCKX:
+      return PageNames.TRUCKX;
+    case PageNamesWithSpaces.ABBEY_ROAD_STUDIOS:
+      return PageNames.ABBEY_ROAD_STUDIOS;
+    case PageNamesWithSpaces.UAMP:
+      return PageNames.UAMP;
+    case PageNamesWithSpaces.INMUSIK:
+      return PageNames.INMUSIK;
+    case PageNamesWithSpaces.WHOLEWORLDBAND:
+      return PageNames.WHOLEWORLDBAND;
+    case PageNamesWithSpaces.WEATHER_APP:
+      return PageNames.WEATHER_APP;
+    case PageNamesWithSpaces.PLANNER_APP:
+      return PageNames.PLANNER_APP;
+    case PageNamesWithSpaces.PORTFOLIO_APP:
+      return PageNames.PORTFOLIO_APP;
+  }
+};
+
+export { PageNames, PageNamesWithSpaces, getComponentForPageName, getPageName };

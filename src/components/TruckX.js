@@ -10,7 +10,7 @@ import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import TitleParagraphImage from "./TitleParagraphImage";
 import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
 import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
-import { openModal } from "../utils";
+import DesignProjects from "./DesignProjects";
 
 const TruckX = () => {
   return (
@@ -146,6 +146,17 @@ const TruckX = () => {
         paragraph={truckXData.mobileGalleryParagraph}
         mobileGalleryImagesArray={truckXData.mobileGalleryImagesArray}
         mobileGalleryModalId={truckXData.mobileGalleryModalId}
+      />
+      <ColOneTextColTwoImg
+        title={truckXData.highFiTitle}
+        paragraph={truckXData.highFiParagraph}
+        image={truckXData.highFiImage}
+        imageAlt={truckXData.highFiImageAlt}
+        imageId={truckXData.highFiId}
+      />
+      <DesignProjects
+        title={truckXData.moreDesignProjectsTitle}
+        designProjectsArray={truckXData.moreDesignProjectsArray}
       />
     </React.Fragment>
   );

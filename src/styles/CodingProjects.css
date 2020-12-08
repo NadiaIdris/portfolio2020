@@ -24,7 +24,11 @@
     display: block;
 }
 
-.one-coding-project:nth-of-type(3) {
+/* https://css-tricks.com/almanac/selectors/l/last-child/ */
+/* Using the > changes the description to: "Find any divs
+   that are the direct descendents of section divs".
+   https://stackoverflow.com/a/2094512/10029397 */
+#all-coding-projects > div:last-of-type {
     margin-right: 0;
 }
 
@@ -75,11 +79,11 @@
         margin-left: var(--default-page-padding);
     }
 
-    .one-coding-project:nth-of-type(1) {
+    #all-coding-projects > div:first-of-type {
         margin-left: var(--default-page-padding);
     }
 
-    .one-coding-project:nth-of-type(3) {
+    #all-coding-projects > div:last-of-type {
         margin-right: var(--default-page-padding);
     }
 
@@ -99,11 +103,11 @@
         margin-left: var(--small-page-padding);
     }
 
-    .one-coding-project:nth-of-type(1) {
+    #all-coding-projects > div:first-of-type {
         margin-left: var(--small-page-padding);
     }
 
-    .one-coding-project:nth-of-type(3) {
+    #all-coding-projects > div:last-of-type {
         margin-right: var(--small-page-padding);
     }
 

@@ -1,9 +1,9 @@
 import React from "react";
 import "./../styles/DesignProjects.css";
-import { arrayOfDesignProjects } from "../data/projectsData";
 import nextArrow from "./../vector-images/arrow-right.svg";
 import previousArrow from "./../vector-images/arrow-left.svg";
-import { getValueOfCSSVariable } from "../utils";
+import { getValueOfCSSVariable, scrollToTop } from "../utils";
+import { getPageName } from "../pageConstants";
 
 class DesignProjects extends React.Component {
   constructor(props) {
@@ -28,7 +28,6 @@ class DesignProjects extends React.Component {
     this.lastDesignProject = document.querySelector(
       "#all-projects"
     ).lastElementChild;
-    console.log(this.lastDesignProject);
     this.firstDesignProject = document.querySelector(
       "#all-projects"
     ).firstElementChild;
@@ -49,26 +48,27 @@ class DesignProjects extends React.Component {
   /** This gets called after each images is loaded. */
   imageLoaded() {
     this.imageLoadedCounter++;
-    console.log("An image has loaded.");
-    if (arrayOfDesignProjects.length == this.imageLoadedCounter) {
+    if (this.props.designProjectsArray.length === this.imageLoadedCounter) {
       // Only do this after all the images have been loaded.
-      console.log("Do calculations after all images have loaded.");
       this.doCalculationsAfterAllImagesHaveLoaded();
     }
   }
 
   hideNextButton = () => {
-    // lastDesignProject.style.marginRight = "0";
-    this.rightOfLastDesignProject = this.lastDesignProject.getBoundingClientRect().right;
-    this.rightOfProjectsContainer = this.projectsContainer.getBoundingClientRect().right;
-    if (this.rightOfLastDesignProject === this.rightOfProjectsContainer)
+    const rightOfLastDesignProject = this.lastDesignProject.getBoundingClientRect()
+      .right;
+    const rightOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
+      .right;
+    if (rightOfLastDesignProject === rightOfProjectsContainer)
       this.nextButton.style.opacity = "0";
   };
 
   showNextButton = () => {
-    this.rightOfLastDesignProject = this.lastDesignProject.getBoundingClientRect().right;
-    this.rightOfProjectsContainer = this.projectsContainer.getBoundingClientRect().right;
-    if (this.rightOfLastDesignProject > this.rightOfProjectsContainer)
+    const rightOfLastDesignProject = this.lastDesignProject.getBoundingClientRect()
+      .right;
+    const rightOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
+      .right;
+    if (rightOfLastDesignProject > rightOfProjectsContainer)
       this.nextButton.style.opacity = "1";
   };
 
@@ -76,9 +76,12 @@ class DesignProjects extends React.Component {
   // left of firstDesignProject. That 16px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewportSmallerThan601Px = () => {
-    let leftOfFirstDesignProject =
-      this.firstDesignProject.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--small-page-padding");
+    const paddingSmall = getValueOfCSSVariable(
+      document.body,
+      "--small-page-padding"
+    );
+    const leftOfFirstDesignProject =
+      this.firstDesignProject.getBoundingClientRect().left - paddingSmall;
     const leftOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
@@ -89,9 +92,12 @@ class DesignProjects extends React.Component {
   // left of firstDesignProject. That 31px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewport601To1280Px = () => {
-    let leftOfFirstDesignProject =
-      this.firstDesignProject.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--default-page-padding");
+    const paddingDefault = getValueOfCSSVariable(
+      document.body,
+      "--default-page-padding"
+    );
+    const leftOfFirstDesignProject =
+      this.firstDesignProject.getBoundingClientRect().left - paddingDefault;
     const leftOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
@@ -99,7 +105,7 @@ class DesignProjects extends React.Component {
   };
 
   hidePreviousButtonIfViewportLargerThan1280Px = () => {
-    let leftOfFirstDesignProject = this.firstDesignProject.getBoundingClientRect()
+    const leftOfFirstDesignProject = this.firstDesignProject.getBoundingClientRect()
       .left;
     const leftOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
       .left;
@@ -108,7 +114,7 @@ class DesignProjects extends React.Component {
   };
 
   showPreviousButton = () => {
-    let leftOfFirstDesignProject = this.firstDesignProject.getBoundingClientRect()
+    const leftOfFirstDesignProject = this.firstDesignProject.getBoundingClientRect()
       .left;
     const leftOfProjectsContainer = this.projectsContainer.getBoundingClientRect()
       .left;
@@ -149,10 +155,21 @@ class DesignProjects extends React.Component {
     setTimeout(this.showNextButton, this.HIDE_AND_SHOW_BUTTONS_TIMEOUT);
   };
 
+  addMarginTopIfProjectPageComponent = () => {
+    // Check if component title is not "Design projects", then add class
+    // design-project-container-margin-top
+    if (this.props.title !== "Design projects") {
+      return "design-project-container-margin-top";
+    }
+  };
+
   render() {
     return (
-      <section id="design-projects-container">
-        <h2>Design projects</h2>
+      <section
+        id="design-projects-container"
+        className={this.addMarginTopIfProjectPageComponent()}
+      >
+        <h2>{this.props.title}</h2>
         <button className="previous-button">
           <img src={previousArrow} />
         </button>
@@ -160,36 +177,40 @@ class DesignProjects extends React.Component {
           <img src={nextArrow} />
         </button>
         <div id="all-projects">
-          {arrayOfDesignProjects.map((project, index) => {
+          {this.props.designProjectsArray.map((project, index) => {
             return (
               <div className="one-design-project" key={index}>
-                <div className="img-hover-zoom">
-                  <img
-                    className="design-project-img"
-                    src={project.homepageImage}
-                    alt={project.homepageImgAlt}
-                    onLoad={() => {
-                      this.imageLoaded();
-                    }}
-                  />
-                </div>
-                <div className="title-and-description-container">
-                  <h4>{project.title}</h4>
-                  <div className="project-description-container">
-                    <p className="light-gray-text">{project.description}</p>
-                    <div className="icons">
-                      {project.icons.map((icon, index) => {
-                        return <img src={icon} key={index} />;
-                      })}
+                <a href={getPageName(project.title)}>
+                  <div className="img-hover-zoom">
+                    <img
+                      className="design-project-img"
+                      src={project.homepageImage}
+                      alt={project.homepageImgAlt}
+                      onLoad={() => {
+                        this.imageLoaded();
+                      }}
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div className="title-and-description-container">
+                    <h4>{project.title}</h4>
+                    <div className="project-description-container">
+                      <p className="light-gray-text">{project.description}</p>
+                      <div className="icons">
+                        {project.icons.map((icon, index) => {
+                          return <img src={icon} key={index} />;
+                        })}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             );
           })}
 
           {/* Empty-div class is for collapsing margins: https://www.smashingmagazine.com/2019/07/margins-in-css/*/}
-          <div className="empty-div"></div>
+          <section className="empty-div"></section>
         </div>
       </section>
     );

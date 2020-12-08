@@ -55,7 +55,7 @@ class CodingProjects extends React.Component {
     // left of firstDesignProject. That 16px is a margin that getBoundingClientRect()
     // doesn't include.
     const hidePreviousButtonIfMarginLeftIsSmall = () => {
-      let leftOfFirstDesignProject =
+      const leftOfFirstDesignProject =
         firstCodingProject.getBoundingClientRect().left -
         getValueOfCSSVariable(document.body, "--small-page-padding");
       const leftOfProjectsContainer = codingProjectsContainer.getBoundingClientRect()
@@ -68,7 +68,7 @@ class CodingProjects extends React.Component {
     // left of firstDesignProject. That 31px is a margin that getBoundingClientRect()
     // doesn't include.
     const hidePreviousButtonIfMarginLeftIsDefault = () => {
-      let leftOfFirstDesignProject =
+      const leftOfFirstDesignProject =
         firstCodingProject.getBoundingClientRect().left -
         getValueOfCSSVariable(document.body, "--default-page-padding");
       const leftOfProjectsContainer = codingProjectsContainer.getBoundingClientRect()
@@ -202,7 +202,7 @@ class CodingProjects extends React.Component {
             );
           })}
           {/* Empty-div class is for collapsing margins: https://www.smashingmagazine.com/2019/07/margins-in-css/*/}
-          <div className="empty-div"></div>
+          <section className="empty-div"></section>
         </div>
       </section>
     );

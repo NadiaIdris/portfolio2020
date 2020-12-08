@@ -7,7 +7,18 @@ import weatherAppData from "./weatherAppData";
 import plannerAppData from "./plannerAppData";
 import portfolioAppData from "./portfolioAppData";
 
-export const arrayOfDesignProjects = [truckXData, abbeyRoadStudiosData, uampData, inmusikData, wholeWorldBandData];
+export const homepageDesignProjectsTitle = "Design projects";
 
-export const arrayOfCodingProjects = [weatherAppData, plannerAppData, portfolioAppData];
-      
+export const arrayOfDesignProjects = [
+  truckXData,
+  abbeyRoadStudiosData,
+  uampData,
+  inmusikData,
+  wholeWorldBandData,
+];
+
+export const arrayOfCodingProjects = [
+  weatherAppData,
+  plannerAppData,
+  portfolioAppData,
+];

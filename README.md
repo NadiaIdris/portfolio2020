@@ -1,6 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [Project deadline estimation](#project-deadline-estimation)
 - [Fonts](#fonts)
 - [Getting an element's size with JS](#getting-an-elements-size-with-js)
@@ -44,6 +45,8 @@ regardless of how much of it is currently visible"
 # Resources
 
 - [Interesting article on collapsing right/left margins](https://www.smashingmagazine.com/2019/07/margins-in-css/)
+- [How to create lightbox and slideshow](https://www.w3schools.com/howto/howto_js_lightbox.asp)
+- [Add first and last of child pseudo elements to an HTML element](https://css-tricks.com/almanac/selectors/l/last-child/)
 
 # Responsive design
 
@@ -147,6 +150,10 @@ no carousel (next and previous buttons).
    margin at the bottom on the image.
 6. `<ColOneTextColTwoImg />` component -> Two column component. First column
    includes title and one paragraph and second column is either a gif or image.
+7. `<TitleParagraphMobileGallery />` component -> Add title, paragraph and an
+   array of mobile design images.
+8. `<TitleParagraphWebGallery />` component -> Add title, paragraph and an array
+   of web design images.
 
 ## The difference between `<TitleParagraph />` and `<TitleParagraphImage />`
 

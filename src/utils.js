@@ -1,6 +1,9 @@
 // Access CSS variable from JS: https://stackoverflow.com/a/41725782
 const getValueOfCSSVariable = (element, variableName) => {
-  return parseInt(getComputedStyle(element).getPropertyValue(variableName));
+  const computedStyle = getComputedStyle(element);
+  const value = computedStyle.getPropertyValue(variableName);
+  const parsedValue = parseInt(value);
+  return parsedValue;
 };
 
 const dummyText = `Spicy jalapeno bacon ipsum dolor `.repeat(700);

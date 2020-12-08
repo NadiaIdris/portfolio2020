@@ -4,6 +4,10 @@ import DesignProjects from "./DesignProjects";
 import CodingProjects from "./CodingProjects";
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
+import {
+  arrayOfDesignProjects,
+  homepageDesignProjectsTitle,
+} from "../data/projectsData";
 
 const Home = () => {
   return (
@@ -15,7 +19,10 @@ const Home = () => {
           "am startup tested",
         ]}
       />
-      <DesignProjects />
+      <DesignProjects
+        title={homepageDesignProjectsTitle}
+        designProjectsArray={arrayOfDesignProjects}
+      />
       <CodingProjects />
       <Testimonials />
       <Footer />
