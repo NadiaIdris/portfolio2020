@@ -5,6 +5,7 @@ import { arrayOfCodingProjects } from "../data/projectsData";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
 import { getValueOfCSSVariable } from "../utils";
+import { getPageName } from "../pageConstants";
 
 class CodingProjects extends React.Component {
   componentDidMount() {
@@ -180,24 +181,28 @@ class CodingProjects extends React.Component {
           {arrayOfCodingProjects.map((project, index) => {
             return (
               <div className="one-coding-project" key={index}>
-                <div className="coding-img-zoom">
-                  <img
-                    className="coding-project-img"
-                    src={project.homepageImage}
-                    alt={project.homepageImgAlt}
-                  />
-                </div>
-                <div className="title-and-description-container">
-                  <h4>{project.title}</h4>
-                  <div className="coding-project-description-container">
-                    <p className="light-gray-text">{project.description}</p>
-                    <div className="icons">
-                      {project.icons.map((icon, index) => {
-                        return <img src={icon} key={index} />;
-                      })}
+                <a href={getPageName(project.title)}>
+                  <div className="coding-img-zoom">
+                    <img
+                      className="coding-project-img"
+                      src={project.homepageImage}
+                      alt={project.homepageImgAlt}
+                    />
+                  </div>
+                </a>
+                <a href={getPageName(project.title)}>
+                  <div className="title-and-description-container">
+                    <h4>{project.title}</h4>
+                    <div className="coding-project-description-container">
+                      <p className="light-gray-text">{project.description}</p>
+                      <div className="icons">
+                        {project.icons.map((icon, index) => {
+                          return <img src={icon} key={index} />;
+                        })}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             );
           })}

@@ -192,7 +192,7 @@ class DesignProjects extends React.Component {
                     />
                   </div>
                 </a>
-                <a>
+                <a href={getPageName(project.title)}>
                   <div className="title-and-description-container">
                     <h4>{project.title}</h4>
                     <div className="project-description-container">

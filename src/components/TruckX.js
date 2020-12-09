@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./../styles/Header.css";
 import "./../styles/ProjectPageGenericStyles.css";
 import "./../styles/TitleParagraphMobileGallery.css";
@@ -11,6 +11,7 @@ import TitleParagraphImage from "./TitleParagraphImage";
 import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
 import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
 import DesignProjects from "./DesignProjects";
+import Footer from "./Footer";
 
 const TruckX = () => {
   return (
@@ -29,8 +30,8 @@ const TruckX = () => {
         contribution={truckXData.aboutProjectArray[4]}
       />
       <TitleParagraph
-        title={truckXData.aboutTruckXTitle}
-        paragraphArray={truckXData.aboutTruckXArray}
+        title={truckXData.aboutTitle}
+        paragraphArray={truckXData.aboutArray}
       />
       <TitleBulletPointsOneColumn
         title={truckXData.featuresTitle}
@@ -44,25 +45,25 @@ const TruckX = () => {
         <h2>Requirements</h2>
         <div className="requirements-columns-container">
           <div className="col-one">
-            <div className="bullet-point-container">
+            <div className="bullet-point-container space-between-paragraphs">
               <p className="dash">-</p>
               <p>
                 The design must be fully compliant with FMCSA and DOT
                 regulations.
               </p>
             </div>
-            <div className="bullet-point-container">
+            <div className="bullet-point-container space-between-paragraphs">
               <p className="dash">-</p>
               <p>It must be easy to use by truck drivers.</p>
             </div>
-            <div className="bullet-point-container">
+            <div className="bullet-point-container space-between-paragraphs">
               <p className="dash">-</p>
               <p>
                 It has to organize a large amount of data effectively on a small
                 phone screen.
               </p>
             </div>
-            <div className="bullet-point-container">
+            <div className="bullet-point-container space-between-paragraphs">
               <p className="dash">-</p>
               <p>
                 Allow drivers to plan their trips and add stops in their
@@ -78,14 +79,14 @@ const TruckX = () => {
             </div>
           </div>
           <div className="col-two">
-            <div className="bullet-point-container">
+            <div className="bullet-point-container space-between-paragraphs">
               <p className="dash">-</p>
               <p>
                 It has to improve on the experience of using a physical logbook
                 by putting together:
               </p>
             </div>
-            <div className="bullet-point-container">
+            <div className="bullet-point-container space-between-paragraphs">
               <p className="nested-dash">·</p>
               <p>
                 Data from an external OBD-II device connected to the truck which
@@ -93,7 +94,7 @@ const TruckX = () => {
                 time and duration of the truck’s movement).
               </p>
             </div>
-            <div className="bullet-point-container">
+            <div className="bullet-point-container space-between-paragraphs">
               <p className="nested-dash">·</p>
               <p>
                 The smartphone’s GPS information (location and time) with the
@@ -158,6 +159,7 @@ const TruckX = () => {
         title={truckXData.moreDesignProjectsTitle}
         designProjectsArray={truckXData.moreDesignProjectsArray}
       />
+      <Footer />
     </React.Fragment>
   );
 };

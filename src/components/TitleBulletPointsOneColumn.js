@@ -6,7 +6,10 @@ const TitleBulletPointsOneColumn = ({ title, bulletPointsArray }) => {
       <h2>{title}</h2>
       {bulletPointsArray.map((bulletPoint, index) => {
         return (
-          <div className="bullet-point-container" key={index}>
+          <div
+            className="bullet-point-container space-between-paragraphs"
+            key={index}
+          >
             <p className="dash">-</p>
             <p>
               <span>{bulletPoint[0]}</span>

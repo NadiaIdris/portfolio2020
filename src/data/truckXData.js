@@ -22,9 +22,13 @@ const truckXData = {
   title: "TruckX",
   description: "Electronic logbook and trip planning app for truck drivers.",
   icons: [iOSLight, androidLight],
-
   homepageImage: homepageTruckX,
   homepageImgAlt: "TruckX image",
+
+  // If I need a button on the header, then add those props:
+  // buttonToApp: true,
+  // buttonToAppText: "Try App",
+  // buttonToAppLink: "https://en.wikipedia.org/wiki/Truck",
 
   mainImage: truckXMain,
   mainImageAlt: "TruckX",
@@ -46,8 +50,8 @@ const truckXData = {
     "I was the only designer in this project, individually responsible for all of the designs",
   ],
 
-  aboutTruckXTitle: "About TruckX",
-  aboutTruckXArray: [
+  aboutTitle: "About TruckX",
+  aboutArray: [
     "For this project, I worked directly with the CEO of a startup, to design a digital replacement for paper-based truck driver log books. My goal was to give the early stage startup the main user flows, along with the main body of design so they could start building a prototype.",
   ],
 

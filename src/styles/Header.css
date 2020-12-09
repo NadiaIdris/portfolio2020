@@ -7,10 +7,9 @@
     padding: 0 0 12px 0;
 }
 
-#project-head p {
+#header-description {
     font-size: 0.9em;
     color: var(--color-gray-font);
-    padding: 0 0 54px 0;
 }
 
 #project-head img {
@@ -19,7 +18,24 @@
     display: block;
     -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    margin: 54px 0 0 0;
 }
+
+.try-app-button {
+    background-color: var(--color-yellow);
+    border: none;
+    border-radius: 100px;
+    padding: 7px 20px 5px 20px;
+    font-family: var(--default-font);
+    font-size: 0.95em;
+    color: var(--color-gray-darkest);
+}
+
+.try-app-button:hover {
+    cursor: pointer;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     #project-head {

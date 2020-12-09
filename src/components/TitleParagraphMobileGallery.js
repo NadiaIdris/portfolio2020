@@ -5,10 +5,10 @@ import closeIcon from "./../vector-images/close-icon.svg";
 import { getValueOfCSSVariable, openModal, closeModal } from "../utils";
 
 // Pass this component following props:
-// - mobileGalleryTitle
-// - mobileGalleryParagraph
-// - mobileGalleryImagesArray (e.g. -> [[timelog, "Timelogs"],[loads, "Loads"], ...])
-// - mobileGalleryModalId
+// - title={}
+// - paragraph={}
+// - mobileGalleryImagesArray={} (e.g. -> [[timelog, "Timelogs"],[loads, "Loads"], ...])
+// - mobileGalleryModalId={}
 
 class TitleParagraphMobileGallery extends Component {
   constructor(props) {
