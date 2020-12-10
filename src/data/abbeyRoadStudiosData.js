@@ -14,6 +14,10 @@ import engineerPage from "./../vector-images/abbey-road-engineer-page.png";
 import eventHire from "./../vector-images/abbey-road-event-hire.png";
 import crossingCam from "./../vector-images/abbey-road-crossing-cam.png";
 import thankYou from "./../vector-images/abbey-road-thank-you.png";
+import uampData from "./uampData";
+import inmusikData from "./inmusikData";
+import wholeWorldBandData from "./wholeWorldBandData";
+import truckXData from "./truckXData";
 
 const abbeyRoadStudiosData = {
   title: "Abbey Road Studios",
@@ -147,6 +151,14 @@ const abbeyRoadStudiosData = {
     [thankYou, "Thank you page"],
   ],
   webGalleryModalId: "abbey-road-web-gallery",
+
+  moreDesignProjectsTitle: "More design projects",
+  moreDesignProjectsArray: [
+    truckXData,
+    uampData,
+    inmusikData,
+    wholeWorldBandData,
+  ],
 };
 
 export default abbeyRoadStudiosData;

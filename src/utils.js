@@ -1,3 +1,5 @@
+import closeIconDark from "./vector-images/close-icon-dark.svg";
+
 // Access CSS variable from JS: https://stackoverflow.com/a/41725782
 const getValueOfCSSVariable = (element, variableName) => {
   const computedStyle = getComputedStyle(element);

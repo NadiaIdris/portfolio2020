@@ -55,7 +55,9 @@ class TitleParagraphMobileGallery extends Component {
   // This gets called after each images is loaded.
   imageLoaded() {
     this.imageLoadedCounter++;
-    if (this.props.mobileGalleryImagesArray.length == this.imageLoadedCounter) {
+    if (
+      this.props.mobileGalleryImagesArray.length === this.imageLoadedCounter
+    ) {
       // Only do this after all the images have been loaded.
       this.doCalculationsAfterAllImagesHaveLoaded();
     }
@@ -84,13 +86,8 @@ class TitleParagraphMobileGallery extends Component {
     let leftOfFirstImage =
       this.firstImage.getBoundingClientRect().left -
       getValueOfCSSVariable(document.body, "--small-page-padding");
-    console.log("leftOfFirstImage " + leftOfFirstImage);
     const leftOfFirstImageWithoutAddedPadding = this.firstImage.getBoundingClientRect()
       .left;
-    console.log(
-      "leftOfFirstImageWithoutAddedPadding " +
-        leftOfFirstImageWithoutAddedPadding
-    );
     const leftOfMobileGalleryImagesContainer = this.mobileGalleryImagesContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstImage === leftOfMobileGalleryImagesContainer)
@@ -101,7 +98,7 @@ class TitleParagraphMobileGallery extends Component {
   // left of firstImage. That 31px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewport601To1280Px = () => {
-    let leftOfFirstImage =
+    const leftOfFirstImage =
       this.firstImage.getBoundingClientRect().left -
       getValueOfCSSVariable(document.body, "--default-page-padding");
     const leftOfMobileGalleryImagesContainer = this.mobileGalleryImagesContainer.getBoundingClientRect()
@@ -111,7 +108,7 @@ class TitleParagraphMobileGallery extends Component {
   };
 
   hidePreviousButtonIfViewportLargerThan1280Px = () => {
-    let leftOfFirstImage = this.firstImage.getBoundingClientRect().left;
+    const leftOfFirstImage = this.firstImage.getBoundingClientRect().left;
     const leftOfMobileGalleryImagesContainer = this.mobileGalleryImagesContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstImage === leftOfMobileGalleryImagesContainer)
@@ -119,7 +116,7 @@ class TitleParagraphMobileGallery extends Component {
   };
 
   showPreviousButton = () => {
-    let leftOfFirstImage = this.firstImage.getBoundingClientRect().left;
+    const leftOfFirstImage = this.firstImage.getBoundingClientRect().left;
     const leftOfMobileGalleryImagesContainer = this.mobileGalleryImagesContainer.getBoundingClientRect()
       .left;
 
@@ -227,7 +224,7 @@ class TitleParagraphMobileGallery extends Component {
             className="close cursor"
             onClick={() => closeModal(this.props.mobileGalleryModalId)}
           >
-            <img src={closeIcon} />
+            <div></div>
           </span>
           <div>
             {this.props.mobileGalleryImagesArray.map((image, index) => {

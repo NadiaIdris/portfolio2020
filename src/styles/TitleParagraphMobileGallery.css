@@ -38,12 +38,16 @@
     align-items: center;
     padding-left: 4px;
     opacity: 1;
+    box-shadow: none;
+    background-color: var(--color-gray-hover-bckround);
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
 
 .modal-previous-button:hover {
     -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    transition: box-shadow .1s ease-in-out
+    background-color: var(--color-white);
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
 
 .modal-next-button  {
@@ -60,24 +64,28 @@
     align-items: center;
     padding-left: 9px;
     opacity: 1;
+    background-color: var(--color-gray-hover-bckround);
+    box-shadow: none;
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
 
 .modal-next-button:hover {
     -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    transition: box-shadow .1s ease-in-out;
+    background-color: var(--color-white);
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
 
 /* ----------- */
 
-.empty-div-project-page {
-    border-left: 1px solid white;
-    width: var(--small-page-padding);
-    height: 379px;
-}
-
 .one-slide {
     display: none;
+}
+
+@media only screen and (min-width: 801px) {
+    #all-mobile-gallery-images > img:last-of-type {
+        margin-right: 0;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -94,11 +102,11 @@
         margin-right: var(--default-page-padding);
     }
 
-    .one-mobile-gallery-image:nth-of-type(1) {
+    #all-mobile-gallery-images > img:first-of-type {
         margin-left: var(--default-page-padding);
     }
 
-    .one-mobile-gallery-image:nth-of-type(5) {
+    #all-mobile-gallery-images > img:last-of-type {
         margin-right: var(--default-page-padding);
     }
 
@@ -123,11 +131,11 @@
         margin-right: var(--small-page-padding);
     }
 
-    .one-mobile-gallery-image:nth-of-type(1) {
+    #all-mobile-gallery-images > img:first-of-type {
         margin-left: var(--small-page-padding);
     }
 
-    .one-mobile-gallery-image:nth-of-type(5) {
+    #all-mobile-gallery-images > img:last-of-type {
         margin-right: var(--small-page-padding);
     }
 }

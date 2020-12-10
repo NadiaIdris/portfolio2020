@@ -1,5 +1,4 @@
 import React from "react";
-import closeIcon from "./../vector-images/close-icon.svg";
 import { closeModal, openModal } from "../utils";
 
 const TitleParagraphImage = ({
@@ -35,7 +34,7 @@ const TitleParagraphImage = ({
         />
         <div id={imageId} className="modal" onClick={() => closeModal(imageId)}>
           <span className="close cursor" onClick={() => closeModal(imageId)}>
-            <img src={closeIcon} />
+            <div></div>
           </span>
           <img src={image} className="modal-content" />
         </div>

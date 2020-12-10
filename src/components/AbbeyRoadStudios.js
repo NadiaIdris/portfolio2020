@@ -1,13 +1,15 @@
 import React from "react";
-import Header from "./Header";
-import truckXData from "../data/truckXData";
 import abbeyRoadStudiosData from "../data/abbeyRoadStudiosData";
+import "./../styles/TitleParagraphWebGallery.css";
+import Header from "./Header";
 import AboutProject from "./AboutProject";
 import TitleParagraph from "./TitleParagraph";
 import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import TitleParagraphImage from "./TitleParagraphImage";
 import TitleParagraphWebGallery from "./TitleParagraphWebGallery";
-import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
+import DesignProjects from "./DesignProjects";
+import truckXData from "../data/truckXData";
+import Footer from "./Footer";
 
 const AbbeyRoadStudios = () => {
   return (
@@ -121,6 +123,11 @@ const AbbeyRoadStudios = () => {
         webGalleryImagesArray={abbeyRoadStudiosData.webGalleryImagesArray}
         webGalleryModalId={abbeyRoadStudiosData.webGalleryModalId}
       />
+      <DesignProjects
+        title={abbeyRoadStudiosData.moreDesignProjectsTitle}
+        designProjectsArray={abbeyRoadStudiosData.moreDesignProjectsArray}
+      />
+      <Footer />
     </React.Fragment>
   );
 };

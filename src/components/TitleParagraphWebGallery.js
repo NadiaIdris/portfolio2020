@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
-import {closeModal, getValueOfCSSVariable, openModal} from "../utils";
+import {
+  closeModal,
+  getValueOfCSSVariable,
+  openModal,
+  styleModalCloseButtonOnHover,
+} from "../utils";
 import closeIcon from "../vector-images/close-icon.svg";
 
 // This component is similar to TitleParagraphMobileGallery component.
@@ -13,8 +18,8 @@ import closeIcon from "../vector-images/close-icon.svg";
 class TitleParagraphWebGallery extends Component {
   constructor(props) {
     super(props);
-    this.MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS = +379;
-    this.MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS = -379;
+    this.MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS = +425;
+    this.MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS = -425;
     this.HIDE_AND_SHOW_BUTTONS_TIMEOUT = 400;
     this.imageLoadedCounter = 0;
   }
@@ -29,18 +34,18 @@ class TitleParagraphWebGallery extends Component {
 
   initializeVariables = () => {
     this.sectionContainer = document.querySelector("#web-gallery-container");
-    this.mobileGalleryImagesContainer = document.querySelector(
-        "#all-web-gallery-images"
+    this.webGalleryImagesContainer = document.querySelector(
+      "#all-web-gallery-images"
     );
     this.lastImage = document.querySelector(
-        "#all-web-gallery-images"
+      "#all-web-gallery-images"
     ).lastElementChild;
     this.firstImage = document.querySelector(
-        "#all-web-gallery-images"
+      "#all-web-gallery-images"
     ).firstElementChild;
     this.nextButton = this.sectionContainer.querySelector(".next-button");
     this.previousButton = this.sectionContainer.querySelector(
-        ".previous-button"
+      ".previous-button"
     );
   };
 
@@ -55,7 +60,7 @@ class TitleParagraphWebGallery extends Component {
   // This gets called after each images is loaded.
   imageLoaded() {
     this.imageLoadedCounter++;
-    if (this.props.webGalleryImagesArray.length == this.imageLoadedCounter) {
+    if (this.props.webGalleryImagesArray.length === this.imageLoadedCounter) {
       // Only do this after all the images have been loaded.
       this.doCalculationsAfterAllImagesHaveLoaded();
     }
@@ -64,7 +69,7 @@ class TitleParagraphWebGallery extends Component {
   hideNextButton = () => {
     const rightOfLastImage = this.lastImage.getBoundingClientRect().right;
     const rightOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
-        .right;
+      .right;
     if (rightOfLastImage === rightOfWebGalleryImagesContainer)
       this.nextButton.style.opacity = "0";
   };
@@ -72,31 +77,110 @@ class TitleParagraphWebGallery extends Component {
   showNextButton = () => {
     const rightOfLastImage = this.lastImage.getBoundingClientRect().right;
     const rightOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
-        .right;
+      .right;
     if (rightOfLastImage > rightOfWebGalleryImagesContainer)
       this.nextButton.style.opacity = "1";
   };
 
-  // // If TitleParagraphMobileGallery component is 600px or smaller, then remove 16px from
-  // // left of firstImage. That 16px is a margin that getBoundingClientRect()
-  // // doesn't include.
-  // hidePreviousButtonIfViewportSmallerThan601Px = () => {
-  //   let leftOfFirstImage =
-  //       this.firstImage.getBoundingClientRect().left -
-  //       getValueOfCSSVariable(document.body, "--small-page-padding");
-  //   console.log("leftOfFirstImage " + leftOfFirstImage);
-  //   const leftOfFirstImageWithoutAddedPadding = this.firstImage.getBoundingClientRect()
-  //       .left;
-  //   console.log(
-  //       "leftOfFirstImageWithoutAddedPadding " +
-  //       leftOfFirstImageWithoutAddedPadding
-  //   );
-  //   const leftOfMobileGalleryImagesContainer = this.mobileGalleryImagesContainer.getBoundingClientRect()
-  //       .left;
-  //   if (leftOfFirstImage === leftOfMobileGalleryImagesContainer)
-  //     this.previousButton.style.opacity = "0";
-  // };
+  // If TitleParagraphWebGallery component is 600px or smaller, then remove 16px from
+  // left of firstImage. That 16px is a margin that getBoundingClientRect()
+  // doesn't include.
+  hidePreviousButtonIfViewportSmallerThan601Px = () => {
+    let leftOfFirstImage =
+      this.firstImage.getBoundingClientRect().left -
+      getValueOfCSSVariable(document.body, "--small-page-padding");
+    const leftOfFirstImageWithoutAddedPadding = this.firstImage.getBoundingClientRect()
+      .left;
+    const leftOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
+      .left;
+    if (leftOfFirstImage === leftOfWebGalleryImagesContainer)
+      this.previousButton.style.opacity = "0";
+  };
 
+  // If TitleParagraphWebGallery component is between 601px and 1280px, then remove 31px from
+  // left of firstImage. That 31px is a margin that getBoundingClientRect()
+  // doesn't include.
+  hidePreviousButtonIfViewport601To1280Px = () => {
+    const leftOfFirstImage =
+      this.firstImage.getBoundingClientRect().left -
+      getValueOfCSSVariable(document.body, "--default-page-padding");
+    const leftOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
+      .left;
+    if (leftOfFirstImage === leftOfWebGalleryImagesContainer)
+      this.previousButton.style.opacity = "0";
+  };
+
+  hidePreviousButtonIfViewportLargerThan1280Px = () => {
+    const leftOfFirstImage = this.firstImage.getBoundingClientRect().left;
+    const leftOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
+      .left;
+    if (leftOfFirstImage === leftOfWebGalleryImagesContainer)
+      this.previousButton.style.opacity = "0";
+  };
+
+  showPreviousButton = () => {
+    const leftOfFirstImage = this.firstImage.getBoundingClientRect().left;
+    const leftOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
+      .left;
+
+    if (leftOfFirstImage < leftOfWebGalleryImagesContainer)
+      this.previousButton.style.opacity = "1";
+  };
+
+  // scrollBy: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
+  moveSliderToRight = () => {
+    this.webGalleryImagesContainer.scrollBy({
+      top: 0,
+      left: this.MOVE_SLIDER_TO_RIGHT_ON_DESIGNS_PROJECTS,
+      behavior: "smooth",
+    });
+    setTimeout(this.hideNextButton, this.HIDE_AND_SHOW_BUTTONS_TIMEOUT);
+    setTimeout(this.showPreviousButton, this.HIDE_AND_SHOW_BUTTONS_TIMEOUT);
+  };
+
+  moveSliderToLeft = () => {
+    this.webGalleryImagesContainer.scrollBy({
+      top: 0,
+      left: this.MOVE_SLIDER_TO_LEFT_ON_DESIGNS_PROJECTS,
+      behavior: "smooth",
+    });
+    setTimeout(
+      this.hidePreviousButtonIfViewportLargerThan1280Px,
+      this.HIDE_AND_SHOW_BUTTONS_TIMEOUT
+    );
+    setTimeout(
+      this.hidePreviousButtonIfViewportSmallerThan601Px,
+      this.HIDE_AND_SHOW_BUTTONS_TIMEOUT
+    );
+    setTimeout(
+      this.hidePreviousButtonIfViewport601To1280Px,
+      this.HIDE_AND_SHOW_BUTTONS_TIMEOUT
+    );
+    setTimeout(this.showNextButton, this.HIDE_AND_SHOW_BUTTONS_TIMEOUT);
+  };
+
+  plusSlides = (n) => {
+    this.showSlides((this.slideIndex += n));
+  };
+
+  currentSlide = (n) => {
+    this.showSlides((this.slideIndex = n));
+  };
+
+  showSlides = (n) => {
+    let i;
+    const slides = document.getElementsByClassName("one-slide");
+    if (n > slides.length) {
+      this.slideIndex = 1;
+    }
+    if (n < 1) {
+      this.slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[this.slideIndex - 1].style.display = "block";
+  };
 
   render() {
     return (
@@ -106,10 +190,10 @@ class TitleParagraphWebGallery extends Component {
       >
         <h2>{this.props.title}</h2>
         <p className="space-between-paragraphs">{this.props.paragraph}</p>
-        <button className="previous-button mobile-gallery-button">
+        <button className="previous-button web-gallery-button">
           <img src={previousArrow} />
         </button>
-        <button className="next-button mobile-gallery-button">
+        <button className="next-button web-gallery-button">
           <img src={nextArrow} />
         </button>
 
@@ -139,7 +223,7 @@ class TitleParagraphWebGallery extends Component {
             className="close cursor"
             onClick={() => closeModal(this.props.webGalleryModalId)}
           >
-            <img src={closeIcon} />
+            <div></div>
           </span>
           <div>
             {this.props.webGalleryImagesArray.map((image, index) => {
