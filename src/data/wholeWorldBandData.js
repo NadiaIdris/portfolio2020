@@ -2,6 +2,7 @@ import webLight from "./../vector-images/web-logo-lght-gray.svg";
 import homepageWWB from "./../vector-images/wwb-846x846.svg";
 
 const wholeWorldBandData = {
+  componentName: "WholeWorldBand",
   title: "WholeWorldBand",
   description: "Online recording studio for the whole world.",
   icons: [webLight],

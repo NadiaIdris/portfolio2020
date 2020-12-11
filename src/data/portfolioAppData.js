@@ -4,12 +4,13 @@ import htmlLight from "./../vector-images/html-logo-lght-gray.svg";
 import cssLight from "./../vector-images/css-logo-lght-gray.svg";
 
 const portfolioAppData = {
-    title: "Maret Idris Portfolio",
-    description: "The design portfolio you are currently browsing.",
-    icons: [reactLight, htmlLight, cssLight],
+  componentName: "PortfolioApp",
+  title: "Maret Idris Portfolio",
+  description: "The design portfolio you are currently browsing.",
+  icons: [reactLight, htmlLight, cssLight],
 
-    homepageImage: homepagePortfolioApp,
-    homepageImgAlt: "Portfolio app",
+  homepageImage: homepagePortfolioApp,
+  homepageImgAlt: "Portfolio app",
 };
 
 export default portfolioAppData;

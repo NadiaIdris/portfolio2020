@@ -20,6 +20,7 @@ import wholeWorldBandData from "./wholeWorldBandData";
 import truckXData from "./truckXData";
 
 const abbeyRoadStudiosData = {
+  componentName: "AbbeyRoadStudios",
   title: "Abbey Road Studios",
   description: "The most famous recording studio in the world.",
   icons: [webLight],
@@ -37,7 +38,7 @@ const abbeyRoadStudiosData = {
     "I was the only designer in this project and was directly responsible for delivering all the designs. I redesigned the main Abbey Road Studios website with existing content. I collaborated on creating requirements for new online services like online mixing and online mastering and designed all the high fidelity screens for them.",
   ],
 
-  aboutTitle: "About TruckX",
+  aboutTitle: "About Abbey Road Studios",
   aboutArray: [
     "Abbey Road Studios is the most famous recording studio in the world. Popular bands and artists like The Beatles, Adele, Stevie Wonder and many more have recorded in this studio.",
     "I was the lead designer in this project creating every design for the public site. The goal of this large project was to redesign the old Abbey Road Studios website and create an easy to navigate single home for all Abby Road brands (studios, institute, RED, store, crossing cam).",
@@ -146,7 +147,7 @@ const abbeyRoadStudiosData = {
     [studioOne, "Studio one page"],
     [audioProducts, "Audio products page"],
     [engineerPage, "Engineer page"],
-    [eventHire, "Event hire pagge"],
+    [eventHire, "Event hire page"],
     [crossingCam, "Crossing cam page"],
     [thankYou, "Thank you page"],
   ],

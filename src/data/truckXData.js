@@ -13,12 +13,9 @@ import oneLoad from "./../vector-images/truckx-loads-load.png";
 import oneLoadFreight from "./../vector-images/truckx-load-freight.png";
 import oneLoadSign from "./../vector-images/truckx-load-sign.png";
 import highFiPrototype from "./../vector-images/truckx-high-fidelity-small.gif";
-import abbeyRoadStudiosData from "./abbeyRoadStudiosData";
-import uampData from "./uampData";
-import inmusikData from "./inmusikData";
-import wholeWorldBandData from "./wholeWorldBandData";
 
 const truckXData = {
+  componentName: "TruckX",
   title: "TruckX",
   description: "Electronic logbook and trip planning app for truck drivers.",
   icons: [iOSLight, androidLight],
@@ -129,12 +126,12 @@ const truckXData = {
   highFiId: "truckx-hi-fi-prototype",
 
   moreDesignProjectsTitle: "More design projects",
-  moreDesignProjectsArray: [
-    abbeyRoadStudiosData,
-    uampData,
-    inmusikData,
-    wholeWorldBandData,
-  ],
+  // moreDesignProjectsArray: [
+  //   abbeyRoadStudiosData,
+  //   uampData,
+  //   inmusikData,
+  //   wholeWorldBandData,
+  // ],
 };
 
 export default truckXData;

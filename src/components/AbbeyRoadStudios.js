@@ -8,8 +8,12 @@ import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import TitleParagraphImage from "./TitleParagraphImage";
 import TitleParagraphWebGallery from "./TitleParagraphWebGallery";
 import DesignProjects from "./DesignProjects";
-import truckXData from "../data/truckXData";
 import Footer from "./Footer";
+import truckXData from "../data/truckXData";
+import uampData from "../data/uampData";
+import inmusikData from "../data/inmusikData";
+import wholeWorldBandData from "../data/wholeWorldBandData";
+import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 
 const AbbeyRoadStudios = () => {
   return (
@@ -125,7 +129,7 @@ const AbbeyRoadStudios = () => {
       />
       <DesignProjects
         title={abbeyRoadStudiosData.moreDesignProjectsTitle}
-        designProjectsArray={abbeyRoadStudiosData.moreDesignProjectsArray}
+        designProjectsArray={getMoreDesignProjectsArrayBy("AbbeyRoadStudios")}
       />
       <Footer />
     </React.Fragment>

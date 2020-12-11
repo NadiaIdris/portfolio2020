@@ -4,12 +4,13 @@ import htmlLight from "./../vector-images/html-logo-lght-gray.svg";
 import cssLight from "./../vector-images/css-logo-lght-gray.svg";
 
 const plannerAppData = {
-    title: "Planner App",
-    description: "Responsive web application to plan, organize, and track tasks.",
-    icons: [jsLight,htmlLight, cssLight],
+  componentName: "PlannerApp",
+  title: "Planner App",
+  description: "Responsive web application to plan, organize, and track tasks.",
+  icons: [jsLight, htmlLight, cssLight],
 
-    homepageImage: homepagePlannerApp,
-    homepageImgAlt: "Planner app",
+  homepageImage: homepagePlannerApp,
+  homepageImgAlt: "Planner app",
 };
 
 export default plannerAppData;

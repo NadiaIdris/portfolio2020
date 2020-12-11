@@ -12,6 +12,7 @@ import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
 import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
 import DesignProjects from "./DesignProjects";
 import Footer from "./Footer";
+import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 
 const TruckX = () => {
   return (
@@ -157,7 +158,7 @@ const TruckX = () => {
       />
       <DesignProjects
         title={truckXData.moreDesignProjectsTitle}
-        designProjectsArray={truckXData.moreDesignProjectsArray}
+        designProjectsArray={getMoreDesignProjectsArrayBy("TruckX")}
       />
       <Footer />
     </React.Fragment>
