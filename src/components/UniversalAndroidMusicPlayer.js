@@ -4,6 +4,13 @@ import AboutProject from "./AboutProject";
 import TitleParagraph from "./TitleParagraph";
 import uampData from "../data/uampData";
 import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
+import TitleParagraphImage from "./TitleParagraphImage";
+import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
+import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
+import truckXData from "../data/truckXData";
+import DesignProjects from "./DesignProjects";
+import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
+import Footer from "./Footer";
 
 const UniversalAndroidMusicPlayer = () => {
   return (
@@ -29,6 +36,68 @@ const UniversalAndroidMusicPlayer = () => {
         title={uampData.featuresTitle}
         bulletPointsArray={uampData.featuresArray}
       />
+      <TitleParagraph
+        title={uampData.userStoriesTitle}
+        paragraphArray={uampData.userStoriesArray}
+      />
+      <TitleParagraph
+        title={uampData.requirementsTitle}
+        paragraphArray={uampData.requirementsArray}
+      />
+      <TitleParagraphImage
+        title={uampData.oldSiteTitle}
+        image={uampData.oldSiteImage}
+        imageAlt={uampData.oldSiteImageAlt}
+        imageId={uampData.oldSiteId}
+      />
+      <TitleParagraphImage
+        title={uampData.wireframesTitle}
+        paragraphArray={uampData.wireframesParagraphArray}
+        image={uampData.wireframesImage}
+        imageAlt={uampData.wireframeImageAlt}
+        imageId={uampData.wireframesId}
+      />
+      <TitleParagraphImage
+        title={uampData.interactionTitle}
+        paragraphArray={uampData.interactionParagraphArray}
+        image={uampData.interactionImage}
+        imageAlt={uampData.interactionImageAlt}
+        imageId={uampData.interactionId}
+      />
+      <ColOneTextColTwoImg
+        title={uampData.lowFiTitle}
+        paragraph={uampData.lowFiParagraph}
+        image={uampData.lowFiImage}
+        imageAlt={uampData.lowFiImageAlt}
+        imageId={uampData.lowFiId}
+      />
+      <ColOneTextColTwoImg
+        title={uampData.typographyTitle}
+        paragraph={uampData.typographyParagraphArray}
+        image={uampData.typographyImage}
+        imageAlt={uampData.typographyImageAlt}
+        imageId={uampData.typographyImageId}
+      />
+      <TitleParagraphMobileGallery
+        title={uampData.mobileGalleryTitle}
+        paragraph={uampData.mobileGalleryParagraph}
+        mobileGalleryImagesArray={uampData.mobileGalleryImagesArray}
+        mobileGalleryModalId={uampData.mobileGalleryModalId}
+      />
+      <ColOneTextColTwoImg
+        title={uampData.highFiTitle}
+        paragraph={uampData.highFiParagraph}
+        image={uampData.highFiImage}
+        imageAlt={uampData.highFiImageAlt}
+        imageId={uampData.highFiId}
+      />
+      <DesignProjects
+        title={truckXData.moreDesignProjectsTitle}
+        designProjectsArray={getMoreDesignProjectsArrayBy(
+          "UniversalAndroidMusicPlayer"
+        )}
+      />
+      <Footer />
     </React.Fragment>
   );
 };

@@ -9,10 +9,6 @@ import TitleParagraphImage from "./TitleParagraphImage";
 import TitleParagraphWebGallery from "./TitleParagraphWebGallery";
 import DesignProjects from "./DesignProjects";
 import Footer from "./Footer";
-import truckXData from "../data/truckXData";
-import uampData from "../data/uampData";
-import inmusikData from "../data/inmusikData";
-import wholeWorldBandData from "../data/wholeWorldBandData";
 import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 
 const AbbeyRoadStudios = () => {

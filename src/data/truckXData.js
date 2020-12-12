@@ -85,7 +85,7 @@ const truckXData = {
 
   wireframesTitle: "Wireframes",
   wireframesParagraphArray: [
-    " This paper wireframe user flow was created to give the developers an idea of what needs to be built, so they could have started planning the construction of the app ahead of time.",
+    "This paper wireframe user flow was created to give the developers an idea of what needs to be built, so they could have started planning the construction of the app ahead of time.",
   ],
   wireframesImage: wireframe,
   wireframeImageAlt: "TruckX wireframes",
@@ -104,7 +104,7 @@ const truckXData = {
     "In order to test out the user flow before designing the high fidelity app, I created the low fidelity prototype to get user feedback.",
   lowFiImage: lowFiPrototype,
   lowFiImageAlt: "TruckX low fidelity prototype",
-  lowFiId: "truckx-low-fi-prototype",
+  lowFiId: "truckx-low-fi-prototype-modal",
 
   mobileGalleryTitle: "High fidelity mockups",
   mobileGalleryParagraph:
@@ -116,22 +116,16 @@ const truckXData = {
     [oneLoadFreight, "Freight info"],
     [oneLoadSign, "Sign a load"],
   ],
-  mobileGalleryModalId: "truckx-mobile-gallery",
+  mobileGalleryModalId: "truckx-mobile-gallery-modal",
 
   highFiTitle: "High fidelity prototype",
   highFiParagraph:
     "Using InVision I created a high fidelity prototype that was delivered to the engineering team with the mockups in order for them to build the app.",
   highFiImage: highFiPrototype,
   highFiImageAlt: "TruckX high fidelity prototype",
-  highFiId: "truckx-hi-fi-prototype",
+  highFiId: "truckx-hi-fi-prototype-modal",
 
   moreDesignProjectsTitle: "More design projects",
-  // moreDesignProjectsArray: [
-  //   abbeyRoadStudiosData,
-  //   uampData,
-  //   inmusikData,
-  //   wholeWorldBandData,
-  // ],
 };
 
 export default truckXData;

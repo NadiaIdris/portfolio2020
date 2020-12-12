@@ -124,7 +124,7 @@ const abbeyRoadStudiosData = {
   ],
   typographyImage: typography,
   typographyImageAlt: "Typography & color theme",
-  typographyImageId: "abbey-road-typography",
+  typographyImageId: "abbey-road-typography-modal",
 
   interactionTitle: "Interaction design",
   interactionParagraphArray: [
