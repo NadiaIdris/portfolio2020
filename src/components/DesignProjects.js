@@ -178,6 +178,11 @@ class DesignProjects extends React.Component {
         </button>
         <div id="all-projects">
           {this.props.designProjectsArray.map((project, index) => {
+            console.log(
+              "this.props.designProjectsArray",
+              this.props.designProjectsArray
+            );
+            console.log("project", project);
             return (
               <div className="one-design-project" key={index}>
                 <a href={getPageName(project.title)}>

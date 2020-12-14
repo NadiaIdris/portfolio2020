@@ -43,6 +43,7 @@
     --distance-between-home-page-components: 35px;
     --distance-between-project-page-components: 42px;
     --border-radius: 4px;
+    --button-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     /*Colors*/
     --color-white: #FFFFFF;
     --color-gray-accent: #DFDFDF;

@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
-import {
-  closeModal,
-  getValueOfCSSVariable,
-  openModal,
-  styleModalCloseButtonOnHover,
-} from "../utils";
-import closeIcon from "../vector-images/close-icon.svg";
+import { closeModal, getValueOfCSSVariable, openModal } from "../utils";
 
 // This component is similar to TitleParagraphMobileGallery component.
 // Pass this component following props:
@@ -89,8 +83,6 @@ class TitleParagraphWebGallery extends Component {
     let leftOfFirstImage =
       this.firstImage.getBoundingClientRect().left -
       getValueOfCSSVariable(document.body, "--small-page-padding");
-    const leftOfFirstImageWithoutAddedPadding = this.firstImage.getBoundingClientRect()
-      .left;
     const leftOfWebGalleryImagesContainer = this.webGalleryImagesContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstImage === leftOfWebGalleryImagesContainer)
@@ -169,7 +161,7 @@ class TitleParagraphWebGallery extends Component {
 
   showSlides = (n) => {
     let i;
-    const slides = document.getElementsByClassName("one-slide");
+    const slides = document.getElementsByClassName("one-web-slide");
     if (n > slides.length) {
       this.slideIndex = 1;
     }
@@ -191,10 +183,10 @@ class TitleParagraphWebGallery extends Component {
         <h2>{this.props.title}</h2>
         <p className="space-between-paragraphs">{this.props.paragraph}</p>
         <button className="previous-button web-gallery-button">
-          <img src={previousArrow} />
+          <img src={previousArrow} alt="Previous item button" />
         </button>
         <button className="next-button web-gallery-button">
-          <img src={nextArrow} />
+          <img src={nextArrow} alt="Next item button" />
         </button>
 
         <div id="all-web-gallery-images">
@@ -232,7 +224,7 @@ class TitleParagraphWebGallery extends Component {
                   src={image[0]}
                   alt={image[1]}
                   key={index}
-                  className="modal-content one-slide"
+                  className="modal-content one-web-slide"
                 />
               );
             })}
@@ -240,13 +232,13 @@ class TitleParagraphWebGallery extends Component {
               className="modal-previous-button"
               onClick={() => this.plusSlides(-1)}
             >
-              <img src={previousArrow} />
+              <img src={previousArrow} alt="Previous item button" />
             </button>
             <button
               className="modal-next-button"
               onClick={() => this.plusSlides(1)}
             >
-              <img src={nextArrow} />
+              <img src={nextArrow} alt="Next item button" />
             </button>
           </div>
         </div>

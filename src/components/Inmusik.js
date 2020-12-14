@@ -48,24 +48,18 @@ const Inmusik = () => {
       />
 
       <TitleParagraphWebGallery
-        title={uampData.webGalleryTitle}
-        paragraph={uampData.webGalleryParagraph}
-        webGalleryImagesArray={uampData.webGalleryImagesArray}
-        webGalleryModalId={uampData.webGalleryModalId}
+        title={inmusikData.webGalleryTitle}
+        paragraph={inmusikData.webGalleryParagraph}
+        webGalleryImagesArray={inmusikData.webGalleryImagesArray}
+        webGalleryModalId={inmusikData.webGalleryModalId}
       />
-      {/*<ColOneTextColTwoImg*/}
-      {/*  title={inmusikData.highFiTitle}*/}
-      {/*  paragraph={inmusikData.highFiParagraph}*/}
-      {/*  image={inmusikData.highFiImage}*/}
-      {/*  imageAlt={inmusikData.highFiImageAlt}*/}
-      {/*  imageId={inmusikData.highFiId}*/}
-      {/*/>*/}
-      {/*<DesignProjects*/}
-      {/*  title={truckXData.moreDesignProjectsTitle}*/}
-      {/*  designProjectsArray={getMoreDesignProjectsArrayBy(*/}
-      {/*    "UniversalAndroidMusicPlayer"*/}
-      {/*  )}*/}
-      {/*/>*/}
+
+      <TitleParagraphMobileGallery
+        title={inmusikData.mobileGalleryTitle}
+        paragraph={inmusikData.mobileGalleryParagraph}
+        mobileGalleryImagesArray={inmusikData.mobileGalleryImagesArray}
+        mobileGalleryModalId={inmusikData.mobileGalleryModalId}
+      />
       <Footer />
     </React.Fragment>
   );

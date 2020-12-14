@@ -174,7 +174,7 @@ button:focus {
     .previous-button {
         position: absolute;
         z-index: 1;
-        top: 205px;
+        bottom: 265px;
         left: 25px;
         height: var(--next-previous-button-size);
         width: var(--next-previous-button-size);
@@ -191,8 +191,8 @@ button:focus {
     }
 
     .previous-button:hover {
-        -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: var(--button-box-shadow);
+        box-shadow: var(--button-box-shadow);
         background-color: var(--color-white);
         transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
     }
@@ -200,7 +200,7 @@ button:focus {
     .next-button {
         position: absolute;
         z-index: 1;
-        top: 205px;
+        bottom: 265px;
         right: 25px;
         height: var(--next-previous-button-size);
         width: var(--next-previous-button-size);
@@ -217,8 +217,8 @@ button:focus {
     }
 
     .next-button:hover {
-        -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: var(--button-box-shadow);
+        box-shadow: var(--button-box-shadow);
         background-color: var(--color-white);
         transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
     }
