@@ -9,6 +9,8 @@ import portfolioAppData from "./portfolioAppData";
 
 export const homepageDesignProjectsTitle = "Design projects";
 
+export const homepageCodingProjectsTitle = "Coding projects";
+
 export const arrayOfDesignProjects = [
   truckXData,
   abbeyRoadStudiosData,

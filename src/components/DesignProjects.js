@@ -171,10 +171,10 @@ class DesignProjects extends React.Component {
       >
         <h2>{this.props.title}</h2>
         <button className="previous-button">
-          <img src={previousArrow} />
+          <img src={previousArrow} alt="Previous item arrow" />
         </button>
         <button className="next-button">
-          <img src={nextArrow} />
+          <img src={nextArrow} alt="Next item arrow" />
         </button>
         <div id="all-projects">
           {this.props.designProjectsArray.map((project, index) => {
@@ -194,6 +194,9 @@ class DesignProjects extends React.Component {
                       onLoad={() => {
                         this.imageLoaded();
                       }}
+                      onError={() => {
+                        this.imageLoaded();
+                      }}
                     />
                   </div>
                 </a>
@@ -204,7 +207,7 @@ class DesignProjects extends React.Component {
                       <p className="light-gray-text">{project.description}</p>
                       <div className="icons">
                         {project.icons.map((icon, index) => {
-                          return <img src={icon} key={index} />;
+                          return <img src={icon} key={index} alt="Icon" />;
                         })}
                       </div>
                     </div>

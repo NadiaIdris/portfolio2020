@@ -44,16 +44,16 @@ class CodingProjects extends React.Component {
 
   doCalculationsAfterAllImagesHaveLoaded = () => {
     // Hide previous button on page load.
-    // hidePreviousButton();
     this.hidePreviousButtonIfMarginLeftIsSmall();
     this.hidePreviousButtonIfMarginLeftIsDefault();
     this.hidePreviousButtonIfViewportLargerThan1280Px();
+    this.showNextButton();
   };
 
   /** This gets called after each images is loaded. */
   imageLoaded() {
     this.imageLoadedCounter++;
-    if (this.props.designProjectsArray.length === this.imageLoadedCounter) {
+    if (this.props.codingProjectsArray.length === this.imageLoadedCounter) {
       // Only do this after all the images have been loaded.
       this.doCalculationsAfterAllImagesHaveLoaded();
     }
@@ -77,15 +77,6 @@ class CodingProjects extends React.Component {
     if (rightOfLastCodingProject > rightOfCodingProjectsContainer)
       this.nextButton.style.opacity = "1";
   };
-
-  // const hidePreviousButton = () => {
-  //   const leftOfFirstCodingProject = firstCodingProject.getBoundingClientRect()
-  //     .left;
-  //   const leftOfCodingProjectsContainer = codingProjectsContainer.getBoundingClientRect()
-  //     .left;
-  //   if (leftOfFirstCodingProject === leftOfCodingProjectsContainer)
-  //     previousButton.style.opacity = "0";
-  // };
 
   // If DesignProjects component is 600px or smaller, then remove 16px from
   // left of firstDesignProject. That 16px is a margin that getBoundingClientRect()
@@ -201,7 +192,7 @@ class CodingProjects extends React.Component {
   render() {
     return (
       <section id="coding-projects-container">
-        <h2>Coding projects</h2>
+        <h2>{this.props.title}</h2>
         <button className="previous-button coding-button">
           <img src={previousArrow} alt="Previous item button" />
         </button>
@@ -218,6 +209,12 @@ class CodingProjects extends React.Component {
                       className="coding-project-img"
                       src={project.homepageImage}
                       alt={project.homepageImgAlt}
+                      onLoad={() => {
+                        this.imageLoaded();
+                      }}
+                      onError={() => {
+                        this.imageLoaded();
+                      }}
                     />
                   </div>
                 </a>

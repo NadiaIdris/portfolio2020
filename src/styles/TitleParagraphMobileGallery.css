@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 9px;
+    /*padding-left: 9px;*/
     opacity: 0;
     background-color: var(--color-gray-hover-bckround);
     box-shadow: none;
@@ -54,7 +54,7 @@
     padding-left: 4px;
     opacity: 1;
     box-shadow: none;
-    background-color: var(--color-gray-hover-bckround);
+    background-color: var(--color-gray-accent);
     transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }
 
@@ -79,7 +79,7 @@
     align-items: center;
     padding-left: 9px;
     opacity: 1;
-    background-color: var(--color-gray-hover-bckround);
+    background-color: var(--color-gray-accent);
     box-shadow: none;
     transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
 }

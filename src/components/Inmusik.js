@@ -4,15 +4,10 @@ import AboutProject from "./AboutProject";
 import TitleParagraph from "./TitleParagraph";
 import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import TitleParagraphImage from "./TitleParagraphImage";
-import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
 import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
-import DesignProjects from "./DesignProjects";
-import truckXData from "../data/truckXData";
-import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 import inmusikData from "../data/inmusikData";
 import Footer from "./Footer";
 import TitleParagraphWebGallery from "./TitleParagraphWebGallery";
-import abbeyRoadStudiosData from "../data/abbeyRoadStudiosData";
 
 const Inmusik = () => {
   return (

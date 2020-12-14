@@ -5,7 +5,9 @@ import CodingProjects from "./CodingProjects";
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import {
+  arrayOfCodingProjects,
   arrayOfDesignProjects,
+  homepageCodingProjectsTitle,
   homepageDesignProjectsTitle,
 } from "../data/projectsData";
 
@@ -23,7 +25,10 @@ const Home = () => {
         title={homepageDesignProjectsTitle}
         designProjectsArray={arrayOfDesignProjects}
       />
-      <CodingProjects />
+      <CodingProjects
+        title={homepageCodingProjectsTitle}
+        codingProjectsArray={arrayOfCodingProjects}
+      />
       <Testimonials />
       <Footer />
     </React.Fragment>
