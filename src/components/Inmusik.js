@@ -8,6 +8,9 @@ import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
 import inmusikData from "../data/inmusikData";
 import Footer from "./Footer";
 import TitleParagraphWebGallery from "./TitleParagraphWebGallery";
+import TitleBulletPointsOneColumnWithLinks from "./TitleBulletPointsOneColumnWithLinks";
+import DesignProjects from "./DesignProjects";
+import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 
 const Inmusik = () => {
   return (
@@ -54,6 +57,14 @@ const Inmusik = () => {
         paragraph={inmusikData.mobileGalleryParagraph}
         mobileGalleryImagesArray={inmusikData.mobileGalleryImagesArray}
         mobileGalleryModalId={inmusikData.mobileGalleryModalId}
+      />
+      <TitleBulletPointsOneColumnWithLinks
+        title={inmusikData.articlesTitle}
+        bulletPointsArray={inmusikData.articlesBulletPointsArray}
+      />
+      <DesignProjects
+        title={inmusikData.moreDesignProjectsTitle}
+        designProjectsArray={getMoreDesignProjectsArrayBy("Inmusik")}
       />
       <Footer />
     </React.Fragment>

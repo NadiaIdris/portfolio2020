@@ -4,9 +4,40 @@ const AboutProject = ({
   duration,
   platformArray,
   screens,
+  repo,
   role,
   contribution,
 }) => {
+  const screensOrGithub = () => {
+    if (screens) {
+      return (
+        <div className="bullet-point-container">
+          <p className="dash">-</p>
+          <p>
+            <span>Final screens designed:&nbsp;</span>
+            {screens}
+          </p>
+        </div>
+      );
+    } else {
+      return (
+        <div className="bullet-point-container">
+          <p className="dash">-</p>
+          <p>
+            <span>Github:&nbsp;</span>
+            <a
+              href={repo[0][1]}
+              target="_blank"
+              rel="noreferrer"
+              className="platform-link"
+            >
+              {repo[0][0]}
+            </a>
+          </p>
+        </div>
+      );
+    }
+  };
   const platforms = [];
 
   for (let i = 0; i < platformArray.length; i++) {
@@ -59,13 +90,7 @@ const AboutProject = ({
           {platforms}
         </p>
       </div>
-      <div className="bullet-point-container">
-        <p className="dash">-</p>
-        <p>
-          <span>Final screens designed:&nbsp;</span>
-          {screens}
-        </p>
-      </div>
+      {screensOrGithub()}
 
       <br />
 

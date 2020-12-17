@@ -154,12 +154,6 @@ const abbeyRoadStudiosData = {
   webGalleryModalId: "abbey-road-web-gallery",
 
   moreDesignProjectsTitle: "More design projects",
-  moreDesignProjectsArray: [
-    truckXData,
-    uampData,
-    inmusikData,
-    wholeWorldBandData,
-  ],
 };
 
 export default abbeyRoadStudiosData;

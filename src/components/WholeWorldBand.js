@@ -6,6 +6,8 @@ import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import wholeWorldBandData from "../data/wholeWorldBandData";
 import Footer from "./Footer";
 import TitleParagraphWebGallery from "./TitleParagraphWebGallery";
+import DesignProjects from "./DesignProjects";
+import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 
 const WholeWorldBand = () => {
   return (
@@ -40,6 +42,10 @@ const WholeWorldBand = () => {
         paragraph={wholeWorldBandData.webGalleryParagraph}
         webGalleryImagesArray={wholeWorldBandData.webGalleryImagesArray}
         webGalleryModalId={wholeWorldBandData.webGalleryModalId}
+      />
+      <DesignProjects
+        title={wholeWorldBandData.moreDesignProjectsTitle}
+        designProjectsArray={getMoreDesignProjectsArrayBy("WholeWorldBand")}
       />
       <Footer />
     </React.Fragment>

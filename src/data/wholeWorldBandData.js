@@ -62,7 +62,9 @@ const wholeWorldBandData = {
   ],
 
   webGalleryTitle: "High fidelity mockups",
-  webGalleryParagraph: "...",
+  webGalleryParagraph: [
+    "The visual design goal for the web application was to give the app a new look that modernized the old iOS application design.",
+  ],
   webGalleryImagesArray: [
     [homePage, "Homepage"],
     [videoFeed, "Video feed"],
@@ -78,6 +80,8 @@ const wholeWorldBandData = {
     [createMyVideoThree, "Add video effects to your video"],
   ],
   webGalleryModalId: "wwb-web-gallery",
+
+  moreDesignProjectsTitle: "More design projects",
 };
 
 export default wholeWorldBandData;

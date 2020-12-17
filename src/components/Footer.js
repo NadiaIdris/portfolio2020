@@ -10,9 +10,9 @@ const Footer = () => {
   return (
     <div id="footer">
       <p>
-        This website was designed and{" "}
+        This website was{" "}
         <a href="https://github.com/MaretIdris/portfolio2020" target="_blank">
-          built by Maret Idris
+          designed and built by Maret Idris
         </a>
         .
       </p>

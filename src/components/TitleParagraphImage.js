@@ -36,7 +36,7 @@ const TitleParagraphImage = ({
           <span className="close cursor" onClick={() => closeModal(imageId)}>
             <div></div>
           </span>
-          <img src={image} className="modal-content" />
+          <img src={image} className="modal-content" alt={imageAlt} />
         </div>
       </React.Fragment>
     );

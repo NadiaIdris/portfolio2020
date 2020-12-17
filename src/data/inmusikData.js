@@ -105,6 +105,36 @@ const inmusikData = {
     [iosSongPage, "Song page"],
   ],
   mobileGalleryModalId: "inmusik-mobile-gallery-modal",
+
+  articlesTitle: "Articles about Inmusik/Emeraz",
+  articlesBulletPointsArray: [
+    [
+      "Irish start-up Inmusik’s move to San Francisco hits right note as it raises $7m (2016)",
+      "https://www.siliconrepublic.com/start-ups/in-musik-san-francisco-brand-capital-times-india-china-next-unicorn",
+    ],
+    [
+      "Irish start-up launches its emerging music discovery tool (2014)",
+      "https://www.siliconrepublic.com/play/irish-start-up-launches-its-emerging-music-discovery-tool",
+    ],
+    [
+      "Emeraz – The Next Big Thing Officially Launches! (2013)",
+      "https://www.musictech.net/news/emeraz-the-next-big-thing-officially-launches/",
+    ],
+    [
+      "Emeraz: The Next Big Thing? (2013)",
+      "https://www.musictech.net/news/emeraz-the-next-big-thing/",
+    ],
+    [
+      "Irish start-up Emeraz creates new ‘Personal Song Coach’ for music-makers (2013)",
+      "https://www.siliconrepublic.com/gear/irish-start-up-emeraz-creates-new-personal-song-coach-for-music-makers",
+    ],
+    [
+      "Tech start-up of the week: Emeraz.com (2012)",
+      "https://www.siliconrepublic.com/start-ups/tech-start-up-of-the-week-emeraz-com",
+    ],
+  ],
+
+  moreDesignProjectsTitle: "More design projects",
 };
 
 export default inmusikData;

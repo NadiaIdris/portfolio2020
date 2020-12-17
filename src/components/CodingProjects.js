@@ -1,7 +1,6 @@
 import React from "react";
 import "./../styles/CodingProjects.css";
 // import './../styles/DesignProjects.css'
-import { arrayOfCodingProjects } from "../data/projectsData";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
 import { getValueOfCSSVariable } from "../utils";
@@ -189,9 +188,20 @@ class CodingProjects extends React.Component {
     }
   };
 
+  addMarginTopIfProjectPageComponent = () => {
+    // Check if component title is not "Design projects", then add class
+    // design-project-container-margin-top
+    if (this.props.title !== "Coding projects") {
+      return "design-project-container-margin-top";
+    }
+  };
+
   render() {
     return (
-      <section id="coding-projects-container">
+      <section
+        id="coding-projects-container"
+        className={this.addMarginTopIfProjectPageComponent()}
+      >
         <h2>{this.props.title}</h2>
         <button className="previous-button coding-button">
           <img src={previousArrow} alt="Previous item button" />
@@ -200,7 +210,7 @@ class CodingProjects extends React.Component {
           <img src={nextArrow} alt="Next item button" />
         </button>
         <div id="all-coding-projects">
-          {arrayOfCodingProjects.map((project, index) => {
+          {this.props.codingProjectsArray.map((project, index) => {
             return (
               <div className="one-coding-project" key={index}>
                 <a href={getPageName(project.title)}>

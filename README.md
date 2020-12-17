@@ -154,6 +154,8 @@ no carousel (next and previous buttons).
    array of mobile design images.
 8. `<TitleParagraphWebGallery />` component -> Add title, paragraph and an array
    of web design images.
+9. `<TitleBulletPointsOneColemnWithLinks />` component -> Add title, paragraph
+   array with link name and link.
 
 ## The difference between `<TitleParagraph />` and `<TitleParagraphImage />`
 

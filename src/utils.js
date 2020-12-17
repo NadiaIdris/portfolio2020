@@ -1,5 +1,3 @@
-import closeIconDark from "./vector-images/close-icon-dark.svg";
-
 // Access CSS variable from JS: https://stackoverflow.com/a/41725782
 const getValueOfCSSVariable = (element, variableName) => {
   const computedStyle = getComputedStyle(element);
@@ -17,9 +15,11 @@ const scrollToTop = () => {
 
 // Open full viewport modal component.
 const openModal = (imageId) => {
-  document.querySelector(`#${imageId}`).style.display = "block";
-  document.querySelector("html").style.height = "100%";
-  document.querySelector("html").style.overflow = "hidden";
+  const imageElement = document.querySelector(`#${imageId}`);
+  const htmlElement = document.querySelector("html");
+  imageElement.style.display = "block";
+  htmlElement.style.height = "100%";
+  htmlElement.style.overflow = "hidden";
 };
 
 // Close modal component.
