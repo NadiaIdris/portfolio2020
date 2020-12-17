@@ -3,38 +3,36 @@ import { closeModal, openModal } from "../utils";
 
 const TitleMultipleParagraphGifs = ({ title, paragraphGifsArray }) => {
   const paragraphGif = (oneParagraphGifArray, index) => {
-    if (oneParagraphGifArray[1] !== undefined) {
+    const image = oneParagraphGifArray[1];
+    const paragraphText = oneParagraphGifArray[0];
+    const imageAlt = oneParagraphGifArray[2];
+    const imageModalId = oneParagraphGifArray[3];
+    if (image !== undefined) {
       const paragraphs = [];
       // If first element of the paragraphGifsArray, then don't add padding-top
       // to the paragraph.
       if (oneParagraphGifArray === paragraphGifsArray[0]) {
         paragraphs.push(
           <div key={index}>
-            <p className="space-between-paragraphs">
-              {oneParagraphGifArray[0]}
-            </p>
+            <p className="space-between-paragraphs">{paragraphText}</p>
             <img
-              src={oneParagraphGifArray[1]}
-              alt={oneParagraphGifArray[2]}
-              onClick={() => openModal(oneParagraphGifArray[3])}
+              src={image}
+              alt={imageAlt}
+              onClick={() => openModal(imageModalId)}
               className="image-bottom-margin responsive-image"
             />
             <div
-              id={oneParagraphGifArray[3]}
+              id={imageModalId}
               className="modal"
-              onClick={() => closeModal(oneParagraphGifArray[3])}
+              onClick={() => closeModal(imageModalId)}
             >
               <span
                 className="close cursor"
-                onClick={() => closeModal(oneParagraphGifArray[3])}
+                onClick={() => closeModal(imageModalId)}
               >
                 <div></div>
               </span>
-              <img
-                src={oneParagraphGifArray[1]}
-                alt={oneParagraphGifArray[2]}
-                className="modal-content"
-              />
+              <img src={image} alt={imageAlt} className="modal-content" />
             </div>
           </div>
         );
@@ -42,30 +40,26 @@ const TitleMultipleParagraphGifs = ({ title, paragraphGifsArray }) => {
         paragraphs.push(
           <div key={index}>
             <p className="space-between-paragraphs added-padding-top">
-              {oneParagraphGifArray[0]}
+              {paragraphText}
             </p>
             <img
-              src={oneParagraphGifArray[1]}
-              alt={oneParagraphGifArray[2]}
-              onClick={() => openModal(oneParagraphGifArray[3])}
+              src={image}
+              alt={imageAlt}
+              onClick={() => openModal(imageModalId)}
               className="image-bottom-margin responsive-image"
             />
             <div
-              id={oneParagraphGifArray[3]}
+              id={imageModalId}
               className="modal"
-              onClick={() => closeModal(oneParagraphGifArray[3])}
+              onClick={() => closeModal(imageModalId)}
             >
               <span
                 className="close cursor"
-                onClick={() => closeModal(oneParagraphGifArray[3])}
+                onClick={() => closeModal(imageModalId)}
               >
                 <div></div>
               </span>
-              <img
-                src={oneParagraphGifArray[1]}
-                alt={oneParagraphGifArray[2]}
-                className="modal-content"
-              />
+              <img src={image} alt={imageAlt} className="modal-content" />
             </div>
           </div>
         );
