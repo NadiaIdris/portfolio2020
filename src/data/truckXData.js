@@ -52,6 +52,9 @@ const truckXData = {
     "For this project, I worked directly with the CEO of a startup, to design a digital replacement for paper-based truck driver log books. My goal was to give the early stage startup the main user flows, along with the main body of design so they could start building a prototype.",
   ],
 
+  endResultTitle: "End result",
+  mobileDesign: true,
+
   featuresTitle: "Features",
   featuresArray: [
     [

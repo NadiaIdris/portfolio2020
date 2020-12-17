@@ -14,10 +14,6 @@ import engineerPage from "./../vector-images/abbey-road-engineer-page.png";
 import eventHire from "./../vector-images/abbey-road-event-hire.png";
 import crossingCam from "./../vector-images/abbey-road-crossing-cam.png";
 import thankYou from "./../vector-images/abbey-road-thank-you.png";
-import uampData from "./uampData";
-import inmusikData from "./inmusikData";
-import wholeWorldBandData from "./wholeWorldBandData";
-import truckXData from "./truckXData";
 
 const abbeyRoadStudiosData = {
   componentName: "AbbeyRoadStudios",
@@ -44,6 +40,8 @@ const abbeyRoadStudiosData = {
     "I was the lead designer in this project creating every design for the public site. The goal of this large project was to redesign the old Abbey Road Studios website and create an easy to navigate single home for all Abby Road brands (studios, institute, RED, store, crossing cam).",
     "Project work also included making it easier to purchase and manage services like online mixing, mastering and create a checkout process for the Abbey Road digital store. The project extended to also designing Abbey Road Studios emails (promotional, welcome and purchase confirmation emails) and also designing an online song competition to promote Abbey Road Studios online mixing and mastering services.",
   ],
+
+  endResultTitle: "End result",
 
   featuresTitle: "Features",
   featuresArray: [

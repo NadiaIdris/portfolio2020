@@ -7,12 +7,11 @@ import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import TitleParagraphImage from "./TitleParagraphImage";
 import ColOneTextColTwoImg from "./ColOneTextColTwoImg";
 import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
-import truckXData from "../data/truckXData";
 import DesignProjects from "./DesignProjects";
 import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 import Footer from "./Footer";
 
-const UniversalAndroidMusicPlayer = () => {
+const UAMP = () => {
   return (
     <React.Fragment>
       <Header
@@ -31,6 +30,13 @@ const UniversalAndroidMusicPlayer = () => {
       <TitleParagraph
         title={uampData.aboutTitle}
         paragraphArray={uampData.aboutArray}
+      />
+      <TitleParagraphImage
+        title={uampData.endResultTitle}
+        image={uampData.highFiImage}
+        imageAlt={uampData.highFiImageAlt}
+        imageId={uampData.highFiId}
+        mobileDesign={uampData.mobileDesign}
       />
       <TitleBulletPointsOneColumn
         title={uampData.featuresTitle}
@@ -92,14 +98,12 @@ const UniversalAndroidMusicPlayer = () => {
         imageId={uampData.highFiId}
       />
       <DesignProjects
-        title={truckXData.moreDesignProjectsTitle}
-        designProjectsArray={getMoreDesignProjectsArrayBy(
-          "UniversalAndroidMusicPlayer"
-        )}
+        title={uampData.moreDesignProjectsTitle}
+        designProjectsArray={getMoreDesignProjectsArrayBy("UAMP")}
       />
       <Footer />
     </React.Fragment>
   );
 };
 
-export default UniversalAndroidMusicPlayer;
+export default UAMP;

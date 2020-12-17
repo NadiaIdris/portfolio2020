@@ -7,6 +7,7 @@ const TitleParagraphImage = ({
   image,
   imageAlt,
   imageId,
+  mobileDesign,
 }) => {
   // Only add paragraph(s) if it exists.
   const paragraphElement = () => {
@@ -23,6 +24,20 @@ const TitleParagraphImage = ({
     }
   };
 
+  // If it's mobile design add inline styling with smaller width and center the
+  // design.
+  const mobile = {
+    maxWidth: "277px",
+    display: "flex",
+    alignSelf: "center",
+  };
+
+  const addExtraStylesIfMobileDesign = () => {
+    if (mobileDesign) {
+      return mobile;
+    }
+  };
+
   const imageElement = (imageId) => {
     return (
       <React.Fragment>
@@ -30,6 +45,7 @@ const TitleParagraphImage = ({
           src={image}
           alt={imageAlt}
           className="image-bottom-margin responsive-image"
+          style={addExtraStylesIfMobileDesign()}
           onClick={() => openModal(imageId)}
         />
         <div id={imageId} className="modal" onClick={() => closeModal(imageId)}>

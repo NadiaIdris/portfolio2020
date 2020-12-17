@@ -54,6 +54,9 @@ const uampData = {
     "Developers can use different components from the sample app and customize them for their specific needs if needed.",
   ],
 
+  endResultTitle: "End result",
+  mobileDesign: true,
+
   featuresTitle: "Features",
   featuresArray: [
     ["Browse music: ", "by genre, by artist, by album, my favorites."],

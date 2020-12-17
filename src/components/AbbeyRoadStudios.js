@@ -10,6 +10,7 @@ import TitleParagraphWebGallery from "./TitleParagraphWebGallery";
 import DesignProjects from "./DesignProjects";
 import Footer from "./Footer";
 import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
+import uampData from "../data/uampData";
 
 const AbbeyRoadStudios = () => {
   return (
@@ -30,6 +31,11 @@ const AbbeyRoadStudios = () => {
       <TitleParagraph
         title={abbeyRoadStudiosData.aboutTitle}
         paragraphArray={abbeyRoadStudiosData.aboutArray}
+      />
+      <TitleParagraphWebGallery
+        title={abbeyRoadStudiosData.endResultTitle}
+        webGalleryImagesArray={abbeyRoadStudiosData.webGalleryImagesArray}
+        webGalleryModalId={abbeyRoadStudiosData.webGalleryModalId}
       />
       <TitleBulletPointsOneColumn
         title={abbeyRoadStudiosData.featuresTitle}

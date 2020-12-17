@@ -34,6 +34,13 @@ const TruckX = () => {
         title={truckXData.aboutTitle}
         paragraphArray={truckXData.aboutArray}
       />
+      <TitleParagraphImage
+        title={truckXData.endResultTitle}
+        image={truckXData.highFiImage}
+        imageAlt={truckXData.highFiImageAlt}
+        imageId={truckXData.highFiId}
+        mobileStyle={truckXData.mobileDesign}
+      />
       <TitleBulletPointsOneColumn
         title={truckXData.featuresTitle}
         bulletPointsArray={truckXData.featuresArray}

@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./components/Home";
 import TruckX from "./components/TruckX";
 import AbbeyRoadStudios from "./components/AbbeyRoadStudios";
-import UniversalAndroidMusicPlayer from "./components/UniversalAndroidMusicPlayer";
+import UAMP from "./components/UAMP";
 import Inmusik from "./components/Inmusik";
 import WholeWorldBand from "./components/WholeWorldBand";
 import WeatherApp from "./components/WeatherApp";
@@ -14,7 +14,7 @@ const PageNames = {
   HOME: "Home",
   ABOUT: "About",
   TRUCKX: "TruckX",
-  UAMP: "UniversalAndroidMusicPlayer",
+  UAMP: "UAMP",
   ABBEY_ROAD_STUDIOS: "AbbeyRoadStudios",
   INMUSIK: "Inmusik",
   WHOLEWORLDBAND: "WholeWorldBand",
@@ -45,7 +45,7 @@ const getComponentForPageName = (name) => {
     case PageNames.ABBEY_ROAD_STUDIOS:
       return <AbbeyRoadStudios />;
     case PageNames.UAMP:
-      return <UniversalAndroidMusicPlayer />;
+      return <UAMP />;
     case PageNames.INMUSIK:
       return <Inmusik />;
     case PageNames.WHOLEWORLDBAND:
