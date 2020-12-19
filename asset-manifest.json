@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.ee0eee4f.chunk.css",
-    "main.js": "/static/js/main.c3ec63f8.chunk.js",
-    "main.js.map": "/static/js/main.c3ec63f8.chunk.js.map",
+    "main.js": "/static/js/main.12557481.chunk.js",
+    "main.js.map": "/static/js/main.12557481.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f629cdc.js",
     "runtime-main.js.map": "/static/js/runtime-main.2f629cdc.js.map",
     "static/js/2.d35da102.chunk.js": "/static/js/2.d35da102.chunk.js",
@@ -79,7 +79,10 @@
     "static/media/planner-app-task-done.e412eaff.gif": "/static/media/planner-app-task-done.e412eaff.gif",
     "static/media/planner-main-2792x1366.0687c214.svg": "/static/media/planner-main-2792x1366.0687c214.svg",
     "static/media/portfolio-app-904x708.4a1ec359.svg": "/static/media/portfolio-app-904x708.4a1ec359.svg",
+    "static/media/portfolio-app-features.ebd92482.gif": "/static/media/portfolio-app-features.ebd92482.gif",
     "static/media/portfolio-app-more-projects-1376x708.7b89230e.svg": "/static/media/portfolio-app-more-projects-1376x708.7b89230e.svg",
+    "static/media/portfolio-app-responsive-design.47462e40.gif": "/static/media/portfolio-app-responsive-design.47462e40.gif",
+    "static/media/portfolio-main-2792x1366.49968fe6.svg": "/static/media/portfolio-main-2792x1366.49968fe6.svg",
     "static/media/react-logo-lght-gray.d248b6f4.svg": "/static/media/react-logo-lght-gray.d248b6f4.svg",
     "static/media/react-logo.79f6df82.svg": "/static/media/react-logo.79f6df82.svg",
     "static/media/truck-main-2792x1366.35af29ee.png": "/static/media/truck-main-2792x1366.35af29ee.png",
@@ -136,6 +139,6 @@
     "static/js/runtime-main.2f629cdc.js",
     "static/js/2.d35da102.chunk.js",
     "static/css/main.ee0eee4f.chunk.css",
-    "static/js/main.c3ec63f8.chunk.js"
+    "static/js/main.12557481.chunk.js"
   ]
 }
