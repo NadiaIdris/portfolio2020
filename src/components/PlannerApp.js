@@ -58,8 +58,8 @@ const PlannerApp = () => {
                 Autosize
               </a>
             </span>
-            &nbsp;, stand-alone script to automatically adjust textarea to fit
-            the text
+            , stand-alone script to automatically adjust textarea to fit the
+            text
           </p>
         </div>
       </div>
