@@ -29,7 +29,7 @@
 
 :root {
     /*Fonts*/
-    --default-font: "Gilroy-Bold";
+    --default-font: "Gilroy-Bold", "Lexend Deca", sans-serif;
     --default-font-size: 1em;
     --secondary-font: "Jetbrains Mono Regular", "Roboto Mono", monospace;
     --secondary-font-bold: "JetBrains Mono Extra Bold", "Roboto Mono", monospace;
