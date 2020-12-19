@@ -10,6 +10,9 @@ import PlannerApp from "./components/PlannerApp";
 import PortfolioApp from "./components/PortfolioApp";
 import About from "./components/About";
 
+const URL_PATH_KEY = "path";
+const PAGE_NAME_PREFIX = "Maret Idris - ";
+
 const PageNames = {
   HOME: "Home",
   ABOUT: "About",
@@ -36,28 +39,28 @@ const PageNamesWithSpaces = {
   PORTFOLIO_APP: "Portfolio App",
 };
 
-const getComponentForPageName = (name) => {
+const getComponentForPageName = (name, onNavigationClicked) => {
   switch (name) {
     case PageNames.HOME:
-      return <Home />;
+      return <Home onNavigationClicked={onNavigationClicked} />;
     case PageNames.TRUCKX:
-      return <TruckX />;
+      return <TruckX onNavigationClicked={onNavigationClicked} />;
     case PageNames.ABBEY_ROAD_STUDIOS:
-      return <AbbeyRoadStudios />;
+      return <AbbeyRoadStudios onNavigationClicked={onNavigationClicked} />;
     case PageNames.UAMP:
-      return <UAMP />;
+      return <UAMP onNavigationClicked={onNavigationClicked} />;
     case PageNames.INMUSIK:
-      return <Inmusik />;
+      return <Inmusik onNavigationClicked={onNavigationClicked} />;
     case PageNames.WHOLEWORLDBAND:
-      return <WholeWorldBand />;
+      return <WholeWorldBand onNavigationClicked={onNavigationClicked} />;
     case PageNames.WEATHER_APP:
-      return <WeatherApp />;
+      return <WeatherApp onNavigationClicked={onNavigationClicked} />;
     case PageNames.PLANNER_APP:
-      return <PlannerApp />;
+      return <PlannerApp onNavigationClicked={onNavigationClicked} />;
     case PageNames.PORTFOLIO_APP:
-      return <PortfolioApp />;
+      return <PortfolioApp onNavigationClicked={onNavigationClicked} />;
     case PageNames.ABOUT:
-      return <About />;
+      return <About onNavigationClicked={onNavigationClicked} />;
   }
 };
 
@@ -82,4 +85,11 @@ const getPageName = (pageName) => {
   }
 };
 
-export { PageNames, PageNamesWithSpaces, getComponentForPageName, getPageName };
+export {
+  PAGE_NAME_PREFIX,
+  URL_PATH_KEY,
+  PageNames,
+  PageNamesWithSpaces,
+  getComponentForPageName,
+  getPageName,
+};

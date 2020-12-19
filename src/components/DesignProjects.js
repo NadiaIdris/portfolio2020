@@ -164,6 +164,42 @@ class DesignProjects extends React.Component {
   };
 
   render() {
+    const generateProject = (project, index) => {
+      const path = "?path=" + getPageName(project.title);
+      return (
+        <div className="one-design-project" key={index}>
+          <a href={path}>
+            <div className="img-hover-zoom">
+              <img
+                className="design-project-img"
+                src={project.homepageImage}
+                alt={project.homepageImgAlt}
+                onLoad={() => {
+                  this.imageLoaded();
+                }}
+                onError={() => {
+                  this.imageLoaded();
+                }}
+              />
+            </div>
+          </a>
+          <a href={path}>
+            <div className="title-and-description-container">
+              <h4>{project.title}</h4>
+              <div className="project-description-container">
+                <p className="light-gray-text">{project.description}</p>
+                <div className="icons">
+                  {project.icons.map((icon, index) => {
+                    return <img src={icon} key={index} alt="Icon" />;
+                  })}
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      );
+    };
+
     return (
       <section
         id="design-projects-container"
@@ -177,46 +213,7 @@ class DesignProjects extends React.Component {
           <img src={nextArrow} alt="Next item arrow" />
         </button>
         <div id="all-projects">
-          {this.props.designProjectsArray.map((project, index) => {
-            console.log(
-              "this.props.designProjectsArray",
-              this.props.designProjectsArray
-            );
-            console.log("project", project);
-            return (
-              <div className="one-design-project" key={index}>
-                <a href={getPageName(project.title)}>
-                  <div className="img-hover-zoom">
-                    <img
-                      className="design-project-img"
-                      src={project.homepageImage}
-                      alt={project.homepageImgAlt}
-                      onLoad={() => {
-                        this.imageLoaded();
-                      }}
-                      onError={() => {
-                        this.imageLoaded();
-                      }}
-                    />
-                  </div>
-                </a>
-                <a href={getPageName(project.title)}>
-                  <div className="title-and-description-container">
-                    <h4>{project.title}</h4>
-                    <div className="project-description-container">
-                      <p className="light-gray-text">{project.description}</p>
-                      <div className="icons">
-                        {project.icons.map((icon, index) => {
-                          return <img src={icon} key={index} alt="Icon" />;
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            );
-          })}
-
+          {this.props.designProjectsArray.map(generateProject)}
           {/* Empty-div class is for collapsing margins: https://www.smashingmagazine.com/2019/07/margins-in-css/*/}
           <section className="empty-div"></section>
         </div>

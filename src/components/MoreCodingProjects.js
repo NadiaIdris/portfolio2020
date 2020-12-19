@@ -209,12 +209,13 @@ class MoreCodingProjects extends React.Component {
         </button>
         <div id="all-coding-projects">
           {this.props.codingProjectsArray.map((project, index) => {
+            const path = "?path=" + getPageName(project.title);
             return (
               <div
                 className="one-coding-project more-coding-projects-img"
                 key={index}
               >
-                <a href={getPageName(project.title)}>
+                <a href={path}>
                   <div className="coding-img-zoom">
                     <img
                       className="coding-project-img more-coding-projects-img"
@@ -229,7 +230,7 @@ class MoreCodingProjects extends React.Component {
                     />
                   </div>
                 </a>
-                <a href={getPageName(project.title)}>
+                <a href={path}>
                   <div className="title-and-description-container">
                     <h4>{project.title}</h4>
                     <div className="coding-project-description-container">
