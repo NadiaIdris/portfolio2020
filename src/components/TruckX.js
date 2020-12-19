@@ -39,7 +39,7 @@ const TruckX = () => {
         image={truckXData.highFiImage}
         imageAlt={truckXData.highFiImageAlt}
         imageId={truckXData.highFiId}
-        mobileStyle={truckXData.mobileDesign}
+        mobileDesign={truckXData.mobileDesign}
       />
       <TitleBulletPointsOneColumn
         title={truckXData.featuresTitle}
