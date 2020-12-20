@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9f0e9c5.chunk.css",
-    "main.js": "/static/js/main.09dd3070.chunk.js",
-    "main.js.map": "/static/js/main.09dd3070.chunk.js.map",
+    "main.css": "/static/css/main.53d1dfab.chunk.css",
+    "main.js": "/static/js/main.f6b73d88.chunk.js",
+    "main.js.map": "/static/js/main.f6b73d88.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f629cdc.js",
     "runtime-main.js.map": "/static/js/runtime-main.2f629cdc.js.map",
     "static/js/2.fcbad7de.chunk.js": "/static/js/2.fcbad7de.chunk.js",
     "static/js/2.fcbad7de.chunk.js.map": "/static/js/2.fcbad7de.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a9f0e9c5.chunk.css.map": "/static/css/main.a9f0e9c5.chunk.css.map",
+    "static/css/main.53d1dfab.chunk.css.map": "/static/css/main.53d1dfab.chunk.css.map",
     "static/js/2.fcbad7de.chunk.js.LICENSE.txt": "/static/js/2.fcbad7de.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/JetBrainsMono-Regular.c2e5a80b.ttf",
     "static/media/abbey-road-audio-products.14f70397.png": "/static/media/abbey-road-audio-products.14f70397.png",
@@ -31,7 +31,7 @@
     "static/media/arrow-left.9b95e653.svg": "/static/media/arrow-left.9b95e653.svg",
     "static/media/arrow-right.1c122deb.svg": "/static/media/arrow-right.1c122deb.svg",
     "static/media/ProjectPageGenericStyles.css": "/static/media/zoom.ca4cbe13.svg",
-    "static/media/copyright.51c92c98.svg": "/static/media/copyright.51c92c98.svg",
+    "static/media/copyright.9ccf5129.svg": "/static/media/copyright.9ccf5129.svg",
     "static/media/css-logo-lght-gray.d7fb4a9a.svg": "/static/media/css-logo-lght-gray.d7fb4a9a.svg",
     "static/media/css-logo.6110ea81.svg": "/static/media/css-logo.6110ea81.svg",
     "static/media/dribbble.8e789f23.svg": "/static/media/dribbble.8e789f23.svg",
@@ -70,6 +70,7 @@
     "static/media/js-logo.13f9f267.svg": "/static/media/js-logo.13f9f267.svg",
     "static/media/linkedin.64065f9e.svg": "/static/media/linkedin.64065f9e.svg",
     "static/media/logo.9615439c.svg": "/static/media/logo.9615439c.svg",
+    "static/media/maret-idris-resume.f303dc9c.pdf": "/static/media/maret-idris-resume.f303dc9c.pdf",
     "static/media/maret-idris.1325d94d.png": "/static/media/maret-idris.1325d94d.png",
     "static/media/medium.6debfe73.svg": "/static/media/medium.6debfe73.svg",
     "static/media/planner-app-904x708.622cad02.svg": "/static/media/planner-app-904x708.622cad02.svg",
@@ -138,7 +139,7 @@
   "entrypoints": [
     "static/js/runtime-main.2f629cdc.js",
     "static/js/2.fcbad7de.chunk.js",
-    "static/css/main.a9f0e9c5.chunk.css",
-    "static/js/main.09dd3070.chunk.js"
+    "static/css/main.53d1dfab.chunk.css",
+    "static/js/main.f6b73d88.chunk.js"
   ]
 }
