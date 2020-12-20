@@ -39,28 +39,28 @@ const PageNamesWithSpaces = {
   PORTFOLIO_APP: "Portfolio App",
 };
 
-const getComponentForPageName = (name, onNavigationClicked) => {
+const getComponentForPageName = (name) => {
   switch (name) {
     case PageNames.HOME:
-      return <Home onNavigationClicked={onNavigationClicked} />;
+      return <Home />;
     case PageNames.TRUCKX:
-      return <TruckX onNavigationClicked={onNavigationClicked} />;
+      return <TruckX />;
     case PageNames.ABBEY_ROAD_STUDIOS:
-      return <AbbeyRoadStudios onNavigationClicked={onNavigationClicked} />;
+      return <AbbeyRoadStudios />;
     case PageNames.UAMP:
-      return <UAMP onNavigationClicked={onNavigationClicked} />;
+      return <UAMP />;
     case PageNames.INMUSIK:
-      return <Inmusik onNavigationClicked={onNavigationClicked} />;
+      return <Inmusik />;
     case PageNames.WHOLEWORLDBAND:
-      return <WholeWorldBand onNavigationClicked={onNavigationClicked} />;
+      return <WholeWorldBand />;
     case PageNames.WEATHER_APP:
-      return <WeatherApp onNavigationClicked={onNavigationClicked} />;
+      return <WeatherApp />;
     case PageNames.PLANNER_APP:
-      return <PlannerApp onNavigationClicked={onNavigationClicked} />;
+      return <PlannerApp />;
     case PageNames.PORTFOLIO_APP:
-      return <PortfolioApp onNavigationClicked={onNavigationClicked} />;
+      return <PortfolioApp />;
     case PageNames.ABOUT:
-      return <About onNavigationClicked={onNavigationClicked} />;
+      return <About />;
   }
 };
 

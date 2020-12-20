@@ -16,8 +16,6 @@ class Home extends React.Component {
     super(props);
   }
   render() {
-    console.log("🩲🩲", this.props);
-
     return (
       <React.Fragment>
         <Banner

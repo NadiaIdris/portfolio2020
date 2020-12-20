@@ -1,15 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
-import { App, getWindowLocationPathName } from "./components/App";
+import { App, getPageNameFromWindowLocation } from "./components/App";
 import { getValueOfCSSVariable, scrollToTop } from "./utils";
-import {
-  getComponentForPageName,
-  PageNames,
-  URL_PATH_KEY,
-} from "./pageConstants";
 
-// This function positions nav bar dropdowns.
+/**
+ * This function positions nav bar dropdowns.
+ */
 const myWindowResizeListener = (containerId, dropdownId) => {
   const container = document.querySelector(containerId);
   const containerStyle = getComputedStyle(container);
@@ -29,7 +26,9 @@ const myWindowResizeListener = (containerId, dropdownId) => {
   dropdown.style.left = n2 + "px";
 };
 
-// Function that adds animation for dropdown menu.
+/**
+ * Function that adds animation for dropdown menu.
+ */
 const attachAnimationForDropdownMenu = (dropdownId, containerId) => {
   const dropdown = document.querySelector(dropdownId);
   const dropdownOpacityAnimationDelay = getValueOfCSSVariable(
@@ -122,7 +121,10 @@ const handleDisableAutoHide = (id) => {
   };
 };
 
-const runAfterMount = () => {
+/**
+ * This function is run after App component is mounted by React.
+ */
+const runAfterAppIsMounted = () => {
   // Attach a window resize listener and run it once.
   window.addEventListener("resize", () => {
     myWindowResizeListener("#designs-container", "#designs-dropdown-container");
@@ -151,7 +153,10 @@ window.addEventListener("load", () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App pathName={getWindowLocationPathName()} runAfterMount={runAfterMount} />
+    <App
+      pageName={getPageNameFromWindowLocation()}
+      runAfterAppIsMounted={runAfterAppIsMounted}
+    />
   </React.StrictMode>,
   document.getElementById("root")
 );
