@@ -1,6 +1,7 @@
 import React from "react";
 import "./../styles/About.css";
 import maretIdris from "./../vector-images/maret-idris.png";
+import resume from "./../vector-images/maret-idris-resume.pdf";
 import Footer from "./Footer";
 
 class About extends React.Component {
@@ -28,7 +29,14 @@ class About extends React.Component {
             Welcome to my design and <br />
             code portfolio!
           </h3>
-          <button className="try-app-button">Download resume</button>
+          {/*<button className="try-app-button">Download resume</button>*/}
+          <a
+            href={resume}
+            download="maret-idris-resume"
+            className="try-app-button"
+          >
+            Download resume
+          </a>
         </section>
       );
     };

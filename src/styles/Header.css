@@ -29,6 +29,7 @@
     font-family: var(--default-font);
     font-size: 0.95em;
     color: var(--color-gray-darkest);
+    text-decoration: none;
 }
 
 .try-app-button:hover {
