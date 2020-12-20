@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.53d1dfab.chunk.css",
+    "main.css": "/static/css/main.d8edb80c.chunk.css",
     "main.js": "/static/js/main.00acc2ea.chunk.js",
     "main.js.map": "/static/js/main.00acc2ea.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f629cdc.js",
@@ -8,7 +8,7 @@
     "static/js/2.fcbad7de.chunk.js": "/static/js/2.fcbad7de.chunk.js",
     "static/js/2.fcbad7de.chunk.js.map": "/static/js/2.fcbad7de.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.53d1dfab.chunk.css.map": "/static/css/main.53d1dfab.chunk.css.map",
+    "static/css/main.d8edb80c.chunk.css.map": "/static/css/main.d8edb80c.chunk.css.map",
     "static/js/2.fcbad7de.chunk.js.LICENSE.txt": "/static/js/2.fcbad7de.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/JetBrainsMono-Regular.c2e5a80b.ttf",
     "static/media/abbey-road-audio-products.14f70397.png": "/static/media/abbey-road-audio-products.14f70397.png",
@@ -139,7 +139,7 @@
   "entrypoints": [
     "static/js/runtime-main.2f629cdc.js",
     "static/js/2.fcbad7de.chunk.js",
-    "static/css/main.53d1dfab.chunk.css",
+    "static/css/main.d8edb80c.chunk.css",
     "static/js/main.00acc2ea.chunk.js"
   ]
 }
