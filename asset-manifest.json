@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.a9f0e9c5.chunk.css",
-    "main.js": "/static/js/main.4dbedb2d.chunk.js",
-    "main.js.map": "/static/js/main.4dbedb2d.chunk.js.map",
+    "main.js": "/static/js/main.e1b07983.chunk.js",
+    "main.js.map": "/static/js/main.e1b07983.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f629cdc.js",
     "runtime-main.js.map": "/static/js/runtime-main.2f629cdc.js.map",
-    "static/js/2.d35da102.chunk.js": "/static/js/2.d35da102.chunk.js",
-    "static/js/2.d35da102.chunk.js.map": "/static/js/2.d35da102.chunk.js.map",
+    "static/js/2.fcbad7de.chunk.js": "/static/js/2.fcbad7de.chunk.js",
+    "static/js/2.fcbad7de.chunk.js.map": "/static/js/2.fcbad7de.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.a9f0e9c5.chunk.css.map": "/static/css/main.a9f0e9c5.chunk.css.map",
-    "static/js/2.d35da102.chunk.js.LICENSE.txt": "/static/js/2.d35da102.chunk.js.LICENSE.txt",
+    "static/js/2.fcbad7de.chunk.js.LICENSE.txt": "/static/js/2.fcbad7de.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/JetBrainsMono-Regular.c2e5a80b.ttf",
     "static/media/abbey-road-audio-products.14f70397.png": "/static/media/abbey-road-audio-products.14f70397.png",
     "static/media/abbey-road-crossing-cam.ccd3b042.png": "/static/media/abbey-road-crossing-cam.ccd3b042.png",
@@ -31,7 +31,7 @@
     "static/media/arrow-left.9b95e653.svg": "/static/media/arrow-left.9b95e653.svg",
     "static/media/arrow-right.1c122deb.svg": "/static/media/arrow-right.1c122deb.svg",
     "static/media/ProjectPageGenericStyles.css": "/static/media/zoom.ca4cbe13.svg",
-    "static/media/copyright.9ccf5129.svg": "/static/media/copyright.9ccf5129.svg",
+    "static/media/copyright.51c92c98.svg": "/static/media/copyright.51c92c98.svg",
     "static/media/css-logo-lght-gray.d7fb4a9a.svg": "/static/media/css-logo-lght-gray.d7fb4a9a.svg",
     "static/media/css-logo.6110ea81.svg": "/static/media/css-logo.6110ea81.svg",
     "static/media/dribbble.8e789f23.svg": "/static/media/dribbble.8e789f23.svg",
@@ -137,8 +137,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2f629cdc.js",
-    "static/js/2.d35da102.chunk.js",
+    "static/js/2.fcbad7de.chunk.js",
     "static/css/main.a9f0e9c5.chunk.css",
-    "static/js/main.4dbedb2d.chunk.js"
+    "static/js/main.e1b07983.chunk.js"
   ]
 }
