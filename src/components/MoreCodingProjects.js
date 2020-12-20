@@ -3,6 +3,7 @@ import { getValueOfCSSVariable } from "../utils";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
 import { getPageName } from "../pageConstants";
+import { sharedObject } from "./SharedContext";
 
 class MoreCodingProjects extends React.Component {
   constructor(props) {
@@ -209,42 +210,41 @@ class MoreCodingProjects extends React.Component {
         </button>
         <div id="all-coding-projects">
           {this.props.codingProjectsArray.map((project, index) => {
-            const path = "?path=" + getPageName(project.title);
             return (
               <div
                 className="one-coding-project more-coding-projects-img"
                 key={index}
+                onClick={() => {
+                  sharedObject.onNavigationClicked(getPageName(project.title));
+                }}
               >
-                <a href={path}>
-                  <div className="coding-img-zoom">
-                    <img
-                      className="coding-project-img more-coding-projects-img"
-                      src={project.moreCodingProjectsImage}
-                      alt={project.homepageImgAlt}
-                      onLoad={() => {
-                        this.imageLoaded();
-                      }}
-                      onError={() => {
-                        this.imageLoaded();
-                      }}
-                    />
-                  </div>
-                </a>
-                <a href={path}>
-                  <div className="title-and-description-container">
-                    <h4>{project.title}</h4>
-                    <div className="coding-project-description-container">
-                      <p className="light-gray-text">{project.description}</p>
-                      <div className="icons">
-                        {project.icons.map((icon, index) => {
-                          return (
-                            <img src={icon} key={index} alt="Platform icon" />
-                          );
-                        })}
-                      </div>
+                <div className="coding-img-zoom">
+                  <img
+                    className="coding-project-img more-coding-projects-img"
+                    src={project.moreCodingProjectsImage}
+                    alt={project.homepageImgAlt}
+                    onLoad={() => {
+                      this.imageLoaded();
+                    }}
+                    onError={() => {
+                      this.imageLoaded();
+                    }}
+                  />
+                </div>
+
+                <div className="title-and-description-container">
+                  <h4>{project.title}</h4>
+                  <div className="coding-project-description-container">
+                    <p className="light-gray-text">{project.description}</p>
+                    <div className="icons">
+                      {project.icons.map((icon, index) => {
+                        return (
+                          <img src={icon} key={index} alt="Platform icon" />
+                        );
+                      })}
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
             );
           })}

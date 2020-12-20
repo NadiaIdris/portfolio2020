@@ -74,7 +74,7 @@ class About extends React.Component {
                       -
                     </span>
                     <span className="secondary-font">
-                      Prototyping (JavaScript, HTML,CSS) in code using real
+                      Prototyping (JavaScript, HTML, CSS) in code using real
                       data.
                     </span>
                   </li>
@@ -160,11 +160,13 @@ class About extends React.Component {
             </li>
             <li className="bullet-point-container">
               <span className="dash-regular-weight">-</span>
-              <span className="secondary-font">Ideation and wireframing</span>
+              <span className="secondary-font-bold">
+                Ideation and wireframing
+              </span>
             </li>
             <li className="bullet-point-container">
               <span className="dash-regular-weight">-</span>
-              <span className="secondary-font">User research</span>
+              <span className="secondary-font-bold">User research</span>
             </li>
           </ul>
         </section>
@@ -183,7 +185,7 @@ class About extends React.Component {
 
       return (
         <section className="vertical-title-container">
-          <h5 className="h5-padding">Articles I wrote</h5>
+          <h5 className="h5-padding">Articles I've published</h5>
           <ul>
             <li className="secondary-font">
               I publish on{" "}

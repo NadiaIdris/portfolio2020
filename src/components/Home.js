@@ -28,7 +28,6 @@ class Home extends React.Component {
         <DesignProjects
           title={homepageDesignProjectsTitle}
           designProjectsArray={arrayOfDesignProjects}
-          onNavigationClicked={this.props.onNavigationClicked}
         />
         <CodingProjects
           title={homepageCodingProjectsTitle}

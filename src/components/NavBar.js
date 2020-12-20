@@ -18,11 +18,12 @@ import cssLight from "./../vector-images/css-logo-lght-gray.svg";
 
 import "./../styles/NavBar.css";
 import { PageNames, PageNamesWithSpaces } from "../pageConstants";
+import { sharedObject } from "./SharedContext";
 
 const Logo = (props) => {
   return (
     <a
-      onClick={() => props.onNavigationClicked(PageNames.HOME)}
+      onClick={() => sharedObject.onNavigationClicked(PageNames.HOME)}
       title="Maret Idris home page"
     >
       <img className="logo" src={logo} alt="Logo" />
@@ -33,7 +34,7 @@ const Logo = (props) => {
 const GitHub = () => {
   return (
     <a
-      href="https://github.com/MaretIdris"
+      href="https://github.com/MaretIdris/portfolio2020"
       target="_blank"
       title="Maret Idris Github page"
     >
@@ -49,7 +50,7 @@ const createHomeOrAboutComponent = (props, pageName) => {
   return (
     <a
       className={isActive(pageName)}
-      onClick={() => props.onNavigationClicked(pageName)}
+      onClick={() => sharedObject.onNavigationClicked(pageName)}
     >
       {pageName}
     </a>
@@ -158,7 +159,7 @@ const createDropdownComponent = (props, name, nameWithSpaces) => {
   return (
     <a
       className={isActive(name)}
-      onClick={() => props.onNavigationClicked(name)}
+      onClick={() => sharedObject.onNavigationClicked(name)}
     >
       <p>{nameWithSpaces}</p>
       <div className="app-logos-container">
@@ -177,7 +178,7 @@ const NavBar = (props) => {
 
   return (
     <div id="app-bar">
-      <Logo onNavigationClicked={props.onNavigationClicked} />
+      <Logo />
       <nav>
         {createHomeOrAboutComponent(props, PageNames.HOME)}
         <div

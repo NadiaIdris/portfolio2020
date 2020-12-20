@@ -10,7 +10,7 @@ import PlannerApp from "./components/PlannerApp";
 import PortfolioApp from "./components/PortfolioApp";
 import About from "./components/About";
 
-const URL_PATH_KEY = "path";
+const URL_PAGE_KEY = "page";
 const PAGE_NAME_PREFIX = "Maret Idris - ";
 
 const PageNames = {
@@ -87,7 +87,7 @@ const getPageName = (pageName) => {
 
 export {
   PAGE_NAME_PREFIX,
-  URL_PATH_KEY,
+  URL_PAGE_KEY,
   PageNames,
   PageNamesWithSpaces,
   getComponentForPageName,

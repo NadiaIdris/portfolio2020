@@ -5,9 +5,10 @@ import {
   getComponentForPageName,
   PAGE_NAME_PREFIX,
   PageNames,
-  URL_PATH_KEY,
+  URL_PAGE_KEY,
 } from "../pageConstants";
 import { scrollToTop } from "../utils";
+import { sharedObject } from "./SharedContext";
 
 /**
  * More info: https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams#Example
@@ -16,7 +17,7 @@ import { scrollToTop } from "../utils";
  */
 const getPageNameFromWindowLocation = () => {
   const params = new URL(document.location).searchParams;
-  const pathValueInURL = params.get(URL_PATH_KEY);
+  const pathValueInURL = params.get(URL_PAGE_KEY);
   if (!pathValueInURL) return PageNames.HOME;
   if (!getComponentForPageName(pathValueInURL)) return PageNames.HOME;
   else return pathValueInURL;
@@ -52,6 +53,7 @@ const createOrUpdateStateWithDestination = (component, destination) => {
 class App extends Component {
   constructor(props) {
     super(props);
+    sharedObject.onNavigationClicked = this.onNavigationClicked;
     createOrUpdateStateWithDestination(this, props.pageName);
   }
 
@@ -61,8 +63,8 @@ class App extends Component {
   }
 
   onNavigationClicked = (destination) => {
-    createOrUpdateStateWithDestination(this, destination);
     this.handlePushState(destination);
+    createOrUpdateStateWithDestination(this, destination);
   };
 
   /**
@@ -72,7 +74,7 @@ class App extends Component {
    */
   handlePushState = (destination) => {
     const url = new URL(window.location);
-    url.searchParams.set(URL_PATH_KEY, destination);
+    url.searchParams.set(URL_PAGE_KEY, destination);
     const browserHistoryState = { destination };
     window.history.pushState(browserHistoryState, destination, url);
   };
@@ -95,10 +97,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar
-          currentDestination={this.state.destination}
-          onNavigationClicked={this.onNavigationClicked}
-        />
+        <NavBar currentDestination={this.state.destination} />
         {getComponentForPageName(this.state.destination)}
       </React.Fragment>
     );

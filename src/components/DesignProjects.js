@@ -4,6 +4,7 @@ import nextArrow from "./../vector-images/arrow-right.svg";
 import previousArrow from "./../vector-images/arrow-left.svg";
 import { getValueOfCSSVariable, scrollToTop } from "../utils";
 import { getPageName } from "../pageConstants";
+import { sharedObject } from "./SharedContext";
 
 class DesignProjects extends React.Component {
   constructor(props) {
@@ -165,37 +166,38 @@ class DesignProjects extends React.Component {
 
   render() {
     const generateProject = (project, index) => {
-      const path = "?path=" + getPageName(project.title);
       return (
-        <div className="one-design-project" key={index}>
-          <a href={path}>
-            <div className="img-hover-zoom">
-              <img
-                className="design-project-img"
-                src={project.homepageImage}
-                alt={project.homepageImgAlt}
-                onLoad={() => {
-                  this.imageLoaded();
-                }}
-                onError={() => {
-                  this.imageLoaded();
-                }}
-              />
-            </div>
-          </a>
-          <a href={path}>
-            <div className="title-and-description-container">
-              <h4>{project.title}</h4>
-              <div className="project-description-container">
-                <p className="light-gray-text">{project.description}</p>
-                <div className="icons">
-                  {project.icons.map((icon, index) => {
-                    return <img src={icon} key={index} alt="Icon" />;
-                  })}
-                </div>
+        <div
+          className="one-design-project"
+          key={index}
+          onClick={() => {
+            sharedObject.onNavigationClicked(getPageName(project.title));
+          }}
+        >
+          <div className="img-hover-zoom">
+            <img
+              className="design-project-img"
+              src={project.homepageImage}
+              alt={project.homepageImgAlt}
+              onLoad={() => {
+                this.imageLoaded();
+              }}
+              onError={() => {
+                this.imageLoaded();
+              }}
+            />
+          </div>
+          <div className="title-and-description-container">
+            <h4>{project.title}</h4>
+            <div className="project-description-container">
+              <p className="light-gray-text">{project.description}</p>
+              <div className="icons">
+                {project.icons.map((icon, index) => {
+                  return <img src={icon} key={index} alt="Icon" />;
+                })}
               </div>
             </div>
-          </a>
+          </div>
         </div>
       );
     };
