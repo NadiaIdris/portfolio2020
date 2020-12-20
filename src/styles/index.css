@@ -237,6 +237,14 @@ p {
     line-height: 1.4;
 }
 
+/*Text selection color*/
+::selection {
+    background: var(--color-yellow);
+}
+::-moz-selection {
+    background: var(--color-yellow);
+}
+
 /*Scrollbar*/
 ::-webkit-scrollbar {
     width: 13px;
