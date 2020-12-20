@@ -48,7 +48,7 @@ const TitleParagraphImage = ({
           style={addExtraStylesIfMobileDesign()}
           onClick={() => openModal(imageId)}
         />
-        <div id={imageId} className="modal" onClick={() => closeModal(imageId)}>
+        <div id={imageId} className="modal">
           <span className="close cursor" onClick={() => closeModal(imageId)}>
             <div></div>
           </span>
