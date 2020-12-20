@@ -20,9 +20,9 @@ class Home extends React.Component {
       <React.Fragment>
         <Banner
           strings={[
-            "am a product designer",
-            "express ideas through code",
-            "am startup tested",
+            "am a product designer 🌺",
+            "express ideas through code 💻",
+            "am startup tested 💪",
           ]}
         />
         <DesignProjects
