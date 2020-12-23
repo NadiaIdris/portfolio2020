@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.d8edb80c.chunk.css",
-    "main.js": "/static/js/main.00acc2ea.chunk.js",
-    "main.js.map": "/static/js/main.00acc2ea.chunk.js.map",
+    "main.js": "/static/js/main.1f1730a9.chunk.js",
+    "main.js.map": "/static/js/main.1f1730a9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f629cdc.js",
     "runtime-main.js.map": "/static/js/runtime-main.2f629cdc.js.map",
     "static/js/2.fcbad7de.chunk.js": "/static/js/2.fcbad7de.chunk.js",
@@ -70,7 +70,7 @@
     "static/media/js-logo.13f9f267.svg": "/static/media/js-logo.13f9f267.svg",
     "static/media/linkedin.64065f9e.svg": "/static/media/linkedin.64065f9e.svg",
     "static/media/logo.9615439c.svg": "/static/media/logo.9615439c.svg",
-    "static/media/maret-idris-resume.f303dc9c.pdf": "/static/media/maret-idris-resume.f303dc9c.pdf",
+    "static/media/maret-idris-resume.c8971bc8.pdf": "/static/media/maret-idris-resume.c8971bc8.pdf",
     "static/media/maret-idris.1325d94d.png": "/static/media/maret-idris.1325d94d.png",
     "static/media/medium.6debfe73.svg": "/static/media/medium.6debfe73.svg",
     "static/media/planner-app-904x708.622cad02.svg": "/static/media/planner-app-904x708.622cad02.svg",
@@ -140,6 +140,6 @@
     "static/js/runtime-main.2f629cdc.js",
     "static/js/2.fcbad7de.chunk.js",
     "static/css/main.d8edb80c.chunk.css",
-    "static/js/main.00acc2ea.chunk.js"
+    "static/js/main.1f1730a9.chunk.js"
   ]
 }
