@@ -124,6 +124,14 @@ class About extends React.Component {
             <li className="bullet-point-container">
               <span className="dash-regular-weight">-</span>
               <div>
+                <span className="secondary-font-bold">
+                  Responsive web design
+                </span>
+              </div>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight">-</span>
+              <div>
                 <span className="secondary-font-bold">Mobile design</span>
                 <span className="secondary-font">&nbsp;(Android, iOS)</span>
               </div>
