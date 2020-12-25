@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.ff676b05.chunk.css",
-    "main.js": "/static/js/main.6cc3a98f.chunk.js",
-    "main.js.map": "/static/js/main.6cc3a98f.chunk.js.map",
+    "main.css": "/static/css/main.9e01da07.chunk.css",
+    "main.js": "/static/js/main.c24aaf79.chunk.js",
+    "main.js.map": "/static/js/main.c24aaf79.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f629cdc.js",
     "runtime-main.js.map": "/static/js/runtime-main.2f629cdc.js.map",
     "static/js/2.fcbad7de.chunk.js": "/static/js/2.fcbad7de.chunk.js",
     "static/js/2.fcbad7de.chunk.js.map": "/static/js/2.fcbad7de.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.ff676b05.chunk.css.map": "/static/css/main.ff676b05.chunk.css.map",
+    "static/css/main.9e01da07.chunk.css.map": "/static/css/main.9e01da07.chunk.css.map",
     "static/js/2.fcbad7de.chunk.js.LICENSE.txt": "/static/js/2.fcbad7de.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/JetBrainsMono-Regular.c2e5a80b.ttf",
     "static/media/abbey-road-audio-products.fcf818aa.png": "/static/media/abbey-road-audio-products.fcf818aa.png",
@@ -31,7 +31,7 @@
     "static/media/arrow-left.9b95e653.svg": "/static/media/arrow-left.9b95e653.svg",
     "static/media/arrow-right.1c122deb.svg": "/static/media/arrow-right.1c122deb.svg",
     "static/media/ProjectPageGenericStyles.css": "/static/media/zoom.ca4cbe13.svg",
-    "static/media/copyright.51c92c98.svg": "/static/media/copyright.51c92c98.svg",
+    "static/media/copyright.9ccf5129.svg": "/static/media/copyright.9ccf5129.svg",
     "static/media/css-logo-lght-gray.d7fb4a9a.svg": "/static/media/css-logo-lght-gray.d7fb4a9a.svg",
     "static/media/css-logo.6110ea81.svg": "/static/media/css-logo.6110ea81.svg",
     "static/media/dribbble.8e789f23.svg": "/static/media/dribbble.8e789f23.svg",
@@ -139,7 +139,7 @@
   "entrypoints": [
     "static/js/runtime-main.2f629cdc.js",
     "static/js/2.fcbad7de.chunk.js",
-    "static/css/main.ff676b05.chunk.css",
-    "static/js/main.6cc3a98f.chunk.js"
+    "static/css/main.9e01da07.chunk.css",
+    "static/js/main.c24aaf79.chunk.js"
   ]
 }
