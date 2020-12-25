@@ -26,9 +26,10 @@ import iosJournals from "./../vector-images/inmusik-ios-journals.png";
 import iosArtistPage from "./../vector-images/inmusik-ios-artists-page.png";
 import iosArtistPageSongs from "./../vector-images/inmusik-ios-artists-page-songs.png";
 import iosSongPage from "./../vector-images/inmusik-ios-song-page.png";
+import { PageNames } from "../names";
 
 const inmusikData = {
-  componentName: "Inmusik",
+  componentName: PageNames.INMUSIK,
   title: "Inmusik",
   description: "Social network for emerging musicians and fans.",
   icons: [webLight, iosLight],

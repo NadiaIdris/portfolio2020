@@ -13,9 +13,10 @@ import createMosaicMixSound from "./../vector-images/wwb-create-your-mosaic-mix-
 import createMyVideo from "./../vector-images/wwb-create-my-video-1.png";
 import createMyVideoTwo from "./../vector-images/wwb-create-my-video-2.png";
 import createMyVideoThree from "./../vector-images/wwb-create-my-video-3.png";
+import { PageNames } from "../names";
 
 const wholeWorldBandData = {
-  componentName: "WholeWorldBand",
+  componentName: PageNames.WHOLEWORLDBAND,
   title: "WholeWorldBand",
   description: "Online recording studio for the whole world.",
   icons: [webLight],

@@ -6,9 +6,10 @@ import weatherMain from "./../vector-images/weather-main-2746x1342.png";
 import weatherAppFeaturesGif from "./../vector-images/weather-app-features.gif";
 import weatherAppLocationsGif from "./../vector-images/weather-app-locations.gif";
 import weatherAppMoreCodingProjects from "./../vector-images/weather-app-more-projects-1376x708.png";
+import { PageNames } from "../names";
 
 const weatherAppData = {
-  componentName: "WeatherApp",
+  componentName: PageNames.WEATHER_APP,
   title: "Weather App",
   description:
     "Weather App that shows both Celsius and Fahrenheit and communicates temperature through color.",

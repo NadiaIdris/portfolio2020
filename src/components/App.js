@@ -4,11 +4,11 @@ import NavBar from "./NavBar";
 import {
   getComponentForPageName,
   PAGE_NAME_PREFIX,
-  PageNames,
   URL_PAGE_KEY,
 } from "../pageConstants";
 import { scrollToTop } from "../utils";
 import { sharedObject } from "./SharedContext";
+import { PageNames } from "../names";
 
 /**
  * More info: https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams#Example
@@ -37,13 +37,13 @@ const updateDocumentTitle = (title) => {
  * @param destination This is the PageName that should be saved to the component's state.
  */
 const createOrUpdateStateWithDestination = (component, destination) => {
+  scrollToTop();
   if (!component.state) {
     component.state = { destination };
     console.log("App.state created for the first time: ", component.state);
   } else {
     component.setState({ destination }, () => {
       // This is called after the state is actually updated (asynchronously).
-      scrollToTop();
       console.log("App.state updated: ", component.state);
     });
   }

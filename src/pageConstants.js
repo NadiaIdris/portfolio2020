@@ -9,35 +9,10 @@ import WeatherApp from "./components/WeatherApp";
 import PlannerApp from "./components/PlannerApp";
 import PortfolioApp from "./components/PortfolioApp";
 import About from "./components/About";
+import { PageNames, PageNamesWithSpaces } from "./names";
 
 const URL_PAGE_KEY = "page";
 const PAGE_NAME_PREFIX = "Maret Idris - ";
-
-const PageNames = {
-  HOME: "Home",
-  ABOUT: "About",
-  TRUCKX: "TruckX",
-  UAMP: "UAMP",
-  ABBEY_ROAD_STUDIOS: "AbbeyRoadStudios",
-  INMUSIK: "Inmusik",
-  WHOLEWORLDBAND: "WholeWorldBand",
-  WEATHER_APP: "WeatherApp",
-  PLANNER_APP: "PlannerApp",
-  PORTFOLIO_APP: "PortfolioApp",
-};
-
-const PageNamesWithSpaces = {
-  HOME: "Home",
-  ABOUT: "About",
-  TRUCKX: "TruckX",
-  UAMP: "Universal Android Music Player",
-  ABBEY_ROAD_STUDIOS: "Abbey Road Studios",
-  INMUSIK: "Inmusik",
-  WHOLEWORLDBAND: "WholeWorldBand",
-  WEATHER_APP: "Weather App",
-  PLANNER_APP: "Planner App",
-  PORTFOLIO_APP: "Portfolio App",
-};
 
 const getComponentForPageName = (name) => {
   switch (name) {
@@ -85,11 +60,4 @@ const getPageName = (pageName) => {
   }
 };
 
-export {
-  PAGE_NAME_PREFIX,
-  URL_PAGE_KEY,
-  PageNames,
-  PageNamesWithSpaces,
-  getComponentForPageName,
-  getPageName,
-};
+export { PAGE_NAME_PREFIX, URL_PAGE_KEY, getComponentForPageName, getPageName };

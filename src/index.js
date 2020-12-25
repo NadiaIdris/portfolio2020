@@ -147,10 +147,6 @@ const runAfterAppIsMounted = () => {
   handleDisableAutoHide("code-container");
 };
 
-window.addEventListener("load", () => {
-  scrollToTop();
-});
-
 ReactDOM.render(
   <React.StrictMode>
     <App

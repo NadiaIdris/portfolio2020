@@ -14,9 +14,10 @@ import engineerPage from "./../vector-images/abbey-road-engineer-page.png";
 import eventHire from "./../vector-images/abbey-road-event-hire.png";
 import crossingCam from "./../vector-images/abbey-road-crossing-cam.png";
 import thankYou from "./../vector-images/abbey-road-thank-you.png";
+import { PageNames } from "../names";
 
 const abbeyRoadStudiosData = {
-  componentName: "AbbeyRoadStudios",
+  componentName: PageNames.ABBEY_ROAD_STUDIOS,
   title: "Abbey Road Studios",
   description: "The most famous recording studio in the world.",
   icons: [webLight],

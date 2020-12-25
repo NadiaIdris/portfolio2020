@@ -14,9 +14,10 @@ import byAlbum from "./../vector-images/uamp-by-album.png";
 import albumOpen from "./../vector-images/uamp-album-open.png";
 import emptyState from "./../vector-images/uamp-empty-state.png";
 import highFiPrototype from "../vector-images/uamp-prototype.gif";
+import { PageNames } from "../names";
 
 const uampData = {
-  componentName: "UniversalAndroidMusicPlayer",
+  componentName: PageNames.UAMP,
   title: "Universal Android Music Player",
   description: "Sample music app for Android media developers by Google.",
   icons: [androidLight],

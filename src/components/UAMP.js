@@ -10,6 +10,7 @@ import TitleParagraphMobileGallery from "./TitleParagraphMobileGallery";
 import DesignProjects from "./DesignProjects";
 import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 import Footer from "./Footer";
+import { PageNames } from "../names";
 
 const UAMP = () => {
   return (
@@ -99,7 +100,7 @@ const UAMP = () => {
       />
       <DesignProjects
         title={uampData.moreDesignProjectsTitle}
-        designProjectsArray={getMoreDesignProjectsArrayBy("UAMP")}
+        designProjectsArray={getMoreDesignProjectsArrayBy(PageNames.UAMP)}
       />
       <Footer />
     </React.Fragment>

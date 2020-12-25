@@ -13,9 +13,10 @@ import oneLoad from "./../vector-images/truckx-loads-load.png";
 import oneLoadFreight from "./../vector-images/truckx-load-freight.png";
 import oneLoadSign from "./../vector-images/truckx-load-sign.png";
 import highFiPrototype from "./../vector-images/truckx-high-fidelity-small.gif";
+import { PageNames } from "../names";
 
 const truckXData = {
-  componentName: "TruckX",
+  componentName: PageNames.TRUCKX,
   title: "TruckX",
   description: "Electronic logbook and trip planning app for truck drivers.",
   icons: [iOSLight, androidLight],

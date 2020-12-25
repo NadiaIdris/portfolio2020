@@ -7,9 +7,10 @@ import plannerAppAddAndSort from "./../vector-images/planner-app-add-and-sort-ta
 import plannerAppTaskDone from "./../vector-images/planner-app-task-done.gif";
 import plannerAppResponsive from "./../vector-images/planner-app-responsive-design.gif";
 import plannerAppMoreCodingProjects from "./../vector-images/planner-app-more-projects-1376x708.png";
+import { PageNames } from "../names";
 
 const plannerAppData = {
-  componentName: "PlannerApp",
+  componentName: PageNames.PLANNER_APP,
   title: "Planner App",
   description: "Responsive web application to plan, organize, and track tasks.",
   icons: [jsLight, htmlLight, cssLight],

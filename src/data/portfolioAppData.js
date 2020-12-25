@@ -6,9 +6,10 @@ import portfolioAppMoreCodingProjects from "./../vector-images/portfolio-app-mor
 import portfolioMain from "./../vector-images/portfolio-main-2746x1342.png";
 import portfolioAppFeaturesGif from "./../vector-images/portfolio-app-features.gif";
 import portfolioAppResponsiveGif from "./../vector-images/portfolio-app-responsive-design.gif";
+import { PageNames } from "../names";
 
 const portfolioAppData = {
-  componentName: "PortfolioApp",
+  componentName: PageNames.PORTFOLIO_APP,
   title: "Portfolio App",
   description:
     "Maret Idris design and code portfolio you are currently browsing.",

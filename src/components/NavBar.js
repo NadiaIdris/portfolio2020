@@ -17,7 +17,7 @@ import cssDark from "./../vector-images/css-logo.svg";
 import cssLight from "./../vector-images/css-logo-lght-gray.svg";
 
 import "./../styles/NavBar.css";
-import { PageNames, PageNamesWithSpaces } from "../pageConstants";
+import { PageNames, PageNamesWithSpaces } from "../names";
 import { sharedObject } from "./SharedContext";
 
 const Logo = (props) => {
