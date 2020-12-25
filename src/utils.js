@@ -1,3 +1,5 @@
+import { showAppBar } from "./navbarVisibility";
+
 // Access CSS variable from JS: https://stackoverflow.com/a/41725782
 const getValueOfCSSVariable = (element, variableName) => {
   const computedStyle = getComputedStyle(element);
@@ -16,6 +18,7 @@ const dummyText = `Spicy jalapeno bacon ipsum dolor `.repeat(700);
 const scrollToTop = () => {
   setTimeout(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    showAppBar();
     console.log("Scrolled to top");
   }, 0);
 };
