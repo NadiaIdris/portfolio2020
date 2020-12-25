@@ -8,9 +8,16 @@ const getValueOfCSSVariable = (element, variableName) => {
 
 const dummyText = `Spicy jalapeno bacon ipsum dolor `.repeat(700);
 
+/**
+ * There are issues w/ `window.scrollTo()` in the way that it is implemented in different browsers. It makes firing
+ * window.scroll events inconsistent across browsers.
+ * https://stackoverflow.com/questions/37098306/this-site-appears-to-use-a-scroll-linked-positioning-effect-this-may-not-work
+ */
 const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  console.log("Scrolled to top");
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    console.log("Scrolled to top");
+  }, 0);
 };
 
 // Open full viewport modal component.
