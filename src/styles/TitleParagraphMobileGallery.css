@@ -12,6 +12,7 @@
 
 .one-mobile-gallery-image {
     width: 216px;
+    min-width: 216px;
     height: 379px;
     object-fit: cover;
     object-position: top;
