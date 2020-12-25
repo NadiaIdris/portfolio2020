@@ -1,6 +1,6 @@
 import React from "react";
 import "./../styles/About.css";
-import maretIdris from "./../vector-images/maret-idris.png";
+import maretIdris from "./../vector-images/maret-idris.jpg";
 import resume from "./../vector-images/maret-idris-resume.pdf";
 import Footer from "./Footer";
 

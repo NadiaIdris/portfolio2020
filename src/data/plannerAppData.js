@@ -1,12 +1,12 @@
-import homepagePlannerApp from "./../vector-images/planner-app-904x708.svg";
+import homepagePlannerApp from "./../vector-images/planner-app-882x708.png";
 import jsLight from "./../vector-images/js-logo-lght-gray.svg";
 import htmlLight from "./../vector-images/html-logo-lght-gray.svg";
 import cssLight from "./../vector-images/css-logo-lght-gray.svg";
-import plannerMain from "./../vector-images/planner-main-2792x1366.svg";
+import plannerMain from "./../vector-images/planner-main-2746x1342.png";
 import plannerAppAddAndSort from "./../vector-images/planner-app-add-and-sort-tasks.gif";
 import plannerAppTaskDone from "./../vector-images/planner-app-task-done.gif";
 import plannerAppResponsive from "./../vector-images/planner-app-responsive-design.gif";
-import plannerAppMoreCodingProjects from "./../vector-images/planner-app-more-projects-1376x708.svg";
+import plannerAppMoreCodingProjects from "./../vector-images/planner-app-more-projects-1376x708.png";
 
 const plannerAppData = {
   componentName: "PlannerApp",

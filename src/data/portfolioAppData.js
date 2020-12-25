@@ -1,11 +1,9 @@
-import homepagePortfolioApp from "./../vector-images/portfolio-app-904x708.svg";
+import homepagePortfolioApp from "./../vector-images/portfolio-app-882x708.png";
 import reactLight from "./../vector-images/react-logo-lght-gray.svg";
 import htmlLight from "./../vector-images/html-logo-lght-gray.svg";
 import cssLight from "./../vector-images/css-logo-lght-gray.svg";
-import portfolioAppMoreCodingProjects from "./../vector-images/portfolio-app-more-projects-1376x708.svg";
-import portfolioMain from "./../vector-images/portfolio-main-2792x1366.svg";
-import weatherAppFeaturesGif from "../vector-images/weather-app-features.gif";
-import weatherAppLocationsGif from "../vector-images/weather-app-locations.gif";
+import portfolioAppMoreCodingProjects from "./../vector-images/portfolio-app-more-projects-1376x708.png";
+import portfolioMain from "./../vector-images/portfolio-main-2746x1342.png";
 import portfolioAppFeaturesGif from "./../vector-images/portfolio-app-features.gif";
 import portfolioAppResponsiveGif from "./../vector-images/portfolio-app-responsive-design.gif";
 

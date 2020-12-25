@@ -1,11 +1,11 @@
-import homepageWeatherApp from "./../vector-images/weather-app-904x708.svg";
+import homepageWeatherApp from "./../vector-images/weather-app-882x708.png";
 import jsLight from "./../vector-images/js-logo-lght-gray.svg";
 import htmlLight from "./../vector-images/html-logo-lght-gray.svg";
 import cssLight from "./../vector-images/css-logo-lght-gray.svg";
-import weatherMain from "./../vector-images/weather-main-2792x1366.svg";
+import weatherMain from "./../vector-images/weather-main-2746x1342.png";
 import weatherAppFeaturesGif from "./../vector-images/weather-app-features.gif";
 import weatherAppLocationsGif from "./../vector-images/weather-app-locations.gif";
-import weatherAppMoreCodingProjects from "./../vector-images/weather-app-more-projects-1376x708.svg";
+import weatherAppMoreCodingProjects from "./../vector-images/weather-app-more-projects-1376x708.png";
 
 const weatherAppData = {
   componentName: "WeatherApp",

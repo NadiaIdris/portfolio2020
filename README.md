@@ -15,6 +15,7 @@
 - [Project page components](#project-page-components)
   - [The difference between `<TitleParagraph />` and `<TitleParagraphImage />`](#the-difference-between-titleparagraph--and-titleparagraphimage-)
 - [Deploying to github pages](#deploying-to-github-pages)
+- [Image optimization](#image-optimization)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -175,3 +176,11 @@ run and it builds the site into the `gh-pages` branch, and then pushes that to
 github.com. In order to prevent this here is a
 [github issue on this topic](https://github.com/tschaub/gh-pages/issues/213).
 The fix is to put the `CNAME` file into the `public` folder.
+
+# Image optimization
+
+- [Great article on image optimization](https://www.abetterlemonadestand.com/optimizing-images-for-web/)
+- Use [ImageOptim](https://imageoptim.com/mac) (for Mac) to remove bloated
+  metadata.
+- Use [ShortPixel](https://shortpixel.com/) (web app) to compress images to a
+  much smaller size.
