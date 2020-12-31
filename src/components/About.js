@@ -241,21 +241,13 @@ class About extends React.Component {
           <h5 className="h5-padding">Articles I've published</h5>
           <ul>
             <li className="secondary-font">
-              I can build responsive web applications and{" "}
-              <a
-                href={responsive}
-                target="_blank"
-                rel="noreferrer"
-                className="secondary-font-link-no-font-size"
-              >
-                I share my knowledge of how to do it
-              </a>
-              . I understand how micro-interactions can enhance user experience.
-              I understand how to keep data in mind when designing, etc.
+              I can build responsive web applications. I understand how
+              micro-interactions can enhance user experience. I understand how
+              to keep data in mind when designing, etc.
             </li>
             <br />
             <li className="secondary-font">
-              I publish on{" "}
+              I share my knowledge of how to do it on{" "}
               <a
                 href="https://developerlife.com/category/UXE/"
                 target="_blank"
@@ -264,7 +256,7 @@ class About extends React.Component {
               >
                 developerlife.com
               </a>{" "}
-              and on{" "}
+              and{" "}
               <a
                 href="https://medium.com/@maret.idris"
                 target="_blank"

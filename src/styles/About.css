@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: row;
     max-width: 1152px;
-    /*justify-content: center;*/
     margin: 0 auto;
     padding: 0 var(--default-page-padding) 50px var(--default-page-padding);
 }
@@ -37,37 +36,6 @@
 .second-card {
     width: 60%;
 }
-
-/*.design-card-image {*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    border-radius: var(--border-radius);*/
-/*}*/
-
-/*!**/
-/*  Adds height: auto only for Safari browser.*/
-/*  https://dev.to/krantikr/browser-specific-css-for-internet-explorer-firefox-chrome-safari-and-edge-394p#safari*/
-/**!*/
-/*@media not all and (min-resolution:.001dpcm)*/
-/*{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {*/
-/*    .design-card-image {*/
-/*        height: 360px;*/
-/*    }*/
-/*}}*/
-
-/*.card-with-text {*/
-/*    padding: 30px;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-end;*/
-/*}*/
-
-/*.design-cards-container img {*/
-/*    margin-right: 0;*/
-/*    object-fit: cover;*/
-/*    object-position: top;*/
-/*    width: 50%;*/
-/*}*/
 
 .secondary-font {
     font-family: var(--secondary-font);
@@ -147,11 +115,6 @@
     .design-cards-container div:last-of-type {
         margin-bottom: 0;
     }
-
-    /*.design-cards-container img {*/
-    /*    margin: 0 auto;*/
-    /*    width: 100%;*/
-    /*}*/
 
     .vertical-title-container {
         width: 100%;
