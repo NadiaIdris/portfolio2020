@@ -44,20 +44,20 @@ class About extends React.Component {
     const designCards = () => {
       return (
         <section className="design-cards-container">
-          <div className="design-card card-with-text">
+          <div className="design-card first-card">
             <h5 className="h5-padding">Maret Idris</h5>
-            <ul className="card-text">
-              <li>
+            <ul>
+              <li className="responsive-list">
                 <span className="secondary-font-bold">
                   Work authorisation:{" "}
                 </span>
                 <span className="secondary-font">🇺🇸 Yes.</span>
               </li>
-              <li>
+              <li className="responsive-list">
                 <span className="secondary-font-bold">Design experience: </span>
                 <span className="secondary-font">7 years.</span>
               </li>
-              <li>
+              <li className="responsive-list">
                 <span className="secondary-font-bold">Coding experience: </span>
                 <span className="secondary-font">2 years.</span>
               </li>
@@ -82,8 +82,8 @@ class About extends React.Component {
                       -
                     </span>
                     <span className="secondary-font">
-                      Prototyping (JavaScript, HTML, CSS) in code using real
-                      data.
+                      Prototyping (JavaScript, React, HTML, CSS) in code using
+                      real data.
                     </span>
                   </li>
                   <li className="bullet-point-container">
@@ -107,37 +107,74 @@ class About extends React.Component {
               </li>
             </ul>
           </div>
-          <img
-            src={maretIdris}
-            alt="Maret Idris"
-            className="design-card-image"
-          />
+          <div className="design-card second-card">
+            <h5 className="h5-padding">
+              What have I been up to for the last 2 years
+            </h5>
+            <p>
+              In Jan 2019 I left R3BL to learn how to code full time. I learned
+              responsive web design, HTML, CSS, advanced JavaScript (including
+              asynchronous JavaScript), React, CSS, and JS animation, how to use
+              tools like Webpack, ESLint, version control with git, GitHub, how
+              to use the terminal, and CLIs, etc.
+            </p>
+            <br />
+            <p>
+              I was taught and mentored by a Google SWE, I read books and took
+              courses online. I was curious about how my designs were
+              implemented and how technology can help to make better user
+              experiences.
+            </p>
+            <br />
+            <p>
+              Because I learned to code, I understand the capabilities &
+              constraints of technology and how they apply to the user
+              experience through designs. I can build interactive prototypes in
+              code, I can effectively communicate with engineers using their
+              terminology.
+            </p>
+          </div>
         </section>
       );
     };
 
     const thingsIDo = () => {
       return (
-        <section className="vertical-title-container">
+        <section className="vertical-title-container first-card">
           <h5 className="h5-padding">Things I do</h5>
           <ul>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <div>
                 <span className="secondary-font-bold">
                   Responsive web design
                 </span>
+                <span className="secondary-font">&nbsp;(2 years)</span>
               </div>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <div>
-                <span className="secondary-font-bold">Mobile design</span>
-                <span className="secondary-font">&nbsp;(Android, iOS)</span>
+                <span className="secondary-font-bold">Static web design</span>
+                <span className="secondary-font">&nbsp;(2.5 years)</span>
               </div>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
+              <div>
+                <span className="secondary-font-bold">Android design</span>
+                <span className="secondary-font">&nbsp;(1 year)</span>
+              </div>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <div>
+                <span className="secondary-font-bold">iOS design</span>
+                <span className="secondary-font">&nbsp;(1.5 years)</span>
+              </div>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
               <div>
                 <span className="secondary-font-bold">Visual design</span>
                 <span className="secondary-font">
@@ -146,7 +183,7 @@ class About extends React.Component {
               </div>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <div>
                 <span className="secondary-font-bold">Interaction design</span>
                 <span className="secondary-font">
@@ -155,7 +192,7 @@ class About extends React.Component {
               </div>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <div>
                 <span className="secondary-font-bold">
                   Prototyping using code{" "}
@@ -166,7 +203,7 @@ class About extends React.Component {
               </div>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <div>
                 <span className="secondary-font-bold">
                   Prototyping using tools
@@ -175,13 +212,13 @@ class About extends React.Component {
               </div>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <span className="secondary-font-bold">
                 Ideation and wireframing
               </span>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <span className="secondary-font-bold">User research</span>
             </li>
           </ul>
@@ -200,9 +237,23 @@ class About extends React.Component {
         "https://developerlife.com/2017/11/15/flexbox-building-a-navigation-bar-part-2-2/";
 
       return (
-        <section className="vertical-title-container">
+        <section className="vertical-title-container second-card">
           <h5 className="h5-padding">Articles I've published</h5>
           <ul>
+            <li className="secondary-font">
+              I can build responsive web applications and{" "}
+              <a
+                href={responsive}
+                target="_blank"
+                rel="noreferrer"
+                className="secondary-font-link-no-font-size"
+              >
+                I share my knowledge of how to do it
+              </a>
+              . I understand how micro-interactions can enhance user experience.
+              I understand how to keep data in mind when designing, etc.
+            </li>
+            <br />
             <li className="secondary-font">
               I publish on{" "}
               <a
@@ -226,7 +277,7 @@ class About extends React.Component {
             </li>
             <br />
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <a
                 href={screenDensity}
                 target="_blank"
@@ -237,7 +288,7 @@ class About extends React.Component {
               </a>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <a
                 href={responsive}
                 target="_blank"
@@ -249,7 +300,7 @@ class About extends React.Component {
               </a>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <a
                 href={flexboxOne}
                 target="_blank"
@@ -260,7 +311,7 @@ class About extends React.Component {
               </a>
             </li>
             <li className="bullet-point-container">
-              <span className="dash-regular-weight">-</span>
+              <span className="dash-regular-weight secondary-font">-</span>
               <a
                 href={flexboxTwo}
                 target="_blank"
