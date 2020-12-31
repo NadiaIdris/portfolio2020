@@ -31,6 +31,15 @@ const Logo = (props) => {
   );
 };
 
+const DarkTheme = () => {
+  return (
+    <label className="switch">
+      <input type="checkbox" />
+      <span className="slider"></span>
+    </label>
+  );
+};
+
 const GitHub = () => {
   return (
     <a
@@ -259,6 +268,7 @@ const NavBar = (props) => {
         </div>
         {createHomeOrAboutComponent(props, PageNames.ABOUT)}
       </nav>
+      <DarkTheme />
       <GitHub />
     </div>
   );
