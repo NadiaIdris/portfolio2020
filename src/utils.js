@@ -1,14 +1,19 @@
 import { showAppBar } from "./navbarVisibility";
 
 // Access CSS variable from JS: https://stackoverflow.com/a/41725782
-const getValueOfCSSVariable = (element, variableName) => {
+const getIntegerValueOfCSSVariable = (element, variableName) => {
   const computedStyle = getComputedStyle(element);
   const value = computedStyle.getPropertyValue(variableName);
   const parsedValue = parseInt(value);
   return parsedValue;
 };
 
-const dummyText = `Spicy jalapeno bacon ipsum dolor `.repeat(700);
+// E.g element can be window.root, variableName needs to be string.
+const getStringValueOfCSSVariable = (element, variableName) => {
+  const computedStyle = getComputedStyle(element);
+  const value = computedStyle.getPropertyValue(variableName);
+  return value;
+};
 
 /**
  * There are issues w/ `window.scrollTo()` in the way that it is implemented in different browsers. It makes firing
@@ -39,4 +44,10 @@ const closeModal = (imageId) => {
   document.querySelector("html").style.overflow = "visible";
 };
 
-export { getValueOfCSSVariable, dummyText, scrollToTop, openModal, closeModal };
+export {
+  getIntegerValueOfCSSVariable,
+  getStringValueOfCSSVariable,
+  scrollToTop,
+  openModal,
+  closeModal,
+};

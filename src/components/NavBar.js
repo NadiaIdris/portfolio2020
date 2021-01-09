@@ -19,10 +19,12 @@ import cssLight from "./../vector-images/css-logo-lght-gray.svg";
 import "./../styles/NavBar.css";
 import { PageNames, PageNamesWithSpaces } from "../names";
 import { sharedObject } from "./SharedContext";
+import { getStringValueOfCSSVariable } from "../utils";
 
-const Logo = (props) => {
+const Logo = () => {
   return (
     <a
+      id="link-for-logo"
       onClick={() => sharedObject.onNavigationClicked(PageNames.HOME)}
       title="Maret Idris home page"
     >
@@ -31,14 +33,20 @@ const Logo = (props) => {
   );
 };
 
-const DarkTheme = () => {
-  return (
-    <label className="switch">
-      <input type="checkbox" />
-      <span className="slider"></span>
-    </label>
-  );
-};
+// Should the toggle id go to parent (label) or child (span)
+// https://stackoverflow.com/a/25264860/10029397
+// How to add attributes conditionally in jsx: https://stackoverflow.com/a/31164090/10029397
+class DarkTheme extends React.Component {
+  render() {
+    const isChecked = this.props.myDarkThemeValue.getValue() === "true";
+    return (
+      <label className="switch">
+        <input id="dark-theme-checkbox" type="checkbox" checked={isChecked} />
+        <span id="dark-theme-button" className="slider"></span>
+      </label>
+    );
+  }
+}
 
 const GitHub = () => {
   return (
@@ -178,100 +186,181 @@ const createDropdownComponent = (props, name, nameWithSpaces) => {
   );
 };
 
-const NavBar = (props) => {
-  // Function that checks if one of the design projects is active. If it is
-  // then it adds black underline to Designs tab.
-  const isDesignsNavActive = (destination, pageNameArray) => {
-    if (pageNameArray.includes(destination)) return "nav-selected";
-  };
+const DARK_THEME = "darkTheme";
 
-  return (
-    <div id="app-bar">
-      <Logo />
-      <nav>
-        {createHomeOrAboutComponent(props, PageNames.HOME)}
-        <div
-          id="designs-container"
-          className={isDesignsNavActive(props.currentDestination, [
-            PageNames.TRUCKX,
-            PageNames.ABBEY_ROAD_STUDIOS,
-            PageNames.UAMP,
-            PageNames.INMUSIK,
-            PageNames.WHOLEWORLDBAND,
-          ])}
-        >
-          Designs
-          <div id="designs-dropdown-container">
-            <div className="center-the-dropdown">
-              <div className="triangle" />
-              <div className="dropdown">
-                {createDropdownComponent(
-                  props,
-                  PageNames.TRUCKX,
-                  PageNamesWithSpaces.TRUCKX
-                )}
-                {createDropdownComponent(
-                  props,
-                  PageNames.ABBEY_ROAD_STUDIOS,
-                  PageNamesWithSpaces.ABBEY_ROAD_STUDIOS
-                )}
-                {createDropdownComponent(
-                  props,
-                  PageNames.UAMP,
-                  PageNamesWithSpaces.UAMP
-                )}
-                {createDropdownComponent(
-                  props,
-                  PageNames.INMUSIK,
-                  PageNamesWithSpaces.INMUSIK
-                )}
-                {createDropdownComponent(
-                  props,
-                  PageNames.WHOLEWORLDBAND,
-                  PageNamesWithSpaces.WHOLEWORLDBAND
-                )}
+class DarkThemeValue {
+  constructor(parentComponent) {
+    this.darkTheme = "false";
+    this.parentComponent = parentComponent;
+
+    if (localStorage.getItem(DARK_THEME) === null) {
+      localStorage.setItem(DARK_THEME, "false");
+    } else {
+      this.setValue(localStorage.getItem(DARK_THEME));
+    }
+  }
+
+  getValue() {
+    return this.darkTheme;
+  }
+
+  setValue(newValue) {
+    this.darkTheme = newValue;
+    localStorage.setItem(DARK_THEME, newValue);
+    this.parentComponent.setState({ myDarkThemeValue: this });
+  }
+}
+
+class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { myDarkThemeValue: new DarkThemeValue(this) };
+  }
+
+  componentDidMount() {
+    const myDarkThemeValue = this.state.myDarkThemeValue;
+    const darkThemeColorGrayDarkest = "#CFCFCF";
+    const darkThemeColorWhite = "#1B1C1E";
+
+    if (myDarkThemeValue.getValue() === "true") {
+      //Dark theme
+      document.documentElement.style.setProperty(
+        "--color-gray-darkest",
+        darkThemeColorGrayDarkest
+      );
+      document.documentElement.style.setProperty(
+        "--color-white",
+        darkThemeColorWhite
+      );
+
+      const checkbox = document.querySelector("#dark-theme-checkbox");
+      checkbox.checked = true;
+    }
+
+    const changeThemeOnClick = () => {
+      if (myDarkThemeValue.getValue() === "true") {
+        // Light theme
+        myDarkThemeValue.setValue("false");
+        document.documentElement.style.setProperty(
+          "--color-gray-darkest",
+          "#303030"
+        );
+        document.documentElement.style.setProperty("--color-white", "#FFFFFF");
+      } else {
+        // Dark theme
+        myDarkThemeValue.setValue("true");
+        document.documentElement.style.setProperty(
+          "--color-gray-darkest",
+          darkThemeColorGrayDarkest
+        );
+        document.documentElement.style.setProperty(
+          "--color-white",
+          darkThemeColorWhite
+        );
+      }
+    };
+
+    const darkThemeButton = document.querySelector("#dark-theme-button");
+    darkThemeButton.addEventListener("click", changeThemeOnClick);
+  }
+
+  render() {
+    // Function that checks if one of the design projects is active. If it is
+    // then it adds black underline to Designs tab.
+    const isDesignsNavActive = (destination, pageNameArray) => {
+      if (pageNameArray.includes(destination)) return "nav-selected";
+    };
+
+    return (
+      <div id="app-bar">
+        <Logo />
+        <nav>
+          {createHomeOrAboutComponent(this.props, PageNames.HOME)}
+          <div
+            id="designs-container"
+            className={isDesignsNavActive(this.props.currentDestination, [
+              PageNames.TRUCKX,
+              PageNames.ABBEY_ROAD_STUDIOS,
+              PageNames.UAMP,
+              PageNames.INMUSIK,
+              PageNames.WHOLEWORLDBAND,
+            ])}
+          >
+            Designs
+            <div id="designs-dropdown-container">
+              <div className="center-the-dropdown">
+                <div className="triangle" />
+                <div className="dropdown">
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.TRUCKX,
+                    PageNamesWithSpaces.TRUCKX
+                  )}
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.ABBEY_ROAD_STUDIOS,
+                    PageNamesWithSpaces.ABBEY_ROAD_STUDIOS
+                  )}
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.UAMP,
+                    PageNamesWithSpaces.UAMP
+                  )}
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.INMUSIK,
+                    PageNamesWithSpaces.INMUSIK
+                  )}
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.WHOLEWORLDBAND,
+                    PageNamesWithSpaces.WHOLEWORLDBAND
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          id="code-container"
-          className={isDesignsNavActive(props.currentDestination, [
-            PageNames.WEATHER_APP,
-            PageNames.PLANNER_APP,
-            PageNames.PORTFOLIO_APP,
-          ])}
-        >
-          Code
-          <div id="code-dropdown-container">
-            <div className="center-the-dropdown">
-              <div className="triangle" />
-              <div className="dropdown code-dropdown-width">
-                {createDropdownComponent(
-                  props,
-                  PageNames.WEATHER_APP,
-                  PageNamesWithSpaces.WEATHER_APP
-                )}
-                {createDropdownComponent(
-                  props,
-                  PageNames.PLANNER_APP,
-                  PageNamesWithSpaces.PLANNER_APP
-                )}
-                {createDropdownComponent(
-                  props,
-                  PageNames.PORTFOLIO_APP,
-                  PageNamesWithSpaces.PORTFOLIO_APP
-                )}
+          <div
+            id="code-container"
+            className={isDesignsNavActive(this.props.currentDestination, [
+              PageNames.WEATHER_APP,
+              PageNames.PLANNER_APP,
+              PageNames.PORTFOLIO_APP,
+            ])}
+          >
+            Code
+            <div id="code-dropdown-container">
+              <div className="center-the-dropdown">
+                <div className="triangle" />
+                <div className="dropdown code-dropdown-width">
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.WEATHER_APP,
+                    PageNamesWithSpaces.WEATHER_APP
+                  )}
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.PLANNER_APP,
+                    PageNamesWithSpaces.PLANNER_APP
+                  )}
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.PORTFOLIO_APP,
+                    PageNamesWithSpaces.PORTFOLIO_APP
+                  )}
+                </div>
               </div>
             </div>
           </div>
+          {createHomeOrAboutComponent(this.props, PageNames.ABOUT)}
+        </nav>
+        <div id="dark-theme-and-github-container">
+          <DarkTheme myDarkThemeValue={this.state.myDarkThemeValue} />
+          <GitHub />
         </div>
-        {createHomeOrAboutComponent(props, PageNames.ABOUT)}
-      </nav>
-      <DarkTheme />
-      <GitHub />
-    </div>
-  );
-};
+      </div>
+    );
+  }
+}
 
 export default NavBar;

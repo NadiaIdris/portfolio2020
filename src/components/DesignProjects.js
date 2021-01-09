@@ -2,7 +2,7 @@ import React from "react";
 import "./../styles/DesignProjects.css";
 import nextArrow from "./../vector-images/arrow-right.svg";
 import previousArrow from "./../vector-images/arrow-left.svg";
-import { getValueOfCSSVariable, scrollToTop } from "../utils";
+import { getIntegerValueOfCSSVariable } from "../utils";
 import { getPageName } from "../pageConstants";
 import { sharedObject } from "./SharedContext";
 
@@ -77,7 +77,7 @@ class DesignProjects extends React.Component {
   // left of firstDesignProject. That 16px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewportSmallerThan601Px = () => {
-    const paddingSmall = getValueOfCSSVariable(
+    const paddingSmall = getIntegerValueOfCSSVariable(
       document.body,
       "--small-page-padding"
     );
@@ -93,7 +93,7 @@ class DesignProjects extends React.Component {
   // left of firstDesignProject. That 31px is a margin that getBoundingClientRect()
   // doesn't include.
   hidePreviousButtonIfViewport601To1280Px = () => {
-    const paddingDefault = getValueOfCSSVariable(
+    const paddingDefault = getIntegerValueOfCSSVariable(
       document.body,
       "--default-page-padding"
     );

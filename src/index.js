@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
 import { App, getPageNameFromWindowLocation } from "./components/App";
-import { getValueOfCSSVariable, scrollToTop } from "./utils";
+import { getIntegerValueOfCSSVariable, scrollToTop } from "./utils";
 import {
   handleAutoHideAppBar,
   handleDisableAutoHide,
@@ -35,7 +35,7 @@ const myWindowResizeListener = (containerId, dropdownId) => {
  */
 const attachAnimationForDropdownMenu = (dropdownId, containerId) => {
   const dropdown = document.querySelector(dropdownId);
-  const dropdownOpacityAnimationDelay = getValueOfCSSVariable(
+  const dropdownOpacityAnimationDelay = getIntegerValueOfCSSVariable(
     dropdown,
     "--dropdown-opacity-animation-delay"
   );
@@ -89,7 +89,7 @@ const runAfterAppIsMounted = () => {
   );
   attachAnimationForDropdownMenu("#code-dropdown-container", "#code-container");
   const appBar = document.querySelector("#app-bar");
-  const height = getValueOfCSSVariable(appBar, "--app-bar-height");
+  const height = getIntegerValueOfCSSVariable(appBar, "--app-bar-height");
   handleAutoHideAppBar(appBar, height);
 
   handleDisableAutoHide("designs-container");

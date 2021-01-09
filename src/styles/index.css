@@ -51,6 +51,7 @@
     --color-gray-font: #717171;
     --color-gray-hover-bckround: #EFEFEF;
     --color-yellow: #EECC11;
+    --color-yellow-faded: #726419;
     --color-green: #067B11;
 }
 
@@ -199,6 +200,7 @@ body {
     max-width: var(--max-app-width);
     margin: 0 auto;
     font-size: var(--default-font-size);
+    background-color: var(--color-white);
 }
 
 html {

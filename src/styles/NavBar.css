@@ -2,6 +2,10 @@
     --app-bar-height: 64px;
 }
 
+#link-for-logo {
+    width: 86px;
+}
+
 .logo {
     width: 40px;
     cursor: pointer;
@@ -10,6 +14,7 @@
 .github-logo {
     width: 24px;
     cursor: pointer;
+    display: block;
 }
 
 #app-bar {
@@ -60,6 +65,15 @@ nav > *:hover {
 
 #designs-container:hover {
     cursor: pointer;
+}
+
+#dark-theme-and-github-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 86px;
 }
 
 
@@ -194,9 +208,10 @@ nav > *:hover {
 /*Dark Theme button styling*/
 .switch {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
+    display: block;
     width: 42px;
-    height: 24px;
+    height: 20px;
 }
 
 .switch input {
@@ -213,36 +228,38 @@ nav > *:hover {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: .2s;
+    transition: .2s;
     border-radius: 100px;
 }
 
 .slider:before {
     position: absolute;
-    content: "";
-    height: 24px;
-    width: 24px;
-    left: 0px;
-    bottom: 0px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    content: url("./../vector-images/moon-icon.svg");
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: -2px;
+    background-color: var(--color-gray-darkest);
+    -webkit-transition: .2s;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 2px 0 3px;
     border-radius: 100px;
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    background-color: var(--color-yellow-faded);
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(19px);
-    -ms-transform: translateX(19px);
-    transform: translateX(19px);
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+    content: url("./../vector-images/moon-icon-dark.svg");
+    background-color: var(--color-yellow);
 }
 /*-----------------*/
 

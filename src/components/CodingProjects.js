@@ -3,7 +3,7 @@ import "./../styles/CodingProjects.css";
 // import './../styles/DesignProjects.css'
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
-import { getValueOfCSSVariable } from "../utils";
+import { getIntegerValueOfCSSVariable } from "../utils";
 import { getPageName } from "../pageConstants";
 import { sharedObject } from "./SharedContext";
 
@@ -84,7 +84,7 @@ class CodingProjects extends React.Component {
   hidePreviousButtonIfMarginLeftIsSmall = () => {
     const leftOfFirstDesignProject =
       this.firstCodingProject.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--small-page-padding");
+      getIntegerValueOfCSSVariable(document.body, "--small-page-padding");
     const leftOfProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
@@ -97,7 +97,7 @@ class CodingProjects extends React.Component {
   hidePreviousButtonIfMarginLeftIsDefault = () => {
     const leftOfFirstDesignProject =
       this.firstCodingProject.getBoundingClientRect().left -
-      getValueOfCSSVariable(document.body, "--default-page-padding");
+      getIntegerValueOfCSSVariable(document.body, "--default-page-padding");
     const leftOfProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
       .left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
@@ -156,7 +156,10 @@ class CodingProjects extends React.Component {
 
   addOrHideButtons = () => {
     const windowSize = window.innerWidth;
-    const maxAppWidth = getValueOfCSSVariable(document.body, "--max-app-width");
+    const maxAppWidth = getIntegerValueOfCSSVariable(
+      document.body,
+      "--max-app-width"
+    );
     if (windowSize < maxAppWidth) {
       // Show next and previous buttons
       // If haven't scrolled yet, hide previous button and show next button
