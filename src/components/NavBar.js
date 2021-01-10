@@ -36,12 +36,19 @@ const Logo = () => {
 // Should the toggle id go to parent (label) or child (span)
 // https://stackoverflow.com/a/25264860/10029397
 // How to add attributes conditionally in jsx: https://stackoverflow.com/a/31164090/10029397
-class DarkTheme extends React.Component {
+class DarkThemeChooser extends React.Component {
   render() {
     const isChecked = this.props.myDarkThemeValue.getValue() === "true";
+    const changeThemeOnClickLambda = this.props.changeThemeOnClickLambda;
     return (
       <label className="switch">
-        <input id="dark-theme-checkbox" type="checkbox" checked={isChecked} />
+        <input
+          id="dark-theme-checkbox"
+          type="checkbox"
+          readOnly
+          checked={isChecked}
+          onClick={changeThemeOnClickLambda}
+        />
         <span id="dark-theme-button" className="slider"></span>
       </label>
     );
@@ -186,41 +193,12 @@ const createDropdownComponent = (props, name, nameWithSpaces) => {
   );
 };
 
-const DARK_THEME = "darkTheme";
-
-class DarkThemeValue {
-  constructor(parentComponent) {
-    this.darkTheme = "false";
-    this.parentComponent = parentComponent;
-
-    if (localStorage.getItem(DARK_THEME) === null) {
-      localStorage.setItem(DARK_THEME, "false");
-    } else {
-      this.setValue(localStorage.getItem(DARK_THEME));
-    }
-  }
-
-  getValue() {
-    return this.darkTheme;
-  }
-
-  setValue(newValue) {
-    this.darkTheme = newValue;
-    localStorage.setItem(DARK_THEME, newValue);
-    this.parentComponent.setState({ myDarkThemeValue: this });
-  }
-}
+const darkThemeColorGrayDarkest = "#CFCFCF";
+const darkThemeColorWhite = "#1B1C1E";
 
 class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { myDarkThemeValue: new DarkThemeValue(this) };
-  }
-
   componentDidMount() {
-    const myDarkThemeValue = this.state.myDarkThemeValue;
-    const darkThemeColorGrayDarkest = "#CFCFCF";
-    const darkThemeColorWhite = "#1B1C1E";
+    const myDarkThemeValue = this.props.myDarkThemeValue;
 
     if (myDarkThemeValue.getValue() === "true") {
       //Dark theme
@@ -236,33 +214,30 @@ class NavBar extends React.Component {
       const checkbox = document.querySelector("#dark-theme-checkbox");
       checkbox.checked = true;
     }
-
-    const changeThemeOnClick = () => {
-      if (myDarkThemeValue.getValue() === "true") {
-        // Light theme
-        myDarkThemeValue.setValue("false");
-        document.documentElement.style.setProperty(
-          "--color-gray-darkest",
-          "#303030"
-        );
-        document.documentElement.style.setProperty("--color-white", "#FFFFFF");
-      } else {
-        // Dark theme
-        myDarkThemeValue.setValue("true");
-        document.documentElement.style.setProperty(
-          "--color-gray-darkest",
-          darkThemeColorGrayDarkest
-        );
-        document.documentElement.style.setProperty(
-          "--color-white",
-          darkThemeColorWhite
-        );
-      }
-    };
-
-    const darkThemeButton = document.querySelector("#dark-theme-button");
-    darkThemeButton.addEventListener("click", changeThemeOnClick);
   }
+
+  changeThemeOnClick = (myDarkThemeValue) => {
+    if (myDarkThemeValue.getValue() === "true") {
+      // Light theme
+      myDarkThemeValue.setValue("false");
+      document.documentElement.style.setProperty(
+        "--color-gray-darkest",
+        "#303030"
+      );
+      document.documentElement.style.setProperty("--color-white", "#FFFFFF");
+    } else {
+      // Dark theme
+      myDarkThemeValue.setValue("true");
+      document.documentElement.style.setProperty(
+        "--color-gray-darkest",
+        darkThemeColorGrayDarkest
+      );
+      document.documentElement.style.setProperty(
+        "--color-white",
+        darkThemeColorWhite
+      );
+    }
+  };
 
   render() {
     // Function that checks if one of the design projects is active. If it is
@@ -355,7 +330,12 @@ class NavBar extends React.Component {
           {createHomeOrAboutComponent(this.props, PageNames.ABOUT)}
         </nav>
         <div id="dark-theme-and-github-container">
-          <DarkTheme myDarkThemeValue={this.state.myDarkThemeValue} />
+          <DarkThemeChooser
+            myDarkThemeValue={this.props.myDarkThemeValue}
+            changeThemeOnClickLambda={() => {
+              this.changeThemeOnClick(this.props.myDarkThemeValue);
+            }}
+          />
           <GitHub />
         </div>
       </div>

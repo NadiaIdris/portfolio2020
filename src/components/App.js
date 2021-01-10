@@ -29,42 +29,67 @@ const updateDocumentTitle = (title) => {
 };
 
 /**
- * Creates the state if it does not already exist. Otherwise it updates the state.
+ * Update an already created state w/ the destination. Do not call this
+ * in the constructor when state hasn't been created yet.
  * Note that setState() is an asynchronous function.
  * More info: https://stackoverflow.com/a/41446620/2085356
  *
  * @param component React component who's state is being modified.
- * @param destination This is the PageName that should be saved to the component's state.
+ * @param destination PageName that is saved to the component's state.
  */
-const createOrUpdateStateWithDestination = (component, destination) => {
+const updateStateWithDestination = (component, destination) => {
   scrollToTop();
-  if (!component.state) {
-    component.state = { destination };
-    console.log("App.state created for the first time: ", component.state);
-  } else {
-    component.setState({ destination }, () => {
-      // This is called after the state is actually updated (asynchronously).
-      console.log("App.state updated: ", component.state);
-    });
-  }
+  component.setState({ destination }, () => {
+    // This is called after the state is actually updated (asynchronously).
+    console.log("App.state updated: ", component.state);
+  });
   updateDocumentTitle(destination);
 };
 
+const DARK_THEME = "darkTheme";
+
+class DarkThemeValue {
+  constructor(enclosingComponent) {
+    this.darkTheme = "false";
+    this.enclosingComponent = enclosingComponent;
+    let valueFromLocalStorage = localStorage.getItem(DARK_THEME);
+    if (!valueFromLocalStorage) {
+      localStorage.setItem(DARK_THEME, "false");
+    } else {
+      this.darkTheme = valueFromLocalStorage;
+    }
+  }
+
+  getValue() {
+    return this.darkTheme;
+  }
+
+  setValue(newValue) {
+    this.darkTheme = newValue;
+    localStorage.setItem(DARK_THEME, newValue);
+    this.enclosingComponent.setState({ myDarkThemeValue: this });
+  }
+}
+
 class App extends Component {
+  // More info on creating state and setState: https://daveceddia.com/where-initialize-state-react/
   constructor(props) {
     super(props);
+    const destination = props.pageName;
+    const myDarkThemeValue = new DarkThemeValue(this);
+    this.state = { myDarkThemeValue, destination };
     sharedObject.onNavigationClicked = this.onNavigationClicked;
-    createOrUpdateStateWithDestination(this, props.pageName);
+    updateDocumentTitle(destination);
   }
 
   componentDidMount() {
     this.props.runAfterAppIsMounted();
-    window.addEventListener("popstate", this.handlePopState);
+    window.addEventListener("popstate", this.handleBrowserHistoryPopState);
   }
 
   onNavigationClicked = (destination) => {
-    this.handlePushState(destination);
-    createOrUpdateStateWithDestination(this, destination);
+    this.handleBrowserHistoryPushState(destination);
+    updateStateWithDestination(this, destination);
   };
 
   /**
@@ -72,7 +97,7 @@ class App extends Component {
    *
    * @param destination Make sure to pass this to the event that handlePopState will use.
    */
-  handlePushState = (destination) => {
+  handleBrowserHistoryPushState = (destination) => {
     const url = new URL(window.location);
     url.searchParams.set(URL_PAGE_KEY, destination);
     const browserHistoryState = { destination };
@@ -84,20 +109,23 @@ class App extends Component {
    *
    * @param event Contains destination which is added when pushState is called.
    */
-  handlePopState = (event) => {
+  handleBrowserHistoryPopState = (event) => {
     const browserHistoryState = event.state;
     // https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/
     let { destination } = { browserHistoryState };
     if (!destination) {
       destination = getPageNameFromWindowLocation();
     }
-    createOrUpdateStateWithDestination(this, destination);
+    updateStateWithDestination(this, destination);
   };
 
   render() {
     return (
       <React.Fragment>
-        <NavBar currentDestination={this.state.destination} />
+        <NavBar
+          currentDestination={this.state.destination}
+          myDarkThemeValue={this.state.myDarkThemeValue}
+        />
         {getComponentForPageName(this.state.destination)}
       </React.Fragment>
     );
