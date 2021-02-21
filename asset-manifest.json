@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.b24f9957.chunk.css",
-    "main.js": "/static/js/main.b0debe16.chunk.js",
-    "main.js.map": "/static/js/main.b0debe16.chunk.js.map",
+    "main.css": "/static/css/main.10f619c0.chunk.css",
+    "main.js": "/static/js/main.e1f9f051.chunk.js",
+    "main.js.map": "/static/js/main.e1f9f051.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f629cdc.js",
     "runtime-main.js.map": "/static/js/runtime-main.2f629cdc.js.map",
     "static/js/2.fcbad7de.chunk.js": "/static/js/2.fcbad7de.chunk.js",
     "static/js/2.fcbad7de.chunk.js.map": "/static/js/2.fcbad7de.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b24f9957.chunk.css.map": "/static/css/main.b24f9957.chunk.css.map",
+    "static/css/main.10f619c0.chunk.css.map": "/static/css/main.10f619c0.chunk.css.map",
     "static/js/2.fcbad7de.chunk.js.LICENSE.txt": "/static/js/2.fcbad7de.chunk.js.LICENSE.txt",
+    "static/media/2021-resume-maret-idris.21e748bc.docx": "/static/media/2021-resume-maret-idris.21e748bc.docx",
     "static/media/index.css": "/static/media/JetBrainsMono-Regular.c2e5a80b.ttf",
     "static/media/abbey-road-audio-products.fcf818aa.png": "/static/media/abbey-road-audio-products.fcf818aa.png",
     "static/media/abbey-road-crossing-cam.ccfebe89.png": "/static/media/abbey-road-crossing-cam.ccfebe89.png",
@@ -90,7 +91,6 @@
     "static/media/js-logo.13f9f267.svg": "/static/media/js-logo.13f9f267.svg",
     "static/media/linkedin.64065f9e.svg": "/static/media/linkedin.64065f9e.svg",
     "static/media/logo.9615439c.svg": "/static/media/logo.9615439c.svg",
-    "static/media/maret-idris-resume.7b9b8c2e.pdf": "/static/media/maret-idris-resume.7b9b8c2e.pdf",
     "static/media/medium.6debfe73.svg": "/static/media/medium.6debfe73.svg",
     "static/media/NavBar.css": "/static/media/moon-icon.9c162ec9.svg",
     "static/media/planner-app-882x708.a8eb89bf.png": "/static/media/planner-app-882x708.a8eb89bf.png",
@@ -159,7 +159,7 @@
   "entrypoints": [
     "static/js/runtime-main.2f629cdc.js",
     "static/js/2.fcbad7de.chunk.js",
-    "static/css/main.b24f9957.chunk.css",
-    "static/js/main.b0debe16.chunk.js"
+    "static/css/main.10f619c0.chunk.css",
+    "static/js/main.e1f9f051.chunk.js"
   ]
 }
