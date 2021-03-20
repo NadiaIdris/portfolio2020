@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.ee2b02b5.chunk.css",
-    "main.js": "/static/js/main.f75cf632.chunk.js",
-    "main.js.map": "/static/js/main.f75cf632.chunk.js.map",
+    "main.css": "/static/css/main.ef7781d3.chunk.css",
+    "main.js": "/static/js/main.608b66e9.chunk.js",
+    "main.js.map": "/static/js/main.608b66e9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5b6cd6ad.js",
     "runtime-main.js.map": "/static/js/runtime-main.5b6cd6ad.js.map",
     "static/js/2.4eea2407.chunk.js": "/static/js/2.4eea2407.chunk.js",
     "static/js/2.4eea2407.chunk.js.map": "/static/js/2.4eea2407.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.ee2b02b5.chunk.css.map": "/static/css/main.ee2b02b5.chunk.css.map",
+    "static/css/main.ef7781d3.chunk.css.map": "/static/css/main.ef7781d3.chunk.css.map",
     "static/js/2.4eea2407.chunk.js.LICENSE.txt": "/static/js/2.4eea2407.chunk.js.LICENSE.txt",
     "static/media/2021-resume-maret-idris.21e748bc.docx": "/static/media/2021-resume-maret-idris.21e748bc.docx",
     "static/media/index.css": "/static/media/JetBrainsMono-Regular.c2e5a80b.ttf",
@@ -159,7 +159,7 @@
   "entrypoints": [
     "static/js/runtime-main.5b6cd6ad.js",
     "static/js/2.4eea2407.chunk.js",
-    "static/css/main.ee2b02b5.chunk.css",
-    "static/js/main.f75cf632.chunk.js"
+    "static/css/main.ef7781d3.chunk.css",
+    "static/js/main.608b66e9.chunk.js"
   ]
 }
