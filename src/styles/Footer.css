@@ -1,0 +1,30 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--default-page-padding);
+    margin-top: 80px;
+}
+
+.copyright-icon {
+    width: 10px;
+    margin-right: 5px;
+}
+
+#footer p {
+    line-height: 1.5;
+}
+
+#footer p a {
+    font-family: var(--secondary-font);
+}
+
+#footer-icons {
+    margin: 11px 0 24px 0;
+}
+
+#footer-icons img {
+    padding: 0 5px;
+}

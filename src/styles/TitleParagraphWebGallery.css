@@ -1,0 +1,102 @@
+#web-gallery-container {
+    position: relative;
+}
+
+#all-web-gallery-images {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    /*overflow-x: hidden;*/
+    height: 250px;
+}
+
+.one-web-gallery-image {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 25px;
+    border: 1px solid var(--color-gray-accent);
+}
+
+.web-gallery-button {
+    bottom: 100px;
+}
+
+@media only screen and (min-width: 801px) {
+    #all-web-gallery-images > img:last-of-type {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #web-gallery-container {
+        padding: var(--distance-between-project-page-components) 0 0 0;;
+    }
+
+    #web-gallery-container h2 {
+        margin-left: var(--default-page-padding);
+    }
+
+    #web-gallery-container p {
+        margin-left: var(--default-page-padding);
+        margin-right: var(--default-page-padding);
+    }
+
+    #all-web-gallery-images > img:first-of-type {
+        margin-left: var(--default-page-padding);
+    }
+
+    #all-web-gallery-images > img:last-of-type {
+        margin-right: var(--default-page-padding);
+    }
+
+    .empty-div-project-page {
+        border-left: 1px solid white;
+        width: var(--small-page-padding);
+        height: 379px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #web-gallery-container {
+        padding: var(--distance-between-project-page-components) 0 0 0;;
+    }
+
+    #web-gallery-container h2 {
+        margin-left: var(--small-page-padding);
+    }
+
+    #web-gallery-container p {
+        margin-left: var(--small-page-padding);
+        margin-right: var(--small-page-padding);
+    }
+
+    #all-web-gallery-images > img:first-of-type {
+        margin-left: var(--small-page-padding);
+    }
+
+    #all-web-gallery-images > img:last-of-type {
+        margin-right: var(--small-page-padding);
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    #all-web-gallery-images {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #all-web-gallery-images {
+        overflow-x: scroll;
+    }
+
+    .previous-button {
+        display: none;
+    }
+
+    .next-button {
+        display: none;
+    }
+}

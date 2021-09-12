@@ -1,0 +1,49 @@
+#project-head {
+    padding: 120px var(--default-page-padding) 0 var(--default-page-padding);
+    text-align: center;
+}
+
+#project-head h1 {
+    padding: 0 0 12px 0;
+}
+
+#header-description {
+    font-size: 0.9em;
+    color: var(--color-gray-font);
+}
+
+#project-head img {
+    width: 100%;
+    border-radius:var(--border-radius);
+    display: block;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    margin: 54px 0 0 0;
+}
+
+.try-app-button {
+    background-color: var(--color-yellow);
+    border: none;
+    border-radius: 100px;
+    padding: 7px 20px 5px 20px;
+    font-family: var(--default-font);
+    font-size: 0.95em;
+    color: var(--color-try-app-button-text);
+    text-decoration: none;
+}
+
+.try-app-button:hover {
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    #project-head {
+        padding: 120px var(--small-page-padding) 0 var(--small-page-padding);
+    }
+
+    #project-head h1 {
+        font-size: 2.5em;
+    }
+}

@@ -1,0 +1,155 @@
+/* If styling seems to be missing, check out
+   DesignProjects.css file. */
+#coding-projects-container {
+    padding: 0 var(--default-page-padding);
+    margin-bottom: var(--distance-between-home-page-components);
+    position: relative;
+}
+
+#all-coding-projects {
+    display: flex;
+    flex-direction: row;
+    max-width: var(--max-app-width);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.one-coding-project {
+    width: 441px;
+    height: auto;
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: block;
+}
+
+.one-coding-project a {
+    text-decoration: none;
+}
+
+/* https://css-tricks.com/almanac/selectors/l/last-child/ */
+/* Using the > changes the description to: "Find any divs
+   that are the direct descendents of section divs".
+   https://stackoverflow.com/a/2094512/10029397 */
+#all-coding-projects > div:last-of-type {
+    margin-right: 0;
+}
+
+.one-coding-project:hover .img-hover-zoom img{
+    transform: scale(1.2);
+}
+/*------*/
+
+.coding-project-img {
+    width: 441px;
+    height: 354px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform .5s;
+    object-fit: cover;
+    display: block;
+}
+
+/*.one-design-project changes on hover*/
+.coding-img-zoom {
+    height: 354px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.coding-img-zoom:hover img {
+    transform: scale(1.2);
+}
+
+.one-coding-project:hover .coding-img-zoom img{
+    transform: scale(1.2);
+}
+/*------*/
+
+.coding-project-description-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.coding-button {
+    bottom: 283px;
+}
+
+@media only screen and (max-width: 1280px) {
+    #coding-projects-container {
+        padding: 0;
+    }
+
+    #coding-projects-container h2 {
+        margin-left: var(--default-page-padding);
+    }
+
+    #all-coding-projects > div:first-of-type {
+        margin-left: var(--default-page-padding);
+    }
+
+    #all-coding-projects > div:last-of-type {
+        margin-right: var(--default-page-padding);
+    }
+
+    .empty-div {
+        border-left: 1px solid white;
+        width: var(--default-page-padding);
+        height: 439px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #coding-projects-container {
+        padding: 0;
+    }
+
+    #coding-projects-container h2 {
+        margin-left: var(--small-page-padding);
+    }
+
+    #all-coding-projects > div:first-of-type {
+        margin-left: var(--small-page-padding);
+    }
+
+    #all-coding-projects > div:last-of-type {
+        margin-right: var(--small-page-padding);
+    }
+
+    .empty-div {
+        border-left: 1px solid white;
+        width: var(--small-page-padding);
+        height: 439px;
+    }
+
+    .coding-project-description-container {
+        flex-direction: column;
+    }
+
+    .icons :first-child {
+        padding-left: 0;
+    }
+
+}
+
+@media only screen and (min-width: 501px) {
+    #all-coding-projects {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #all-coding-projects {
+        overflow-x: scroll;
+    }
+
+    .coding-project-img {
+        width: 354px;
+        height: 277px;
+    }
+    .coding-img-zoom {
+        height: 277px;
+    }
+}

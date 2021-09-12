@@ -1,0 +1,177 @@
+/* Mobile image gallery component styling. */
+#mobile-gallery-container {
+    position: relative;
+}
+
+#all-mobile-gallery-images {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.one-mobile-gallery-image {
+    width: 216px;
+    min-width: 216px;
+    height: 379px;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 25px;
+    border: 1px solid var(--color-gray-accent);
+}
+
+.mobile-gallery-button {
+    bottom: 170px;
+    position: absolute;
+    z-index: 1;
+    right: 25px;
+    height: var(--next-previous-button-size);
+    width: var(--next-previous-button-size);
+    border-radius: 100px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding-left: 9px;*/
+    opacity: 0;
+    background-color: var(--color-carousel-button-bg);
+    box-shadow: none;
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
+}
+
+/* Next and previous buttons on mobile gallery. */
+.modal-previous-button  {
+    position: absolute;
+    z-index: 1;
+    top: 50vh;
+    left: 25px;
+    height: var(--next-previous-button-size);
+    width: var(--next-previous-button-size);
+    border-radius: 100px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4px;
+    opacity: 1;
+    box-shadow: none;
+    background-color: var(--color-modal-button-bg);
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
+}
+
+.modal-previous-button:hover {
+    -webkit-box-shadow: var(--button-box-shadow);
+    box-shadow: var(--button-box-shadow);
+    background-color: var(--color-modal-button-bg-hover);
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
+}
+
+.modal-next-button  {
+    position: absolute;
+    z-index: 1;
+    top: 50vh;
+    right: 25px;
+    height: var(--next-previous-button-size);
+    width: var(--next-previous-button-size);
+    border-radius: 100px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 9px;
+    opacity: 1;
+    background-color: var(--color-modal-button-bg);
+    box-shadow: none;
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
+}
+
+.modal-next-button:hover {
+    -webkit-box-shadow: var(--button-box-shadow);
+    box-shadow: var(--button-box-shadow);
+    background-color: var(--color-modal-button-bg-hover);
+    transition: box-shadow .1s ease-in-out, background-color .1s ease-in-out;
+}
+
+/* ----------- */
+
+.one-web-slide {
+    display: none;
+}
+
+@media only screen and (min-width: 801px) {
+    #all-mobile-gallery-images > img:last-of-type {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #mobile-gallery-container {
+        padding: var(--distance-between-project-page-components) 0 0 0;;
+    }
+
+    #mobile-gallery-container h2 {
+        margin-left: var(--default-page-padding);
+    }
+
+    #mobile-gallery-container p {
+        margin-left: var(--default-page-padding);
+        margin-right: var(--default-page-padding);
+    }
+
+    #all-mobile-gallery-images > img:first-of-type {
+        margin-left: var(--default-page-padding);
+    }
+
+    #all-mobile-gallery-images > img:last-of-type {
+        margin-right: var(--default-page-padding);
+    }
+
+    .empty-div-project-page {
+        border-left: 1px solid white;
+        width: var(--small-page-padding);
+        height: 379px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #mobile-gallery-container {
+        padding: var(--distance-between-project-page-components) 0 0 0;;
+    }
+
+    #mobile-gallery-container h2 {
+        margin-left: var(--small-page-padding);
+    }
+
+    #mobile-gallery-container p {
+        margin-left: var(--small-page-padding);
+        margin-right: var(--small-page-padding);
+    }
+
+    #all-mobile-gallery-images > img:first-of-type {
+        margin-left: var(--small-page-padding);
+    }
+
+    #all-mobile-gallery-images > img:last-of-type {
+        margin-right: var(--small-page-padding);
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    #all-mobile-gallery-images {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #all-mobile-gallery-images {
+        overflow-x: scroll;
+    }
+
+    .previous-button {
+        display: none;
+    }
+
+    .next-button {
+        display: none;
+    }
+}

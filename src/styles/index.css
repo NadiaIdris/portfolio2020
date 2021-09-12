@@ -1,0 +1,286 @@
+/*Read more on different font formats: https://www.w3schools.com/css/css3_fonts.asp#:~:text=OpenType%20Fonts%20(OTF),on%20the%20major%20computer%20platforms.*/
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url("Gilroy-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url("Gilroy-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jetbrains Mono Regular';
+    src: url("JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono Extra Bold';
+    src: url("JetBrainsMono-ExtraBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /*Fonts*/
+    --default-font: "Gilroy-Bold", "Lexend Deca", sans-serif;
+    --default-font-size: 1em;
+    --secondary-font: "Jetbrains Mono Regular", "Roboto Mono", monospace;
+    --secondary-font-bold: "JetBrains Mono Extra Bold", "Roboto Mono", monospace;
+
+    /*Other*/
+    --dropdown-opacity-animation-delay: 170;
+    --max-app-width: 1435px;
+    --letter-spacing: 1px;
+    --default-page-padding: 31px;
+    --small-page-padding: 16px;
+    --distance-between-home-page-components: 35px;
+    --distance-between-project-page-components: 42px;
+    --border-radius: 4px;
+    --button-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    --dropdown-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+    --dropdown-triangle-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
+    /*Colors*/
+    --color-white: #FFFFFF;
+    --color-gray-accent: #DFDFDF;
+    --color-gray-darkest: #303030;
+    --color-gray-font: #717171;
+    --color-gray-hover-bckround: #EFEFEF;
+    --color-yellow: #EECC11;
+    --color-yellow-faded: #726419;
+    --color-green: #067B11;
+    --color-try-app-button-text: #303030;
+
+    --color-carousel-button-bg-hover: #FFFFFF;
+    --color-carousel-button-bg: #EFEFEF;
+
+    --color-modal-button-bg-hover: #EECC11;
+    --color-modal-button-bg: #EFEFEF;
+
+    --color-triangle-border: #DFDFDF;
+    --color-highlight-text: #303030;
+
+}
+
+/*----- Reset all the CSS styles -----*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: var(--default-font-size);
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+    color: var(--color-gray-darkest);
+}
+
+code, pre {
+    /*font-family: var(--default-code-font);*/
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*-----  -----*/
+
+body {
+    max-width: var(--max-app-width);
+    margin: 0 auto;
+    font-size: var(--default-font-size);
+    background-color: var(--color-white);
+}
+
+html {
+    overflow-y: scroll;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: var(--letter-spacing);
+}
+
+h2 {
+    font-size: 1.5em;
+    padding: 0 0 18px 0;
+    letter-spacing: var(--letter-spacing);
+}
+
+h3 {
+    font-size: 2.8em;
+    letter-spacing: var(--letter-spacing);
+}
+
+h4 {
+    font-size: 1.2em;
+    padding: 15px 0 6px 1px;
+    letter-spacing: var(--letter-spacing);
+}
+
+h5 {
+    font-size: 1.41em;
+    letter-spacing: var(--letter-spacing);
+}
+
+p {
+    font-family: var(--secondary-font);
+    font-size: 0.82em;
+    line-height: 1.4;
+}
+
+/*Text selection color*/
+::selection {
+    background: var(--color-yellow);
+    color: var(--color-highlight-text);
+}
+::-moz-selection {
+    background: var(--color-yellow);
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid var(--color-gray-hover-bckround);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /*border: 1px solid #C6C6C6;*/
+    background: var(--color-gray-accent);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-font);
+}

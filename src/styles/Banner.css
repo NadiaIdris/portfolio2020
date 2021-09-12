@@ -1,0 +1,58 @@
+/* Adding CSS manually is only necessary in JSFiddle,
+   where CSS can't be inserted into the <head> */
+.typed-cursor {
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink {
+    50% {
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes typedjsBlink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.typed-fade-out {
+    opacity: 0;
+    transition: opacity .25s;
+    -webkit-animation: 0;
+    animation: 0;
+}
+
+.banner {
+    padding: var(--app-bar-height) var(--default-page-padding) 0 var(--default-page-padding);
+    height: 474px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.type-wrap {
+    padding-top: 20px;
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner {
+        padding: var(--app-bar-height) var(--small-page-padding) 0 var(--small-page-padding);
+    }
+
+    h3 {
+        font-size: 2.7em;
+    }
+}
