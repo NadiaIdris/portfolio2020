@@ -65,7 +65,7 @@ class About extends React.Component {
           </ul>
           <br />
           <p>
-            I am a Front-End Developer with 2+ years of experience working on SPAs using
+            I am a Front-End Developer with ~3 years of experience working on SPAs using
             React, JavaScript (ES6), HTML5, CSS3 (Flexbox, CSS Grid, Media
             Queries, Modules, animations).
           </p>
