@@ -46,6 +46,8 @@
     --button-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     --dropdown-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
     --dropdown-triangle-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
+    /*Animation speed*/
+    --hover-transition: .1s;
     /*Colors*/
     --color-white: #FFFFFF;
     --color-gray-accent: #DFDFDF;
@@ -53,6 +55,7 @@
     --color-gray-font: #717171;
     --color-gray-hover-bckround: #EFEFEF;
     --color-yellow: #EECC11;
+    --color-yellow-lighter:#FCDB26;
     --color-yellow-faded: #726419;
     --color-green: #067B11;
     --color-try-app-button-text: #303030;

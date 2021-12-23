@@ -30,10 +30,13 @@
     font-size: 0.95em;
     color: var(--color-try-app-button-text);
     text-decoration: none;
+    margin-top: 20px;
 }
 
 .try-app-button:hover {
     cursor: pointer;
+    background-color: var(--color-yellow-lighter);
+    transition: background-color var(--hover-transition) ease-in-out;
 }
 
 

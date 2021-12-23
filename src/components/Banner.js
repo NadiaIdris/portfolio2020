@@ -1,6 +1,7 @@
 import React from "react";
 import Typed from "typed.js";
 import "./../styles/Banner.css";
+import resume from "../vector-images/2021-resume-maret-idris.docx";
 
 /**
  * For more information on Typed.js, please take a look at:
@@ -33,7 +34,7 @@ class Banner extends React.Component {
   render() {
     return (
       <div className="wrap banner">
-        <h3>👋🏻 Hi, I am Maret Idris</h3>
+        <h3>Hi, I am Maret Idris</h3>
         <div className="type-wrap">
           I&nbsp; am&nbsp;
           <span
@@ -43,6 +44,13 @@ class Banner extends React.Component {
             }}
           />
         </div>
+        <a
+          href={resume}
+          download="maret-idris-resume.docx"
+          className="try-app-button"
+        >
+          Download resume
+        </a>
       </div>
     );
   }

@@ -1,15 +1,6 @@
 import React from "react";
 
 class Header extends React.Component {
-  componentDidMount() {
-    if (this.props.buttonToApp) {
-      const headerDescriptionParagraph = document.querySelector(
-        "#header-description"
-      );
-      headerDescriptionParagraph.style.padding = "0 0 20px 0";
-    }
-  }
-
   render() {
     const {
       projectName,
