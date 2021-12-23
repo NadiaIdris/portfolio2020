@@ -56,7 +56,7 @@ class About extends React.Component {
             </li>
             <li className="responsive-list">
               <span className="secondary-font-bold">Coding experience: </span>
-              <span className="secondary-font">2 years.</span>
+              <span className="secondary-font">~3 years.</span>
             </li>
             <li className="responsive-list">
               <span className="secondary-font-bold">Design experience: </span>
