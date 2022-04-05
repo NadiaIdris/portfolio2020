@@ -256,13 +256,14 @@ const createDropdownComponent = (props, name, nameWithSpaces) => {
   );
 };
 
+// Dark theme:
 const darkThemeColorGrayDarkest = "#CFCFCF";
 const darkThemeColorWhite = "#1B1C1E";
 const darkThemeColorHoverBg = "#141414";
 const darkThemeColorGrayAccent = "#303030";
 const darkThemeColorTriangleBorder = "#141414";
-const darkThemeDropdownBoxShadow = "0 1px 3px 0 rgba(0,0,0,1)";
-const darkThemeDropdownTriangleBoxShadow = "0 1px 1px 0 rgba(0, 0, 0, 1);";
+const darkThemeDropdownBoxShadow = "0 0px 5px 0 rgb(0, 0, 0)";
+const darkThemeDropdownTriangleBoxShadow = "0 1px 3px 0 rgb(0, 0, 0)";
 const darkThemeHighlightText = "#1B1C1E";
 
 const lightThemeColorGrayDarkest = "#303030";
