@@ -77,11 +77,6 @@ nav > *:hover {
     min-width: 86px;
 }
 
-
-/* Dropdown*/
-#designs-container {
-}
-
 #designs-dropdown-container {
     position: absolute;
     /*Set left property using myWindowSizeListener()*/
@@ -89,10 +84,6 @@ nav > *:hover {
     margin-top: -3px;
     opacity: 0;
     visibility: hidden;
-}
-
-#code-container {
-
 }
 
 #code-dropdown-container {

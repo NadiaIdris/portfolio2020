@@ -164,10 +164,6 @@ video {
     color: var(--color-gray-darkest);
 }
 
-code, pre {
-    /*font-family: var(--default-code-font);*/
-}
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

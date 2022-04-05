@@ -95,7 +95,7 @@
     }
 
     .empty-div {
-        border-left: 1px solid white;
+        border-left: 1px solid var(--color-white);
         width: var(--default-page-padding);
         height: 439px;
     }
