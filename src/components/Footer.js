@@ -62,7 +62,7 @@ class Footer extends React.Component {
               alt="Dribbble logo"
             />
           </a>
-          <a href="www.linkedin.com/in/NadiaIdris1" target="_blank">
+          <a href="https://www.linkedin.com/in/nadiaidris1/" target="_blank">
             <img
               src={isDarkTheme ? darkThemeLinkedInLogo : linkedInLogo}
               alt="LinkedIn logo"

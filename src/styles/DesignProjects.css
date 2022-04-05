@@ -97,7 +97,10 @@
 /*Select any img element that is a child of any
   element with a class name of “icons */
 .icons img {
-    padding-left: 7px;
+    margin-left: 7px;
+    width: 34px;
+    height: 34px;
+    display: flex;
 }
 
 button:focus {

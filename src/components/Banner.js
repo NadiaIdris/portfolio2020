@@ -1,7 +1,7 @@
 import React from "react";
 import Typed from "typed.js";
 import "./../styles/Banner.css";
-import resume from "../vector-images/nadia-idris-resume.pdf";
+import resume from "../vector-images/nadia-idris-resume-public.pdf";
 
 /**
  * For more information on Typed.js, please take a look at:

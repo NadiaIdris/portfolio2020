@@ -1,6 +1,6 @@
 import React from "react";
 import "./../styles/About.css";
-import resume from "../vector-images/nadia-idris-resume.pdf";
+import resume from "../vector-images/nadia-idris-resume-public.pdf";
 import Footer from "./Footer";
 
 class About extends React.Component {
@@ -36,7 +36,7 @@ class About extends React.Component {
           </h3>
           <a
             href={resume}
-            download="nadia-idris-resume.docx"
+            download="nadia-idris-resume.pdf"
             className="try-app-button"
           >
             Download resume
