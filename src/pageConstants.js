@@ -12,7 +12,7 @@ import About from "./components/About";
 import { PageNames, PageNamesWithSpaces } from "./names";
 
 const URL_PAGE_KEY = "page";
-const PAGE_NAME_PREFIX = "Maret Idris - ";
+const PAGE_NAME_PREFIX = "Nadia Idris - ";
 
 /**
  * @param myDarkThemeValue this is optional

@@ -19,7 +19,7 @@ const portfolioAppData = {
   componentName: PageNames.PORTFOLIO_APP,
   title: "Portfolio App",
   description:
-    "Maret Idris design and code portfolio you are currently browsing.",
+    "Nadia Idris design and code portfolio you are currently browsing.",
   icons: [reactLight, HTMLLight, CSSLight],
   iconsDarkTheme: [darkThemeReactDark, darkThemeHTMLDark, darkThemeCSSDark],
 
@@ -33,8 +33,8 @@ const portfolioAppData = {
 
   aboutProjectArray: [
     "2020 Oct - Dec (2 months)",
-    [["Web", "https://maretidris.com"]],
-    [["Clone the repo", "https://github.com/MaretIdris/portfolio2020"]],
+    [["Web", "https://nadiaidris.com"]],
+    [["Clone the repo", "https://github.com/NadiaIdris/portfolio2020"]],
     "Product designer, front-end JavaScript developer",
     "Portfolio app is my project and I created everything from scratch",
   ],

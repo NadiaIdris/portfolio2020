@@ -23,14 +23,14 @@ class Footer extends React.Component {
       <div id="footer">
         <p>
           This website was{" "}
-          <a href="https://github.com/MaretIdris/portfolio2020" target="_blank">
-            designed and built by Maret Idris
+          <a href="https://github.com/NadiaIdris/portfolio2020" target="_blank">
+            designed and built by Nadia Idris
           </a>
           .
         </p>
         <p>
           Clone this repo from{" "}
-          <a href="https://github.com/MaretIdris/portfolio2020" target="_blank">
+          <a href="https://github.com/NadiaIdris/portfolio2020" target="_blank">
             Github
           </a>
           .
@@ -41,28 +41,28 @@ class Footer extends React.Component {
             alt="Copyright"
             className="copyright-icon"
           />
-          {new Date().getFullYear()} Maret Idris
+          {new Date().getFullYear()} Nadia Idris
         </p>
         <div id="footer-icons">
-          <a href="https://github.com/MaretIdris" target="_blank">
+          <a href="https://github.com/NadiaIdris" target="_blank">
             <img
               src={isDarkTheme ? darkThemeGithubLogo : githubLogo}
               alt="Github logo"
             />
           </a>
-          <a href="https://medium.com/@maret.idris" target="_blank">
+          <a href="https://medium.com/@NadiaIdris" target="_blank">
             <img
               src={isDarkTheme ? darkThemeMediumLogo : mediumLogo}
               alt="Medium logo"
             />
           </a>
-          <a href="https://dribbble.com/maretidris" target="_blank">
+          <a href="https://dribbble.com/NadiaIdris" target="_blank">
             <img
               src={isDarkTheme ? darkThemeDribbbleLogo : dribbbleLogo}
               alt="Dribbble logo"
             />
           </a>
-          <a href="https://www.linkedin.com/in/maretidris/" target="_blank">
+          <a href="www.linkedin.com/in/NadiaIdris1" target="_blank">
             <img
               src={isDarkTheme ? darkThemeLinkedInLogo : linkedInLogo}
               alt="LinkedIn logo"

@@ -28,15 +28,15 @@ const plannerAppData = {
 
   buttonToApp: true,
   buttonToAppText: "Try Planner App",
-  buttonToAppLink: "https://maretidris.github.io/planner-web-app/",
+  buttonToAppLink: "https://NadiaIdris.github.io/planner-web-app/",
 
   mainImage: plannerMain,
   mainImageAlt: "Planner app",
 
   aboutProjectArray: [
     "2019 Mar - Jul (4 months)",
-    [["Web", "https://maretidris.github.io/planner-web-app/"]],
-    [["Clone the repo", "https://github.com/MaretIdris/planner-web-app"]],
+    [["Web", "https://NadiaIdris.github.io/planner-web-app/"]],
+    [["Clone the repo", "https://github.com/NadiaIdris/planner-web-app"]],
     "Product designer, front-end JavaScript developer",
     "Planner app is my project and I created everything from scratch",
   ],

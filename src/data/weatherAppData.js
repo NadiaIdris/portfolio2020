@@ -28,15 +28,15 @@ const weatherAppData = {
 
   buttonToApp: true,
   buttonToAppText: "Try Weather App",
-  buttonToAppLink: "https://maretidris.github.io/weather-app/",
+  buttonToAppLink: "https://nadiaidris.github.io/weather-app/",
 
   mainImage: weatherMain,
   mainImageAlt: "Weather app",
 
   aboutProjectArray: [
     "2019 Jul - Nov (4 months)",
-    [["Web", "https://maretidris.github.io/weather-app/"]],
-    [["Clone the repo", "https://github.com/MaretIdris/weather-app"]],
+    [["Web", "https://nadiaidris.github.io/weather-app/"]],
+    [["Clone the repo", "https://github.com/NadiaIdris/weather-app"]],
     "Product designer, front-end JavaScript developer",
     "Weather app is my project and I created everything from scratch",
   ],

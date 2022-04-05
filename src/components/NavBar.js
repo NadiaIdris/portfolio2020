@@ -52,7 +52,7 @@ class Logo extends React.Component {
       <a
         id="link-for-logo"
         onClick={() => sharedObject.onNavigationClicked(PageNames.HOME)}
-        title="Maret Idris home page"
+        title="Nadia Idris home page"
       >
         <img
           className="logo"
@@ -91,9 +91,9 @@ class GitHub extends React.Component {
     const isDarkTheme = this.props.myDarkThemeValue.getValue() === "true";
     return (
       <a
-        href="https://github.com/MaretIdris/portfolio2020"
+        href="https://github.com/NadiaIdris/portfolio2020"
         target="_blank"
-        title="Maret Idris Github page"
+        title="Nadia Idris Github page"
         id="github-logo-on-nav-bar"
       >
         <img

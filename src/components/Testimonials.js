@@ -14,10 +14,10 @@ class Testimonials extends Component {
                         </div>
                         <div className="recommendation-text">
                             <p className="text-bold">
-                                “Maret's work is exceptional. She went above and beyond the call of duty and it shows in the work she has delivered.
+                                “Nadia's work is exceptional. She went above and beyond the call of duty and it shows in the work she has delivered.
                             </p>
                             <p className="text-jb-medium">
-                                One of the things I learned from Maret is to be hungrier to learn and have confidence I can self-educate. Several times in the project there were new concepts (whether design, commerce, etc.), this never phased Maret, and each time she came back having done a tonne of research with concise informed conclusions.”
+                                One of the things I learned from Nadia is to be hungrier to learn and have confidence I can self-educate. Several times in the project there were new concepts (whether design, commerce, etc.), this never phased Nadia, and each time she came back having done a tonne of research with concise informed conclusions.”
                             </p>
                         </div>
                     </div>
@@ -28,9 +28,9 @@ class Testimonials extends Component {
                         </div>
                         <div className="recommendation-text">
                             <p className="text-bold">
-                                “Maret is one of those people you just love working with. She is smart, inclusive, driven, focused, and one of the nicest people you could hope to meet.                       </p>
+                                “Nadia is one of those people you just love working with. She is smart, inclusive, driven, focused, and one of the nicest people you could hope to meet.                       </p>
                             <p className="text-jb-medium">
-                                She has an incredible eye for detail and beauty and raises the bar of what people thought was possible. She balances this with a pragmatic approach to what is possible technically and from a budgetary perspective. Everyone in my company loved working with Maret.”
+                                She has an incredible eye for detail and beauty and raises the bar of what people thought was possible. She balances this with a pragmatic approach to what is possible technically and from a budgetary perspective. Everyone in my company loved working with Nadia.”
                             </p>
                         </div>
                     </div>

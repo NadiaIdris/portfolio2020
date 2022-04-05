@@ -1,6 +1,6 @@
 import React from "react";
 import "./../styles/About.css";
-import resume from "./../vector-images/2021-resume-maret-idris.docx";
+import resume from "./../vector-images/nadia-idris-resume.pdf";
 import Footer from "./Footer";
 
 class About extends React.Component {
@@ -36,7 +36,7 @@ class About extends React.Component {
           </h3>
           <a
             href={resume}
-            download="maret-idris-resume.docx"
+            download="nadia-idris-resume.docx"
             className="try-app-button"
           >
             Download resume
@@ -48,11 +48,11 @@ class About extends React.Component {
     const designCards = () => {
       return (
         <section className="vertical-title-container container-one">
-          <h5 className="h5-padding-bottom">Maret Idris</h5>
+          <h5 className="h5-padding-bottom">Nadia Idris</h5>
           <ul>
             <li className="responsive-list">
               <span className="secondary-font-bold">Email: </span>
-              <span className="secondary-font">maret.career@fasterlap.com</span>
+              <span className="secondary-font">nadia@fasterlap.com</span>
             </li>
             <li className="responsive-list">
               <span className="secondary-font-bold">Coding experience: </span>
@@ -65,9 +65,9 @@ class About extends React.Component {
           </ul>
           <br />
           <p>
-            I am a Front-End Developer with ~3 years of experience working on SPAs using
-            React, JavaScript (ES6), HTML5, CSS3 (Flexbox, CSS Grid, Media
-            Queries, Modules, animations).
+            I am a Frontend Developer with 3+ years of experience working on
+            SPAs using React, Redux, JavaScript (ES6), HTML5, CSS3 (Flexbox, CSS
+            Grid, Media Queries, Modules, animations).
           </p>
           <br />
           <p>
@@ -87,9 +87,9 @@ class About extends React.Component {
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
               <p className="secondary-font">
-                <b>JavaScript</b>, <b>TypeScript</b>, <b>React</b>, <b>HTML5</b>
-                , <b>CSS3</b> (inc. CSS Modules, Media Queries, CSS Grid,
-                Flexbox, etc), <b>Node.js</b>, Express
+                <b>TypeScript</b>, <b>JavaScript</b>, <b>React</b>, <b>Redux</b>
+                , <b>HTML5</b>, <b>CSS3</b> (inc. CSS Modules, Media Queries,
+                CSS Grid, Flexbox, etc), <b>Node.js</b>, Express
               </p>
             </li>
             <li className="bullet-point-container">
@@ -126,7 +126,7 @@ class About extends React.Component {
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
               <p className="secondary-font">
-                <b>Unit testing</b> (Jasmine, Karma)
+                <b>Unit testing</b> (Jest, Enzyme)
               </p>
             </li>
             <li className="bullet-point-container">
@@ -229,13 +229,13 @@ class About extends React.Component {
               </a>{" "}
               and{" "}
               <a
-                href="https://medium.com/@maret.idris"
+                href="https://medium.com/@NadiaIdris"
                 target="_blank"
                 rel="noreferrer"
                 className="secondary-font-link-no-font-size"
               >
-                Medium.
-              </a>
+                Medium
+              </a>.
             </li>
             <br />
             <li className="bullet-point-container">
