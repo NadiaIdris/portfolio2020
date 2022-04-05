@@ -1,6 +1,6 @@
 import React from "react";
 import "./../styles/About.css";
-import resume from "./../vector-images/nadia-idris-resume.pdf";
+import resume from "../vector-images/nadia-idris-resume.pdf";
 import Footer from "./Footer";
 
 class About extends React.Component {
