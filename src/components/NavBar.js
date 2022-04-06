@@ -272,7 +272,7 @@ const lightThemeColorHoverBg = "#EFEFEF";
 const lightThemeColorGrayAccent = "#DFDFDF";
 const lightThemeColorTriangleBorder = "#DFDFDF";
 const lightThemeDrowdownBoxShadow = "0 1px 3px 0 rgba(0,0,0,0.4)";
-const lightThemeDropdownTriangleBoxShadow = "0 1px 1px 0 rgba(0, 0, 0, 0.4)";
+const lightThemeDropdownTriangleBoxShadow = "0 0 2px 0 rgba(0, 0, 0, 0.3)";
 
 class NavBar extends React.Component {
   componentDidMount() {
