@@ -1,7 +1,7 @@
 import React from "react";
 import "./../styles/About.css";
-import resume from "../vector-images/nadia-idris-resume-public.pdf";
 import Footer from "./Footer";
+import LinkedInButton from "./LinkedInButton";
 
 class About extends React.Component {
   constructor(props) {
@@ -34,13 +34,7 @@ class About extends React.Component {
           <h3 id="about-heading" className="h3-padding about-title">
             {this.headingTextWithBreak}
           </h3>
-          <a
-            href={resume}
-            download="nadia-idris-resume.pdf"
-            className="try-app-button"
-          >
-            Download resume
-          </a>
+          <LinkedInButton />
         </section>
       );
     };
@@ -235,7 +229,8 @@ class About extends React.Component {
                 className="secondary-font-link-no-font-size"
               >
                 Medium
-              </a>.
+              </a>
+              .
             </li>
             <br />
             <li className="bullet-point-container">

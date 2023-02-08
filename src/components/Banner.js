@@ -1,7 +1,7 @@
 import React from "react";
 import Typed from "typed.js";
 import "./../styles/Banner.css";
-import resume from "../vector-images/nadia-idris-resume-public.pdf";
+import LinkedInButton from "./LinkedInButton";
 
 /**
  * For more information on Typed.js, please take a look at:
@@ -44,13 +44,7 @@ class Banner extends React.Component {
             }}
           />
         </div>
-        <a
-          href={resume}
-          download="nadia-idris-resume.pdf"
-          className="try-app-button"
-        >
-          Download resume
-        </a>
+        <LinkedInButton />
       </div>
     );
   }
