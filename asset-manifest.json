@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.deec6ffb.chunk.css",
-    "main.js": "/static/js/main.6b6037ea.chunk.js",
-    "main.js.map": "/static/js/main.6b6037ea.chunk.js.map",
+    "main.js": "/static/js/main.107a223c.chunk.js",
+    "main.js.map": "/static/js/main.107a223c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.13c1c103.js",
     "runtime-main.js.map": "/static/js/runtime-main.13c1c103.js.map",
     "static/js/2.b374c85b.chunk.js": "/static/js/2.b374c85b.chunk.js",
@@ -48,7 +48,7 @@
     "static/media/dark-theme-js-dark.0b7b939c.svg": "/static/media/dark-theme-js-dark.0b7b939c.svg",
     "static/media/dark-theme-js-light.cb96824c.svg": "/static/media/dark-theme-js-light.cb96824c.svg",
     "static/media/dark-theme-linkedin-logo.6467977c.svg": "/static/media/dark-theme-linkedin-logo.6467977c.svg",
-    "static/media/dark-theme-logo.663780aa.svg": "/static/media/dark-theme-logo.663780aa.svg",
+    "static/media/dark-theme-logo.28a9c494.svg": "/static/media/dark-theme-logo.28a9c494.svg",
     "static/media/dark-theme-medium-logo.86ff4305.svg": "/static/media/dark-theme-medium-logo.86ff4305.svg",
     "static/media/dark-theme-react-dark.70c003d0.svg": "/static/media/dark-theme-react-dark.70c003d0.svg",
     "static/media/dark-theme-react-light.cee0368f.svg": "/static/media/dark-theme-react-light.cee0368f.svg",
@@ -89,10 +89,10 @@
     "static/media/js-logo-lght-gray.b3e4e33b.svg": "/static/media/js-logo-lght-gray.b3e4e33b.svg",
     "static/media/js-logo.13f9f267.svg": "/static/media/js-logo.13f9f267.svg",
     "static/media/linkedin.64065f9e.svg": "/static/media/linkedin.64065f9e.svg",
-    "static/media/logo.9615439c.svg": "/static/media/logo.9615439c.svg",
+    "static/media/logo.ca5c464c.svg": "/static/media/logo.ca5c464c.svg",
     "static/media/medium.6debfe73.svg": "/static/media/medium.6debfe73.svg",
     "static/media/NavBar.css": "/static/media/moon-icon.9c162ec9.svg",
-    "static/media/nadia-idris-resume-public.e5561720.pdf": "/static/media/nadia-idris-resume-public.e5561720.pdf",
+    "static/media/new-window.7da99be5.svg": "/static/media/new-window.7da99be5.svg",
     "static/media/planner-app-882x708.a8eb89bf.png": "/static/media/planner-app-882x708.a8eb89bf.png",
     "static/media/planner-app-add-and-sort-tasks.74bb0c12.gif": "/static/media/planner-app-add-and-sort-tasks.74bb0c12.gif",
     "static/media/planner-app-more-projects-1376x708.2569c20b.png": "/static/media/planner-app-more-projects-1376x708.2569c20b.png",
@@ -160,6 +160,6 @@
     "static/js/runtime-main.13c1c103.js",
     "static/js/2.b374c85b.chunk.js",
     "static/css/main.deec6ffb.chunk.css",
-    "static/js/main.6b6037ea.chunk.js"
+    "static/js/main.107a223c.chunk.js"
   ]
 }
