@@ -10,7 +10,6 @@ import TitleParagraphWebGallery from "./TitleParagraphWebGallery";
 import DesignProjects from "./DesignProjects";
 import Footer from "./Footer";
 import { getMoreDesignProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
-import uampData from "../data/uampData";
 
 class AbbeyRoadStudios extends React.Component {
   render() {
@@ -123,12 +122,6 @@ class AbbeyRoadStudios extends React.Component {
           image={abbeyRoadStudiosData.interactionImage}
           imageAlt={abbeyRoadStudiosData.interactionImageAlt}
           imageId={abbeyRoadStudiosData.interactionId}
-        />
-        <TitleParagraphWebGallery
-          title={abbeyRoadStudiosData.webGalleryTitle}
-          paragraph={abbeyRoadStudiosData.webGalleryParagraph}
-          webGalleryImagesArray={abbeyRoadStudiosData.webGalleryImagesArray}
-          webGalleryModalId={abbeyRoadStudiosData.webGalleryModalId}
         />
         <DesignProjects
           title={abbeyRoadStudiosData.moreDesignProjectsTitle}

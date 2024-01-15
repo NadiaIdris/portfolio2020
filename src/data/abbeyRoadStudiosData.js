@@ -48,6 +48,17 @@ const abbeyRoadStudiosData = {
   ],
 
   endResultTitle: "End result",
+  webGalleryImagesArray: [
+    [onlineMastering, "Online mastering page"],
+    [confirmOrder, "Confirm order page"],
+    [studioOne, "Studio one page"],
+    [audioProducts, "Audio products page"],
+    [engineerPage, "Engineer page"],
+    [eventHire, "Event hire page"],
+    [crossingCam, "Crossing cam page"],
+    [thankYou, "Thank you page"],
+  ],
+  webGalleryModalId: "abbey-road-web-gallery-modal",
 
   featuresTitle: "Features",
   featuresArray: [
@@ -137,25 +148,6 @@ const abbeyRoadStudiosData = {
   interactionImage: abbeyRoadInteractionDesign,
   interactionImageAlt: "Abbey Road Studios Interaction design",
   interactionId: "abbey-road-interaction-design-modal",
-
-  highFiTitle: "High fidelity mockups",
-  highFiParagraph:
-    "Visual design goals were to keep app looking simple and easy to edit the colours and typography in order to allow the outsourced design company to add the finishing touch.",
-
-  webGalleryTitle: "High fidelity mockups",
-  webGalleryParagraph:
-    "Visual design goals were to keep app looking simple and easy to edit the colours and typography in order to allow the outsourced design company to add the finishing touch.",
-  webGalleryImagesArray: [
-    [onlineMastering, "Online mastering page"],
-    [confirmOrder, "Confirm order page"],
-    [studioOne, "Studio one page"],
-    [audioProducts, "Audio products page"],
-    [engineerPage, "Engineer page"],
-    [eventHire, "Event hire page"],
-    [crossingCam, "Crossing cam page"],
-    [thankYou, "Thank you page"],
-  ],
-  webGalleryModalId: "abbey-road-web-gallery",
 
   moreDesignProjectsTitle: "More design projects",
 };

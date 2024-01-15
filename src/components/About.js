@@ -2,6 +2,7 @@ import React from "react";
 import "./../styles/About.css";
 import Footer from "./Footer";
 import LinkedInButton from "./LinkedInButton";
+import GitHubButton from "./GitHubButton";
 
 class About extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class About extends React.Component {
             {this.headingTextWithBreak}
           </h3>
           <LinkedInButton />
+          <GitHubButton />
         </section>
       );
     };
@@ -50,7 +52,7 @@ class About extends React.Component {
             </li>
             <li className="responsive-list">
               <span className="secondary-font-bold">Coding experience: </span>
-              <span className="secondary-font">~3 years.</span>
+              <span className="secondary-font">4+ years.</span>
             </li>
             <li className="responsive-list">
               <span className="secondary-font-bold">Design experience: </span>
@@ -59,9 +61,9 @@ class About extends React.Component {
           </ul>
           <br />
           <p>
-            I am a Frontend Developer with 3+ years of experience working on
-            SPAs using React, Redux, JavaScript (ES6), HTML5, CSS3 (Flexbox, CSS
-            Grid, Media Queries, Modules, animations).
+            I am full stack software engineer with 4+ years of experience
+            working using Rust, React, Redux, JavaScript (ES6), HTML5, and CSS3
+            (Flexbox, CSS Grid, Media Queries, Modules, animations).
           </p>
           <br />
           <p>

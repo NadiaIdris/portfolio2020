@@ -2,6 +2,7 @@ import React from "react";
 import Typed from "typed.js";
 import "./../styles/Banner.css";
 import LinkedInButton from "./LinkedInButton";
+import GitHubButton from "./GitHubButton";
 
 /**
  * For more information on Typed.js, please take a look at:
@@ -45,6 +46,7 @@ class Banner extends React.Component {
           />
         </div>
         <LinkedInButton />
+        <GitHubButton />
       </div>
     );
   }
