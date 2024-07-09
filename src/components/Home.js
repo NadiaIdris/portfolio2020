@@ -17,7 +17,7 @@ class Home extends React.Component {
       <React.Fragment>
         <Banner
           strings={[
-            "a Full Stack Software Engineer",
+            "Full Stack Software Engineer",
           ]}
         />
         <CodingProjects

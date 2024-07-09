@@ -223,7 +223,7 @@ class MoreCodingProjects extends React.Component {
               >
                 <div className="coding-img-zoom">
                   <img
-                    className="coding-project-img more-coding-projects-img"
+                    className="project-img-small more-coding-projects-img"
                     src={project.moreCodingProjectsImage}
                     alt={project.homepageImgAlt}
                     onLoad={() => {

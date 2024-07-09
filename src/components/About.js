@@ -8,7 +8,7 @@ class About extends React.Component {
   constructor(props) {
     super(props);
     this.headingTextWithBreak =
-      "Welcome to my code and <br />design portfolio!";
+      "About me";
     this.headingText = "Welcome to my code and design portfolio!";
   }
 

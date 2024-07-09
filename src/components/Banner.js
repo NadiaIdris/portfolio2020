@@ -35,9 +35,8 @@ class Banner extends React.Component {
   render() {
     return (
       <div className="wrap banner">
-        <h3>Hi, I am Nadia Idris</h3>
+        <h3>Nadia Idris Portfolio</h3>
         <div className="type-wrap">
-          I&nbsp; am&nbsp;
           <span
             style={{ whiteSpace: "pre" }}
             ref={(el) => {

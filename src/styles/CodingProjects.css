@@ -44,7 +44,7 @@
 .coding-project-img {
     width: 441px;
     height: 354px;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     transition: transform .5s;
     object-fit: cover;
@@ -55,7 +55,7 @@
 .coding-img-zoom {
     height: 354px;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 20px;
 }
 
 .coding-img-zoom:hover img {

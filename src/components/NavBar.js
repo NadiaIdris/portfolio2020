@@ -257,7 +257,8 @@ const createDropdownComponent = (props, name, nameWithSpaces) => {
 };
 
 // Dark theme:
-const darkThemeColorGrayDarkest = "#CFCFCF";
+const darkThemeColorGrayDarkest = "rgba(231, 237, 243,  .7)";
+const darkThemeColorGrayLighter = "rgba(231, 237, 243,  .9)";
 const darkThemeColorWhite = "#1B1C1E";
 const darkThemeColorHoverBg = "#141414";
 const darkThemeColorGrayAccent = "#303030";
@@ -289,6 +290,10 @@ class NavBar extends React.Component {
     document.documentElement.style.setProperty(
       "--color-gray-darkest",
       darkThemeColorGrayDarkest
+    );
+    document.documentElement.style.setProperty(
+      "--color-gray-lighter",
+      darkThemeColorGrayLighter
     );
     document.documentElement.style.setProperty(
       "--color-white",
@@ -323,6 +328,10 @@ class NavBar extends React.Component {
   applyLightTheme = () => {
     document.documentElement.style.setProperty(
       "--color-gray-darkest",
+      lightThemeColorGrayDarkest
+    );
+    document.documentElement.style.setProperty(
+      "--color-gray-lighter",
       lightThemeColorGrayDarkest
     );
     document.documentElement.style.setProperty(

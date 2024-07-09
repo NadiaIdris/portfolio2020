@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
 import { App, getPageNameFromWindowLocation } from "./components/App";
-import { getIntegerValueOfCSSVariable, scrollToTop } from "./utils";
+import { getIntegerValueOfCSSVariable } from "./utils";
 import {
   handleAutoHideAppBar,
   handleDisableAutoHide,

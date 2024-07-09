@@ -23,7 +23,7 @@
 }
 
 .text-bold {
-    font-family: var(--default-font);
+    font-family: var(--bold-font);
     font-size: 0.95em;
     padding: 0 0 20px 0;
     line-height: 1.25;
@@ -44,7 +44,7 @@
         width: 674px;
         height: 280px;
         border: 1px solid var(--color-gray-accent);
-        border-radius: 4px;
+        border-radius: var(--border-radius);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -68,7 +68,7 @@
     .one-recommendation {
         width: 674px;
         border: 1px solid var(--color-gray-accent);
-        border-radius: 4px;
+        border-radius: var(--border-radius);
         display: flex;
         flex-direction: row;
         /*justify-content: space-between;*/

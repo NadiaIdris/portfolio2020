@@ -178,9 +178,9 @@ nav > *:hover {
 
 /*Selected states*/
 .nav-selected {
-    border-bottom: 3px solid var(--color-gray-darkest) !important;
+    border-bottom: 3px solid var(--color-gray-lighter) !important;
     padding-top: 3px;
-    color: var(--color-gray-darkest) !important;
+    color: var(--color-gray-lighter) !important;
     margin: 0 1px;
 }
 
