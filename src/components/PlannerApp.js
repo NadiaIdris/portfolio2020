@@ -96,6 +96,7 @@ class PlannerApp extends React.Component {
         {techSection()}
         <MoreCodingProjects
           codingProjectsArray={getMoreCodingProjectsArrayBy("PlannerApp")}
+          myDarkThemeValue={this.props.myDarkThemeValue}
         />
         <Footer myDarkThemeValue={this.props.myDarkThemeValue} />
       </React.Fragment>

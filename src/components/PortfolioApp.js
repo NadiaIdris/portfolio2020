@@ -90,6 +90,7 @@ class PortfolioApp extends React.Component {
         {techSection()}
         <MoreCodingProjects
           codingProjectsArray={getMoreCodingProjectsArrayBy("PortfolioApp")}
+          myDarkThemeValue={this.props.myDarkThemeValue}
         />
         <Footer myDarkThemeValue={this.props.myDarkThemeValue} />
       </React.Fragment>

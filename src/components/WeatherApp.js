@@ -110,6 +110,7 @@ class WeatherApp extends React.Component {
         {techSection()}
         <MoreCodingProjects
           codingProjectsArray={getMoreCodingProjectsArrayBy("WeatherApp")}
+          myDarkThemeValue={this.props.myDarkThemeValue}
         />
         <Footer myDarkThemeValue={this.props.myDarkThemeValue} />
       </React.Fragment>

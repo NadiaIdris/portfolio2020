@@ -199,6 +199,26 @@ class MoreCodingProjects extends React.Component {
   };
 
   render() {
+    const isDarkTheme = this.props.myDarkThemeValue.getValue() === "true";
+
+    const generateIcons = (project) => {
+      const imageTags = [];
+      if (isDarkTheme) {
+        if (project.iconsDarkTheme) {
+          project.iconsDarkTheme.map((icon, index) =>
+            imageTags.push(<img src={icon} key={index} alt="Icon" />)
+          );
+        }
+      } else {
+        if (project.icons) {
+          project.icons.map((icon, index) =>
+            imageTags.push(<img src={icon} key={index} alt="Icon" />)
+          );
+        }
+      }
+      return imageTags;
+    };
+
     return (
       <section
         id="coding-projects-container"
@@ -239,12 +259,7 @@ class MoreCodingProjects extends React.Component {
                   <h4>{project.title}</h4>
                   <div className="coding-project-description-container">
                     <p className="light-gray-text">{project.description}</p>
-                    <div className="icons">
-                      {project.icons.map((icon, index) => {
-                        return (
-                          <img src={icon} key={index} alt="Platform icon" />
-                        );
-                      })}
+                    <div className="icons"> {generateIcons(project)}
                     </div>
                   </div>
                 </div>
