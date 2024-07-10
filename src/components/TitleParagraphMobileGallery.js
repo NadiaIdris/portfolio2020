@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
-import closeIcon from "./../vector-images/close-icon.svg";
 import { getIntegerValueOfCSSVariable, openModal, closeModal } from "../utils";
 
 // Pass this component following props:
