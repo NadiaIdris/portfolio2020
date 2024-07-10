@@ -28,9 +28,9 @@
     background-color: var(--color-yellow);
     border: none;
     border-radius: 100px;
-    padding: 0 15px;
+    padding: 1px 15px 0px 15px;
     font-family: var(--bold-font);
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: var(--color-try-app-button-text);
     text-decoration: none;
     margin-top: 20px;

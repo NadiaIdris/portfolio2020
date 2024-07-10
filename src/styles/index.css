@@ -44,6 +44,8 @@
   --secondary-font-bold: "JetBrains Mono Extra Bold", "Roboto Mono", monospace;
 
   /*Other*/
+  --test-delete-me: rgb(31, 31, 31); 
+  --hover-transition: 0.1s;
   --dropdown-opacity-animation-delay: 170;
   --max-app-width: 1435px;
   --letter-spacing: 1px;
@@ -53,18 +55,19 @@
   --distance-between-project-page-components: 42px;
   --border-radius: 15px;
   --button-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
-  --dropdown-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  --dropdown-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.4);
   --dropdown-triangle-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
-  /*Animation speed*/
-  --hover-transition: 0.1s;
-  /* Default colors*/
+  --color-triangle-bg: #ffffff;
   --color-white: #ffffff;
   --color-gray-accent: rgba(143, 149, 150, 0.3);
-  --color-gray-lighter: #303030; /* Default lighter and darkest are the same colors. */
+  --color-gray-lighter: rgba(23, 27, 34, 0.9); /* Default lighter and darkest are the same colors. */
   --color-gray-darkest: rgba(23, 27, 34, 0.9);
   --color-dark-blue-800: rgba(11, 14, 18, 0.7);
   --color-gray-font: #717171;
-  --color-gray-hover-bckround: #efefef;
+  --color-gray-hover-bckround: #f7f7f7; 
+  --color-dropdown-background: #ffffff;
+  --color-dropdown-selected: #efefef;
+  --color-dropdown-selected-text: rgba(23, 27, 34, 0.9);
   --color-yellow: rgba(238, 204, 17, 0.9);
   --color-yellow-lighter: #fcdb26;
   --color-yellow-faded: #726419;

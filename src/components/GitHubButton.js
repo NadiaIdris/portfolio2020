@@ -14,7 +14,7 @@ const GitHubButton = () => {
         alt="New window icon"
         width="10"
         height="10"
-        style={{ marginLeft: "5px" }}
+        style={{ marginLeft: "5px", marginTop: "-1px" }}
       />
     </a>
   );

@@ -1,48 +1,34 @@
 import React from "react";
 
-import logo from "./../vector-images/logo.svg";
 import darkThemeLogo from "./../vector-images/dark-theme-logo.svg";
+import logo from "./../vector-images/logo.svg";
 
-import github from "./../vector-images/github-logo.svg";
 import darkThemeGithub from "./../vector-images/dark-theme-github-logo.svg";
+import github from "./../vector-images/github-logo.svg";
 
-import iOsDark from "./../vector-images/ios-logo.svg";
 import darkThemeIOSDark from "./../vector-images/dark-theme-ios-dark.svg";
 import iOsLight from "./../vector-images/ios-logo-lght-gray.svg";
-import darkThemeIOSLight from "./../vector-images/dark-theme-ios-light.svg";
 
-import androidDark from "./../vector-images/android-logo.svg";
-import darkThemeAndroidDark from "./../vector-images/dark-theme-android-dark.svg";
 import androidLight from "./../vector-images/android-logo-lght-gray.svg";
-import darkThemeAndroidLight from "./../vector-images/dark-theme-android-light.svg";
+import darkThemeAndroidDark from "./../vector-images/dark-theme-android-dark.svg";
 
-import webDark from "./../vector-images/web-logo.svg";
 import darkThemeWebDark from "./../vector-images/dark-theme-web-dark.svg";
 import webLight from "./../vector-images/web-logo-lght-gray.svg";
-import darkThemeWebLight from "./../vector-images/dark-theme-web-light.svg";
 
-import reactDark from "./../vector-images/react-logo.svg";
 import darkThemeReactDark from "./../vector-images/dark-theme-react-dark.svg";
 import reactLight from "./../vector-images/react-logo-lght-gray.svg";
-import darkThemeReactLight from "./../vector-images/dark-theme-react-light.svg";
 
-import JSDark from "./../vector-images/js-logo.svg";
 import darkThemeJSDark from "./../vector-images/dark-theme-js-dark.svg";
 import JSLight from "./../vector-images/js-logo-lght-gray.svg";
-import darkThemeJSLight from "./../vector-images/dark-theme-js-light.svg";
 
-import HTMLDark from "./../vector-images/html-logo.svg";
 import darkThemeHTMLDark from "./../vector-images/dark-theme-html-dark.svg";
 import HTMLLight from "./../vector-images/html-logo-lght-gray.svg";
-import darkThemeHTMLLight from "./../vector-images/dark-theme-html-light.svg";
 
-import CSSDark from "./../vector-images/css-logo.svg";
-import darkThemeCSSDark from "./../vector-images/dark-theme-css-dark.svg";
 import CSSLight from "./../vector-images/css-logo-lght-gray.svg";
-import darkThemeCSSLight from "./../vector-images/dark-theme-css-light.svg";
+import darkThemeCSSDark from "./../vector-images/dark-theme-css-dark.svg";
 
-import "./../styles/NavBar.css";
 import { PageNames, PageNamesWithSpaces } from "../names";
+import "./../styles/NavBar.css";
 import { sharedObject } from "./SharedContext";
 
 class Logo extends React.Component {
@@ -93,6 +79,7 @@ class GitHub extends React.Component {
       <a
         href="https://github.com/NadiaIdris/portfolio2020"
         target="_blank"
+        rel="noreferrer"
         title="Nadia Idris Github page"
         id="github-logo-on-nav-bar"
       >
@@ -214,18 +201,25 @@ const createDropdownComponent = (props, name, nameWithSpaces) => {
 const darkThemeColorGrayDarkest = "rgba(231, 237, 243,  .7)";
 const darkThemeColorGrayLighter = "rgba(231, 237, 243,  .9)";
 const darkThemeColorWhite = "#1B1C1E";
-// const darkThemeColorHoverBg = "#141414";
-const darkThemeColorHoverBg = "rgba(10, 13, 18,  0.4)";
+const darkThemeColorDropdownBg = "rgba(11, 14, 18, 1)";
+const darkThemeColorHoverBg = "rgba(31, 31, 31, 0.6)"; /* "rgba(10, 13, 18,  0.4)" */
+const darkThemeColorSelectedBg = "black"; /* "rgba(11, 14, 18, 1)"; */
+const darkThemeColorSelectedText = "rgba(238, 204, 17, 0.9)";
 const darkThemeColorGrayAccent = "#303030";
-const darkThemeColorTriangleBorder = "#141414";
-const darkThemeDropdownBoxShadow = "0 0px 5px 0 rgb(0, 0, 0)";
-const darkThemeDropdownTriangleBoxShadow = "0 1px 3px 0 rgb(0, 0, 0)";
+const darkThemeColorTriangleBg = "rgba(11, 14, 18, 1)";
+const darkThemeColorTriangleBorder = "rgba(11, 14, 18, 1)";
+const darkThemeDropdownBoxShadow = "0 0 0 0 rgb(0, 0, 0)";
+const darkThemeDropdownTriangleBoxShadow = "0 0 0 0 rgb(0, 0, 0)";
 const darkThemeHighlightText = "#1B1C1E";
 
 const lightThemeColorGrayDarkest = "#303030";
-const lightThemeColorWhite = "#FFFFFF";
-const lightThemeColorHoverBg = "#EFEFEF";
+const lightThemeColorWhite = "#ffffff";
+const lightThemeColorDropdownBg = "#ffffff";
+const lightThemeColorHoverBg = "#f7f7f7";
+const lightThemeColorSelectedBg = "#efefef";
+const lightThemeColorSelectedText = "rgba(23, 27, 34, 0.9)";
 const lightThemeColorGrayAccent = "#DFDFDF";
+const lightThemeColorTriangleBg = "#ffffff";
 const lightThemeColorTriangleBorder = "#DFDFDF";
 const lightThemeDrowdownBoxShadow = "0 1px 3px 0 rgba(0,0,0,0.4)";
 const lightThemeDropdownTriangleBoxShadow = "0 0 2px 0 rgba(0, 0, 0, 0.3)";
@@ -255,12 +249,28 @@ class NavBar extends React.Component {
       darkThemeColorWhite
     );
     document.documentElement.style.setProperty(
+      "--color-dropdown-background",
+      darkThemeColorDropdownBg
+    );
+    document.documentElement.style.setProperty(
       "--color-gray-hover-bckround",
       darkThemeColorHoverBg
     );
     document.documentElement.style.setProperty(
+      "--color-dropdown-selected",
+      darkThemeColorSelectedBg
+    );
+    document.documentElement.style.setProperty(
+      "--color-dropdown-selected-text",
+      darkThemeColorSelectedText
+    );
+    document.documentElement.style.setProperty(
       "--color-gray-accent",
       darkThemeColorGrayAccent
+    );
+    document.documentElement.style.setProperty(
+      "--color-triangle-bg",
+      darkThemeColorTriangleBg
     );
     document.documentElement.style.setProperty(
       "--color-triangle-border",
@@ -294,12 +304,28 @@ class NavBar extends React.Component {
       lightThemeColorWhite
     );
     document.documentElement.style.setProperty(
+      "--color-dropdown-background",
+      lightThemeColorDropdownBg
+    );
+    document.documentElement.style.setProperty(
       "--color-gray-hover-bckround",
       lightThemeColorHoverBg
     );
     document.documentElement.style.setProperty(
+      "--color-dropdown-selected",
+      lightThemeColorSelectedBg
+    );
+    document.documentElement.style.setProperty(
+      "--color-dropdown-selected-text",
+      lightThemeColorSelectedText
+    );
+    document.documentElement.style.setProperty(
       "--color-gray-accent",
       lightThemeColorGrayAccent
+    );
+    document.documentElement.style.setProperty(
+      "--color-triangle-bg",
+      lightThemeColorTriangleBg
     );
     document.documentElement.style.setProperty(
       "--color-triangle-border",

@@ -120,7 +120,7 @@ nav > *:hover {
     transform: rotate(45deg);
     top: 16px;
     left: 21px;
-    background-color: var(--color-white);
+    background-color: var(--color-triangle-bg);
     border: 1px solid var(--color-triangle-border);
     -webkit-box-shadow: var(--dropdown-triangle-box-shadow);
     box-shadow: var(--dropdown-triangle-box-shadow);
@@ -133,7 +133,8 @@ nav > *:hover {
     width: 340px;
     margin-top: -10px;
     padding: 14px 0;
-    background-color: var(--color-white);
+    /* background-color: var(--color-white); */
+    background-color: var(--color-dropdown-background);
     border-radius: var(--border-radius);
     -webkit-box-shadow: var(--dropdown-box-shadow);
     box-shadow: var(--dropdown-box-shadow);
@@ -155,7 +156,6 @@ nav > *:hover {
 .dropdown > a p {
     display: flex;
     align-self: center;
-    color: var(--color-gray-font);
     font-family: var(--default-font);
     font-size: 1em;
     color: var(--color-gray-lighter);
@@ -188,15 +188,11 @@ nav > *:hover {
 /*Add this to an dropdown element using JS */
 /*Also swap the icons for darker icons*/
 .dropdown-selected {
-    /* border-left: 3px solid var(--color-gray-darkest); */
-    background-color: var(--color-dark-blue-800);
+    background-color: var(--color-dropdown-selected);
 }
 
 .dropdown-selected p {
-    /* font-size: 1.15em !important; */
-    /* color: var(--color-gray-darkest) !important; */
-    margin-left: -3px;
-    color: var(--color-yellow) !important;
+    color: var(--color-dropdown-selected-text) !important;
 }
 
 /*Dark Theme button styling*/

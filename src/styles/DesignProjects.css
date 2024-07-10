@@ -56,11 +56,11 @@
 }
 
 .img-hover-zoom:hover img {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .one-design-project:hover .img-hover-zoom img {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 /*------*/
