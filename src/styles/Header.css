@@ -1,6 +1,9 @@
 #project-head {
     padding: 120px var(--default-page-padding) 0 var(--default-page-padding);
+    display: flex;
     text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #project-head h1 {

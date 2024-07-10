@@ -35,7 +35,7 @@ class Banner extends React.Component {
   render() {
     return (
       <div className="wrap banner">
-        <h3>Nadia Idris Portfolio</h3>
+        <h3>Hi, I am Nadia Idris</h3>
         <div className="type-wrap">
           <span
             style={{ whiteSpace: "pre" }}

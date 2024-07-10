@@ -129,107 +129,61 @@ const getIconsForDropdown = (name, isSelected, isDarkTheme) => {
   const htmlAlt = "HTML icon";
   const cssAlt = "CSS icon";
 
-  const getIosIcon = () => {
-    if (isDarkTheme) {
-      return isSelected ? darkThemeIOSLight : darkThemeIOSDark;
-    } else {
-      return isSelected ? iOsDark : iOsLight;
-    }
-  };
-
-  const getAndroidIcon = () => {
-    if (isDarkTheme) {
-      return isSelected ? darkThemeAndroidLight : darkThemeAndroidDark;
-    } else {
-      return isSelected ? androidDark : androidLight;
-    }
-  };
-
-  const getWebIcon = () => {
-    if (isDarkTheme) {
-      return isSelected ? darkThemeWebLight : darkThemeWebDark;
-    } else {
-      return isSelected ? webDark : webLight;
-    }
-  };
-
-  const getReactIcon = () => {
-    if (isDarkTheme) {
-      return isSelected ? darkThemeReactLight : darkThemeReactDark;
-    } else {
-      return isSelected ? reactDark : reactLight;
-    }
-  };
-
-  const getJsIcon = () => {
-    if (isDarkTheme) {
-      return isSelected ? darkThemeJSLight : darkThemeJSDark;
-    } else {
-      return isSelected ? JSDark : JSLight;
-    }
-  };
-
-  const getHtmlIcon = () => {
-    if (isDarkTheme) {
-      return isSelected ? darkThemeHTMLLight : darkThemeHTMLDark;
-    } else {
-      return isSelected ? HTMLDark : HTMLLight;
-    }
-  };
-
-  const getCssIcon = () => {
-    if (isDarkTheme) {
-      return isSelected ? darkThemeCSSLight : darkThemeCSSDark;
-    } else {
-      return isSelected ? CSSDark : CSSLight;
-    }
-  };
+  const iosIcon = isDarkTheme ? darkThemeIOSDark : iOsLight;
+  const androidIcon = isDarkTheme ? darkThemeAndroidDark : androidLight;
+  const webIcon = isDarkTheme ? darkThemeWebDark : webLight;
+  const reactIcon = isDarkTheme ? darkThemeReactDark : reactLight;
+  const jsIcon = isDarkTheme ? darkThemeJSDark : JSLight;
+  const htmlIcon = isDarkTheme ? darkThemeHTMLDark : HTMLLight;
+  const cssIcon = isDarkTheme ? darkThemeCSSDark : CSSLight;
 
   switch (name) {
     case PageNames.TRUCKX:
       return (
         <React.Fragment>
-          <img src={getIosIcon()} alt={iOSAlt} />
-          <img src={getAndroidIcon()} alt={androidAlt} />
+          <img src={iosIcon} alt={iOSAlt} />
+          <img src={androidIcon} alt={androidAlt} />
         </React.Fragment>
       );
     case PageNames.ABBEY_ROAD_STUDIOS:
-      return <img src={getWebIcon()} alt={webAlt} />;
+      return <img src={webIcon} alt={webAlt} />;
     case PageNames.UAMP:
-      return <img src={getAndroidIcon()} alt={androidAlt} />;
+      return <img src={androidIcon} alt={androidAlt} />;
     case PageNames.INMUSIK:
       return (
         <React.Fragment>
-          <img src={getWebIcon()} alt={webAlt} />
-          <img src={getIosIcon()} alt={iOSAlt} />
+          <img src={webIcon} alt={webAlt} />
+          <img src={iosIcon} alt={iOSAlt} />
         </React.Fragment>
       );
     case PageNames.WHOLEWORLDBAND:
-      return <img src={getWebIcon()} alt={webAlt} />;
+      return <img src={webIcon} alt={webAlt} />;
     case PageNames.WEATHER_APP:
       return (
         <React.Fragment>
-          <img src={getJsIcon()} alt={jsAlt} />
-          <img src={getHtmlIcon()} alt={htmlAlt} />
-          <img src={getCssIcon()} alt={cssAlt} />
+          <img src={jsIcon} alt={jsAlt} />
+          <img src={htmlIcon} alt={htmlAlt} />
+          <img src={cssIcon} alt={cssAlt} />
         </React.Fragment>
       );
     case PageNames.PLANNER_APP:
       return (
         <React.Fragment>
-          <img src={getJsIcon()} alt={jsAlt} />
-          <img src={getHtmlIcon()} alt={htmlAlt} />
-          <img src={getCssIcon()} alt={cssAlt} />
+          <img src={jsIcon} alt={jsAlt} />
+          <img src={htmlIcon} alt={htmlAlt} />
+          <img src={cssIcon} alt={cssAlt} />
         </React.Fragment>
       );
     case PageNames.PORTFOLIO_APP:
       return (
         <React.Fragment>
-          <img src={getReactIcon()} alt={reactAlt} />
-          <img src={getHtmlIcon()} alt={htmlAlt} />
-          <img src={getCssIcon()} alt={cssAlt} />
+          <img src={reactIcon} alt={reactAlt} />
+          <img src={htmlIcon} alt={htmlAlt} />
+          <img src={cssIcon} alt={cssAlt} />
         </React.Fragment>
       );
+    default: 
+      return <></>
   }
 };
 
@@ -260,7 +214,8 @@ const createDropdownComponent = (props, name, nameWithSpaces) => {
 const darkThemeColorGrayDarkest = "rgba(231, 237, 243,  .7)";
 const darkThemeColorGrayLighter = "rgba(231, 237, 243,  .9)";
 const darkThemeColorWhite = "#1B1C1E";
-const darkThemeColorHoverBg = "#141414";
+// const darkThemeColorHoverBg = "#141414";
+const darkThemeColorHoverBg = "rgba(10, 13, 18,  0.4)";
 const darkThemeColorGrayAccent = "#303030";
 const darkThemeColorTriangleBorder = "#141414";
 const darkThemeDropdownBoxShadow = "0 0px 5px 0 rgb(0, 0, 0)";
