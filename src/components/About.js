@@ -8,8 +8,9 @@ class About extends React.Component {
   constructor(props) {
     super(props);
     this.headingTextWithBreak =
-      "About me";
-    this.headingText = "Welcome to my code and design portfolio!";
+      "I believe engineering is in service of delivering great experiences";
+    this.headingText =
+      "I believe engineering is in service of delivering great experiences";
   }
 
   componentDidMount() {
@@ -52,24 +53,25 @@ class About extends React.Component {
             </li>
             <li className="responsive-list">
               <span className="secondary-font-bold">Coding experience: </span>
-              <span className="secondary-font">4+ years.</span>
+              <span className="secondary-font">5 years</span>
             </li>
             <li className="responsive-list">
               <span className="secondary-font-bold">Design experience: </span>
-              <span className="secondary-font">7 years.</span>
+              <span className="secondary-font">7 years</span>
             </li>
           </ul>
           <br />
           <p>
-            I am full stack software engineer with 4+ years of experience
-            working using Rust, React, Redux, JavaScript (ES6), HTML5, and CSS3
-            (Flexbox, CSS Grid, Media Queries, Modules, animations).
+            I am a full stack software engineer with 5 years of experience
+            working using React, Redux, GraphQL, JavaScript (ES6), HTML5, and
+            CSS3 (Flexbox, CSS Grid, Media Queries, Modules, animations),
+            PostgreSQL, Node.js, etc.
           </p>
           <br />
           <p>
-            Before that, I was a product designer for 7-years. I co-founded a
-            startup in Ireland in 2012, which I relocated to the SF Bay Area in
-            2015.
+            Before becoming a software engineer, I was a product designer for 7
+            years. I co-founded a startup in Ireland in 2012, which I relocated
+            to the SF Bay Area in 2015.
           </p>
         </section>
       );
@@ -84,8 +86,40 @@ class About extends React.Component {
               <span className="dash-regular-weight secondary-font">-</span>
               <p className="secondary-font">
                 <b>TypeScript</b>, <b>JavaScript</b>, <b>React</b>, <b>Redux</b>
-                , <b>HTML5</b>, <b>CSS3</b> (inc. CSS Modules, Media Queries,
-                CSS Grid, Flexbox, etc), <b>Node.js</b>, Express
+                , <b>HTML5</b>, <b>Node.js</b>, Express
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>CSS3</b> (inc. CSS Modules, Media Queries, CSS Grid, Flexbox,
+                etc), <b>CSS in JS</b> (styled-components), <b>Material UI</b>,{" "}
+                <b>Chakra UI</b>
+              </p>
+            </li>
+
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>Client-side routing</b> (React Router)
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>Back-end and API development</b> (Node.js, Express)
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>Relational database</b> (PostgreSQL)
+              </p>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <p className="secondary-font">
+                <b>REST and Web APIs</b>
               </p>
             </li>
             <li className="bullet-point-container">
@@ -104,25 +138,13 @@ class About extends React.Component {
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
               <p className="secondary-font">
-                <b>CLI</b> (fish shell)
-              </p>
-            </li>
-            <li className="bullet-point-container">
-              <span className="dash-regular-weight secondary-font">-</span>
-              <p className="secondary-font">
-                <b>REST and Web APIs</b>
-              </p>
-            </li>
-            <li className="bullet-point-container">
-              <span className="dash-regular-weight secondary-font">-</span>
-              <p className="secondary-font">
                 <b>Git</b>, <b>GitHub</b>
               </p>
             </li>
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
               <p className="secondary-font">
-                <b>Unit testing</b> (Jest, Enzyme)
+                <b>Unit testing</b> (Jest, React Resting Library, Enzyme)
               </p>
             </li>
             <li className="bullet-point-container">
@@ -134,7 +156,7 @@ class About extends React.Component {
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
               <p className="secondary-font">
-                <b>SPA</b> (single-page application)
+                <b>Responsive UI</b>
               </p>
             </li>
             <li className="bullet-point-container"></li>
@@ -147,22 +169,10 @@ class About extends React.Component {
             </li>
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
-              <span className="secondary-font-bold">Static web design</span>
-            </li>
-            <li className="bullet-point-container">
-              <span className="dash-regular-weight secondary-font">-</span>
-              <span className="secondary-font-bold">Android design</span>
-            </li>
-            <li className="bullet-point-container">
-              <span className="dash-regular-weight secondary-font">-</span>
-              <span className="secondary-font-bold">iOS design</span>
-            </li>
-            <li className="bullet-point-container">
-              <span className="dash-regular-weight secondary-font">-</span>
               <div>
                 <span className="secondary-font-bold">Visual design</span>
                 <span className="secondary-font">
-                  &nbsp;using Figma, Sketch, Photoshop
+                  &nbsp;using Figma, Photoshop
                 </span>
               </div>
             </li>
@@ -170,18 +180,7 @@ class About extends React.Component {
               <span className="dash-regular-weight secondary-font">-</span>
               <div>
                 <span className="secondary-font-bold">Interaction design</span>
-                <span className="secondary-font">
-                  &nbsp;using Figma, Sketch
-                </span>
-              </div>
-            </li>
-            <li className="bullet-point-container">
-              <span className="dash-regular-weight secondary-font">-</span>
-              <div>
-                <span className="secondary-font-bold">
-                  Prototyping using tools
-                </span>
-                <span className="secondary-font">&nbsp;(Invision, Sketch)</span>
+                <span className="secondary-font">&nbsp;using Figma</span>
               </div>
             </li>
             <li className="bullet-point-container">
@@ -193,6 +192,56 @@ class About extends React.Component {
             <li className="bullet-point-container">
               <span className="dash-regular-weight secondary-font">-</span>
               <span className="secondary-font-bold">User research</span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font-bold">Android design</span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font-bold">iOS design</span>
+            </li>
+          </ul>
+        </section>
+      );
+    };
+
+    const softSkills = () => {
+      return (
+        <section className="vertical-title-container container-four">
+          <h5 className="h5-padding-bottom">Soft skills</h5>
+          <ul>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font">
+                Self-awareness and a desire to continually improve.
+              </span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font">
+                Ability to communicate effectively and collaborate with
+                different stakeholders (project managers, designers, software
+                engineers, etc).
+              </span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font">
+                Creativity, resilience, and attention to detail.
+              </span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font">
+                Desire to solve hard and engaging engineering problems.
+              </span>
+            </li>
+            <li className="bullet-point-container">
+              <span className="dash-regular-weight secondary-font">-</span>
+              <span className="secondary-font">
+                Empathy for the users/customers, co-workers, and leadership.
+              </span>
             </li>
           </ul>
         </section>
@@ -291,6 +340,7 @@ class About extends React.Component {
         <div className="design-cards-container remove-padding-bottom">
           {designCards()}
           {thingsIDo()}
+          {softSkills()}
           {articlesIWrote()}
         </div>
         <Footer myDarkThemeValue={this.props.myDarkThemeValue} />

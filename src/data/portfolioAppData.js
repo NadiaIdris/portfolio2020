@@ -1,13 +1,8 @@
 import homepagePortfolioApp from "./../vector-images/portfolio-app-882x708.png";
 
-import reactLight from "./../vector-images/react-logo-lght-gray.svg";
-import darkThemeReactDark from "./../vector-images/dark-theme-react-dark.svg";
-
-import HTMLLight from "./../vector-images/html-logo-lght-gray.svg";
-import darkThemeHTMLDark from "./../vector-images/dark-theme-html-dark.svg";
-
-import CSSLight from "./../vector-images/css-logo-lght-gray.svg";
-import darkThemeCSSDark from "./../vector-images/dark-theme-css-dark.svg";
+import reactLogo from "./../vector-images/react-logo.svg";
+import htmlLogo from "./../vector-images/html-logo.svg";
+import cssLogo from "./../vector-images/css-logo.svg";
 
 import portfolioAppMoreCodingProjects from "./../vector-images/portfolio-app-more-projects-1376x708.png";
 import portfolioMain from "./../vector-images/portfolio-main-2746x1342.png";
@@ -20,8 +15,8 @@ const portfolioAppData = {
   title: "Portfolio App",
   description:
     "Nadia Idris design and code portfolio you are currently browsing.",
-  icons: [reactLight, HTMLLight, CSSLight],
-  iconsDarkTheme: [darkThemeReactDark, darkThemeHTMLDark, darkThemeCSSDark],
+  icons: [reactLogo, htmlLogo, cssLogo],
+  iconsDarkTheme: [reactLogo, htmlLogo, cssLogo],
 
   homepageImage: homepagePortfolioApp,
   homepageImgAlt: "Portfolio app",

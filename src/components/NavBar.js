@@ -6,26 +6,13 @@ import logo from "./../vector-images/logo.svg";
 import darkThemeGithub from "./../vector-images/dark-theme-github-logo.svg";
 import github from "./../vector-images/github-logo.svg";
 
-import darkThemeIOSDark from "./../vector-images/dark-theme-ios-dark.svg";
-import iOsLight from "./../vector-images/ios-logo-lght-gray.svg";
-
-import androidLight from "./../vector-images/android-logo-lght-gray.svg";
-import darkThemeAndroidDark from "./../vector-images/dark-theme-android-dark.svg";
-
-import darkThemeWebDark from "./../vector-images/dark-theme-web-dark.svg";
-import webLight from "./../vector-images/web-logo-lght-gray.svg";
-
-import darkThemeReactDark from "./../vector-images/dark-theme-react-dark.svg";
-import reactLight from "./../vector-images/react-logo-lght-gray.svg";
-
-import darkThemeJSDark from "./../vector-images/dark-theme-js-dark.svg";
-import JSLight from "./../vector-images/js-logo-lght-gray.svg";
-
-import darkThemeHTMLDark from "./../vector-images/dark-theme-html-dark.svg";
-import HTMLLight from "./../vector-images/html-logo-lght-gray.svg";
-
-import CSSLight from "./../vector-images/css-logo-lght-gray.svg";
-import darkThemeCSSDark from "./../vector-images/dark-theme-css-dark.svg";
+import iosLogo from "./../vector-images/ios-logo.svg";
+import androidLogo from "./../vector-images/android-logo.svg";
+import webLogo from "./../vector-images/web-logo.svg";
+import reactLogo from "./../vector-images/react-logo.svg";
+import jsLogo from "./../vector-images/js-logo.svg";
+import htmlLogo from "./../vector-images/html-logo.svg";
+import cssLogo from "./../vector-images/css-logo.svg";
 
 import { PageNames, PageNamesWithSpaces } from "../names";
 import "./../styles/NavBar.css";
@@ -116,13 +103,13 @@ const getIconsForDropdown = (name, isSelected, isDarkTheme) => {
   const htmlAlt = "HTML icon";
   const cssAlt = "CSS icon";
 
-  const iosIcon = isDarkTheme ? darkThemeIOSDark : iOsLight;
-  const androidIcon = isDarkTheme ? darkThemeAndroidDark : androidLight;
-  const webIcon = isDarkTheme ? darkThemeWebDark : webLight;
-  const reactIcon = isDarkTheme ? darkThemeReactDark : reactLight;
-  const jsIcon = isDarkTheme ? darkThemeJSDark : JSLight;
-  const htmlIcon = isDarkTheme ? darkThemeHTMLDark : HTMLLight;
-  const cssIcon = isDarkTheme ? darkThemeCSSDark : CSSLight;
+  const iosIcon = iosLogo;
+  const androidIcon = androidLogo;
+  const webIcon = webLogo;
+  const reactIcon = reactLogo;
+  const jsIcon = jsLogo;
+  const htmlIcon = htmlLogo;
+  const cssIcon = cssLogo;
 
   switch (name) {
     case PageNames.TRUCKX:
@@ -202,8 +189,8 @@ const darkThemeColorGrayDarkest = "rgba(231, 237, 243,  .7)";
 const darkThemeColorGrayLighter = "rgba(231, 237, 243,  .9)";
 const darkThemeColorWhite = "#1B1C1E";
 const darkThemeColorDropdownBg = "rgba(11, 14, 18, 1)";
-const darkThemeColorHoverBg = "rgba(31, 31, 31, 0.6)"; /* "rgba(10, 13, 18,  0.4)" */
-const darkThemeColorSelectedBg = "black"; /* "rgba(11, 14, 18, 1)"; */
+const darkThemeColorHoverBg = "rgba(31, 31, 31, 0.5)";
+const darkThemeColorSelectedBg = "rgba(0, 0, 0, .5)"; 
 const darkThemeColorSelectedText = "rgba(238, 204, 17, 0.9)";
 const darkThemeColorGrayAccent = "#303030";
 const darkThemeColorTriangleBg = "rgba(11, 14, 18, 1)";

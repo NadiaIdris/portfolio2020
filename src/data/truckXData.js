@@ -1,8 +1,5 @@
-import androidLight from "./../vector-images/android-logo-lght-gray.svg";
-import darkThemeAndroidDark from "./../vector-images/dark-theme-android-dark.svg";
-
-import IOSLight from "./../vector-images/ios-logo-lght-gray.svg";
-import darkThemeIOSDark from "./../vector-images/dark-theme-ios-dark.svg";
+import androidLogo from "./../vector-images/android-logo.svg";
+import iosLogo from "./../vector-images/ios-logo.svg";
 
 import homepageTruckX from "./../vector-images/truckx-708x708.png";
 import truckXMain from "./../vector-images/truck-main-2746x1342.png";
@@ -23,8 +20,8 @@ const truckXData = {
   componentName: PageNames.TRUCKX,
   title: "TruckX",
   description: "Electronic logbook and trip planning app for truck drivers.",
-  icons: [IOSLight, androidLight],
-  iconsDarkTheme: [darkThemeIOSDark, darkThemeAndroidDark],
+  icons: [iosLogo, androidLogo],
+  iconsDarkTheme: [iosLogo, androidLogo],
   homepageImage: homepageTruckX,
   homepageImgAlt: "TruckX image",
 

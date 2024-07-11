@@ -1,8 +1,5 @@
-import webLight from "./../vector-images/web-logo-lght-gray.svg";
-import darkThemeWebDark from "./../vector-images/dark-theme-web-dark.svg";
-
-import IOSLight from "./../vector-images/ios-logo-lght-gray.svg";
-import darkThemeIOSDark from "./../vector-images/dark-theme-ios-dark.svg";
+import webLogo from "./../vector-images/web-logo.svg";
+import iosLogo from "./../vector-images/ios-logo.svg";
 
 import homepageInmusik from "./../vector-images/inmusik-708x708.png";
 import inmusikMain from "../vector-images/inmusik-main-2746x1342.png";
@@ -36,8 +33,8 @@ const inmusikData = {
   componentName: PageNames.INMUSIK,
   title: "Inmusik",
   description: "Social network for emerging musicians and fans.",
-  icons: [webLight, IOSLight],
-  iconsDarkTheme: [darkThemeWebDark, darkThemeIOSDark],
+  icons: [webLogo, iosLogo],
+  iconsDarkTheme: [webLogo, iosLogo],
 
   homepageImage: homepageInmusik,
 

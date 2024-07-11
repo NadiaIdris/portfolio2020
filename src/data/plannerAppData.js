@@ -1,13 +1,8 @@
 import homepagePlannerApp from "./../vector-images/planner-app-882x708.png";
 
-import JSLight from "./../vector-images/js-logo-lght-gray.svg";
-import darkThemeJSDark from "./../vector-images/dark-theme-js-dark.svg";
-
-import HTMLLight from "./../vector-images/html-logo-lght-gray.svg";
-import darkThemeHTMLDark from "./../vector-images/dark-theme-html-dark.svg";
-
-import CSSLight from "./../vector-images/css-logo-lght-gray.svg";
-import darkThemeCSSDark from "./../vector-images/dark-theme-css-dark.svg";
+import jsLogo from "./../vector-images/js-logo.svg";
+import htmlLogo from "./../vector-images/html-logo.svg";
+import cssLogo from "./../vector-images/css-logo.svg";
 
 import plannerMain from "./../vector-images/planner-main-2746x1342.png";
 import plannerAppAddAndSort from "./../vector-images/planner-app-add-and-sort-tasks.gif";
@@ -20,8 +15,8 @@ const plannerAppData = {
   componentName: PageNames.PLANNER_APP,
   title: "Planner App",
   description: "Responsive web application to plan, organize, and track tasks.",
-  icons: [JSLight, HTMLLight, CSSLight],
-  iconsDarkTheme: [darkThemeJSDark, darkThemeHTMLDark, darkThemeCSSDark],
+  icons: [jsLogo, htmlLogo, cssLogo],
+  iconsDarkTheme: [jsLogo, htmlLogo, cssLogo], // In the future if needed, can update those icons. Currently, left them here.
 
   homepageImage: homepagePlannerApp,
   homepageImgAlt: "Planner app",

@@ -1,5 +1,4 @@
-import androidLight from "./../vector-images/android-logo-lght-gray.svg";
-import darkThemeAndroidDark from "./../vector-images/dark-theme-android-dark.svg";
+import androidLogo from "./../vector-images/android-logo.svg";
 
 import homepageUamp from "./../vector-images/uamp-708x708.png";
 import uampMain from "./../vector-images/uamp-main-2746x1342.png";
@@ -22,8 +21,8 @@ const uampData = {
   componentName: PageNames.UAMP,
   title: "Universal Android Music Player",
   description: "Sample music app for Android media developers by Google.",
-  icons: [androidLight],
-  iconsDarkTheme: [darkThemeAndroidDark],
+  icons: [androidLogo],
+  iconsDarkTheme: [androidLogo],
   homepageImage: homepageUamp,
 
   // If I need a button on the header, then add those props:

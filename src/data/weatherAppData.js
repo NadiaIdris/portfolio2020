@@ -1,13 +1,8 @@
 import homepageWeatherApp from "./../vector-images/weather-app-882x708.png";
 
-import JSLight from "./../vector-images/js-logo-lght-gray.svg";
-import darkThemeJSDark from "./../vector-images/dark-theme-js-dark.svg";
-
-import HTMLLight from "./../vector-images/html-logo-lght-gray.svg";
-import darkThemeHTMLDark from "./../vector-images/dark-theme-html-dark.svg";
-
-import CSSLight from "./../vector-images/css-logo-lght-gray.svg";
-import darkThemeCSSDark from "./../vector-images/dark-theme-css-dark.svg";
+import jsLight from "./../vector-images/js-logo.svg";
+import htmlLogo from "./../vector-images/html-logo.svg";
+import cssLogo from "./../vector-images/css-logo.svg";
 
 import weatherMain from "./../vector-images/weather-main-2746x1342.png";
 import weatherAppFeaturesGif from "./../vector-images/weather-app-features.gif";
@@ -20,8 +15,8 @@ const weatherAppData = {
   title: "Weather App",
   description:
     "Weather App that shows both Celsius and Fahrenheit and communicates temperature through color.",
-  icons: [JSLight, HTMLLight, CSSLight],
-  iconsDarkTheme: [darkThemeJSDark, darkThemeHTMLDark, darkThemeCSSDark],
+  icons: [jsLight, htmlLogo, cssLogo],
+  iconsDarkTheme: [jsLight, htmlLogo, cssLogo],
 
   homepageImage: homepageWeatherApp,
   homepageImgAlt: "Weather App",

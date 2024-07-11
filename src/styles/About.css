@@ -28,6 +28,11 @@
     grid-row: 2/3;
 }
 
+.container-four {
+    grid-column: 1/3;
+    grid-row: auto;
+}
+
 /*Fonts*/
 
 .secondary-font {

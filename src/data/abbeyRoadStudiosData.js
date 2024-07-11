@@ -1,5 +1,4 @@
-import webLight from "./../vector-images/web-logo-lght-gray.svg";
-import darkThemeWebDark from "./../vector-images/dark-theme-web-dark.svg";
+import webLogo from "./../vector-images/web-logo.svg";
 
 import homepageAbbeyRoadStudios from "./../vector-images/abbey-road-studios-708x708.png";
 import abbeyRoadMain from "./../vector-images/abbey-road-main-2746x1342.png";
@@ -17,15 +16,13 @@ import eventHire from "./../vector-images/abbey-road-event-hire.png";
 import crossingCam from "./../vector-images/abbey-road-crossing-cam.png";
 import thankYou from "./../vector-images/abbey-road-thank-you.png";
 import { PageNames } from "../names";
-import darkThemeIOSDark from "../vector-images/dark-theme-ios-dark.svg";
-import darkThemeAndroidDark from "../vector-images/dark-theme-android-dark.svg";
 
 const abbeyRoadStudiosData = {
   componentName: PageNames.ABBEY_ROAD_STUDIOS,
   title: "Abbey Road Studios",
-  description: "The most famous recording studio in the world.",
-  icons: [webLight],
-  iconsDarkTheme: [darkThemeWebDark],
+  description: "Web app design for the most famous recording studio in the world.",
+  icons: [webLogo],
+  iconsDarkTheme: [webLogo],
   homepageImage: homepageAbbeyRoadStudios,
   homepageImgAlt: "Abbey Road Studios image",
 

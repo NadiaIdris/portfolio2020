@@ -1,5 +1,4 @@
-import webLight from "./../vector-images/web-logo-lght-gray.svg";
-import darkThemeWebDark from "./../vector-images/dark-theme-web-dark.svg";
+import webLogo from "./../vector-images/web-logo.svg";
 
 import homepageWWB from "./../vector-images/wwb-708x708.png";
 import wwbMain from "./../vector-images/wwb-main-2746x1342.png";
@@ -21,8 +20,8 @@ const wholeWorldBandData = {
   componentName: PageNames.WHOLEWORLDBAND,
   title: "WholeWorldBand",
   description: "Online recording studio for the whole world.",
-  icons: [webLight],
-  iconsDarkTheme: [darkThemeWebDark],
+  icons: [webLogo],
+  iconsDarkTheme: [webLogo],
   homepageImage: homepageWWB,
 
   mainImage: wwbMain,
