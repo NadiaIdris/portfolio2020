@@ -1,37 +1,37 @@
-import homepageWeatherApp from "./../vector-images/weather-app-882x708.png";
+import reactLogo from "./../vector-images/react-logo.svg";
+import tsLogo from "./../vector-images/ts-logo.svg";
+import nodeLogo from "./../vector-images/node-logo.svg";
 
-import jsLight from "./../vector-images/js-logo.svg";
-import htmlLogo from "./../vector-images/html-logo.svg";
-import cssLogo from "./../vector-images/css-logo.svg";
-
-import weatherMain from "./../vector-images/weather-main-2746x1342.png";
-import weatherAppFeaturesGif from "./../vector-images/weather-app-features.gif";
-import weatherAppLocationsGif from "./../vector-images/weather-app-locations.gif";
-import weatherAppMoreCodingProjects from "./../vector-images/weather-app-more-projects-1376x708.png";
 import { PageNames, PageNamesWithSpaces } from "../names";
 
-const weatherAppData = {
-  componentName: PageNames.WEATHER_APP,
-  title: PageNamesWithSpaces.WEATHER_APP,
-  description:
-    "Weather App that shows both Celsius and Fahrenheit and communicates temperature through color.",
-  icons: [jsLight, htmlLogo, cssLogo],
-  iconsDarkTheme: [jsLight, htmlLogo, cssLogo],
+import homepageStudentsApp from "./../vector-images/students-app-882x708.png";
+import studentsMain from "./../vector-images/students-main-2746x1342.png";
+import weatherAppFeaturesGif from "./../vector-images/weather-app-features.gif";
+import weatherAppLocationsGif from "./../vector-images/weather-app-locations.gif";
+import studentsAppMoreCodingProjects from "./../vector-images/students-app-more-projects-1376x708.png";
 
-  homepageImage: homepageWeatherApp,
-  homepageImgAlt: "Weather App",
+const studentsAppData = {
+  componentName: PageNames.STUDENTS_APP,
+  title: PageNamesWithSpaces.STUDENTS_APP,
+  description:
+    "Full stack app to add, delete, and update students. Includes account creation, custom REST APIs, Node.js server, and PostgreSQL.",
+  icons: [reactLogo, tsLogo, nodeLogo],
+  iconsDarkTheme: [reactLogo, tsLogo, nodeLogo],
+
+  homepageImage: homepageStudentsApp,
+  homepageImgAlt: PageNamesWithSpaces.STUDENTS_APP,
 
   buttonToApp: true,
-  buttonToAppText: "Try Weather App",
+  buttonToAppText: "Try " + PageNamesWithSpaces.STUDENTS_APP,
   buttonToAppLink: "https://nadiaidris.github.io/weather-app/",
 
-  mainImage: weatherMain,
-  mainImageAlt: "Weather app",
+  mainImage: studentsMain,
+  mainImageAlt: PageNamesWithSpaces.STUDENTS_APP,
 
   aboutProjectArray: [
-    "2019 Jul - Nov (4 months)",
-    [["Web", "https://nadiaidris.github.io/weather-app/"]],
-    [["Clone the repo", "https://github.com/NadiaIdris/weather-app"]],
+    "2024 Apr - Jul (3 months)",
+    [["Web", "https://mylisty.com/"]],
+    [["Clone the repo", "https://github.com/NadiaIdris/ts-student-list-app"]],
     "Product designer, front-end JavaScript developer",
     "Weather app is my project and I created everything from scratch",
   ],
@@ -76,6 +76,7 @@ const weatherAppData = {
   ],
 
   // Separate image for <MoreCodingProjects /> component.
-  moreCodingProjectsImage: weatherAppMoreCodingProjects,
+  moreCodingProjectsImage: studentsAppMoreCodingProjects,
 };
-export default weatherAppData;
+
+export default studentsAppData;

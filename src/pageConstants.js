@@ -5,9 +5,9 @@ import AbbeyRoadStudios from "./components/AbbeyRoadStudios";
 import UAMP from "./components/UAMP";
 import Inmusik from "./components/Inmusik";
 import WholeWorldBand from "./components/WholeWorldBand";
+import StudentsApp from "./components/StudentsApp";
 import WeatherApp from "./components/WeatherApp";
 import PlannerApp from "./components/PlannerApp";
-import PortfolioApp from "./components/PortfolioApp";
 import About from "./components/About";
 import { PageNames, PageNamesWithSpaces } from "./names";
 
@@ -31,14 +31,16 @@ const getComponentForPageName = (name, myDarkThemeValue) => {
       return <Inmusik myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.WHOLEWORLDBAND:
       return <WholeWorldBand myDarkThemeValue={myDarkThemeValue} />;
+    case PageNames.STUDENTS_APP:
+      return <StudentsApp myDarkThemeValue={myDarkThemeValue}/>
     case PageNames.WEATHER_APP:
       return <WeatherApp myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.PLANNER_APP:
       return <PlannerApp myDarkThemeValue={myDarkThemeValue} />;
-    case PageNames.PORTFOLIO_APP:
-      return <PortfolioApp myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.ABOUT:
       return <About myDarkThemeValue={myDarkThemeValue} />;
+    default:
+      return;
   }
 };
 
@@ -54,12 +56,14 @@ const getPageName = (pageName) => {
       return PageNames.INMUSIK;
     case PageNamesWithSpaces.WHOLEWORLDBAND:
       return PageNames.WHOLEWORLDBAND;
+    case PageNamesWithSpaces.STUDENTS_APP:
+      return PageNames.STUDENTS_APP;
     case PageNamesWithSpaces.WEATHER_APP:
       return PageNames.WEATHER_APP;
     case PageNamesWithSpaces.PLANNER_APP:
       return PageNames.PLANNER_APP;
-    case PageNamesWithSpaces.PORTFOLIO_APP:
-      return PageNames.PORTFOLIO_APP;
+    default:
+      return;
   }
 };
 
