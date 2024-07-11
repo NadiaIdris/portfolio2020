@@ -62,6 +62,10 @@
     padding-right: 10px;
 }
 
+.margin-top {
+    margin-top: 10px;
+}
+
 /* If image is the last element of a component,
    add margin-bottom for visual design purposes. */
 .image-bottom-margin {

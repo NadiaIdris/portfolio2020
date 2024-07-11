@@ -261,7 +261,7 @@ h5 {
 
 p {
   font-family: var(--secondary-font);
-  font-size: 0.82em;
+  font-size: 0.82rem;
   line-height: 1.4;
 }
 
@@ -295,4 +295,12 @@ p {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gray-font);
+}
+
+code {
+  font-family: var(--secondary-font);
+  color: #1B1C1E;
+  background-color: rgba(228, 230, 232, 0.757);
+  padding: 2px 8px;
+  border-radius: 8px;
 }

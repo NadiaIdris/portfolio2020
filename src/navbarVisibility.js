@@ -16,10 +16,10 @@ const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
       currentScrollPosition < numberOfPixelsToIgnore ||
       prevScrollPosition === currentScrollPosition
     ) {
-      console.log("window.onscroll event ignored");
+      // console.log("window.onscroll event ignored");
       return;
     }
-    console.log("window.onscroll event fired");
+    // console.log("window.onscroll event fired");
 
     if (enableNavBarAutoHide) {
       let showValue = "0";
@@ -49,11 +49,11 @@ const handleAutoHideAppBar = (appBarElement, appBarHeight) => {
 
 const handleDisableAutoHide = (id) => {
   document.getElementById(id).onmouseenter = () => {
-    console.log(`${id} mouseenter - disable navbar autohide`);
+    // console.log(`${id} mouseenter - disable navbar autohide`);
     enableNavBarAutoHide = false;
   };
   document.getElementById(id).onmouseleave = () => {
-    console.log(`${id} mouseleave - enable navbar autohide`);
+    // console.log(`${id} mouseleave - enable navbar autohide`);
     enableNavBarAutoHide = true;
   };
 };
