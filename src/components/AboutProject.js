@@ -21,20 +21,26 @@ const AboutProject = ({
       );
     } else {
       return (
-        <div className="bullet-point-container">
-          <p className="dash">-</p>
-          <p>
-            <span>Github:&nbsp;</span>
-            <a
-              href={repo[0][1]}
-              target="_blank"
-              rel="noreferrer"
-              className="platform-link"
-            >
-              {repo[0][0]}
-            </a>
-          </p>
-        </div>
+        <>
+          {repo.map((repoItem, index) => {
+            return (
+              <div className="bullet-point-container" key={index}>
+                <p className="dash">-</p>
+                <p>
+                  <span>Github:&nbsp;</span>
+                  <a
+                    href={repoItem[1]}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="platform-link"
+                  >
+                    {repoItem[0]}
+                  </a>
+                </p>
+              </div>
+            );
+          })}
+        </>
       );
     }
   };

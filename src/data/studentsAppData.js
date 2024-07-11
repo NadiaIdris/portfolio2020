@@ -31,9 +31,12 @@ const studentsAppData = {
   aboutProjectArray: [
     "2024 Apr - Jul (3 months)",
     [["Web", "https://mylisty.com/"]],
-    [["Clone the repo", "https://github.com/NadiaIdris/ts-student-list-app"]],
-    "Product designer, front-end JavaScript developer",
-    "Weather app is my project and I created everything from scratch",
+    [
+      ["Clone the frontend repo", "https://github.com/NadiaIdris/ts-student-list-app"],
+      ["Clone the backend repo", "https://github.com/NadiaIdris/nodejs-postgresql-api"],
+    ],
+    "Full stack software engineer and product designer",
+    "Students App is my project and I designed and built everything from scratch",
   ],
 
   endResultTitle: "End result",
