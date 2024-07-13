@@ -6,6 +6,7 @@ import wholeWorldBandData from "./wholeWorldBandData";
 import studentsAppData from "./studentsAppData";
 import weatherAppData from "./weatherAppData";
 import plannerAppData from "./plannerAppData";
+import spreadsheetPrototypeAppData from "./spreadsheetPrototypeAppData";
 
 const designProjectsArray = [
   truckXData,
@@ -15,7 +16,12 @@ const designProjectsArray = [
   wholeWorldBandData,
 ];
 
-const codingProjectsArray = [studentsAppData, weatherAppData, plannerAppData];
+const codingProjectsArray = [
+  studentsAppData,
+  spreadsheetPrototypeAppData,
+  plannerAppData,
+  weatherAppData,
+];
 
 // Pass component name ("AbbeyRoadStudios" and not "Abbey Road Studios");
 const getMoreDesignProjectsArrayBy = (componentName) => {

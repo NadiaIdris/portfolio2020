@@ -1,6 +1,5 @@
 import React from "react";
 import "./../styles/CodingProjects.css";
-// import './../styles/DesignProjects.css'
 import previousArrow from "../vector-images/arrow-left.svg";
 import nextArrow from "../vector-images/arrow-right.svg";
 import { getIntegerValueOfCSSVariable } from "../utils";

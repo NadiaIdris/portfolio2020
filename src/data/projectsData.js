@@ -23,6 +23,6 @@ export const arrayOfDesignProjects = [
 export const arrayOfCodingProjects = [
   studentsAppData,
   spreadsheetPrototypeAppData,
-  weatherAppData,
   plannerAppData,
+  weatherAppData,
 ];

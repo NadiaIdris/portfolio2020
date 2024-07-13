@@ -41,32 +41,32 @@ const spreadsheetPrototypeAppData = {
   featuresTitle: "Features",
   featuresArray: [
     [
+      "",
       "Edit cell data",
-      "",
     ],
     [
+      "",
       "Copy, paste, cut cell data using mouse ",
-      "",
     ],
     [
+      "",
       "Copy, paste, cut cell data using keyboard shortcuts",
-      "",
     ],
     [
+      "",
       "Add one or multiple rows and columns",
-      "",
     ],
     [
+      "",
       "Drag and drop cells",
-      "",
     ],
     [
+      "",
       "Rename spreadsheet",
-      "",
     ],
     [
-      "Responsive design",
       "",
+      "Responsive design",
     ],
   ],
 

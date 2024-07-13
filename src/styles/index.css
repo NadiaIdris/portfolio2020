@@ -82,7 +82,7 @@
   --color-triangle-border: #dfdfdf;
   --color-highlight-text: #303030;
 
-  --background-image: background-image: radial-gradient(#1f2028, #19191d) !important; /* TODO */
+  --background-image: radial-gradient(#1f2028, #19191d) !important; 
   --color-h3: #73757f50;
 }
 
@@ -237,12 +237,14 @@ html {
 h1 {
   font-size: 3em;
   letter-spacing: var(--letter-spacing);
+  font-family: var(--medium-font);
 }
 
 h2 {
   font-size: 1.5em;
   padding: 0 0 18px 0;
   letter-spacing: var(--letter-spacing);
+  font-family: var(--medium-font);
 }
 
 h3 {
@@ -255,11 +257,13 @@ h4 {
   font-size: 1.2em;
   padding: 15px 0 6px 1px;
   letter-spacing: var(--letter-spacing);
+  font-family: var(--medium-font);
 }
 
 h5 {
   font-size: 1.41em;
   letter-spacing: var(--letter-spacing);
+  font-family: var(--medium-font);
 }
 
 p {

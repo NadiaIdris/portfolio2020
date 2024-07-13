@@ -10,6 +10,7 @@ import WeatherApp from "./components/WeatherApp";
 import PlannerApp from "./components/PlannerApp";
 import About from "./components/About";
 import { PageNames, PageNamesWithSpaces } from "./names";
+import SpreadsheetPrototypeApp from "./components/SpreadsheetPrototypeApp";
 
 const URL_PAGE_KEY = "page";
 const PAGE_NAME_PREFIX = "Nadia Idris - ";
@@ -32,11 +33,13 @@ const getComponentForPageName = (name, myDarkThemeValue) => {
     case PageNames.WHOLEWORLDBAND:
       return <WholeWorldBand myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.STUDENTS_APP:
-      return <StudentsApp myDarkThemeValue={myDarkThemeValue}/>
-    case PageNames.WEATHER_APP:
-      return <WeatherApp myDarkThemeValue={myDarkThemeValue} />;
+      return <StudentsApp myDarkThemeValue={myDarkThemeValue} />;
+    case PageNames.SPREADSHEET_PROTOTYPE_APP:
+      return <SpreadsheetPrototypeApp myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.PLANNER_APP:
       return <PlannerApp myDarkThemeValue={myDarkThemeValue} />;
+    case PageNames.WEATHER_APP:
+      return <WeatherApp myDarkThemeValue={myDarkThemeValue} />;
     case PageNames.ABOUT:
       return <About myDarkThemeValue={myDarkThemeValue} />;
     default:
@@ -58,10 +61,12 @@ const getPageName = (pageName) => {
       return PageNames.WHOLEWORLDBAND;
     case PageNamesWithSpaces.STUDENTS_APP:
       return PageNames.STUDENTS_APP;
-    case PageNamesWithSpaces.WEATHER_APP:
-      return PageNames.WEATHER_APP;
+    case PageNamesWithSpaces.SPREADSHEET_PROTOTYPE_APP:
+      return PageNames.SPREADSHEET_PROTOTYPE_APP;
     case PageNamesWithSpaces.PLANNER_APP:
       return PageNames.PLANNER_APP;
+    case PageNamesWithSpaces.WEATHER_APP:
+      return PageNames.WEATHER_APP;
     default:
       return;
   }
