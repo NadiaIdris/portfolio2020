@@ -21,8 +21,8 @@ const weatherAppData = {
   homepageImage: homepageWeatherApp,
   homepageImgAlt: "Weather App",
 
-  buttonToApp: true,
-  buttonToAppText: "Try Weather App",
+  buttonToApp: false,
+  // buttonToAppText: "Try Weather App",
   buttonToAppLink: "https://nadiaidris.github.io/weather-app/",
 
   mainImage: weatherMain,

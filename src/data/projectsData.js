@@ -6,6 +6,7 @@ import wholeWorldBandData from "./wholeWorldBandData";
 import studentsAppData from "./studentsAppData";
 import weatherAppData from "./weatherAppData";
 import plannerAppData from "./plannerAppData";
+import spreadsheetPrototypeAppData from "./spreadsheetPrototypeAppData";
 
 export const homepageDesignProjectsTitle = "Design projects";
 
@@ -21,6 +22,7 @@ export const arrayOfDesignProjects = [
 
 export const arrayOfCodingProjects = [
   studentsAppData,
+  spreadsheetPrototypeAppData,
   weatherAppData,
   plannerAppData,
 ];

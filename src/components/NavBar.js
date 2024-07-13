@@ -10,6 +10,8 @@ import iosLogo from "./../vector-images/ios-logo.svg";
 import androidLogo from "./../vector-images/android-logo.svg";
 import webLogo from "./../vector-images/web-logo.svg";
 import reactLogo from "./../vector-images/react-logo.svg";
+import tsLogo from "./../vector-images/ts-logo.svg";
+import nodeLogo from "./../vector-images/node-logo.svg";
 import jsLogo from "./../vector-images/js-logo.svg";
 import htmlLogo from "./../vector-images/html-logo.svg";
 import cssLogo from "./../vector-images/css-logo.svg";
@@ -94,11 +96,13 @@ const createHomeOrAboutComponent = (props, pageName) => {
   );
 };
 
-const getIconsForDropdown = (name, isSelected, isDarkTheme) => {
+const getIconsForDropdown = (name) => {
   const webAlt = "Web icon";
   const iOSAlt = "iOS icon";
-  const androidAlt = "Android logo";
-  const reactAlt = "React logo";
+  const androidAlt = "Android icon";
+  const reactAlt = "React icon";
+  const tsAlt = "TypeScript icon";
+  const nodeAlt = "Node.js icon";
   const jsAlt = "JavaScript icon";
   const htmlAlt = "HTML icon";
   const cssAlt = "CSS icon";
@@ -107,6 +111,8 @@ const getIconsForDropdown = (name, isSelected, isDarkTheme) => {
   const androidIcon = androidLogo;
   const webIcon = webLogo;
   const reactIcon = reactLogo;
+  const tsIcon = tsLogo;
+  const nodeIcon = nodeLogo;
   const jsIcon = jsLogo;
   const htmlIcon = htmlLogo;
   const cssIcon = cssLogo;
@@ -132,12 +138,19 @@ const getIconsForDropdown = (name, isSelected, isDarkTheme) => {
       );
     case PageNames.WHOLEWORLDBAND:
       return <img src={webIcon} alt={webAlt} />;
-    case PageNames.WEATHER_APP:
+    case PageNames.STUDENTS_APP:
       return (
         <React.Fragment>
-          <img src={jsIcon} alt={jsAlt} />
-          <img src={htmlIcon} alt={htmlAlt} />
-          <img src={cssIcon} alt={cssAlt} />
+          <img src={reactIcon} alt={reactAlt} />
+          <img src={tsIcon} alt={tsAlt} />
+          <img src={nodeIcon} alt={nodeAlt} />
+        </React.Fragment>
+      );
+    case PageNames.SPREADSHEET_PROTOTYPE_APP:
+      return (
+        <React.Fragment>
+          <img src={reactIcon} alt={reactAlt} />
+          <img src={tsIcon} alt={tsAlt} />
         </React.Fragment>
       );
     case PageNames.PLANNER_APP:
@@ -148,16 +161,16 @@ const getIconsForDropdown = (name, isSelected, isDarkTheme) => {
           <img src={cssIcon} alt={cssAlt} />
         </React.Fragment>
       );
-    case PageNames.PORTFOLIO_APP:
+    case PageNames.WEATHER_APP:
       return (
         <React.Fragment>
-          <img src={reactIcon} alt={reactAlt} />
+          <img src={jsIcon} alt={jsAlt} />
           <img src={htmlIcon} alt={htmlAlt} />
           <img src={cssIcon} alt={cssAlt} />
         </React.Fragment>
       );
-    default: 
-      return <></>
+    default:
+      return <></>;
   }
 };
 
@@ -177,9 +190,7 @@ const createDropdownComponent = (props, name, nameWithSpaces) => {
       onClick={() => sharedObject.onNavigationClicked(name)}
     >
       <p>{nameWithSpaces}</p>
-      <div className="app-logos-container">
-        {getIconsForDropdown(name, isSelected, isDarkTheme)}
-      </div>
+      <div className="app-logos-container">{getIconsForDropdown(name)}</div>
     </a>
   );
 };
@@ -190,7 +201,7 @@ const darkThemeColorGrayLighter = "rgba(231, 237, 243,  .9)";
 const darkThemeColorWhite = "#1B1C1E";
 const darkThemeColorDropdownBg = "rgba(11, 14, 18, 1)";
 const darkThemeColorHoverBg = "rgba(31, 31, 31, 0.5)";
-const darkThemeColorSelectedBg = "rgba(0, 0, 0, .5)"; 
+const darkThemeColorSelectedBg = "rgba(0, 0, 0, .5)";
 const darkThemeColorSelectedText = "rgba(238, 204, 17, 0.9)";
 const darkThemeColorGrayAccent = "#303030";
 const darkThemeColorTriangleBg = "rgba(11, 14, 18, 1)";
@@ -361,7 +372,8 @@ class NavBar extends React.Component {
             className={isDesignsNavActive(this.props.currentDestination, [
               PageNames.WEATHER_APP,
               PageNames.PLANNER_APP,
-              PageNames.PORTFOLIO_APP,
+              PageNames.STUDENTS_APP,
+              PageNames.SPREADSHEET_PROTOTYPE_APP,
             ])}
           >
             Code
@@ -371,8 +383,13 @@ class NavBar extends React.Component {
                 <div className="dropdown code-dropdown-width">
                   {createDropdownComponent(
                     this.props,
-                    PageNames.WEATHER_APP,
-                    PageNamesWithSpaces.WEATHER_APP
+                    PageNames.STUDENTS_APP,
+                    PageNamesWithSpaces.STUDENTS_APP
+                  )}
+                  {createDropdownComponent(
+                    this.props,
+                    PageNames.SPREADSHEET_PROTOTYPE_APP,
+                    PageNamesWithSpaces.SPREADSHEET_PROTOTYPE_APP
                   )}
                   {createDropdownComponent(
                     this.props,
@@ -381,8 +398,8 @@ class NavBar extends React.Component {
                   )}
                   {createDropdownComponent(
                     this.props,
-                    PageNames.PORTFOLIO_APP,
-                    PageNamesWithSpaces.PORTFOLIO_APP
+                    PageNames.WEATHER_APP,
+                    PageNamesWithSpaces.WEATHER_APP
                   )}
                 </div>
               </div>

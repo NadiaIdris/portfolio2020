@@ -37,9 +37,8 @@ class CodingProjects extends React.Component {
       "#all-coding-projects"
     ).firstElementChild;
     this.nextButton = this.sectionContainer.querySelector(".next-button");
-    this.previousButton = this.sectionContainer.querySelector(
-      ".previous-button"
-    );
+    this.previousButton =
+      this.sectionContainer.querySelector(".previous-button");
   };
 
   doCalculationsAfterAllImagesHaveLoaded = () => {
@@ -61,19 +60,19 @@ class CodingProjects extends React.Component {
 
   hideNextButton = () => {
     this.lastCodingProject.style.marginRight = "0";
-    const rightOfLastCodingProject = this.lastCodingProject.getBoundingClientRect()
-      .right;
-    const rightOfCodingProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
-      .right;
+    const rightOfLastCodingProject =
+      this.lastCodingProject.getBoundingClientRect().right;
+    const rightOfCodingProjectsContainer =
+      this.codingProjectsContainer.getBoundingClientRect().right;
     if (rightOfLastCodingProject === rightOfCodingProjectsContainer)
       this.nextButton.style.opacity = "0";
   };
 
   showNextButton = () => {
-    const rightOfLastCodingProject = this.lastCodingProject.getBoundingClientRect()
-      .right;
-    const rightOfCodingProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
-      .right;
+    const rightOfLastCodingProject =
+      this.lastCodingProject.getBoundingClientRect().right;
+    const rightOfCodingProjectsContainer =
+      this.codingProjectsContainer.getBoundingClientRect().right;
     if (rightOfLastCodingProject > rightOfCodingProjectsContainer)
       this.nextButton.style.opacity = "1";
   };
@@ -85,8 +84,8 @@ class CodingProjects extends React.Component {
     const leftOfFirstDesignProject =
       this.firstCodingProject.getBoundingClientRect().left -
       getIntegerValueOfCSSVariable(document.body, "--small-page-padding");
-    const leftOfProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
-      .left;
+    const leftOfProjectsContainer =
+      this.codingProjectsContainer.getBoundingClientRect().left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
       this.previousButton.style.opacity = "0";
   };
@@ -98,26 +97,26 @@ class CodingProjects extends React.Component {
     const leftOfFirstDesignProject =
       this.firstCodingProject.getBoundingClientRect().left -
       getIntegerValueOfCSSVariable(document.body, "--default-page-padding");
-    const leftOfProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
-      .left;
+    const leftOfProjectsContainer =
+      this.codingProjectsContainer.getBoundingClientRect().left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
       this.previousButton.style.opacity = "0";
   };
 
   hidePreviousButtonIfViewportLargerThan1280Px = () => {
-    const leftOfFirstDesignProject = this.firstCodingProject.getBoundingClientRect()
-      .left;
-    const leftOfProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
-      .left;
+    const leftOfFirstDesignProject =
+      this.firstCodingProject.getBoundingClientRect().left;
+    const leftOfProjectsContainer =
+      this.codingProjectsContainer.getBoundingClientRect().left;
     if (leftOfFirstDesignProject === leftOfProjectsContainer)
       this.previousButton.style.opacity = "0";
   };
 
   showPreviousButton = () => {
-    const leftOfFirstCodingProject = this.firstCodingProject.getBoundingClientRect()
-      .left;
-    const leftOfCodingProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
-      .left;
+    const leftOfFirstCodingProject =
+      this.firstCodingProject.getBoundingClientRect().left;
+    const leftOfCodingProjectsContainer =
+      this.codingProjectsContainer.getBoundingClientRect().left;
     if (leftOfFirstCodingProject < leftOfCodingProjectsContainer)
       this.previousButton.style.opacity = "1";
   };
@@ -163,17 +162,17 @@ class CodingProjects extends React.Component {
     if (windowSize < maxAppWidth) {
       // Show next and previous buttons
       // If haven't scrolled yet, hide previous button and show next button
-      const leftOfFirstCodingProject = this.firstCodingProject.getBoundingClientRect()
-        .left;
-      const leftOfCodingProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
-        .left;
+      const leftOfFirstCodingProject =
+        this.firstCodingProject.getBoundingClientRect().left;
+      const leftOfCodingProjectsContainer =
+        this.codingProjectsContainer.getBoundingClientRect().left;
       if (leftOfFirstCodingProject === leftOfCodingProjectsContainer)
         this.previousButton.style.opacity = "0";
 
-      const rightOfLastCodingProject = this.lastCodingProject.getBoundingClientRect()
-        .right;
-      const rightOfCodingProjectsContainer = this.codingProjectsContainer.getBoundingClientRect()
-        .right;
+      const rightOfLastCodingProject =
+        this.lastCodingProject.getBoundingClientRect().right;
+      const rightOfCodingProjectsContainer =
+        this.codingProjectsContainer.getBoundingClientRect().right;
       if (rightOfLastCodingProject > rightOfCodingProjectsContainer)
         this.nextButton.style.opacity = "1";
 
@@ -207,15 +206,15 @@ class CodingProjects extends React.Component {
       const imageTags = [];
       if (isDarkTheme) {
         if (project.iconsDarkTheme) {
-          project.iconsDarkTheme.map((icon, index) => {
-            imageTags.push(<img src={icon} key={index} alt="Icon" />);
-          });
+          project.iconsDarkTheme.map((icon, index) =>
+            imageTags.push(<img src={icon} key={index} alt="Icon" />)
+          );
         }
       } else {
         if (project.icons) {
-          project.icons.map((icon, index) => {
-            imageTags.push(<img src={icon} key={index} alt="Icon" />);
-          });
+          project.icons.map((icon, index) =>
+            imageTags.push(<img src={icon} key={index} alt="Icon" />)
+          );
         }
       }
       return imageTags;

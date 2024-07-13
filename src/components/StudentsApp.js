@@ -6,6 +6,7 @@ import TitleBulletPointsOneColumn from "./TitleBulletPointsOneColumn";
 import Footer from "./Footer";
 import { getMoreCodingProjectsArrayBy } from "../data/designAndCodingProjectsArrays";
 import MoreCodingProjects from "./MoreCodingProjects";
+import { PageNames } from "../names";
 
 class StudentsApp extends React.Component {
   render() {
@@ -315,7 +316,7 @@ class StudentsApp extends React.Component {
         {otherTechSection()}
         {apiDesign()}
         <MoreCodingProjects
-          codingProjectsArray={getMoreCodingProjectsArrayBy("WeatherApp")}
+          codingProjectsArray={getMoreCodingProjectsArrayBy(PageNames.STUDENTS_APP)}
           myDarkThemeValue={this.props.myDarkThemeValue}
         />
         <Footer myDarkThemeValue={this.props.myDarkThemeValue} />

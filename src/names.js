@@ -7,6 +7,7 @@ const PageNames = {
   INMUSIK: "Inmusik",
   WHOLEWORLDBAND: "WholeWorldBand",
   STUDENTS_APP: "StudentsApp",
+  SPREADSHEET_PROTOTYPE_APP: "SpreadsheetPrototypeApp",
   WEATHER_APP: "WeatherApp",
   PLANNER_APP: "PlannerApp",
 };
@@ -20,6 +21,7 @@ const PageNamesWithSpaces = {
   INMUSIK: "Inmusik",
   WHOLEWORLDBAND: "WholeWorldBand",
   STUDENTS_APP: "Students App",
+  SPREADSHEET_PROTOTYPE_APP: "Spreadsheet Prototype App",
   WEATHER_APP: "Weather App",
   PLANNER_APP: "Planner App",
 };

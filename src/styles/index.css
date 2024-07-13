@@ -81,6 +81,9 @@
 
   --color-triangle-border: #dfdfdf;
   --color-highlight-text: #303030;
+
+  --background-image: background-image: radial-gradient(#1f2028, #19191d) !important; /* TODO */
+  --color-h3: #73757f50;
 }
 
 /*----- Reset all the CSS styles -----*/
